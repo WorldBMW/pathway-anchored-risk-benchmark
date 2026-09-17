@@ -1,0 +1,2677 @@
+﻿{
+ "main": {
+  "n_samples": 35,
+  "hpv_proxy_auc": 0.9914,
+  "hpv_auc": null,
+  "moran_i": 0.8665,
+  "recon_mse_proxy": 0.1834,
+  "recon_mse": null,
+  "n_deg_perm_fdr05_effect": 11,
+  "n_deg_naive": null,
+  "n_prior_genes": 92,
+  "high_risk_ratio": 0.5,
+  "hpv_gene_set_size": 108,
+  "hpv_gene_set_mode": "kegg_hpv",
+  "kendall_tau": 0.462,
+  "kendall_p": 0.001,
+  "permutation_p": 0.001,
+  "permutation_n": 1000,
+  "n_up": 2,
+  "n_pairs": 34,
+  "cin_kruskal_stat": 7.9714,
+  "cin_kruskal_p": 0.0048,
+  "subtype_kruskal_stat": 5.4545,
+  "subtype_kruskal_p": 0.0195,
+  "label_source": "data/st_visium/labels/cervix_histology_labels_extended.csv",
+  "by_cin_grade": {
+   "grade_4": {
+    "n_samples": 3,
+    "overall_mean": 1.9030591556348526,
+    "overall_std": 0.5008288712738134,
+    "per_sample_means": [
+     2.2433211418058496,
+     1.194959136463903,
+     2.2708971886348057
+    ]
+   },
+   "grade_3": {
+    "n_samples": 1,
+    "overall_mean": 1.1601344051550502,
+    "overall_std": 0.0,
+    "per_sample_means": [
+     1.1601344051550502
+    ]
+   },
+   "grade_0": {
+    "n_samples": 31,
+    "overall_mean": 0.0005797701601713583,
+    "overall_std": 0.26405542619531075,
+    "per_sample_means": [
+     0.5481517137623828,
+     -0.02312388585001079,
+     -0.04154302412347429,
+     -0.032910065203600375,
+     0.371791612794905,
+     -0.02349114906739901,
+     0.05128095710561389,
+     -0.25497513707826097,
+     -0.351888261956495,
+     -0.4836581008379606,
+     0.289139049759184,
+     -0.33686192241763085,
+     -0.1869849707178933,
+     0.38006749446332366,
+     -0.04280544564520058,
+     -0.032392473166395805,
+     0.14429625201772583,
+     0.5886233502399113,
+     -0.1434340049682216,
+     -0.16298509324550828,
+     -0.17841920560708954,
+     -0.22693738377126085,
+     0.0182135211146293,
+     0.4123893851414323,
+     -0.2045630077365786,
+     -0.11954640982191214,
+     0.07369976918520539,
+     0.27482320091623436,
+     -0.1536712521769806,
+     -0.2623922866438853,
+     0.12807964850052267
+    ]
+   }
+  },
+  "by_histology_subtype": {
+   "SCC": {
+    "n_samples": 2,
+    "overall_mean": 2.257109165220328,
+    "overall_std": 0.013788023414478046,
+    "per_sample_means": [
+     2.2433211418058496,
+     2.2708971886348057
+    ]
+   },
+   "ADC": {
+    "n_samples": 1,
+    "overall_mean": 1.194959136463903,
+    "overall_std": 0.0,
+    "per_sample_means": [
+     1.194959136463903
+    ]
+   },
+   "HSIL": {
+    "n_samples": 1,
+    "overall_mean": 1.1601344051550502,
+    "overall_std": 0.0,
+    "per_sample_means": [
+     1.1601344051550502
+    ]
+   },
+   "Normal": {
+    "n_samples": 1,
+    "overall_mean": 0.5481517137623828,
+    "overall_std": 0.0,
+    "per_sample_means": [
+     0.5481517137623828
+    ]
+   },
+   "Normal_Ecto": {
+    "n_samples": 30,
+    "overall_mean": -0.01767262795990236,
+    "overall_std": 0.2484387098571456,
+    "per_sample_means": [
+     -0.02312388585001079,
+     -0.04154302412347429,
+     -0.032910065203600375,
+     0.371791612794905,
+     -0.02349114906739901,
+     0.05128095710561389,
+     -0.25497513707826097,
+     -0.351888261956495,
+     -0.4836581008379606,
+     0.289139049759184,
+     -0.33686192241763085,
+     -0.1869849707178933,
+     0.38006749446332366,
+     -0.04280544564520058,
+     -0.032392473166395805,
+     0.14429625201772583,
+     0.5886233502399113,
+     -0.1434340049682216,
+     -0.16298509324550828,
+     -0.17841920560708954,
+     -0.22693738377126085,
+     0.0182135211146293,
+     0.4123893851414323,
+     -0.2045630077365786,
+     -0.11954640982191214,
+     0.07369976918520539,
+     0.27482320091623436,
+     -0.1536712521769806,
+     -0.2623922866438853,
+     0.12807964850052267
+    ]
+   }
+  },
+  "dunn_by_grade": {
+   "grade_0_vs_grade_3": {
+    "z": -1.5368489717290903,
+    "p_raw": 0.12433029787963568,
+    "p_bonferroni": 0.37299089363890703
+   },
+   "grade_0_vs_grade_4": {
+    "z": -2.9052256598160806,
+    "p_raw": 0.003669884081355601,
+    "p_bonferroni": 0.011009652244066803
+   },
+   "grade_3_vs_grade_4": {
+    "z": -0.1690308509457033,
+    "p_raw": 0.8657723749926214,
+    "p_bonferroni": 1.0
+   }
+  },
+  "dunn_by_subtype": {
+   "ADC_vs_HSIL": {
+    "z": 0.06900655593423542,
+    "p_raw": 0.9449844010606654,
+    "p_bonferroni": 1.0
+   },
+   "ADC_vs_Normal": {
+    "z": 0.20701966780270628,
+    "p_raw": 0.8359944985248411,
+    "p_bonferroni": 1.0
+   },
+   "ADC_vs_Normal_Ecto": {
+    "z": 1.6768536601757023,
+    "p_raw": 0.09357110163376481,
+    "p_bonferroni": 0.9357110163376481
+   },
+   "ADC_vs_SCC": {
+    "z": -0.11952286093343938,
+    "p_raw": 0.904861129450448,
+    "p_bonferroni": 1.0
+   },
+   "HSIL_vs_Normal": {
+    "z": 0.13801311186847084,
+    "p_raw": 0.8902300549434974,
+    "p_bonferroni": 1.0
+   },
+   "HSIL_vs_Normal_Ecto": {
+    "z": 1.5808505880282384,
+    "p_raw": 0.11391220450967432,
+    "p_bonferroni": 1.0
+   },
+   "HSIL_vs_SCC": {
+    "z": -0.19920476822239894,
+    "p_raw": 0.8421025696707305,
+    "p_bonferroni": 1.0
+   },
+   "Normal_vs_Normal_Ecto": {
+    "z": 1.3888444437333105,
+    "p_raw": 0.1648800573042355,
+    "p_bonferroni": 1.0
+   },
+   "Normal_vs_SCC": {
+    "z": -0.3585685828003181,
+    "p_raw": 0.7199178531944463,
+    "p_bonferroni": 1.0
+   },
+   "Normal_Ecto_vs_SCC": {
+    "z": -2.5345274441361583,
+    "p_raw": 0.0112599106668414,
+    "p_bonferroni": 0.112599106668414
+   }
+  },
+  "mannwhitney_by_subtype_bonf5": {
+   "Normal_Ecto_vs_SCC": {
+    "u": 0.0,
+    "p_raw": 0.004032258064516129,
+    "p_bonf5": 0.020161290322580645,
+    "n_a": 30,
+    "n_b": 2
+   },
+   "Normal_Ecto_vs_HSIL": {
+    "u": 0.0,
+    "p_raw": 0.06451612903225806,
+    "p_bonf5": 0.3225806451612903,
+    "n_a": 30,
+    "n_b": 1
+   },
+   "Normal_Ecto_vs_ADC": {
+    "u": 0.0,
+    "p_raw": 0.06451612903225806,
+    "p_bonf5": 0.3225806451612903,
+    "n_a": 30,
+    "n_b": 1
+   },
+   "Normal_vs_SCC": {
+    "u": 0.0,
+    "p_raw": 0.6666666666666666,
+    "p_bonf5": 1.0,
+    "n_a": 1,
+    "n_b": 2
+   },
+   "HSIL_vs_SCC": {
+    "u": 0.0,
+    "p_raw": 0.6666666666666666,
+    "p_bonf5": 1.0,
+    "n_a": 1,
+    "n_b": 2
+   }
+  },
+  "order": [
+   "N_HPV",
+   "ecto_P001",
+   "ecto_P004",
+   "ecto_P007",
+   "ecto_P008",
+   "ecto_P014",
+   "ecto_P016",
+   "ecto_P018",
+   "ecto_P020",
+   "ecto_P021",
+   "ecto_P023",
+   "ecto_P024",
+   "ecto_P026",
+   "ecto_P028",
+   "ecto_P031",
+   "ecto_P044",
+   "ecto_P045",
+   "ecto_P047",
+   "ecto_P050",
+   "ecto_P057",
+   "ecto_P067",
+   "ecto_P080",
+   "ecto_P081",
+   "ecto_P087",
+   "ecto_P097",
+   "ecto_P105",
+   "ecto_P107",
+   "ecto_P108",
+   "ecto_P114",
+   "ecto_P117",
+   "ecto_P118",
+   "HSIL_HPV",
+   "CA_HPV_1",
+   "CA_HPV_2",
+   "cervical_cancer_1"
+  ],
+  "top_deg": []
+ },
+ "ablation": {
+  "FULL": {
+   "n_samples": 35,
+   "hpv_proxy_auc": 0.9961,
+   "hpv_high_low_gap": null,
+   "moran_i": 0.9262,
+   "recon_mse_proxy": 0.0993,
+   "recon_mse": null,
+   "n_deg_perm": 5,
+   "hpv_gene_set_mode": "default",
+   "hpv_gene_set_size": 40,
+   "kendall_tau": 0.462,
+   "perm_p": 0.001,
+   "cin_kruskal_p": 0.0048,
+   "subtype_kruskal_p": 0.0195,
+   "order_len": 35
+  },
+  "NO-HPV": {
+   "n_samples": 35,
+   "hpv_proxy_auc": 0.9631,
+   "hpv_high_low_gap": null,
+   "moran_i": 0.9379,
+   "recon_mse_proxy": 0.1284,
+   "recon_mse": null,
+   "n_deg_perm": 4,
+   "hpv_gene_set_mode": "default",
+   "hpv_gene_set_size": 40,
+   "kendall_tau": 0.462,
+   "perm_p": 0.001,
+   "cin_kruskal_p": 0.0048,
+   "subtype_kruskal_p": 0.0195,
+   "order_len": 35
+  },
+  "NO-NEIGH": {
+   "n_samples": 35,
+   "hpv_proxy_auc": 0.9829,
+   "hpv_high_low_gap": null,
+   "moran_i": 0.8913,
+   "recon_mse_proxy": 0.1233,
+   "recon_mse": null,
+   "n_deg_perm": 4,
+   "hpv_gene_set_mode": "default",
+   "hpv_gene_set_size": 40,
+   "kendall_tau": 0.462,
+   "perm_p": 0.001,
+   "cin_kruskal_p": 0.0048,
+   "subtype_kruskal_p": 0.0195,
+   "order_len": 35
+  },
+  "BASELINE-CNN": {
+   "n_samples": 35,
+   "hpv_proxy_auc": 0.9988,
+   "hpv_high_low_gap": null,
+   "moran_i": 0.8874,
+   "recon_mse_proxy": 0.1051,
+   "recon_mse": null,
+   "n_deg_perm": 3,
+   "hpv_gene_set_mode": "default",
+   "hpv_gene_set_size": 40,
+   "kendall_tau": 0.462,
+   "perm_p": 0.001,
+   "cin_kruskal_p": 0.0048,
+   "subtype_kruskal_p": 0.0195,
+   "order_len": 35
+  },
+  "FM-UNI2": {
+   "n_samples": 35,
+   "hpv_proxy_auc": 0.9994,
+   "hpv_high_low_gap": null,
+   "moran_i": 0.8978,
+   "recon_mse_proxy": 0.0945,
+   "recon_mse": null,
+   "n_deg_perm": 4,
+   "hpv_gene_set_mode": "default",
+   "hpv_gene_set_size": 40,
+   "kendall_tau": 0.462,
+   "perm_p": 0.001,
+   "cin_kruskal_p": 0.0048,
+   "subtype_kruskal_p": 0.0195,
+   "order_len": 35
+  },
+  "HPV-ROBUST-A": {
+   "n_samples": 35,
+   "hpv_proxy_auc": 0.9958,
+   "hpv_high_low_gap": null,
+   "moran_i": 0.9095,
+   "recon_mse_proxy": 0.0946,
+   "recon_mse": null,
+   "n_deg_perm": 2,
+   "hpv_gene_set_mode": "dropout_20pct",
+   "hpv_gene_set_size": 32,
+   "kendall_tau": 0.462,
+   "perm_p": 0.001,
+   "cin_kruskal_p": 0.0048,
+   "subtype_kruskal_p": 0.0195,
+   "order_len": 35
+  },
+  "HPV-ROBUST-B": {
+   "n_samples": 35,
+   "hpv_proxy_auc": 0.9927,
+   "hpv_high_low_gap": null,
+   "moran_i": 0.9065,
+   "recon_mse_proxy": 0.0924,
+   "recon_mse": null,
+   "n_deg_perm": 14,
+   "hpv_gene_set_mode": "kegg_hpv",
+   "hpv_gene_set_size": 108,
+   "kendall_tau": 0.462,
+   "perm_p": 0.001,
+   "cin_kruskal_p": 0.0048,
+   "subtype_kruskal_p": 0.0195,
+   "order_len": 35
+  }
+ },
+ "baseline_ridge": [
+  {
+   "aggregate": {
+    "regressor": "ridge",
+    "n_valid_folds": 35,
+    "n_failed_folds": 0,
+    "mean_mse": 0.59659,
+    "mean_pearson": -0.0145,
+    "mean_hpv_overlap": 0.0,
+    "fit_seconds_sum": 506.0
+   },
+   "per_fold": [
+    {
+     "label": "loso_held=CA_HPV_1",
+     "regressor": "ridge",
+     "n_train": 45063,
+     "n_test": 1757,
+     "fit_seconds": 15.4,
+     "heldout_recon_mse": 0.96476,
+     "mean_per_gene_pearson": 0.0322,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=CA_HPV_2",
+     "regressor": "ridge",
+     "n_train": 45227,
+     "n_test": 1593,
+     "fit_seconds": 14.8,
+     "heldout_recon_mse": 0.8792,
+     "mean_per_gene_pearson": -0.0413,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=HSIL_HPV",
+     "regressor": "ridge",
+     "n_train": 46241,
+     "n_test": 579,
+     "fit_seconds": 14.8,
+     "heldout_recon_mse": 0.81536,
+     "mean_per_gene_pearson": -0.0441,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=N_HPV",
+     "regressor": "ridge",
+     "n_train": 45766,
+     "n_test": 1054,
+     "fit_seconds": 14.5,
+     "heldout_recon_mse": 0.61335,
+     "mean_per_gene_pearson": -0.0048,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=cervical_cancer_1",
+     "regressor": "ridge",
+     "n_train": 44039,
+     "n_test": 2781,
+     "fit_seconds": 14.5,
+     "heldout_recon_mse": 2.19292,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P001",
+     "regressor": "ridge",
+     "n_train": 45441,
+     "n_test": 1379,
+     "fit_seconds": 14.4,
+     "heldout_recon_mse": 0.42574,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P004",
+     "regressor": "ridge",
+     "n_train": 45564,
+     "n_test": 1256,
+     "fit_seconds": 14.4,
+     "heldout_recon_mse": 0.51262,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P007",
+     "regressor": "ridge",
+     "n_train": 45842,
+     "n_test": 978,
+     "fit_seconds": 14.5,
+     "heldout_recon_mse": 0.47905,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P008",
+     "regressor": "ridge",
+     "n_train": 45995,
+     "n_test": 825,
+     "fit_seconds": 15.2,
+     "heldout_recon_mse": 0.76517,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P014",
+     "regressor": "ridge",
+     "n_train": 44832,
+     "n_test": 1988,
+     "fit_seconds": 15.0,
+     "heldout_recon_mse": 0.50712,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P016",
+     "regressor": "ridge",
+     "n_train": 45980,
+     "n_test": 840,
+     "fit_seconds": 14.5,
+     "heldout_recon_mse": 0.6757,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P018",
+     "regressor": "ridge",
+     "n_train": 45012,
+     "n_test": 1808,
+     "fit_seconds": 14.2,
+     "heldout_recon_mse": 0.41002,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P020",
+     "regressor": "ridge",
+     "n_train": 43854,
+     "n_test": 2966,
+     "fit_seconds": 13.8,
+     "heldout_recon_mse": 0.38734,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P021",
+     "regressor": "ridge",
+     "n_train": 44989,
+     "n_test": 1831,
+     "fit_seconds": 14.3,
+     "heldout_recon_mse": 0.34732,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P023",
+     "regressor": "ridge",
+     "n_train": 45649,
+     "n_test": 1171,
+     "fit_seconds": 14.7,
+     "heldout_recon_mse": 0.65087,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P024",
+     "regressor": "ridge",
+     "n_train": 45653,
+     "n_test": 1167,
+     "fit_seconds": 14.7,
+     "heldout_recon_mse": 0.39316,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P026",
+     "regressor": "ridge",
+     "n_train": 45389,
+     "n_test": 1431,
+     "fit_seconds": 14.6,
+     "heldout_recon_mse": 0.511,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P028",
+     "regressor": "ridge",
+     "n_train": 46141,
+     "n_test": 679,
+     "fit_seconds": 14.5,
+     "heldout_recon_mse": 0.82277,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P031",
+     "regressor": "ridge",
+     "n_train": 46060,
+     "n_test": 760,
+     "fit_seconds": 14.2,
+     "heldout_recon_mse": 0.44594,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P044",
+     "regressor": "ridge",
+     "n_train": 44816,
+     "n_test": 2004,
+     "fit_seconds": 14.6,
+     "heldout_recon_mse": 0.45442,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P045",
+     "regressor": "ridge",
+     "n_train": 46123,
+     "n_test": 697,
+     "fit_seconds": 13.9,
+     "heldout_recon_mse": 0.72424,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P047",
+     "regressor": "ridge",
+     "n_train": 45640,
+     "n_test": 1180,
+     "fit_seconds": 15.2,
+     "heldout_recon_mse": 1.12227,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P050",
+     "regressor": "ridge",
+     "n_train": 45128,
+     "n_test": 1692,
+     "fit_seconds": 14.0,
+     "heldout_recon_mse": 0.4341,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P057",
+     "regressor": "ridge",
+     "n_train": 44433,
+     "n_test": 2387,
+     "fit_seconds": 14.7,
+     "heldout_recon_mse": 0.39701,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P067",
+     "regressor": "ridge",
+     "n_train": 44071,
+     "n_test": 2749,
+     "fit_seconds": 14.0,
+     "heldout_recon_mse": 0.44479,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P080",
+     "regressor": "ridge",
+     "n_train": 45696,
+     "n_test": 1124,
+     "fit_seconds": 14.8,
+     "heldout_recon_mse": 0.36554,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P081",
+     "regressor": "ridge",
+     "n_train": 45815,
+     "n_test": 1005,
+     "fit_seconds": 14.5,
+     "heldout_recon_mse": 0.39633,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P087",
+     "regressor": "ridge",
+     "n_train": 45780,
+     "n_test": 1040,
+     "fit_seconds": 13.7,
+     "heldout_recon_mse": 0.51081,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P097",
+     "regressor": "ridge",
+     "n_train": 45540,
+     "n_test": 1280,
+     "fit_seconds": 14.7,
+     "heldout_recon_mse": 0.40321,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P105",
+     "regressor": "ridge",
+     "n_train": 46108,
+     "n_test": 712,
+     "fit_seconds": 14.3,
+     "heldout_recon_mse": 0.40974,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P107",
+     "regressor": "ridge",
+     "n_train": 46402,
+     "n_test": 418,
+     "fit_seconds": 14.2,
+     "heldout_recon_mse": 0.439,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P108",
+     "regressor": "ridge",
+     "n_train": 46513,
+     "n_test": 307,
+     "fit_seconds": 14.8,
+     "heldout_recon_mse": 0.78428,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P114",
+     "regressor": "ridge",
+     "n_train": 45851,
+     "n_test": 969,
+     "fit_seconds": 13.7,
+     "heldout_recon_mse": 0.33109,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P117",
+     "regressor": "ridge",
+     "n_train": 45537,
+     "n_test": 1283,
+     "fit_seconds": 14.1,
+     "heldout_recon_mse": 0.32954,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    },
+    {
+     "label": "loso_held=ecto_P118",
+     "regressor": "ridge",
+     "n_train": 45690,
+     "n_test": 1130,
+     "fit_seconds": 13.8,
+     "heldout_recon_mse": 0.53486,
+     "mean_per_gene_pearson": NaN,
+     "hpv_top50_overlap": 0.0
+    }
+   ]
+  }
+ ],
+ "baseline_hpv_auc": [
+  {
+   "regressor": "ridge",
+   "n_samples": 35,
+   "n_valid_folds": 16,
+   "n_hpv_genes_in_final_panel": 108,
+   "mean_auc": 0.4967,
+   "std_auc": 0.0205,
+   "median_auc": 0.5008,
+   "per_fold": [
+    {
+     "held_out": "cervical_cancer_1",
+     "n_spots": 2781,
+     "auc": null,
+     "true_hpv_mean": 0.6307082176208496,
+     "pred_hpv_mean": 0.172341745667691,
+     "fit_seconds": 20.6
+    },
+    {
+     "held_out": "P001",
+     "n_spots": 1379,
+     "auc": null,
+     "true_hpv_mean": 0.17604221403598785,
+     "pred_hpv_mean": 0.20371902455957108,
+     "fit_seconds": 20.8
+    },
+    {
+     "held_out": "P004",
+     "n_spots": 1256,
+     "auc": 0.4968152866242038,
+     "true_hpv_mean": 0.1780472993850708,
+     "pred_hpv_mean": 0.20357308742514502,
+     "fit_seconds": 21.3
+    },
+    {
+     "held_out": "P007",
+     "n_spots": 978,
+     "auc": 0.5020449897750511,
+     "true_hpv_mean": 0.20593535900115967,
+     "pred_hpv_mean": 0.20273196099498053,
+     "fit_seconds": 21.0
+    },
+    {
+     "held_out": "P008",
+     "n_spots": 825,
+     "auc": null,
+     "true_hpv_mean": 0.28249138593673706,
+     "pred_hpv_mean": 0.20120408001361384,
+     "fit_seconds": 21.1
+    },
+    {
+     "held_out": "P014",
+     "n_spots": 1988,
+     "auc": 0.5020120724346077,
+     "true_hpv_mean": 0.17621752619743347,
+     "pred_hpv_mean": 0.20413324102819402,
+     "fit_seconds": 21.6
+    },
+    {
+     "held_out": "P016",
+     "n_spots": 840,
+     "auc": 0.4976190476190476,
+     "true_hpv_mean": 0.21627895534038544,
+     "pred_hpv_mean": 0.20253083119240872,
+     "fit_seconds": 21.3
+    },
+    {
+     "held_out": "P018",
+     "n_spots": 1808,
+     "auc": null,
+     "true_hpv_mean": 0.13257400691509247,
+     "pred_hpv_mean": 0.20597874141313713,
+     "fit_seconds": 21.0
+    },
+    {
+     "held_out": "P020",
+     "n_spots": 2966,
+     "auc": null,
+     "true_hpv_mean": 0.10633870959281921,
+     "pred_hpv_mean": 0.21016693985040993,
+     "fit_seconds": 20.5
+    },
+    {
+     "held_out": "P021",
+     "n_spots": 1831,
+     "auc": 0.5005065330230893,
+     "true_hpv_mean": 0.0706295445561409,
+     "pred_hpv_mean": 0.2088556883478826,
+     "fit_seconds": 20.7
+    },
+    {
+     "held_out": "P023",
+     "n_spots": 1171,
+     "auc": null,
+     "true_hpv_mean": 0.2591954171657562,
+     "pred_hpv_mean": 0.2011833029312799,
+     "fit_seconds": 21.0
+    },
+    {
+     "held_out": "P024",
+     "n_spots": 1167,
+     "auc": 0.5025817100965718,
+     "true_hpv_mean": 0.10349896550178528,
+     "pred_hpv_mean": 0.20565609744497143,
+     "fit_seconds": 21.1
+    },
+    {
+     "held_out": "P026",
+     "n_spots": 1431,
+     "auc": 0.4993124194241512,
+     "true_hpv_mean": 0.16782937943935394,
+     "pred_hpv_mean": 0.2040454667505432,
+     "fit_seconds": 21.3
+    },
+    {
+     "held_out": "P028",
+     "n_spots": 679,
+     "auc": 0.504403088669096,
+     "true_hpv_mean": 0.33316829800605774,
+     "pred_hpv_mean": 0.20065645441852178,
+     "fit_seconds": 22.0
+    },
+    {
+     "held_out": "P031",
+     "n_spots": 760,
+     "auc": 0.5105263157894736,
+     "true_hpv_mean": 0.14661283791065216,
+     "pred_hpv_mean": 0.20384641650069749,
+     "fit_seconds": 21.6
+    },
+    {
+     "held_out": "P044",
+     "n_spots": 2004,
+     "auc": null,
+     "true_hpv_mean": 0.1751929372549057,
+     "pred_hpv_mean": 0.20419599616344464,
+     "fit_seconds": 21.8
+    },
+    {
+     "held_out": "P045",
+     "n_spots": 697,
+     "auc": null,
+     "true_hpv_mean": 0.2314734160900116,
+     "pred_hpv_mean": 0.20232120982721952,
+     "fit_seconds": 21.2
+    },
+    {
+     "held_out": "P047",
+     "n_spots": 1180,
+     "auc": null,
+     "true_hpv_mean": 0.42081940174102783,
+     "pred_hpv_mean": 0.19648014672580633,
+     "fit_seconds": 21.8
+    },
+    {
+     "held_out": "P050",
+     "n_spots": 1692,
+     "auc": null,
+     "true_hpv_mean": 0.15411759912967682,
+     "pred_hpv_mean": 0.20485875868159173,
+     "fit_seconds": 21.6
+    },
+    {
+     "held_out": "P057",
+     "n_spots": 2387,
+     "auc": null,
+     "true_hpv_mean": 0.13995420932769775,
+     "pred_hpv_mean": 0.2066094933743429,
+     "fit_seconds": 20.3
+    },
+    {
+     "held_out": "P067",
+     "n_spots": 2749,
+     "auc": null,
+     "true_hpv_mean": 0.1559547483921051,
+     "pred_hpv_mean": 0.20610158801551587,
+     "fit_seconds": 19.8
+    },
+    {
+     "held_out": "P080",
+     "n_spots": 1124,
+     "auc": 0.5000063322600152,
+     "true_hpv_mean": 0.12115565687417984,
+     "pred_hpv_mean": 0.2050608048089741,
+     "fit_seconds": 22.6
+    },
+    {
+     "held_out": "P081",
+     "n_spots": 1005,
+     "auc": null,
+     "true_hpv_mean": 0.16581490635871887,
+     "pred_hpv_mean": 0.20371722446829807,
+     "fit_seconds": 20.8
+    },
+    {
+     "held_out": "P087",
+     "n_spots": 1040,
+     "auc": null,
+     "true_hpv_mean": 0.2334730327129364,
+     "pred_hpv_mean": 0.202025192922464,
+     "fit_seconds": 20.5
+    },
+    {
+     "held_out": "P097",
+     "n_spots": 1280,
+     "auc": null,
+     "true_hpv_mean": 0.15922434628009796,
+     "pred_hpv_mean": 0.20418218701876717,
+     "fit_seconds": 21.2
+    },
+    {
+     "held_out": "P105",
+     "n_spots": 712,
+     "auc": 0.5,
+     "true_hpv_mean": 0.1720784604549408,
+     "pred_hpv_mean": 0.20333876780280738,
+     "fit_seconds": 21.1
+    },
+    {
+     "held_out": "P107",
+     "n_spots": 418,
+     "auc": null,
+     "true_hpv_mean": 0.18827447295188904,
+     "pred_hpv_mean": 0.20295345555504832,
+     "fit_seconds": 21.0
+    },
+    {
+     "held_out": "P108",
+     "n_spots": 307,
+     "auc": null,
+     "true_hpv_mean": 0.2929076552391052,
+     "pred_hpv_mean": 0.20214083399106747,
+     "fit_seconds": 20.5
+    },
+    {
+     "held_out": "P114",
+     "n_spots": 969,
+     "auc": 0.501022407770299,
+     "true_hpv_mean": 0.14560168981552124,
+     "pred_hpv_mean": 0.20416305376206925,
+     "fit_seconds": 20.8
+    },
+    {
+     "held_out": "P117",
+     "n_spots": 1283,
+     "auc": null,
+     "true_hpv_mean": 0.11131308227777481,
+     "pred_hpv_mean": 0.205701095900448,
+     "fit_seconds": 20.7
+    },
+    {
+     "held_out": "P118",
+     "n_spots": 1130,
+     "auc": null,
+     "true_hpv_mean": 0.22387835383415222,
+     "pred_hpv_mean": 0.202221988289712,
+     "fit_seconds": 20.7
+    },
+    {
+     "held_out": "CA_HPV_1",
+     "n_spots": 1757,
+     "auc": 0.48352860078625276,
+     "true_hpv_mean": 0.565079391002655,
+     "pred_hpv_mean": 0.2996683289781813,
+     "fit_seconds": 19.9
+    },
+    {
+     "held_out": "CA_HPV_2",
+     "n_spots": 1593,
+     "auc": 0.5054680554592285,
+     "true_hpv_mean": 0.15988688170909882,
+     "pred_hpv_mean": 0.5209480453295804,
+     "fit_seconds": 20.4
+    },
+    {
+     "held_out": "HSIL_HPV",
+     "n_spots": 579,
+     "auc": 0.4222169192220499,
+     "true_hpv_mean": 0.2813309133052826,
+     "pred_hpv_mean": 0.4327430767399566,
+     "fit_seconds": 21.0
+    },
+    {
+     "held_out": "N_HPV",
+     "n_spots": 1054,
+     "auc": 0.5189987361780729,
+     "true_hpv_mean": 0.46220117807388306,
+     "pred_hpv_mean": 0.3974008261962106,
+     "fit_seconds": 21.0
+    }
+   ]
+  },
+  {
+   "regressor": "mlp",
+   "n_samples": 35,
+   "n_valid_folds": 33,
+   "n_hpv_genes_in_final_panel": 108,
+   "mean_auc": 0.4973,
+   "std_auc": 0.0198,
+   "median_auc": 0.5,
+   "per_fold": [
+    {
+     "held_out": "cervical_cancer_1",
+     "n_spots": 2781,
+     "auc": null,
+     "true_hpv_mean": 0.6307082176208496,
+     "pred_hpv_mean": 0.17069870233535767,
+     "fit_seconds": 21.4
+    },
+    {
+     "held_out": "P001",
+     "n_spots": 1379,
+     "auc": 0.49927641404261586,
+     "true_hpv_mean": 0.17604221403598785,
+     "pred_hpv_mean": 0.20902323722839355,
+     "fit_seconds": 14.4
+    },
+    {
+     "held_out": "P004",
+     "n_spots": 1256,
+     "auc": 0.5031847133757963,
+     "true_hpv_mean": 0.1780472993850708,
+     "pred_hpv_mean": 0.2061631977558136,
+     "fit_seconds": 22.6
+    },
+    {
+     "held_out": "P007",
+     "n_spots": 978,
+     "auc": 0.5020449897750511,
+     "true_hpv_mean": 0.20593535900115967,
+     "pred_hpv_mean": 0.21306614577770233,
+     "fit_seconds": 18.7
+    },
+    {
+     "held_out": "P008",
+     "n_spots": 825,
+     "auc": 0.5,
+     "true_hpv_mean": 0.28249138593673706,
+     "pred_hpv_mean": 0.19718243181705475,
+     "fit_seconds": 19.8
+    },
+    {
+     "held_out": "P014",
+     "n_spots": 1988,
+     "auc": 0.49798792756539234,
+     "true_hpv_mean": 0.17621752619743347,
+     "pred_hpv_mean": 0.20468972623348236,
+     "fit_seconds": 15.2
+    },
+    {
+     "held_out": "P016",
+     "n_spots": 840,
+     "auc": 0.5023809523809524,
+     "true_hpv_mean": 0.21627895534038544,
+     "pred_hpv_mean": 0.2107144445180893,
+     "fit_seconds": 17.1
+    },
+    {
+     "held_out": "P018",
+     "n_spots": 1808,
+     "auc": 0.4988938053097345,
+     "true_hpv_mean": 0.13257400691509247,
+     "pred_hpv_mean": 0.21271170675754547,
+     "fit_seconds": 13.5
+    },
+    {
+     "held_out": "P020",
+     "n_spots": 2966,
+     "auc": 0.5013936835442577,
+     "true_hpv_mean": 0.10633870959281921,
+     "pred_hpv_mean": 0.21593379974365234,
+     "fit_seconds": 17.4
+    },
+    {
+     "held_out": "P021",
+     "n_spots": 1831,
+     "auc": 0.5005065330230893,
+     "true_hpv_mean": 0.0706295445561409,
+     "pred_hpv_mean": 0.2125225067138672,
+     "fit_seconds": 18.5
+    },
+    {
+     "held_out": "P023",
+     "n_spots": 1171,
+     "auc": 0.5,
+     "true_hpv_mean": 0.2591954171657562,
+     "pred_hpv_mean": 0.19987012445926666,
+     "fit_seconds": 21.0
+    },
+    {
+     "held_out": "P024",
+     "n_spots": 1167,
+     "auc": 0.4974182899034281,
+     "true_hpv_mean": 0.10349896550178528,
+     "pred_hpv_mean": 0.21147264540195465,
+     "fit_seconds": 20.2
+    },
+    {
+     "held_out": "P026",
+     "n_spots": 1431,
+     "auc": 0.4993124194241512,
+     "true_hpv_mean": 0.16782937943935394,
+     "pred_hpv_mean": 0.20703312754631042,
+     "fit_seconds": 18.5
+    },
+    {
+     "held_out": "P028",
+     "n_spots": 679,
+     "auc": 0.504403088669096,
+     "true_hpv_mean": 0.33316829800605774,
+     "pred_hpv_mean": 0.19733111560344696,
+     "fit_seconds": 17.3
+    },
+    {
+     "held_out": "P031",
+     "n_spots": 760,
+     "auc": 0.5105263157894736,
+     "true_hpv_mean": 0.14661283791065216,
+     "pred_hpv_mean": 0.2058441936969757,
+     "fit_seconds": 18.6
+    },
+    {
+     "held_out": "P044",
+     "n_spots": 2004,
+     "auc": 0.4970059880239521,
+     "true_hpv_mean": 0.1751929372549057,
+     "pred_hpv_mean": 0.19768355786800385,
+     "fit_seconds": 18.9
+    },
+    {
+     "held_out": "P045",
+     "n_spots": 697,
+     "auc": 0.5,
+     "true_hpv_mean": 0.2314734160900116,
+     "pred_hpv_mean": 0.20449194312095642,
+     "fit_seconds": 15.8
+    },
+    {
+     "held_out": "P047",
+     "n_spots": 1180,
+     "auc": 0.49491525423728816,
+     "true_hpv_mean": 0.42081940174102783,
+     "pred_hpv_mean": 0.19593976438045502,
+     "fit_seconds": 15.1
+    },
+    {
+     "held_out": "P050",
+     "n_spots": 1692,
+     "auc": 0.5011820330969268,
+     "true_hpv_mean": 0.15411759912967682,
+     "pred_hpv_mean": 0.20852041244506836,
+     "fit_seconds": 20.6
+    },
+    {
+     "held_out": "P057",
+     "n_spots": 2387,
+     "auc": null,
+     "true_hpv_mean": 0.13995420932769775,
+     "pred_hpv_mean": 0.20757828652858734,
+     "fit_seconds": 13.8
+    },
+    {
+     "held_out": "P067",
+     "n_spots": 2749,
+     "auc": 0.5,
+     "true_hpv_mean": 0.1559547483921051,
+     "pred_hpv_mean": 0.20859292149543762,
+     "fit_seconds": 14.8
+    },
+    {
+     "held_out": "P080",
+     "n_spots": 1124,
+     "auc": 0.4999936677399847,
+     "true_hpv_mean": 0.12115565687417984,
+     "pred_hpv_mean": 0.20393513143062592,
+     "fit_seconds": 20.0
+    },
+    {
+     "held_out": "P081",
+     "n_spots": 1005,
+     "auc": 0.4950119997148583,
+     "true_hpv_mean": 0.16581490635871887,
+     "pred_hpv_mean": 0.209817573428154,
+     "fit_seconds": 15.0
+    },
+    {
+     "held_out": "P087",
+     "n_spots": 1040,
+     "auc": 0.49038461538461536,
+     "true_hpv_mean": 0.2334730327129364,
+     "pred_hpv_mean": 0.20545178651809692,
+     "fit_seconds": 16.7
+    },
+    {
+     "held_out": "P097",
+     "n_spots": 1280,
+     "auc": 0.5,
+     "true_hpv_mean": 0.15922434628009796,
+     "pred_hpv_mean": 0.2105187475681305,
+     "fit_seconds": 33.2
+    },
+    {
+     "held_out": "P105",
+     "n_spots": 712,
+     "auc": 0.5,
+     "true_hpv_mean": 0.1720784604549408,
+     "pred_hpv_mean": 0.20279762148857117,
+     "fit_seconds": 17.0
+    },
+    {
+     "held_out": "P107",
+     "n_spots": 418,
+     "auc": 0.49999999999999994,
+     "true_hpv_mean": 0.18827447295188904,
+     "pred_hpv_mean": 0.20766733586788177,
+     "fit_seconds": 16.5
+    },
+    {
+     "held_out": "P108",
+     "n_spots": 307,
+     "auc": 0.5,
+     "true_hpv_mean": 0.2929076552391052,
+     "pred_hpv_mean": 0.2071579545736313,
+     "fit_seconds": 16.7
+    },
+    {
+     "held_out": "P114",
+     "n_spots": 969,
+     "auc": 0.501022407770299,
+     "true_hpv_mean": 0.14560168981552124,
+     "pred_hpv_mean": 0.2096083015203476,
+     "fit_seconds": 16.9
+    },
+    {
+     "held_out": "P117",
+     "n_spots": 1283,
+     "auc": 0.5007848950233282,
+     "true_hpv_mean": 0.11131308227777481,
+     "pred_hpv_mean": 0.2091473639011383,
+     "fit_seconds": 16.8
+    },
+    {
+     "held_out": "P118",
+     "n_spots": 1130,
+     "auc": 0.5017699115044247,
+     "true_hpv_mean": 0.22387835383415222,
+     "pred_hpv_mean": 0.20915889739990234,
+     "fit_seconds": 18.8
+    },
+    {
+     "held_out": "CA_HPV_1",
+     "n_spots": 1757,
+     "auc": 0.510395691936115,
+     "true_hpv_mean": 0.565079391002655,
+     "pred_hpv_mean": 0.30344119668006897,
+     "fit_seconds": 15.5
+    },
+    {
+     "held_out": "CA_HPV_2",
+     "n_spots": 1593,
+     "auc": 0.43626539220569605,
+     "true_hpv_mean": 0.15988688170909882,
+     "pred_hpv_mean": 0.5093278288841248,
+     "fit_seconds": 16.9
+    },
+    {
+     "held_out": "HSIL_HPV",
+     "n_spots": 579,
+     "auc": 0.41867915523207255,
+     "true_hpv_mean": 0.2813309133052826,
+     "pred_hpv_mean": 0.4375411570072174,
+     "fit_seconds": 15.4
+    },
+    {
+     "held_out": "N_HPV",
+     "n_spots": 1054,
+     "auc": 0.5461295003402598,
+     "true_hpv_mean": 0.46220117807388306,
+     "pred_hpv_mean": 0.354523241519928,
+     "fit_seconds": 17.4
+    }
+   ]
+  }
+ ],
+ "align_keys": [
+  "cervix_n",
+  "layer1_tcga_clinical",
+  "deg_passed_threshold",
+  "deg_background_n",
+  "layer1_hpv_hypergeom",
+  "layer2",
+  "layer3_cox",
+  "layer3b_cox_hpv_proxy",
+  "per_sample_score",
+  "top_degs",
+  "tme_markers",
+  "args"
+ ],
+ "tcga_layer3b": {
+  "univariate": {
+   "HR": 1.6883647438186282,
+   "HR_95CI_low": 1.0554271450330535,
+   "HR_95CI_high": 2.700873785163512,
+   "wald_p": 0.02888789663155676,
+   "concordance_index": 0.6200886872228524,
+   "n_samples": 302,
+   "n_events": 72
+  },
+  "age_adj": null
+ },
+ "tcga_layer3": {
+  "univariate": {
+   "HR": 1.209452424074542,
+   "HR_95CI_low": 0.7602564830367472,
+   "HR_95CI_high": 1.9240548403571875,
+   "wald_p": 0.42208011632243925,
+   "concordance_index": 0.5963700113437146,
+   "n_samples": 302,
+   "n_events": 72
+  }
+ },
+ "cross_cohort": {
+  "BREAST": [
+   {
+    "cohort": "breast_cancer_1",
+    "n_spots": 2518,
+    "moran_i": 0.1862,
+    "n_deg_perm_fdr05": 20,
+    "hpv_gene_overlap_in_deg": [
+     "GATA3",
+     "KPNA2",
+     "KRT18",
+     "KRT8",
+     "MX1",
+     "TOP2A"
+    ],
+    "n_hpv_overlap": 6
+   }
+  ],
+  "OVARIAN": [
+   {
+    "cohort": "ovarian_cancer_1",
+    "n_spots": 3455,
+    "moran_i": 0.5011,
+    "n_deg_perm_fdr05": 26,
+    "hpv_gene_overlap_in_deg": [
+     "CD4",
+     "IL2RG",
+     "IRF1",
+     "KRT18",
+     "KRT8",
+     "MX1",
+     "MYC",
+     "OAS1",
+     "STAT1"
+    ],
+    "n_hpv_overlap": 9
+   }
+  ],
+  "PROSTATE": [
+   {
+    "cohort": "prostate_cancer_1",
+    "n_spots": 4371,
+    "moran_i": 0.2697,
+    "n_deg_perm_fdr05": 8,
+    "hpv_gene_overlap_in_deg": [
+     "KRT18",
+     "KRT8",
+     "MYC"
+    ],
+    "n_hpv_overlap": 3
+   }
+  ]
+ },
+ "E_cohort": {
+  "breast_cancer_1": {
+   "hpv_auc": null,
+   "hpv_proxy_auc": 0.3346,
+   "moran_i": 0.8027,
+   "n_samples": 1
+  },
+  "ovarian_cancer_1": {
+   "hpv_auc": null,
+   "hpv_proxy_auc": 0.057,
+   "moran_i": 0.9099,
+   "n_samples": 1
+  },
+  "prostate_cancer_1": {
+   "hpv_auc": null,
+   "hpv_proxy_auc": 0.0298,
+   "moran_i": 0.8874,
+   "n_samples": 1
+  }
+ },
+ "tnbc": {
+  "hpv_auc": null,
+  "hpv_proxy_auc": 0.0156,
+  "moran_i": 0.7608,
+  "n_samples": 1,
+  "keys": [
+   "hpv_gene_set_mode",
+   "hpv_gene_set_size",
+   "lambda_hpv",
+   "hpv_proxy_auc",
+   "hpv_gene_high_low_gap",
+   "moran_i"
+  ]
+ },
+ "gsva": {
+  "n_slices_with_ssgsea": 0,
+  "mean_ssgsea_auc": null,
+  "std_ssgsea_auc": null,
+  "mean_spearman_ssgsea_vs_true": null,
+  "model_hpv_auc_from_results_full": 0.9914036889557373,
+  "delta_model_minus_ssgsea": null
+ },
+ "independent_pathway": [
+  {
+   "pathway": "KEGG_HPV_INFECTION",
+   "role": "TARGET",
+   "expected_auc": "high (~0.99)",
+   "n_valid_slices": 35,
+   "mean_auc_hpv_vs_pathway": 1.0,
+   "per_slice": [
+    {
+     "slice": "CA_HPV_1",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "CA_HPV_2",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "HSIL_HPV",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "N_HPV",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P001",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P004",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P007",
+     "auc_hpv_vs_pathway_label": 0.9999999999999999,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P008",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P014",
+     "auc_hpv_vs_pathway_label": 0.9999999999999999,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P016",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P018",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P020",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P021",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P023",
+     "auc_hpv_vs_pathway_label": 0.9999999999999999,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P024",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P026",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P028",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P031",
+     "auc_hpv_vs_pathway_label": 0.9999999999999999,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P044",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P045",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P047",
+     "auc_hpv_vs_pathway_label": 0.9999999999999999,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P050",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P057",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P067",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P080",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P081",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P087",
+     "auc_hpv_vs_pathway_label": 0.9999999999999999,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P097",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P105",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P107",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P108",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P114",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P117",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "P118",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 108
+    },
+    {
+     "slice": "cervical_cancer_1",
+     "auc_hpv_vs_pathway_label": 1.0,
+     "pathway_genes_found": 101
+    }
+   ]
+  },
+  {
+   "pathway": "KEGG_WNT_SIGNALING",
+   "role": "NEGATIVE_CONTROL",
+   "expected_auc": "low (~0.55-0.65)",
+   "n_valid_slices": 35,
+   "mean_auc_hpv_vs_pathway": 0.7904,
+   "per_slice": [
+    {
+     "slice": "CA_HPV_1",
+     "auc_hpv_vs_pathway_label": 0.9525691110056212,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "CA_HPV_2",
+     "auc_hpv_vs_pathway_label": 0.9160521070161697,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "HSIL_HPV",
+     "auc_hpv_vs_pathway_label": 0.9741276361986195,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "N_HPV",
+     "auc_hpv_vs_pathway_label": 0.918415590405904,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P001",
+     "auc_hpv_vs_pathway_label": 0.5959256664968585,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P004",
+     "auc_hpv_vs_pathway_label": 0.8828001630074881,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P007",
+     "auc_hpv_vs_pathway_label": 0.8126232741617357,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P008",
+     "auc_hpv_vs_pathway_label": 0.885837037037037,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P014",
+     "auc_hpv_vs_pathway_label": 0.8726093857748509,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P016",
+     "auc_hpv_vs_pathway_label": 0.786355776045358,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P018",
+     "auc_hpv_vs_pathway_label": 0.8562448037008058,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P020",
+     "auc_hpv_vs_pathway_label": 0.8670485659394643,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P021",
+     "auc_hpv_vs_pathway_label": 0.7734181072005968,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P023",
+     "auc_hpv_vs_pathway_label": 0.6609536912358761,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P024",
+     "auc_hpv_vs_pathway_label": 0.7637374363210794,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P026",
+     "auc_hpv_vs_pathway_label": 0.8419678983316097,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P028",
+     "auc_hpv_vs_pathway_label": 0.9138072322767374,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P031",
+     "auc_hpv_vs_pathway_label": 0.8657638633221959,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P044",
+     "auc_hpv_vs_pathway_label": 0.642641325487483,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P045",
+     "auc_hpv_vs_pathway_label": 0.7246433577966521,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P047",
+     "auc_hpv_vs_pathway_label": 0.5968424137762594,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P050",
+     "auc_hpv_vs_pathway_label": 0.5857434306594843,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P057",
+     "auc_hpv_vs_pathway_label": 0.8087497846428461,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P067",
+     "auc_hpv_vs_pathway_label": 0.8425573148869671,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P080",
+     "auc_hpv_vs_pathway_label": 0.6785444588283075,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P081",
+     "auc_hpv_vs_pathway_label": 0.714382779912635,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P087",
+     "auc_hpv_vs_pathway_label": 0.42679975129901854,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P097",
+     "auc_hpv_vs_pathway_label": 0.8000281060364101,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P105",
+     "auc_hpv_vs_pathway_label": 0.8813315236689893,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P107",
+     "auc_hpv_vs_pathway_label": 0.719790063624044,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P108",
+     "auc_hpv_vs_pathway_label": 0.9192699490662138,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P114",
+     "auc_hpv_vs_pathway_label": 0.6443996182913426,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P117",
+     "auc_hpv_vs_pathway_label": 0.7572885533008233,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "P118",
+     "auc_hpv_vs_pathway_label": 0.8840258428094484,
+     "pathway_genes_found": 56
+    },
+    {
+     "slice": "cervical_cancer_1",
+     "auc_hpv_vs_pathway_label": 0.8979443694497458,
+     "pathway_genes_found": 55
+    }
+   ]
+  },
+  {
+   "pathway": "HALLMARK_ANGIOGENESIS",
+   "role": "NEGATIVE_CONTROL",
+   "expected_auc": "low (~0.55-0.65)",
+   "n_valid_slices": 35,
+   "mean_auc_hpv_vs_pathway": 0.7305,
+   "per_slice": [
+    {
+     "slice": "CA_HPV_1",
+     "auc_hpv_vs_pathway_label": 0.9681489169815428,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "CA_HPV_2",
+     "auc_hpv_vs_pathway_label": 0.9631327906786127,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "HSIL_HPV",
+     "auc_hpv_vs_pathway_label": 0.9807393971216496,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "N_HPV",
+     "auc_hpv_vs_pathway_label": 0.8657492299655962,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P001",
+     "auc_hpv_vs_pathway_label": 0.5536550544952242,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P004",
+     "auc_hpv_vs_pathway_label": 0.8022215291301525,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P007",
+     "auc_hpv_vs_pathway_label": 0.7836870830806549,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P008",
+     "auc_hpv_vs_pathway_label": 0.851249265138154,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P014",
+     "auc_hpv_vs_pathway_label": 0.4476708821043789,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P016",
+     "auc_hpv_vs_pathway_label": 0.7658446712018141,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P018",
+     "auc_hpv_vs_pathway_label": 0.8838959147837473,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P020",
+     "auc_hpv_vs_pathway_label": 0.8115600087119064,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P021",
+     "auc_hpv_vs_pathway_label": 0.7805315834492118,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P023",
+     "auc_hpv_vs_pathway_label": 0.7319661983017391,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P024",
+     "auc_hpv_vs_pathway_label": 0.8320822262456206,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P026",
+     "auc_hpv_vs_pathway_label": 0.6182709363840246,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P028",
+     "auc_hpv_vs_pathway_label": 0.9345489093654016,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P031",
+     "auc_hpv_vs_pathway_label": 0.8972081394060284,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P044",
+     "auc_hpv_vs_pathway_label": 0.4929147952582021,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P045",
+     "auc_hpv_vs_pathway_label": 0.6296808615749432,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P047",
+     "auc_hpv_vs_pathway_label": 0.48062045567496603,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P050",
+     "auc_hpv_vs_pathway_label": 0.5744485242749917,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P057",
+     "auc_hpv_vs_pathway_label": 0.7498307859955401,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P067",
+     "auc_hpv_vs_pathway_label": 0.7978518047384322,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P080",
+     "auc_hpv_vs_pathway_label": 0.6158205082659832,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P081",
+     "auc_hpv_vs_pathway_label": 0.42011674970099716,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P087",
+     "auc_hpv_vs_pathway_label": 0.2190902366863905,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P097",
+     "auc_hpv_vs_pathway_label": 0.8331783036579679,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P105",
+     "auc_hpv_vs_pathway_label": 0.864258089976322,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P107",
+     "auc_hpv_vs_pathway_label": 0.536997595328066,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P108",
+     "auc_hpv_vs_pathway_label": 0.8761247877758914,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P114",
+     "auc_hpv_vs_pathway_label": 0.6913061819297438,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P117",
+     "auc_hpv_vs_pathway_label": 0.7490064260036678,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "P118",
+     "auc_hpv_vs_pathway_label": 0.8262583640327794,
+     "pathway_genes_found": 85
+    },
+    {
+     "slice": "cervical_cancer_1",
+     "auc_hpv_vs_pathway_label": 0.7381117886494231,
+     "pathway_genes_found": 84
+    }
+   ]
+  },
+  {
+   "pathway": "KEGG_P53_SIGNALING",
+   "role": "RELATED_CONTROL",
+   "expected_auc": "medium (~0.60-0.70) — p53 crosses with HPV pathway",
+   "n_valid_slices": 35,
+   "mean_auc_hpv_vs_pathway": 0.954,
+   "per_slice": [
+    {
+     "slice": "CA_HPV_1",
+     "auc_hpv_vs_pathway_label": 0.9659318546391245,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "CA_HPV_2",
+     "auc_hpv_vs_pathway_label": 0.9412713185694286,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "HSIL_HPV",
+     "auc_hpv_vs_pathway_label": 0.9843585762064023,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "N_HPV",
+     "auc_hpv_vs_pathway_label": 0.9718420446032385,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P001",
+     "auc_hpv_vs_pathway_label": 0.9223216167235638,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P004",
+     "auc_hpv_vs_pathway_label": 0.9815322449642626,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P007",
+     "auc_hpv_vs_pathway_label": 0.9597576335798005,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P008",
+     "auc_hpv_vs_pathway_label": 0.9939313255278132,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P014",
+     "auc_hpv_vs_pathway_label": 0.9750332852405903,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P016",
+     "auc_hpv_vs_pathway_label": 0.9685791264889394,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P018",
+     "auc_hpv_vs_pathway_label": 0.9130371042185627,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P020",
+     "auc_hpv_vs_pathway_label": 0.9238161522979568,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P021",
+     "auc_hpv_vs_pathway_label": 0.8685608347912426,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P023",
+     "auc_hpv_vs_pathway_label": 0.9706193212342046,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P024",
+     "auc_hpv_vs_pathway_label": 0.8776764484484962,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P026",
+     "auc_hpv_vs_pathway_label": 0.9440324064108334,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P028",
+     "auc_hpv_vs_pathway_label": 0.9905903482742464,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P031",
+     "auc_hpv_vs_pathway_label": 0.9959061815965199,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P044",
+     "auc_hpv_vs_pathway_label": 0.9399380804953561,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P045",
+     "auc_hpv_vs_pathway_label": 0.991485927902113,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P047",
+     "auc_hpv_vs_pathway_label": 0.9524195402298851,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P050",
+     "auc_hpv_vs_pathway_label": 0.9455254851040729,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P057",
+     "auc_hpv_vs_pathway_label": 0.9482895372094626,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P067",
+     "auc_hpv_vs_pathway_label": 0.9276235476292749,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P080",
+     "auc_hpv_vs_pathway_label": 0.9505746907948094,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P081",
+     "auc_hpv_vs_pathway_label": 0.9466127269270982,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P087",
+     "auc_hpv_vs_pathway_label": 0.9478057661778256,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P097",
+     "auc_hpv_vs_pathway_label": 0.9282377450980392,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P105",
+     "auc_hpv_vs_pathway_label": 0.9606338615512927,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P107",
+     "auc_hpv_vs_pathway_label": 0.9408336196038017,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P108",
+     "auc_hpv_vs_pathway_label": 0.9892826825127334,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P114",
+     "auc_hpv_vs_pathway_label": 0.943477462708232,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P117",
+     "auc_hpv_vs_pathway_label": 0.9644959126741123,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "P118",
+     "auc_hpv_vs_pathway_label": 0.9817323204636228,
+     "pathway_genes_found": 75
+    },
+    {
+     "slice": "cervical_cancer_1",
+     "auc_hpv_vs_pathway_label": 0.9813592975168142,
+     "pathway_genes_found": 70
+    }
+   ]
+  }
+ ],
+ "threshold": {
+  "recommended_threshold_eval": {
+   "FULL": {
+    "checks": [
+     {
+      "metric": "AUC",
+      "pass": true,
+      "value": 0.9914036889557373,
+      "threshold": 0.8
+     },
+     {
+      "metric": "Moran_I",
+      "pass": true,
+      "value": 0.8664757383157715,
+      "threshold": 0.7
+     }
+    ],
+    "all_pass": true
+   },
+   "ablations": {
+    "NO-NEIGH": {
+     "checks": [
+      {
+       "metric": "AUC",
+       "pass": true,
+       "value": 0.9967688785144063,
+       "threshold": 0.8
+      },
+      {
+       "metric": "Moran_I",
+       "pass": false,
+       "value": 0.5095374062882578,
+       "threshold": 0.7
+      }
+     ],
+     "all_pass": false
+    },
+    "NO-HPV": {
+     "checks": [
+      {
+       "metric": "AUC",
+       "pass": true,
+       "value": 0.9995646859685957,
+       "threshold": 0.8
+      },
+      {
+       "metric": "Moran_I",
+       "pass": false,
+       "value": 0.5458471508468001,
+       "threshold": 0.7
+      }
+     ],
+     "all_pass": false
+    }
+   }
+  },
+  "single_metric_sweeps": {
+   "AUC": [
+    {
+     "threshold": 0.6,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.65,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.7,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.75,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.8,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.85,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.9,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.95,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    }
+   ],
+   "Moran_I": [
+    {
+     "threshold": 0.5,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": true,
+       "passed": 2,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": true,
+       "passed": 2,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.55,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.6,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.65,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.7,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.75,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.8,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    }
+   ],
+   "Kendall_tau": [
+    {
+     "threshold": 0.1,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.15,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.2,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.25,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.3,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    },
+    {
+     "threshold": 0.35,
+     "FULL_all_pass": true,
+     "FULL_passed": 2,
+     "FULL_total": 2,
+     "ablations": {
+      "NO-NEIGH": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      },
+      "NO-HPV": {
+       "all_pass": false,
+       "passed": 1,
+       "total": 2
+      }
+     }
+    }
+   ]
+  }
+ }
+}

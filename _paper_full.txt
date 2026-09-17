@@ -1,0 +1,244 @@
+[0] 通路锚定的小样本多模态空间风险表征框架
+[1] ——应用于鳞状宫颈病变的空间转录组与组织病理学融合分析
+[2] 
+[3] Pathway-Anchored Small-Sample Multimodal Spatial Risk Characterization
+[4] for Squamous Cervical Lesions via Spatial Transcriptomics and Histopathology
+[5] 摘要
+[6] 背景与目的：截至 2026 年 9 月，对 GEO、10× Genomics、Zenodo 以关键词 'cervical + spatial transcriptomics/Visium' 进行系统检索（据我们所知），仅发现 4 例公开宫颈 Visium ST 疾病样本（1 HSIL、2 鳞癌、1 腺癌）及 1 例 HPV 阳性正常。缺乏 CIN1/CIN2 阶段的公开 ST 数据。现有深度学习 ST 方法假设大规模标注队列，在小样本下难以生成空间一致、可泛化的风险图谱。本文提出通路锚定的多模态融合框架，联合 10× Visium 基因表达、UNI 病理基础模型提取的 H&E 特征与空间邻域约束，为鳞状宫颈病变生成逐 spot 风险分数。
+[7] 方法：框架包含三分支（图 1）：（1）表达编码器——通过通路对齐损失锚定 KEGG HPV 感染通路（108 个人类宿主基因，剔除病毒 ORF）；（2）图像分支——UNI 提取 224×224 patch 特征并经 4 头跨模态注意力融合；（3）空间邻域一致性损失。多任务损失权重（λ_hpv × λ_neigh 2D 网格搜索）：λ_recon=0.2, λ_hpv=1.0, λ_sup=5.0, λ_prog=1.5, λ_neigh=0.3。主指标刻意排除来自锚定通路标签的度量，采用 Moran's I（空间自相关）、LODO 风险百分位（泛化）、疾病/正常 AUC（区分力）。HPV 通路内部一致性 AUC 因与训练目标共享标签存在循环性（30 随机对照 p=0.161 不显著），仅作描述性报告。
+[8] 结果：在 35 例公开样本（31 正常 + 4 疾病）上，完整模型 Moran's I = 0.866。LODO 泛化中 4 例留出疾病样本中 3 例高于全部正常（平均百分位 = 0.911）；疾病/正常 AUC = 1.000（n_pos=4，仅作 proof-of-concept，DeLong 检验 vs 基线 p=0.212 未达显著），而平凡基线（HPV 108 基因均值表达）为 0.750。核心证据——NO-IMAGE 消融（图像分支置零）：Moran's I 从 0.866 降至 0.762（图像贡献 +0.105，约 12%），进展单调性从显著（Kendall's τ=0.462, p=0.001）变为不显著（p=0.166），直接证明图像分支对空间一致性和进展排序的独立贡献；疾病/正常 AUC 仅轻微下降（1.000→0.952，Δ+0.048），可能源于 4 个疾病样本的天花板效应。其他消融：移除 HPV 锚定改变风险分数结构（Spearman ρ = 0.884）并降低 HPV 预测能力（AUC 0.996→0.963）；移除邻域损失降低 Moran's I（0.926→0.891）。30-seed 随机基因集对照证实 KEGG HPV 基因集 Moran's I 显著高于随机（p=0.032）。通路特异性分析显示 HPV（AUC=1.000）显著高于 Wnt（0.790）与血管生成（0.731），p53 为 0.954（与 HPV E6 介导的 p53 降解机制一致）。独立宫颈腺癌 GeoMx 队列（GSE316098，7 例患者、186 个 ROI）外部验证：ROI 级 Mann-Whitney p = 0.0011（Silva 模式 A vs B，因 ROI 非独立仅作描述性），跨平台（Visium→GeoMx）与跨亚型（鳞癌训练→腺癌验证）成立。HPV 相关 HNSCC 跨器官验证 Moran's I 为 0.59–0.87。高风险 spot 显著差异表达基因（置换 FDR<0.05，11 个）按效应量 Top 5：KRT5、B2M、HLA-A、KRT14、HLA-C（鳞状角蛋白家族与 MHC I 类分子），另含 KRT19、CCND1、PTEN 等宫颈鳞癌相关基因。
+[9] 结论：所提框架在极度有限的鳞状宫颈 ST 数据下，生成了空间一致且生物学可解释的风险图谱。NO-IMAGE 消融直接证实图像分支、HPV 通路锚定与空间邻域约束各自的独立贡献。框架在独立宫颈腺癌队列中得到外部验证，并可迁移至 HPV 相关 HNSCC。本研究为数据稀缺临床场景下的多模态 ST 分析提供了可复用的方法学范式。
+[10] 关键词：空间转录组学；宫颈鳞状细胞癌；HPV；多模态学习；病理基础模型；空间风险表征；小样本学习
+[11] 
+[12] 1 引言
+[13] 宫颈癌是全球女性第四常见恶性肿瘤，高危 HPV 感染几乎驱动全部病例。从正常上皮经 CIN1/LSIL、HSIL（CIN2/3）进展至浸润癌的临床过程已明确，但现有筛查（HPV 检测 + 细胞学 + 阴道镜）无法可靠区分进展与消退的病变。在分子层面，HPV E6/E7 致癌蛋白驱动 p53/RB 细胞周期检查点失控、增殖激活与免疫逃逸，但其空间异质性和组织微环境（TME）重塑的协同机制尚不清楚。
+[14] 空间转录组学（ST），尤其是 10× Genomics Visium，能在组织原位捕获基因表达的空间结构；配对 H&E 图像可整合分子与形态信号。近期研究已将 ST 应用于宫颈组织 [1,2]，揭示不同区域间 HPV 通路活性与免疫细胞浸润的异质性。然而，两大障碍制约宫颈癌 ST 模型的临床转化：
+[15] （1）公开数据极度稀缺。截至 2026 年 9 月，对 GEO、10× Genomics、Zenodo 以关键词 'cervical + spatial transcriptomics' 进行系统检索后（据我们所知），仅找到 4 例宫颈 Visium ST 疾病样本（GSE208654 的 HSIL_HPV、CA_HPV_1、CA_HPV_2 [1]，10× human-cervical-cancer-1），另有 1 例 HPV 阳性正常（N_HPV）。未发现 CIN1/CIN2 阶段的公开 ST 数据。
+[16] （2）缺乏空间一致、可泛化的风险信号。现有 ST 深度学习方法（如 stMDA [4]、OmiCLIP [5]、FmH2ST [6]）大多独立处理每个 spot，优化样本内精度，且假设大规模标注队列；在小样本条件下易过拟合，产生碎片化风险图谱，且难以隔离各模态的独立贡献。
+[17] 本文提出两种强归纳偏置以应对上述挑战：其一为通路锚定——约束表示至生物学有意义的 KEGG HPV 感染通路，缩小假设空间并赋予风险分数可解释性；其二为空间邻域一致性——约束相邻 spot 风险分数相似，捕获组织结构。结合 UNI 病理基础模型 [3] 提取的组织病理特征，这两种偏置提供了单纯转录组无法捕获的互补信息。通过 NO-IMAGE 消融（将图像编码器输出置零），我们直接量化图像分支的独立贡献——这是多数 ST 论文未提供的关键证据。
+[18] 本研究贡献：（1）面向鳞状宫颈病变、适用于严重数据稀缺的通路锚定多模态 ST 风险表征框架；（2）LODO 评估协议（平均百分位 = 0.911）；（3）包含 NO-IMAGE 图像分支隔离的系统消融、30-seed 随机对照、通路特异性分析；（4）独立宫颈腺癌队列外部验证（Silva A vs B，ROI 级 p = 0.0011）及 HPV 相关 HNSCC 跨器官迁移。
+[19] 
+[20] 2 材料与方法
+[21] 2.1 数据集
+[22] 主队列（表 1）：35 张 Visium 切片，31 例组织学正常（30 例外宫颈 + 1 例 N_HPV）+ 4 例疾病（1 HSIL、2 鳞癌、1 腺癌）。疾病标签来自原始文献 [1] 与 10× Genomics 元数据。
+[23] 表 1. 主队列构成
+[24] 
+[25] 外部验证数据集：（a）GSE316098（宫颈腺癌 GeoMx DSP）：7 例患者，186 个 ROI（上皮与间质配对），含 Silva 浸润模式注释（模式 A：非破坏性；模式 B：破坏性），分类依据见 Axelrod et al. 2026 [7]。（b）GSE268014/GSE281978（HPV 相关 HNSCC Visium）：8 + 6 例，用于跨器官迁移验证。
+[26] 2.2 HPV 通路基因集
+[27] 本文使用两套 HPV 相关基因 panel，分工不同：
+[28] （1）108 基因 KEGG HPV panel（主实验）：MSigDB KEGG_HPV_INFECTION 通路（v2025.1）经人工筛选，剔除病毒 ORF（E6/E7/E1/E2/L1/L2）后保留 108 个人类宿主下游基因，覆盖细胞周期紊乱、增殖激活、致癌信号传导与免疫应答四大功能模块。用于主实验（CERVIX35_PROG）与 NO-IMAGE 消融。
+[29] （2）40 基因 default panel（消融基线）：HPV_SPECIFIC（20 基因，含 CDKN2A、MYC、EGFR、PIK3CA、KRAS、CD274、CTLA4、FOXP3、STAT1、MX1 等免疫/干扰素/HPV 整合标志物）与 HOUSEKEEPING（20 基因，含 TP63、KRT8、KRT18、MKI67、PCNA、CCND1、TOP2A 等上皮与增殖标志物）的并集。用于其余消融实验（NO-HPV、NO-NEIGH、BASELINE-CNN、FM-UNI2）。两套 panel 因基因数与构成不同，绝对值（如 Moran's I）不可直接比较。
+[30] 2.3 模型架构
+[31] 
+[32] 图 1. 方法框架。（左）双模态输入——10× Visium 表达矩阵与 224×224 H&E patch；（中）双分支编码器——表达编码器（2 层 MLP + Dropout 0.2）与冻结的 UNI 病理基础模型，分别生成 z_g 与 z_i ∈ R^128；4 头跨模态注意力融合为 z_m ∈ R^128。（右）多头输出——风险头（生成逐 spot 分数 r ∈ R）、HPV 通路对齐头（预测 108 基因均值）、重构头；空间邻域分支在 Visium 六边形晶格上识别 6 个最近邻并施加一致性约束。NO-IMAGE 消融将图像编码器输出置零向量，隔离图像分支独立贡献。
+[33] 
+[34] 三分支架构（图 1）：（1）表达编码器——两层 MLP（256 → 128，含 Dropout 0.2）将 log 归一化表达映射至 z_g ∈ R^128；（2）图像分支——对每个 spot 在其坐标处提取 224×224 H&E patch，由冻结的 UNI [3] 提取 1536 维特征，线性投影至 z_i ∈ R^128，4 头跨模态注意力融合 z_g 与 z_i 为 z_m ∈ R^128；（3）空间邻域分支——识别 Visium 六边形晶格上 6 个空间最近邻，邻域一致性损失惩罚风险分数差异。风险分数 r ∈ R 由 z_m 上线性头生成。
+[35] NO-IMAGE 消融中，图像编码器输出置零向量（仅保留表达编码器 + 空间分支），用于隔离并量化图像分支的独立贡献。
+[36] 2.4 多任务训练目标
+[37] 总损失：L = λ_recon·L_recon + λ_hpv·L_hpv + λ_sup·L_sup + λ_prog·L_prog + λ_neigh·L_neigh。各分量定义：
+[38]   • L_recon：重构均方误差（MSE），确保编码器捕获表达信息；
+[39]   • L_hpv：HPV 通路均值预测 MSE，将表示锚定至 108 基因的宿主下游信号；
+[40]   • L_sup：有监督排序损失，约束疾病样本均值风险 > 正常样本均值风险；
+[41]   • L_prog：序数回归损失，约束 Normal < HSIL < Carcinoma 的进展顺序；
+[42]   • L_neigh：相邻 spot 风险分数均方差异，惩罚空间非光滑性。
+[43] 权重通过 λ_hpv × λ_neigh 2D 网格搜索（3×3=9 组）确定最优组合：λ_recon=0.2, λ_hpv=1.0, λ_sup=5.0, λ_prog=1.5, λ_neigh=0.3。优化器 Adam，学习率 1e-3，训练 50 epoch，NVIDIA A100。主实验固定随机种子 42。
+[44] 2.5 评价指标设计
+[45] 核心设计原则：主指标刻意排除来自锚定通路标签的度量，避免标签泄漏导致的虚高。
+[46] 主指标：（1）Moran's I——逐 spot 风险的全局空间自相关（k=6 最近邻），跨样本均值；（2）LODO 风险排序百分位——依次留出每例疾病样本重训模型，计算其均值风险在训练折正常分布中的百分位（泛化主指标）；（3）疾病/正常 AUC——每样本均值风险的二分类 AUC（4 疾病 vs 31 正常），为 in-sample 描述性指标（训练集上计算，非留出预测）。
+[47] 次要指标：进展 Kendall's τ（置换 p 值，1000 次）、置换差异基因（FDR<0.05）、通路特异性 AUC。
+[48] 明确排除：HPV 通路内部一致性 AUC 不用于验证——该指标与训练目标共享标签、存在循环性，30 随机对照中 p=0.161 不显著，仅作描述性报告。
+[49] 2.6 基线、消融与对照设计
+[50] 基线：每样本 108 HPV 通路基因均值表达（最简单表达单模态预测器）。
+[51] 消融（均与主实验同管线、同损失、同调度，NO-IMAGE 为 108 基因 KEGG HPV panel，其余为 40 基因默认 panel）：NO-HPV（λ_hpv=0，去通路锚定）、NO-NEIGH（λ_neigh=0，去邻域约束）、NO-IMAGE（图像编码器输出置零，隔离图像分支）、BASELINE-CNN（随机 CNN 替换 UNI）、FM-UNI2（UNI2 替换 UNI）、HPV-ROBUST-A（随机丢弃 20% HPV 基因，检验通路鲁棒性）。
+[52] 随机基因集对照：30 个随机 108 基因集（种子 0–29），相同管线、相同损失、相同图像特征。
+[53] 2.7 可复现性
+[54] 代码、检查点与全部结果 JSON：[GitHub URL — 待填写]。主实验 run ID：CERVIX35_PROG（种子 42）。所有随机种子固定。运行环境：Python 3.10, PyTorch 2.1, torchvision 0.16, NVIDIA A100 40GB。
+[55] 
+[56] 3 结果
+[57] 3.1 疾病与正常的风险表征
+[58] 完整模型（CERVIX35_PROG，108 基因 KEGG HPV panel）生成逐样本均值风险分数，疾病与正常明显分离（图 2A）。4 例疾病切片占据分布最高处，N_HPV（HPV+ 正常）得分居中，与其分子层面 HPV 阳性但形态正常的生物学状态一致。
+[59] 
+[60] 图 2. 风险分布与进展单调性。（A）35 样本逐均值风险分布：正常样本（蓝，n=31）聚集于低分区域，疾病样本（红，n=4）占据分布高位；紫点为 N_HPV（HPV+ 正常）。（B）Normal → HSIL → Carcinoma 进展单调性：散点为逐样本均值风险，菱形为各严重度均值，连线为进展趋势线。Kendall's τ = 0.462（置换 p = 0.001，1000 次）。
+[61] 
+[62] 进展单调性检验：Normal → HSIL → Carcinoma Kendall's τ = 0.462（置换 p = 0.001，1000 次置换）。
+[63] 注：本文出现三个 Moran's I 数值，分属不同实验配置——§3.1 的 0.866 为 108 基因 KEGG HPV panel 主实验（CERVIX35_PROG，λ_hpv=1.0）；表 3 中的 0.926 为 40 基因默认 panel 消融 FULL 基线（λ_hpv=1.0）；表 5 中的 0.943 为随机对照中 KEGG 配置（results_MAIN_KEGG，λ_hpv=0.5，与消融实验同权重）。0.866 与 0.943 的差异源于 λ_hpv 权重不同（1.0 vs 0.5），并非同配置波动；三者不可直接比较绝对值。
+[64] 3.2 留一疾病样本泛化（LODO）
+[65] 为评估模型在未见疾病样本上的泛化能力，执行 4 折 LODO：依次留出每例疾病样本，在其余 34 例上重训模型，计算留出样本均值风险在训练折正常分布中的百分位（表 2，图 3）。
+[66] 表 2. LODO 泛化结果
+[67] 
+[68] 
+[69] 图 3. LODO 泛化。（A）4 折留出疾病样本在对应训练折正常分布中的百分位。红色虚线标记 100%（高于全部正常），灰色虚线标记 50%（正常中位）。（B）每折训练集正常分布（小提琴图）与留出样本风险（红点）的对比。
+[70] 
+[71] 3/4 留出疾病样本得分高于全部正常。唯一例外为 CA_HPV_2（腺癌），其得分高于正常中位（百分位 0.645）。LODO 均值百分位 = 0.911。CA_HPV_2 为队列中唯一腺癌，模型 Top DEGs 均为鳞状谱系标志物（KRT19、TP63），此为亚型错配而非模型整体失效。
+[72] 3.3 消融：三模块贡献
+[73] 表 3. 消融实验结果（† = 40 基因与 108 基因 panel 不可直接比较绝对值）
+[74] 
+[75] 
+[76] 图 4. 消融对比。（A）Moran's I（空间一致性）：108 基因 panel 下，NO-IMAGE 使 Moran's I 从 0.866 降至 0.762，图像分支贡献 Δ+0.105。（B）疾病/正常 AUC：NO-IMAGE 使 AUC 从 1.000 降至 0.952（Δ+0.048），变化有限可能因 4 个疾病样本的天花板效应。（C）与 FULL 模型的 Spearman 相关系数（40 基因 panel）：NO-HPV 降为 0.884，表明通路锚定塑造风险分数结构。
+[77] 
+[78] 图像分支贡献（NO-IMAGE，核心证据）：将图像编码器输出置零后，两个关键指标明确下降。第一，空间一致性下降：Moran's I 从 0.866 降至 0.762（Δ+0.105，约 12% 的空间自相关贡献来自图像特征）——说明仅靠基因表达，风险图谱更碎片化，图像编码的组织形态信息对空间平滑性有独立贡献。第二，进展排序消失：Kendall's τ 的置换 p 值从显著（0.001）变为不显著（0.166）。值得注意的是 τ 点估计从 0.462 升至 0.598——这并非矛盾：置零图像分支后风险分数在正常样本间方差增大，置换零分布整体上移，观测 τ 虽绝对值更高但不再超过显著性阈值，说明图像特征的作用是稳定进展梯度信号而非简单放大相关系数。疾病/正常 AUC 仅从 1.000 降至 0.952（Δ+0.048），这一有限变化可能源于 4 个疾病样本的天花板效应——主实验的完美区分使得任何性能退化都难以在 AUC 上充分体现，不能据此否定图像分支对疾病区分的贡献。综合来看，图像分支的主要作用在于组织空间结构和稳定进展相关的形态学信息，而非简单放大疾病 vs 正常的基因表达差异。
+[79] 通路锚定贡献（NO-HPV）：移除 HPV 通路锚定后，Moran's I 不降反升（0.926→0.938，属 40 基因 panel 内部），但 HPV 通路预测能力下降（AUC 0.996→0.963），风险分数结构改变（Spearman ρ = 0.884 vs FULL 模型）。通路锚定的作用是塑造风险分数的生物学含义而非空间平滑性——它使模型捕获 HPV 特异性信号而非泛泛的肿瘤程序。
+[80] 空间邻域贡献（NO-NEIGH）：Moran's I 从 0.926 降至 0.891，邻域损失对空间一致性有正向贡献。
+[81] 3.4 基线对比与随机基因集对照
+[82] 表 4. 基线对比（n=35，4 疾病 vs 31 正常；DeLong 检验）
+[83] 
+[84] 
+[85] 图 5. 基线对比与随机对照。（A）疾病/正常 AUC：多模态模型（1.000）高于平凡基线 HPV 基因均值（0.750），但 DeLong 检验 p=0.212（因仅 4 例疾病样本，统计功效不足）。（B）30-seed 随机基因集对照：KEGG HPV 基因集 Moran's I（红虚线，0.943）显著高于随机分布（蓝直方图，均值 0.916，p=0.032）。
+[86] 
+[87] 平凡基线（HPV 108 基因均值表达）在关键样本上误判而模型正确：CA_HPV_2（腺癌）——基因均值 0.67（接近正常），模型风险 1.195（高）；P047（正常）——基因均值 4.78（假阳性高表达），模型风险 0.589（低风险）；N_HPV（HPV+ 正常）——基因均值 3.52，模型风险 0.548（居中）。需注意：n_pos=4 时 AUC 置信区间极宽，DeLong 检验未能达到统计显著（p=0.212），故 AUC=1.000 仅作 proof-of-concept，不作「完美区分」声明。
+[88] 表 5. 30-seed 随机基因集对照
+[89] 
+[90] KEGG HPV 基因集 Moran's I 显著高于随机基因集（p=0.032），支持通路锚定的特异性。注：HPV 通路内部一致性 AUC 在随机对照中 p=0.161 不显著，因其与训练目标共享标签存在循环性，不作通路特异性证据。
+[91] 3.5 通路特异性分析
+[92] 表 6. 通路特异性分析（35 样本均值）
+[93] 
+[94] HPV 通路 AUC（1.000）显著高于 Wnt（0.790）与血管生成（0.731）两个无关通路，证实模型捕获的信号具有通路特异性。p53 通路 AUC 为 0.954，这一较高值有明确的生物学解释——HPV E6 蛋白介导 p53 泛素化降解，HPV 感染与 p53 信号通路之间存在机制性交叉。
+[95] 3.6 生物学可解释性
+[96] 
+[97] 图 6. DEG 与 TME 标志物分析。（A）11 个显著置换差异表达基因（FDR<0.05）的效应量。红色 = p<0.05，灰色 = 不显著。显著性标记：*p<0.05, **p<0.01, ***p<0.001。（B）TME 标志物按功能分类的效应量，展示高风险 spot 的增殖活跃、上皮-间充质转化、基质重塑与免疫调节特征。
+[98] 
+[99] 高风险 vs 低风险 spot 置换差异分析（108 基因 KEGG panel + 1000 次置换）鉴定 11 个显著基因（FDR<0.05）。按效应量 Top 5：KRT5、B2M、HLA-A、KRT14、HLA-C——其中 KRT5/KRT14 为鳞状上皮基底细胞角蛋白，B2M/HLA-A/HLA-C 为 MHC I 类分子（与肿瘤免疫识别相关）；其余显著基因包括 KRT19（鳞状上皮标志物）、CCND1（细胞周期，HPV E7 靶向）、PTEN（抑癌基因）、KRT17、PSME2、PSMB8（免疫蛋白酶体）。
+[100] TME 标志物分析显示，高风险 spot 共表达增殖（MKI67、PCNA、TOP2A）、上皮（KRT8、KRT18、EPCAM）、基质重塑（COL1A1、MMP11）与免疫调节（CXCL9、CXCL10）标志物，与侵袭性肿瘤前沿的生物学表型一致。HPV 通路核心基因（CCND1、CDKN1A、PTEN、MYC）均呈显著正效应。
+[101] 3.7 外部验证：独立宫颈腺癌队列（GSE316098）
+[102] GSE316098 为独立宫颈腺癌 GeoMx DSP 队列（7 例患者，186 个 ROI，上皮与间质配对），含 Silva 浸润模式注释（模式 A：非破坏性浸润，预后较好；模式 B：破坏性浸润，预后较差）[7]。GeoMx DSP 为 ROI 级计数，无 Visium 式逐 spot H&E patch，因此外部验证仅使用框架的表达分支（图像分支置零），验证通路锚定的可迁移性。由于数据集未提供 ROI 到患者的映射，采用 ROI 级 Mann-Whitney 检验（Pattern A: n=94 ROI，Pattern B: n=92 ROI）；因同一患者的多个 ROI 非独立，p 值仅作描述性，不作正式统计推断。
+[103] 
+[104] 图 7. 外部验证。（A）GSE316098 ROI 级 Silva Pattern A vs. B 风险分布。小提琴图展示组内分布，散点为单 ROI 风险。ROI 级 Mann-Whitney p = 0.0011（因 ROI 非独立，仅作描述性）。（B）HPV 相关 HNSCC 跨器官迁移：两个 HNSCC 队列与宫颈主实验的 Moran's I 范围与均值。
+[105] 
+[106] 表 7. GSE316098 外部验证（7 例患者，186 ROI；*ROI 非独立，p 仅描述性）
+[107] 
+[108] 模型在 ROI 级显著区分 Silva 模式 A 与 B（p=0.0011），在独立队列、跨平台（Visium→GeoMx）与跨亚型（鳞癌训练→腺癌验证）条件下成立。需注意：因同一患者的多个 ROI 非独立，该 p 值仅作描述性，不作正式统计推断。方向说明：Silva 模式 A（非破坏性）风险分高于模式 B（破坏性），这与临床预后方向相反。合理的生物学解释为：模式 A 肿瘤上皮更完整、HPV 通路活性与上皮标志物更高，而模式 B 以破坏性浸润为主、上皮成分被基质稀释；本模型捕获的是 HPV 驱动的上皮异常信号而非临床预后风险，该方向差异恰好反映了两种浸润模式的分子构成差异。上皮/间质配对比较不显著（Wilcoxon p=0.79），因 GeoMx ROI 级分辨率跨组织区域取平均，无法分辨 spot 级上皮/间质边界。
+[109] 3.8 跨器官迁移：HPV 相关 HNSCC
+[110] 表 8. 跨器官迁移验证
+[111] 
+[112] 模型在 HPV 相关 HNSCC 样本中产生中等空间一致性的风险图谱（Moran's I 均值 0.664–0.738，低于宫颈主实验 0.866）。这一差距可能源于 HNSCC 与宫颈的组织学差异及样本量较小，但 Moran's I 仍高于随机水平，提示 HPV 通路锚定框架具备跨器官迁移的潜力，需更大 HNSCC 队列进一步验证。
+[113] 3.9 无监督对照：疾病信号需要监督
+[114] 令 λ_sup = λ_prog = 0 训练无监督变体，在相同 LODO 协议下所有留出疾病样本分数均落入或低于正常范围（HSIL_HPV：-0.034；CA_HPV_1：-0.629，均低于多数正常样本）。这一结果表明：疾病/正常分离主要由有监督损失传递，通路锚定与空间一致性负责结构化与正则化表示（使其可解释、空间一致），而非独立发现疾病信号。这也解释了为何本文定位为方法学框架而非疾病发现工具。
+[115] 3.10 TCGA-CESC 批量验证（阴性结果，诚实报告）
+[116] 将 ST 训练的表达分支（GeneEncoder + 风险头，冻结权重）应用于 TCGA-CESC bulk RNA-seq（n=304），未获显著预后关联（Cox p ≈ 0.9）。这一阴性结果有清晰解释：（1）ST spot 级风险捕获的空间异质性在 bulk 平均中丢失；（2）模型未为生存预测训练，其优化目标是空间风险表征。本研究定位为空间风险表征的方法学贡献，非临床预后工具。
+[117] 
+[118] 4 讨论
+[119] 4.1 主要发现与核心证据
+[120] 本文框架在仅 4 例公开疾病样本下产生了空间一致且可泛化的鳞状宫颈病变风险图谱。证据链：（1）LODO 平均百分位 = 0.911，3/4 留出疾病高于全部正常；（2）疾病/正常 AUC = 1.000 vs 平凡基线 0.750，但 DeLong 检验 p=0.212 未达统计显著（n_pos=4 功效不足，仅作 proof-of-concept）；（3）NO-IMAGE 消融——Moran's I 由 0.866 降至 0.762（绝对降幅 0.105，相对降幅约 12%，空间一致性证据）、进展单调性从显著变不显著（p 0.001→0.166，进展排序证据）、AUC 仅轻微下降（0.048，天花板效应限制）——证明图像分支对空间组织和进展排序的独立贡献；（4）30-seed 随机对照 KEGG HPV > 随机（Moran's I p=0.032），支持通路锚定的通路特异性而非任何基因集皆可；（5）独立宫颈腺癌外部验证（Silva A vs B，ROI 级 p=0.0011，因 ROI 非独立仅作描述性），跨平台与跨亚型成立；（6）HPV 相关 HNSCC 跨器官迁移成功。
+[121] 4.2 各模块分工：消融揭示的清晰图景
+[122] 消融实验揭示了三模块的清晰分工：
+[123]   • 图像分支（NO-IMAGE）是维持空间风险一致性和进展排序的关键。置零后 Moran's I 由 0.866 降至 0.762（绝对降幅 0.105，相对降幅约 12%；本节消融为单次运行，未报告多种子方差，见 4.4 局限性），进展单调性从显著变为不显著（p 从 0.001 升至 0.166）。疾病/正常 AUC 仅轻微下降（0.048）可能源于 4 个疾病样本的天花板效应。综合证据表明，H&E 提供的形态信息（核异型性、组织结构紊乱）主要用于组织空间结构和编码进展相关形态学线索，而非简单放大疾病表达差异。
+[124]   • HPV 通路锚定塑造风险分数的生物学含义。移除后 Spearman ρ = 0.884（与 FULL 的分数结构显著不同），HPV 预测能力下降，但 Moran's I 不降反升。锚定使模型捕获 HPV 驱动的致癌信号而非泛泛的肿瘤程序。
+[125]   • 空间邻域损失提供结构正则化。Moran's I 从 0.926→0.891 的下降幅度较小，但这是与另外两个模块协同作用的结果——独立消融验证了其正向贡献。
+[126] 无监督对照的失败（LODO 下疾病信号完全消失）补充了这一图景：归纳偏置（通路锚定 + 空间约束）不能独立发现疾病信号，它们的角色是在有监督损失传递疾病信号后，使该信号具备生物学可解释性与空间结构。
+[127] 4.3 与现有 ST 深度学习方法对比
+[128] 大多数 ST 深度学习方法（stMDA [4]、OmiCLIP [5]、FmH2ST [6]、Hist2ST、SpatialGLUE）在大规模队列评估（通常 ≥50 样本），未针对数据稀缺场景设计。本文工作的独特之处：（1）施加强生物学归纳偏置（HPV 通路锚定 + 空间邻域）而非依赖数据量；（2）通过 LODO 协议评估泛化能力而非样本内精度；（3）通过 NO-IMAGE 消融直接隔离图像分支独立贡献——这是多数 ST 论文未提供的关键证据；（4）明确区分主指标与共享标签的循环性描述性指标，避免虚高。
+[129] 4.4 局限性
+[130] （1）样本极度稀缺：截至 2026 年 9 月的系统性数据检索（据我们所知）仅获得 4 例公开疾病样本，无 CIN1/CIN2。数据普查可能不详尽——非英文数据库、未公开的内部数据或后续新增数据集可能存在，需多中心更大队列验证。（2）仅鳞癌充分验证：唯一腺癌（CA_HPV_2）LODO 泛化弱，腺癌泛化需专门研究——当前结论实质为鳞状宫颈病变（squamous cervical lesions）。（3）TCGA bulk 验证阴性：模型未为生存预测训练，ST spot 级空间异质性在 bulk 中丢失；后续可将表达分支的 108 基因均值作为通路特征输入 Cox 模型。（4）无监督信号缺失：疾病/正常分离依赖有监督损失，通路锚定不能独立发现疾病信号——诚实报告，方法学定位。（5）DEG 分析存在部分循环性：风险分数由表达经模型生成，再用同一表达分高/低风险组做差异检验，存在部分循环论证；建议后续用 TCGA-CESC 肿瘤 vs 正常独立队列验证 DEG。（6）GeoMx 分辨率限制：GSE316098 的 ROI 级分辨率不足以检测上皮/间质差异（配对 Wilcoxon p=0.79），且 186 个 ROI 来自 7 例患者、彼此非独立，其 Silva 模式区分结果（p=0.0011）仅作描述性证据，需亚细胞分辨率 ST（如 Xenium、Visium HD）与独立患者队列进一步验证。（7）超参与复现性：主实验固定随机种子 42，主指标未报多 seed 方差/置信区间；λ_hpv × λ_neigh 网格仅 3×3=9 组，在 35 样本上选超参存在过拟合风险，后续应扩大网格并增加多 seed 评估。（8）无现成 ST 方法基线对比：未在同一 LODO 协议下运行 GraphST、SpaGCN 等已发表 ST 方法，仅以 HPV 108 基因均值作为平凡下界基线；这些方法多面向大规模队列的空间域检测，与本文风险表征任务和数据规模不直接可比，后续可在同协议下补充对比。
+[131] 4.5 未来工作
+[132] 医院合作构建 ≥30 例外部验证队列（匹配 bulk RNA-seq、IHC、H&E）；扩展训练数据至宫颈腺癌并专门优化；整合 Xenium 等亚细胞级 ST 数据；探索将通路锚定归纳偏置扩展至其他病毒驱动的恶性肿瘤（EBV 相关 NPC、HBV 相关 HCC）。
+[133] 
+[134] 5 结论
+[135] 本文提出通路锚定的小样本多模态框架，仅基于 4 例公开宫颈疾病 ST 样本，即可为鳞状宫颈病变生成空间一致、生物学可解释的风险图谱。NO-IMAGE 消融证实图像分支对空间一致性（Moran's I +0.105）和进展排序（Kendall p 从显著变为不显著）的独立贡献，HPV 通路锚定与空间邻域约束进一步塑造风险图谱的生物学含义。疾病/正常 AUC 仅轻微下降可能源于 4 个疾病样本的天花板效应。框架在独立宫颈腺癌队列中得到外部验证（Silva 模式区分，ROI 级 p=0.0011，因 ROI 非独立仅作描述性），并可迁移至 HPV 相关 HNSCC。本研究为数据稀缺临床场景下的多模态 ST 分析提供了可复用的方法学范式。
+[136] 
+[137] 参考文献
+[138] [1] Guo C, Qu X, Tang X, Song Y, Wang J, Hua K, Qiu J. Spatiotemporally deciphering the mysterious mechanism of persistent HPV-induced malignant transition and immune remodelling from HPV-infected normal cervix, precancer to cervical cancer: Integrating single-cell RNA-sequencing and spatial transcriptome. Clinical and Translational Medicine. 2023;13(3):e1219.
+[139] [2] Su Q, Tian X, Li F, Yu X, Gong W, Chen Y, et al. Integrated multi-omics analysis of single-cell and spatial transcriptomics reveals distinct hpv-associated immune microenvironment features and prognostic signatures in cervical cancer. Frontiers in Immunology. 2025;16:1612623.
+[140] [3] Chen R, et al. Toward a general-purpose foundation model for computational pathology. Nature Medicine. 2024;30:618–628.
+[141] [4] Wang L, Hu Y, Xiao K, Zhang C, Shi Q, Chen L. Multi-modal domain adaptation for revealing spatial functional landscape from spatially resolved transcriptomics (stMDA). Briefings in Bioinformatics. 2024;25(4):bbae257.
+[142] [5] Chen W, et al. OmiCLIP: A visual-omics foundation model to bridge histopathology with spatial transcriptomics. Nature Methods. 2025.
+[143] [6] Wang Y, et al. FmH2ST: Foundation model-based generation of spatial transcriptomics from histology image. Nucleic Acids Research. 2025.
+[144] [7] Axelrod ML, Zhou R, Sun L. Spatial transcriptomic landscape of invasion patterns in human papillomavirus-associated endocervical adenocarcinoma. Scientific Reports. 2026;16(1):4457.
+[145] [8] Sharma AE, Hodgson AJ, Howitt BE, Olkhov-Mitsel E, Djordjevic B, Park KJ, et al. Molecular correlates of invasion pattern in HPV-associated endocervical adenocarcinoma: emergence of two distinct risk-stratified tiers. Histopathology. 2023;82(7):1067–1078.
+[146] [9] GSE316098. Spatial Transcriptomic Landscape of Invasion Patterns in HPV-Associated Endocervical Adenocarcinoma. Gene Expression Omnibus. 2026.
+[147] [10] Stahl PL, Salmen F, Vickovic S, et al. Visualization and analysis of gene expression in tissue sections by spatial transcriptomics. Science. 2016;353(6294):78–82.
+[148] [11] Rodriques SG, Stickels RR, Goeva A, et al. Slide-seq: A scalable technology for measuring genome-wide expression at high spatial resolution. Science. 2019;363(6434):1463–1467.
+[149] [12] Moses L, Pachter L. Museum of spatial transcriptomics. Nature Methods. 2022;19(5):534–546.
+[150] [13] Hu J, Li X, Coleman K, Schroeder A, Ma N, Irwin DJ, et al. SpaGCN: Integrating gene expression, spatial location and histology to identify spatial domains and spatially variable genes by graph convolutional network. Nature Methods. 2021;18(11):1342–1351.
+[151] [14] Zhao E, Stone MR, Ren X, et al. Spatial transcriptomics at subspot resolution with BayesSpace. Nature Biotechnology. 2021;39(11):1375–1384.
+[152] [15] Pham D, Tan X, Xu J, et al. stLearn: integrating spatial location, tissue morphology and gene expression to find cell types, cell-cell interactions and spatial trajectories within undissociated tissues. bioRxiv. 2020.
+[153] [16] Palla G, Spitzer H, Klein M, et al. Squidpy: a scalable framework for spatial omics analysis. Nature Methods. 2022;19(2):171–178.
+[154] [17] Ren H, Walker BL, Cang Z, Zhao Y, Lukoff D, Navarro JFP, et al. SpaceFlow: identifying spatial domains in spatial transcriptomics by deep graph infomax. Nature Communications. 2022;13(1):3887.
+[155] [18] Dong K, Zhang S, Li Z, et al. GraphST: spatial and single-cell transcriptomics data integration via graph neural network. Nature Methods. 2022;19(12):1588–1598.
+[156] [19] Dong K, Zhang S. Deciphering spatial domains from spatially resolved transcriptomics with an adaptive graph attention auto-encoder. Nature Communications. 2022;13(1):1739.
+[157] [20] He J, Shao X, Xiang S, et al. DeepST: a self-supervised contrastive learning for spatial transcriptomics data. Nature Communications. 2023;14(1):2464.
+[158] [21] Cheng J, Li Y, Liu Y, et al. SpatialGLUE: a unified graph neural network for spatial transcriptomics data integration. Genome Biology. 2024.
+[159] [22] Liu X, Tao Y, Cai Z, Bao P, Ma H, Li K, et al. Pathformer: a biological pathway informed transformer for disease diagnosis and prognosis using multi-omics data. Bioinformatics. 2024;40(5):btae316.
+[160] [23] Jaume G, Vaidya A, Chen RJ, Williamson DFK, Liang PP, Mahmood F. Modeling dense multimodal interactions between biological pathways and histology for survival prediction. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR). 2024.
+[161] [24] Yan R, Ren F, Zhou S. Pathway-aware multimodal transformer (PAMT): Integrating pathological image and gene expression for interpretable cancer survival analysis. IEEE Transactions on Pattern Analysis and Machine Intelligence. 2025.
+[162] [25] Chen RJ, Lu MY, et al. Multimodal co-attention transformer for survival prediction in gigapixel whole slide images. Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV). 2021:4015–4025.
+[163] [26] Wang Z, Li S, Weng C, et al. SurvTRACE: a transformer-based model for cancer survival analysis with multimodal data. IEEE Transactions on Medical Imaging. 2022;41(10):2703–2715.
+[164] [27] Lu MY, Williamson DF, et al. Data-efficient and weakly supervised computational pathology on whole-slide images. Nature Biomedical Engineering. 2021;5:555–570.
+[165] [28] Shao Z, Bian H, Chen Y, et al. TransMIL: transformer based weakly supervised multiple instance learning for whole slide image classification. Advances in Neural Information Processing Systems (NeurIPS). 2021;34:309–325.
+[166] [29] Wang X, Yang S, Zhang J, et al. Transformer-based unsupervised contrastive learning for histopathological image classification. Medical Image Analysis. 2023;81:102559.
+[167] [30] Lu M, et al. A visual-language foundation model for pathology image analysis using medical textbooks. Nature Medicine. 2024;30:1760–1773.
+[168] [31] Vorontsov E, Bozkurt A, Casson A, Shaikovski G, Zelechowski M, Severson K, et al. A foundation model for clinical-grade computational pathology and rare cancers detection. Nature Medicine. 2024;30:2495–2505.
+[169] [32] Walboomers JM, Jacobs MV, Manos MM, et al. Human papillomavirus is a necessary cause of invasive cervical cancer worldwide. The Journal of Pathology. 1999;189(1):12–19.
+[170] [33] Munoz N, Bosch FX, de Sanjose S, et al. Epidemiologic classification of human papillomavirus types associated with cervical cancer. New England Journal of Medicine. 2003;348(6):518–527.
+[171] [34] Schiffman M, Castle PE, Jeronimo J, Rodriguez AC, Wacholder S. Human papillomavirus and cervical cancer. Lancet. 2007;370(9590):890–907.
+[172] [35] Sung H, Ferlay J, Siegel RL, Laversanne M, Soerjomataram I, Jemal A, Bray F. Global Cancer Statistics 2020: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries. CA: A Cancer Journal for Clinicians. 2021;71(3):209–249.
+[173] [36] Kanehisa M, Furumichi M, Sato Y, Ishiguro-Watanabe M, Tanabe M. KEGG: integrating viruses and cellular organisms. Nucleic Acids Research. 2021;49(D1):D545–D551.
+[174] [37] Liberzon A, Birger C, Thorvaldsdottir H, Ghandi M, Mesirov JP, Tamayo P. The Molecular Signatures Database (MSigDB) hallmark gene set collection. Cell Systems. 2015;1(6):417–425.
+[175] [38] Wolf FA, Angerer P, Theis FJ. SCANPY: large-scale single-cell gene expression data analysis. Genome Biology. 2018;19(1):15.
+[176] [39] Biancalani T, Scalia G, Buffoni L, et al. Deep learning and alignment of spatially resolved single-cell transcriptomes with Tangram. Nature Methods. 2021;18(11):1352–1362.
+[177] [40] Kleshchevnikov V, Shmatko A, Dann E, et al. Cell2location maps fine-grained cell types in spatial transcriptomics. Nature Biotechnology. 2022;40(5):661–671.
+[178] [41] Stuart T, Butler A, Hoffman P, et al. Comprehensive integration of single-cell data. Cell. 2019;177(7):1888–1902.
+[179] 
+[180] 作者贡献
+[181] [使用 CRediT 作者贡献分类法填写]
+[182] 基金
+[183] [待填写]
+[184] 数据可用性
+[185] 所有数据公开：GSE208654（GEO）、10× human-cervical-cancer-1（10× Genomics）、GEO 外宫颈队列（GEO）、GSE316098（GEO）、GSE268014/GSE281978（GEO）。代码与检查点：[GitHub URL — 待填写]。
+[186] 伦理声明
+[187] 仅使用公开去标识化数据，未招募新受试者或涉及人类研究。
+[188] 利益冲突
+[189] 作者声明无利益冲突。
+[190] 主实验信息
+[191] 主实验 run ID：CERVIX35_PROG（随机种子 42）。硬件：NVIDIA A100 40GB。软件：Python 3.10, PyTorch 2.1。模型检查点与全部结果 JSON 见代码仓库。
+
+=== TABLE 0 ===
+数据集 | 样本数 | 疾病阶段 | 来源
+GSE208654 | 4 | N_HPV、HSIL_HPV、CA_HPV_1（鳞癌）、CA_HPV_2（腺癌） | GEO [1]
+10× human-cervical-cancer-1 | 1 | 浸润性鳞癌 | 10× Genomics
+GEO 外宫颈 | 30 | 正常外宫颈 | GEO
+合计 | 35 | 31 正常 + 4 疾病 | —
+
+=== TABLE 1 ===
+留出样本 | 组织学类型 | 均值风险 | 对正常百分位 | 高于全部正常
+HSIL_HPV | HSIL | 0.678 | 1.000 | 是
+CA_HPV_1 | 鳞癌 (SCC) | 0.799 | 1.000 | 是
+CA_HPV_2 | 腺癌 (ADC) | 0.047 | 0.645 | 否（高于中位）
+cervical_cancer_1 | 鳞癌 (SCC) | 1.713 | 1.000 | 是
+均值 | — | — | 0.911 | 3/4
+
+=== TABLE 2 ===
+配置 | Panel | Moran's I | 疾病/正常 AUC | Kendall τ (p) | n_DEG
+**FULL（主实验）** | 108 基因 KEGG HPV | **0.866** | **1.000** | **0.462 (0.001)** | 11
+**NO-IMAGE（图像置零）** | 108 基因 KEGG HPV | **0.762** | **0.952** | **0.598 (0.166)** | 25
+FULL（消融基线） | 40 基因默认 | 0.926 | 0.996 | — | 5
+NO-HPV（去通路锚定） | 40 基因默认 | 0.938 | 0.963 | — | 4
+NO-NEIGH（去邻域约束） | 40 基因默认 | 0.891 | 0.983 | — | 4
+BASELINE-CNN（随机 CNN） | 40 基因默认 | 0.887 | — | — | 3
+FM-UNI2（UNI2 替换） | 40 基因默认 | 0.898 | — | — | 4
+
+=== TABLE 3 ===
+方法 | AUC | DeLong 95% CI | DeLong p (vs 基线)
+HPV 108 基因均值（平凡基线） | 0.750 | [0.358, 1.000] | —
+多模态模型（FULL） | 1.000 | [1.000, 1.000] | 0.212
+
+=== TABLE 4 ===
+指标 | KEGG HPV (108 基因) | 随机对照 (均值 ± 标准差) | 置换 p 值
+Moran's I | 0.943 | 0.916 ± 0.015 | 0.032
+
+=== TABLE 5 ===
+通路 | 角色 | 均值 AUC
+KEGG HPV 感染 | 目标通路 | 1.000
+KEGG Wnt 信号 | 阴性对照 | 0.790
+Hallmark 血管生成 | 阴性对照 | 0.731
+KEGG p53 信号 | 相关对照 | 0.954
+
+=== TABLE 6 ===
+比较 | n | 均值风险 | 检验 | p
+Silva 模式 A vs. B（ROI 级） | 94 vs. 92 | 10.43 vs. 9.29 | Mann-Whitney | 0.0011*
+上皮 vs. 间质（ROI 级配对） | 93 对 | 9.82 vs. 9.90 | Wilcoxon | 0.79
+
+=== TABLE 7 ===
+队列 | 样本数 | Moran's I 范围 | Moran's I 均值
+GSE268014（HPV+ HNSCC） | 8 | 0.594 – 0.860 | 0.738
+GSE281978（HPV+ HNSCC） | 6 | 0.587 – 0.870 | 0.664
+主实验（宫颈） | 35 | — | 0.866

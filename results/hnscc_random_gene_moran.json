@@ -1,0 +1,751 @@
+{
+  "config": {
+    "n_random_sets": 30,
+    "n_perm": 1000,
+    "seed": 20260912,
+    "panel_size": 108,
+    "score": "mean log1p(CPM10k) expression per spot",
+    "random_universes": "panels drawn from (a) union of per-slide 2000 HVGs (primary), (b) HVG in >=2 slides, (c) HVG-union expression-decile matched to KEGG panel, (d) all measured genes (weak/strawman reference; the earlier intersection-of-HVGs universe had <108 genes and was unusable)",
+    "moran": "k=6 kNN, identical to src.models.moran_i"
+  },
+  "cohorts": {
+    "geo_hnscc_hpv_GSE268014": {
+      "n_slides": 8,
+      "sections": [
+        "GSM8283897",
+        "GSM8283898",
+        "GSM8283899",
+        "GSM8283900",
+        "GSM8283901",
+        "GSM8283902",
+        "GSM8283903",
+        "GSM8283904"
+      ],
+      "universes": {
+        "hvg2000_intersection": 4,
+        "hvg_union": 11211,
+        "hvg_in_ge2_slides": 3279,
+        "all_measured": 36634,
+        "kegg_genes_measured": 108,
+        "kegg_genes_in_hvg_union": 52,
+        "kegg_excluded_from_random_panels": true
+      },
+      "primary_control": "random_HVG_union_exprMatched",
+      "per_slide": [
+        {
+          "name": "GSM8283897",
+          "n_spots": 4048,
+          "kegg_genes_present": 108,
+          "kegg_moran": 0.8205362100251101,
+          "controls": {
+            "random_HVG_union": {
+              "random_moran_mean": 0.5831739932284477,
+              "random_moran_sd": 0.03698014525322199,
+              "random_moran_min": 0.5166851546742064,
+              "random_moran_max": 0.6761782873347502,
+              "delta_kegg_minus_random": 0.23736221679666247,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_ge2": {
+              "random_moran_mean": 0.6164651576943089,
+              "random_moran_sd": 0.04538280273663815,
+              "random_moran_min": 0.5226723098442096,
+              "random_moran_max": 0.6911297252534881,
+              "delta_kegg_minus_random": 0.20407105233080125,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_union_exprMatched": {
+              "random_moran_mean": 0.7740082537891962,
+              "random_moran_sd": 0.02302222434178545,
+              "random_moran_min": 0.7294585750649719,
+              "random_moran_max": 0.8179318077523274,
+              "delta_kegg_minus_random": 0.04652795623591388,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_allMeasured_strawman": {
+              "random_moran_mean": 0.5478729045211309,
+              "random_moran_sd": 0.05675238651984927,
+              "random_moran_min": 0.42605076603247555,
+              "random_moran_max": 0.6369244697031649,
+              "delta_kegg_minus_random": 0.2726633055039792,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            }
+          },
+          "kegg_perm_null_mean": 0.0004222909944227438,
+          "kegg_perm_null_q025": -0.01637212669138433,
+          "kegg_perm_null_q975": 0.01812101694909292,
+          "kegg_perm_p": 0.000999000999000999
+        },
+        {
+          "name": "GSM8283898",
+          "n_spots": 4096,
+          "kegg_genes_present": 108,
+          "kegg_moran": 0.6813486990321342,
+          "controls": {
+            "random_HVG_union": {
+              "random_moran_mean": 0.3510849691432192,
+              "random_moran_sd": 0.062482502646580694,
+              "random_moran_min": 0.21377042567476692,
+              "random_moran_max": 0.44243727600117766,
+              "delta_kegg_minus_random": 0.33026372988891506,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_ge2": {
+              "random_moran_mean": 0.3932008826467138,
+              "random_moran_sd": 0.059080297089389416,
+              "random_moran_min": 0.26126541868379716,
+              "random_moran_max": 0.5076927806747779,
+              "delta_kegg_minus_random": 0.2881478163854204,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_union_exprMatched": {
+              "random_moran_mean": 0.6069346060766349,
+              "random_moran_sd": 0.03500792400060287,
+              "random_moran_min": 0.5334100047665828,
+              "random_moran_max": 0.6669481121024244,
+              "delta_kegg_minus_random": 0.07441409295549939,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_allMeasured_strawman": {
+              "random_moran_mean": 0.30724599452819096,
+              "random_moran_sd": 0.06370424819112615,
+              "random_moran_min": 0.19632917905480599,
+              "random_moran_max": 0.4871281581750646,
+              "delta_kegg_minus_random": 0.3741027045039433,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            }
+          },
+          "kegg_perm_null_mean": -2.869591721642198e-05,
+          "kegg_perm_null_q025": -0.017846463715963545,
+          "kegg_perm_null_q975": 0.016523645066389057,
+          "kegg_perm_p": 0.000999000999000999
+        },
+        {
+          "name": "GSM8283899",
+          "n_spots": 3333,
+          "kegg_genes_present": 108,
+          "kegg_moran": 0.7529685514442652,
+          "controls": {
+            "random_HVG_union": {
+              "random_moran_mean": 0.40694755324265725,
+              "random_moran_sd": 0.06523926058328848,
+              "random_moran_min": 0.25972566374885947,
+              "random_moran_max": 0.5309099386611829,
+              "delta_kegg_minus_random": 0.346020998201608,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_ge2": {
+              "random_moran_mean": 0.43409440137297767,
+              "random_moran_sd": 0.07254887288257249,
+              "random_moran_min": 0.2974900605051077,
+              "random_moran_max": 0.5884448060577638,
+              "delta_kegg_minus_random": 0.31887415007128755,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_union_exprMatched": {
+              "random_moran_mean": 0.6051527713580981,
+              "random_moran_sd": 0.03302576083130843,
+              "random_moran_min": 0.5296201341076643,
+              "random_moran_max": 0.6912068969159497,
+              "delta_kegg_minus_random": 0.14781578008616714,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_allMeasured_strawman": {
+              "random_moran_mean": 0.405786856178909,
+              "random_moran_sd": 0.06285802103794724,
+              "random_moran_min": 0.31184629891461346,
+              "random_moran_max": 0.5318561398715457,
+              "delta_kegg_minus_random": 0.34718169526535625,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            }
+          },
+          "kegg_perm_null_mean": -4.47258891018394e-05,
+          "kegg_perm_null_q025": -0.020331138910030657,
+          "kegg_perm_null_q975": 0.018497346144889123,
+          "kegg_perm_p": 0.000999000999000999
+        },
+        {
+          "name": "GSM8283900",
+          "n_spots": 4128,
+          "kegg_genes_present": 108,
+          "kegg_moran": 0.6284265777609261,
+          "controls": {
+            "random_HVG_union": {
+              "random_moran_mean": 0.31187196118520666,
+              "random_moran_sd": 0.06766866332194243,
+              "random_moran_min": 0.173074276697779,
+              "random_moran_max": 0.4766155486458227,
+              "delta_kegg_minus_random": 0.3165546165757195,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_ge2": {
+              "random_moran_mean": 0.4059402489991267,
+              "random_moran_sd": 0.0809172109285942,
+              "random_moran_min": 0.20268895123396172,
+              "random_moran_max": 0.5315976826950654,
+              "delta_kegg_minus_random": 0.22248632876179947,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_union_exprMatched": {
+              "random_moran_mean": 0.45379011828690835,
+              "random_moran_sd": 0.058019095594896625,
+              "random_moran_min": 0.3620173151717644,
+              "random_moran_max": 0.5723036748311117,
+              "delta_kegg_minus_random": 0.1746364594740178,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_allMeasured_strawman": {
+              "random_moran_mean": 0.3001278050052053,
+              "random_moran_sd": 0.08759084799564068,
+              "random_moran_min": 0.16565522435402125,
+              "random_moran_max": 0.5166652111511892,
+              "delta_kegg_minus_random": 0.32829877275572084,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            }
+          },
+          "kegg_perm_null_mean": -0.0005013399249047633,
+          "kegg_perm_null_q025": -0.017327314488286616,
+          "kegg_perm_null_q975": 0.01700745411851705,
+          "kegg_perm_p": 0.000999000999000999
+        },
+        {
+          "name": "GSM8283901",
+          "n_spots": 3606,
+          "kegg_genes_present": 108,
+          "kegg_moran": 0.8280728910712616,
+          "controls": {
+            "random_HVG_union": {
+              "random_moran_mean": 0.3407867986956459,
+              "random_moran_sd": 0.08473431191112073,
+              "random_moran_min": 0.21695436840874188,
+              "random_moran_max": 0.5306414483321913,
+              "delta_kegg_minus_random": 0.4872860923756157,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_ge2": {
+              "random_moran_mean": 0.3389001009326819,
+              "random_moran_sd": 0.08215540472238421,
+              "random_moran_min": 0.2107387555867243,
+              "random_moran_max": 0.512026565248926,
+              "delta_kegg_minus_random": 0.48917279013857967,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_union_exprMatched": {
+              "random_moran_mean": 0.5213622197179878,
+              "random_moran_sd": 0.08035674792461288,
+              "random_moran_min": 0.3255094074617684,
+              "random_moran_max": 0.6545096551147863,
+              "delta_kegg_minus_random": 0.3067106713532738,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_allMeasured_strawman": {
+              "random_moran_mean": 0.43730504716820706,
+              "random_moran_sd": 0.10499318760539769,
+              "random_moran_min": 0.1660849852924935,
+              "random_moran_max": 0.6186832490994484,
+              "delta_kegg_minus_random": 0.3907678439030545,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            }
+          },
+          "kegg_perm_null_mean": 0.00027549854805549107,
+          "kegg_perm_null_q025": -0.017969778420686987,
+          "kegg_perm_null_q975": 0.018120476705519445,
+          "kegg_perm_p": 0.000999000999000999
+        },
+        {
+          "name": "GSM8283902",
+          "n_spots": 2685,
+          "kegg_genes_present": 108,
+          "kegg_moran": 0.646224122239191,
+          "controls": {
+            "random_HVG_union": {
+              "random_moran_mean": 0.4350003068791129,
+              "random_moran_sd": 0.05289100929806563,
+              "random_moran_min": 0.33806193515204463,
+              "random_moran_max": 0.5507033784477658,
+              "delta_kegg_minus_random": 0.21122381536007812,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_ge2": {
+              "random_moran_mean": 0.5118846218974403,
+              "random_moran_sd": 0.06586430026589248,
+              "random_moran_min": 0.38204082404455325,
+              "random_moran_max": 0.67612778593755,
+              "delta_kegg_minus_random": 0.13433950034175068,
+              "p_kegg_vs_random_sets": 0.06451612903225806
+            },
+            "random_HVG_union_exprMatched": {
+              "random_moran_mean": 0.6387242235507683,
+              "random_moran_sd": 0.020770661252092436,
+              "random_moran_min": 0.5974631606650058,
+              "random_moran_max": 0.6859429169266287,
+              "delta_kegg_minus_random": 0.007499898688422713,
+              "p_kegg_vs_random_sets": 0.45161290322580644
+            },
+            "random_allMeasured_strawman": {
+              "random_moran_mean": 0.37542251819719635,
+              "random_moran_sd": 0.05260913420550463,
+              "random_moran_min": 0.24645223197183866,
+              "random_moran_max": 0.48447641118614837,
+              "delta_kegg_minus_random": 0.27080160404199466,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            }
+          },
+          "kegg_perm_null_mean": -8.7982885227803e-05,
+          "kegg_perm_null_q025": -0.022406371779838136,
+          "kegg_perm_null_q975": 0.022242488008807217,
+          "kegg_perm_p": 0.000999000999000999
+        },
+        {
+          "name": "GSM8283903",
+          "n_spots": 2978,
+          "kegg_genes_present": 108,
+          "kegg_moran": 0.6179665176834874,
+          "controls": {
+            "random_HVG_union": {
+              "random_moran_mean": 0.29841704143973874,
+              "random_moran_sd": 0.056147800573355444,
+              "random_moran_min": 0.19657604672932427,
+              "random_moran_max": 0.41775333815002164,
+              "delta_kegg_minus_random": 0.3195494762437487,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_ge2": {
+              "random_moran_mean": 0.41847837958077533,
+              "random_moran_sd": 0.08408539374839316,
+              "random_moran_min": 0.283626776214735,
+              "random_moran_max": 0.6470226359612348,
+              "delta_kegg_minus_random": 0.1994881381027121,
+              "p_kegg_vs_random_sets": 0.06451612903225806
+            },
+            "random_HVG_union_exprMatched": {
+              "random_moran_mean": 0.43904710005838105,
+              "random_moran_sd": 0.044376133987781716,
+              "random_moran_min": 0.3386638523874275,
+              "random_moran_max": 0.5329030276513574,
+              "delta_kegg_minus_random": 0.17891941762510638,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_allMeasured_strawman": {
+              "random_moran_mean": 0.26802957458079324,
+              "random_moran_sd": 0.05440334565576085,
+              "random_moran_min": 0.154547903505634,
+              "random_moran_max": 0.4001202486439639,
+              "delta_kegg_minus_random": 0.3499369431026942,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            }
+          },
+          "kegg_perm_null_mean": -0.0005506311237243368,
+          "kegg_perm_null_q025": -0.01988963738390829,
+          "kegg_perm_null_q975": 0.022210933684058017,
+          "kegg_perm_p": 0.000999000999000999
+        },
+        {
+          "name": "GSM8283904",
+          "n_spots": 4908,
+          "kegg_genes_present": 108,
+          "kegg_moran": 0.7024882799713326,
+          "controls": {
+            "random_HVG_union": {
+              "random_moran_mean": 0.44766557361598436,
+              "random_moran_sd": 0.07508459798472417,
+              "random_moran_min": 0.313364865693532,
+              "random_moran_max": 0.600131514469134,
+              "delta_kegg_minus_random": 0.2548227063553482,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_ge2": {
+              "random_moran_mean": 0.5663253281836027,
+              "random_moran_sd": 0.08148771141216342,
+              "random_moran_min": 0.40758875033079317,
+              "random_moran_max": 0.734651977121302,
+              "delta_kegg_minus_random": 0.13616295178772986,
+              "p_kegg_vs_random_sets": 0.06451612903225806
+            },
+            "random_HVG_union_exprMatched": {
+              "random_moran_mean": 0.6382715469733363,
+              "random_moran_sd": 0.03257098478274306,
+              "random_moran_min": 0.5784143289132706,
+              "random_moran_max": 0.7118322040704249,
+              "delta_kegg_minus_random": 0.06421673299799624,
+              "p_kegg_vs_random_sets": 0.0967741935483871
+            },
+            "random_allMeasured_strawman": {
+              "random_moran_mean": 0.3739039789631237,
+              "random_moran_sd": 0.0668266350304806,
+              "random_moran_min": 0.22244655947013264,
+              "random_moran_max": 0.5011376820820997,
+              "delta_kegg_minus_random": 0.32858430100820885,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            }
+          },
+          "kegg_perm_null_mean": 0.00037502077406336023,
+          "kegg_perm_null_q025": -0.01394443419829174,
+          "kegg_perm_null_q975": 0.016423635903361208,
+          "kegg_perm_p": 0.000999000999000999
+        }
+      ],
+      "cohort_mean": {
+        "kegg_moran": 0.7097539811534636,
+        "controls": {
+          "random_HVG_union": {
+            "random_moran_mean": 0.39686852467875156,
+            "delta": 0.312885456474712,
+            "delta_mean_of_per_slide": 0.31288545647471194,
+            "n_slides_kegg_gt_random": 8,
+            "n_slides": 8,
+            "slide_level_sign_test_p": 0.0078125
+          },
+          "random_HVG_ge2": {
+            "random_moran_mean": 0.4606611401634534,
+            "delta": 0.24909284099001017,
+            "delta_mean_of_per_slide": 0.2490928409900101,
+            "n_slides_kegg_gt_random": 8,
+            "n_slides": 8,
+            "slide_level_sign_test_p": 0.0078125
+          },
+          "random_HVG_union_exprMatched": {
+            "random_moran_mean": 0.5846613549764139,
+            "delta": 0.12509262617704964,
+            "delta_mean_of_per_slide": 0.12509262617704967,
+            "n_slides_kegg_gt_random": 8,
+            "n_slides": 8,
+            "slide_level_sign_test_p": 0.0078125
+          },
+          "random_allMeasured_strawman": {
+            "random_moran_mean": 0.37696183489284457,
+            "delta": 0.332792146260619,
+            "delta_mean_of_per_slide": 0.3327921462606189,
+            "n_slides_kegg_gt_random": 8,
+            "n_slides": 8,
+            "slide_level_sign_test_p": 0.0078125
+          }
+        }
+      }
+    },
+    "geo_hpv_hnscc_GSE281978": {
+      "n_slides": 6,
+      "sections": [
+        "LI_SING_21_00757",
+        "LI_SING_21_00758",
+        "LI_SING_21_01569",
+        "LI_SING_21_01570",
+        "LI_SING_21_01586",
+        "LI_SING_21_01587"
+      ],
+      "universes": {
+        "hvg2000_intersection": 11,
+        "hvg_union": 8788,
+        "hvg_in_ge2_slides": 2244,
+        "all_measured": 36601,
+        "kegg_genes_measured": 108,
+        "kegg_genes_in_hvg_union": 38,
+        "kegg_excluded_from_random_panels": true
+      },
+      "primary_control": "random_HVG_union_exprMatched",
+      "per_slide": [
+        {
+          "name": "LI_SING_21_00757",
+          "n_spots": 1187,
+          "kegg_genes_present": 108,
+          "kegg_moran": 0.556828759724046,
+          "controls": {
+            "random_HVG_union": {
+              "random_moran_mean": 0.26632029726519507,
+              "random_moran_sd": 0.061297864758291555,
+              "random_moran_min": 0.18081322530928592,
+              "random_moran_max": 0.4027748977281892,
+              "delta_kegg_minus_random": 0.2905084624588509,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_ge2": {
+              "random_moran_mean": 0.3998320282752715,
+              "random_moran_sd": 0.08869508166695406,
+              "random_moran_min": 0.2248705834961714,
+              "random_moran_max": 0.6136120612574384,
+              "delta_kegg_minus_random": 0.15699673144877452,
+              "p_kegg_vs_random_sets": 0.0967741935483871
+            },
+            "random_HVG_union_exprMatched": {
+              "random_moran_mean": 0.4497122767467064,
+              "random_moran_sd": 0.04694742540362483,
+              "random_moran_min": 0.3655774300660458,
+              "random_moran_max": 0.5674323810726846,
+              "delta_kegg_minus_random": 0.10711648297733961,
+              "p_kegg_vs_random_sets": 0.06451612903225806
+            },
+            "random_allMeasured_strawman": {
+              "random_moran_mean": 0.36457215719793634,
+              "random_moran_sd": 0.06443164842152348,
+              "random_moran_min": 0.22886130514905637,
+              "random_moran_max": 0.4868212318954881,
+              "delta_kegg_minus_random": 0.19225660252610965,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            }
+          },
+          "kegg_perm_null_mean": -0.00016973424186539574,
+          "kegg_perm_null_q025": -0.030427232098154625,
+          "kegg_perm_null_q975": 0.030950149780034658,
+          "kegg_perm_p": 0.000999000999000999
+        },
+        {
+          "name": "LI_SING_21_00758",
+          "n_spots": 1579,
+          "kegg_genes_present": 108,
+          "kegg_moran": 0.5958017491379217,
+          "controls": {
+            "random_HVG_union": {
+              "random_moran_mean": 0.2914578730573107,
+              "random_moran_sd": 0.05784203783964762,
+              "random_moran_min": 0.1947173184953898,
+              "random_moran_max": 0.42971392936068054,
+              "delta_kegg_minus_random": 0.30434387608061103,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_ge2": {
+              "random_moran_mean": 0.40474915437474,
+              "random_moran_sd": 0.05963273364165797,
+              "random_moran_min": 0.2921924934217427,
+              "random_moran_max": 0.5228476027677276,
+              "delta_kegg_minus_random": 0.1910525947631817,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_union_exprMatched": {
+              "random_moran_mean": 0.4340815978712916,
+              "random_moran_sd": 0.04138080841385219,
+              "random_moran_min": 0.3103135961557961,
+              "random_moran_max": 0.5285182420357156,
+              "delta_kegg_minus_random": 0.16172015126663014,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_allMeasured_strawman": {
+              "random_moran_mean": 0.2925319361588986,
+              "random_moran_sd": 0.05983680951637059,
+              "random_moran_min": 0.1441171246109378,
+              "random_moran_max": 0.44099314146776714,
+              "delta_kegg_minus_random": 0.3032698129790231,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            }
+          },
+          "kegg_perm_null_mean": -0.00027242312906719816,
+          "kegg_perm_null_q025": -0.027247855953940865,
+          "kegg_perm_null_q975": 0.02779440917790454,
+          "kegg_perm_p": 0.000999000999000999
+        },
+        {
+          "name": "LI_SING_21_01569",
+          "n_spots": 1359,
+          "kegg_genes_present": 108,
+          "kegg_moran": 0.6788577008956064,
+          "controls": {
+            "random_HVG_union": {
+              "random_moran_mean": 0.1738075058382721,
+              "random_moran_sd": 0.06984914501141042,
+              "random_moran_min": 0.09043558946805781,
+              "random_moran_max": 0.4308127657184261,
+              "delta_kegg_minus_random": 0.5050501950573343,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_ge2": {
+              "random_moran_mean": 0.3596833263853781,
+              "random_moran_sd": 0.11330509128294763,
+              "random_moran_min": 0.1559811341611016,
+              "random_moran_max": 0.6615764538470026,
+              "delta_kegg_minus_random": 0.3191743745102283,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_union_exprMatched": {
+              "random_moran_mean": 0.3696593961297189,
+              "random_moran_sd": 0.08017257248508812,
+              "random_moran_min": 0.22642431370090557,
+              "random_moran_max": 0.5761829022177213,
+              "delta_kegg_minus_random": 0.3091983047658875,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_allMeasured_strawman": {
+              "random_moran_mean": 0.22487313203819725,
+              "random_moran_sd": 0.0814657056433735,
+              "random_moran_min": 0.12231226991864358,
+              "random_moran_max": 0.4563865611718519,
+              "delta_kegg_minus_random": 0.4539845688574091,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            }
+          },
+          "kegg_perm_null_mean": -0.002784610138021489,
+          "kegg_perm_null_q025": -0.033190388775941354,
+          "kegg_perm_null_q975": 0.025987746833607002,
+          "kegg_perm_p": 0.000999000999000999
+        },
+        {
+          "name": "LI_SING_21_01570",
+          "n_spots": 1908,
+          "kegg_genes_present": 108,
+          "kegg_moran": 0.5567075738032832,
+          "controls": {
+            "random_HVG_union": {
+              "random_moran_mean": 0.2797526552874352,
+              "random_moran_sd": 0.04602792875478422,
+              "random_moran_min": 0.20796055590554063,
+              "random_moran_max": 0.3945147132650806,
+              "delta_kegg_minus_random": 0.27695491851584797,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_ge2": {
+              "random_moran_mean": 0.3888937899032801,
+              "random_moran_sd": 0.08528827597851324,
+              "random_moran_min": 0.2678622268951185,
+              "random_moran_max": 0.6179525498244195,
+              "delta_kegg_minus_random": 0.16781378390000307,
+              "p_kegg_vs_random_sets": 0.06451612903225806
+            },
+            "random_HVG_union_exprMatched": {
+              "random_moran_mean": 0.4706892123811663,
+              "random_moran_sd": 0.038160241305642696,
+              "random_moran_min": 0.37651826122181636,
+              "random_moran_max": 0.5623069329798422,
+              "delta_kegg_minus_random": 0.08601836142211688,
+              "p_kegg_vs_random_sets": 0.06451612903225806
+            },
+            "random_allMeasured_strawman": {
+              "random_moran_mean": 0.2723331373073959,
+              "random_moran_sd": 0.047639652108620166,
+              "random_moran_min": 0.16860087783728997,
+              "random_moran_max": 0.38703773241414763,
+              "delta_kegg_minus_random": 0.2843744364958873,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            }
+          },
+          "kegg_perm_null_mean": -0.00046272774965774,
+          "kegg_perm_null_q025": -0.025472722002583603,
+          "kegg_perm_null_q975": 0.026486990975147257,
+          "kegg_perm_p": 0.000999000999000999
+        },
+        {
+          "name": "LI_SING_21_01586",
+          "n_spots": 1195,
+          "kegg_genes_present": 108,
+          "kegg_moran": 0.797642886629619,
+          "controls": {
+            "random_HVG_union": {
+              "random_moran_mean": 0.4749021663847951,
+              "random_moran_sd": 0.06706105502620398,
+              "random_moran_min": 0.3208157867584718,
+              "random_moran_max": 0.6348445665100048,
+              "delta_kegg_minus_random": 0.3227407202448239,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_ge2": {
+              "random_moran_mean": 0.5351611031977364,
+              "random_moran_sd": 0.06808563214205708,
+              "random_moran_min": 0.41758885769831466,
+              "random_moran_max": 0.6905013922383234,
+              "delta_kegg_minus_random": 0.26248178343188266,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_union_exprMatched": {
+              "random_moran_mean": 0.7100556723476885,
+              "random_moran_sd": 0.038823727012755764,
+              "random_moran_min": 0.6274367683313324,
+              "random_moran_max": 0.7899921224992306,
+              "delta_kegg_minus_random": 0.0875872142819305,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_allMeasured_strawman": {
+              "random_moran_mean": 0.4802016294983785,
+              "random_moran_sd": 0.04833333066766992,
+              "random_moran_min": 0.40843471844723345,
+              "random_moran_max": 0.5957882273454412,
+              "delta_kegg_minus_random": 0.3174412571312405,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            }
+          },
+          "kegg_perm_null_mean": -0.000574607069142859,
+          "kegg_perm_null_q025": -0.03093438334209578,
+          "kegg_perm_null_q975": 0.030652034009108996,
+          "kegg_perm_p": 0.000999000999000999
+        },
+        {
+          "name": "LI_SING_21_01587",
+          "n_spots": 1439,
+          "kegg_genes_present": 108,
+          "kegg_moran": 0.5542084389317995,
+          "controls": {
+            "random_HVG_union": {
+              "random_moran_mean": 0.30476462599198856,
+              "random_moran_sd": 0.0769034129788774,
+              "random_moran_min": 0.17812253213395227,
+              "random_moran_max": 0.530703621796673,
+              "delta_kegg_minus_random": 0.24944381293981094,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            },
+            "random_HVG_ge2": {
+              "random_moran_mean": 0.5643204920052546,
+              "random_moran_sd": 0.08719640094497673,
+              "random_moran_min": 0.3809750650521442,
+              "random_moran_max": 0.6766004113854531,
+              "delta_kegg_minus_random": -0.010112053073455085,
+              "p_kegg_vs_random_sets": 0.6129032258064516
+            },
+            "random_HVG_union_exprMatched": {
+              "random_moran_mean": 0.4189644488921525,
+              "random_moran_sd": 0.07336305092278753,
+              "random_moran_min": 0.30864499750823327,
+              "random_moran_max": 0.5729248014637531,
+              "delta_kegg_minus_random": 0.135243990039647,
+              "p_kegg_vs_random_sets": 0.12903225806451613
+            },
+            "random_allMeasured_strawman": {
+              "random_moran_mean": 0.267419425380928,
+              "random_moran_sd": 0.05690910895255046,
+              "random_moran_min": 0.19228860804424977,
+              "random_moran_max": 0.45952478742261055,
+              "delta_kegg_minus_random": 0.2867890135508715,
+              "p_kegg_vs_random_sets": 0.03225806451612903
+            }
+          },
+          "kegg_perm_null_mean": -0.0008412731608671935,
+          "kegg_perm_null_q025": -0.029719006161494244,
+          "kegg_perm_null_q975": 0.028960107099753343,
+          "kegg_perm_p": 0.000999000999000999
+        }
+      ],
+      "cohort_mean": {
+        "kegg_moran": 0.6233411848537127,
+        "controls": {
+          "random_HVG_union": {
+            "random_moran_mean": 0.29850085397083276,
+            "delta": 0.32484033088287995,
+            "delta_mean_of_per_slide": 0.32484033088287984,
+            "n_slides_kegg_gt_random": 6,
+            "n_slides": 6,
+            "slide_level_sign_test_p": 0.03125
+          },
+          "random_HVG_ge2": {
+            "random_moran_mean": 0.44210664902361013,
+            "delta": 0.18123453583010257,
+            "delta_mean_of_per_slide": 0.18123453583010252,
+            "n_slides_kegg_gt_random": 5,
+            "n_slides": 6,
+            "slide_level_sign_test_p": 0.21875
+          },
+          "random_HVG_union_exprMatched": {
+            "random_moran_mean": 0.4755271007281207,
+            "delta": 0.147814084125592,
+            "delta_mean_of_per_slide": 0.14781408412559194,
+            "n_slides_kegg_gt_random": 6,
+            "n_slides": 6,
+            "slide_level_sign_test_p": 0.03125
+          },
+          "random_allMeasured_strawman": {
+            "random_moran_mean": 0.3169885695969558,
+            "delta": 0.3063526152567569,
+            "delta_mean_of_per_slide": 0.3063526152567569,
+            "n_slides_kegg_gt_random": 6,
+            "n_slides": 6,
+            "slide_level_sign_test_p": 0.03125
+          }
+        }
+      }
+    }
+  }
+}

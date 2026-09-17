@@ -1,0 +1,1129 @@
+{
+  "dataset": "GSE316098",
+  "type": "cervical adenocarcinoma GeoMx",
+  "checkpoint": "results\\checkpoint_FULL_DEPLOY_FAST_seed42.pt",
+  "mode": "expr_only",
+  "normalization": "log1p(raw counts aligned to checkpoint panel, zero-fill missing)",
+  "n_rois": 186,
+  "panel_n_genes": 4991,
+  "gene_match": 4788,
+  "silva_A_mean_oldlabel": 11.995361941926022,
+  "per_roi": [
+    {
+      "roi": "1A.001.epi",
+      "score": 12.007038116455078,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.001.stroma",
+      "score": 9.773113250732422,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.002.epi",
+      "score": 9.599162101745605,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.002.stroma",
+      "score": 9.788775444030762,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.003.epi",
+      "score": 10.876100540161133,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.003.stroma",
+      "score": 9.739630699157715,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.004.epi",
+      "score": 10.782837867736816,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.004.stroma",
+      "score": 9.064488410949707,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.005.epi",
+      "score": 11.649889945983887,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.005.stroma",
+      "score": 10.233216285705566,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.006.epi",
+      "score": 11.641081809997559,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.006.stroma",
+      "score": 8.966652870178223,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.007.epi",
+      "score": 9.393402099609375,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.007.stroma",
+      "score": 9.289111137390137,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.008.epi",
+      "score": 13.924748420715332,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.008.stroma",
+      "score": 9.191121101379395,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.009.epi",
+      "score": 10.849785804748535,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.009.stroma",
+      "score": 10.433371543884277,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.010.epi",
+      "score": 11.804435729980469,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.010.stroma",
+      "score": 8.75508975982666,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.011.epi",
+      "score": 10.893572807312012,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.011.stroma",
+      "score": 7.011023044586182,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.012.epi",
+      "score": 13.390618324279785,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.012.stroma",
+      "score": 9.630167961120605,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.013.epi",
+      "score": 13.671612739562988,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.013.stroma",
+      "score": 10.259994506835938,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.014.epi",
+      "score": 10.005929946899414,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.014.stroma",
+      "score": 10.534852027893066,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.015.epi",
+      "score": 10.19197940826416,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.015.stroma",
+      "score": 9.3423433303833,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.016.epi",
+      "score": 8.682838439941406,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.016.stroma",
+      "score": 8.092303276062012,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.017.epi",
+      "score": 11.348228454589844,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.017.stroma",
+      "score": 10.083300590515137,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.018.epi",
+      "score": 14.180434226989746,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.018.stroma",
+      "score": 13.987080574035645,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.019.epi",
+      "score": 15.014490127563477,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.019.stroma",
+      "score": 13.246350288391113,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.020.epi",
+      "score": 14.222341537475586,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.020.stroma",
+      "score": 13.96041202545166,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.021.epi",
+      "score": 10.183039665222168,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.021.stroma",
+      "score": 13.779118537902832,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.022.epi",
+      "score": 10.174817085266113,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.022.stroma",
+      "score": 11.310904502868652,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.023.epi",
+      "score": 14.460880279541016,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.023.stroma",
+      "score": 12.552800178527832,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.024.epi",
+      "score": 13.508522987365723,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.024.stroma",
+      "score": 14.038582801818848,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.025.epi",
+      "score": 14.217976570129395,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.025.stroma",
+      "score": 13.08507251739502,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.026.epi",
+      "score": 11.552474975585938,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.026.stroma",
+      "score": 13.476595878601074,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.027.epi",
+      "score": 9.710906028747559,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.027.stroma",
+      "score": 12.971383094787598,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.029.epi",
+      "score": 19.69826889038086,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.029.stroma",
+      "score": 12.17944622039795,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.030.epi",
+      "score": 17.656330108642578,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.030.stroma",
+      "score": 12.62907886505127,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.032.epi",
+      "score": 18.93755340576172,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.032.stroma",
+      "score": 13.574777603149414,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.033.epi",
+      "score": 19.406803131103516,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.033.stroma",
+      "score": 13.913825035095215,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.034.epi",
+      "score": 18.102067947387695,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.034.stroma",
+      "score": 13.113566398620605,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.035.epi",
+      "score": 18.1024112701416,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.035.stroma",
+      "score": 15.07922077178955,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.036.epi",
+      "score": 18.91889190673828,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.036.stroma",
+      "score": 13.096930503845215,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.037.epi",
+      "score": 18.60126495361328,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.037.stroma",
+      "score": 10.54978084564209,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.038.epi",
+      "score": 11.63088321685791,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.038.stroma",
+      "score": 10.27916431427002,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.039.epi",
+      "score": 12.329678535461426,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.039.stroma",
+      "score": 11.047294616699219,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.040.epi",
+      "score": 10.145732879638672,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.040.stroma",
+      "score": 10.165560722351074,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.041.epi",
+      "score": 10.399307250976562,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.041.stroma",
+      "score": 10.043251037597656,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.042.epi",
+      "score": 12.477529525756836,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.042.stroma",
+      "score": 12.477208137512207,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.043.epi",
+      "score": 13.936009407043457,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.043.stroma",
+      "score": 11.243390083312988,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.044.epi",
+      "score": 6.909940719604492,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.044.stroma",
+      "score": 12.550339698791504,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.045.epi",
+      "score": 11.412825584411621,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.045.stroma",
+      "score": 10.43704891204834,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.046.epi",
+      "score": 10.654629707336426,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.046.stroma",
+      "score": 11.199198722839355,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.047.epi",
+      "score": 12.784919738769531,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.047.stroma",
+      "score": 10.096013069152832,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.048.epi",
+      "score": 10.514476776123047,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.048.stroma",
+      "score": 9.708038330078125,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.049.epi",
+      "score": 10.428313255310059,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.049.stroma",
+      "score": 10.59704875946045,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.001.epi",
+      "score": 15.767205238342285,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.001.stroma",
+      "score": 8.756725311279297,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.002.epi",
+      "score": 13.292071342468262,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.002.stroma",
+      "score": 8.93049144744873,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.003.epi",
+      "score": 12.27869701385498,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.003.stroma",
+      "score": 11.390633583068848,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.004.epi",
+      "score": 14.463666915893555,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.004.stroma",
+      "score": 10.958170890808105,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.005.epi",
+      "score": 16.398666381835938,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.005.stroma",
+      "score": 9.658424377441406,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.006.epi",
+      "score": 16.046127319335938,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.006.stroma",
+      "score": 9.300446510314941,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.007.epi",
+      "score": 14.942334175109863,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.007.stroma",
+      "score": 7.675335884094238,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.008.epi",
+      "score": 12.656682968139648,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.008.stroma",
+      "score": 8.776091575622559,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.009.epi",
+      "score": 11.366503715515137,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.009.stroma",
+      "score": 8.193499565124512,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.010.epi",
+      "score": 10.940018653869629,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.010.stroma",
+      "score": 9.316393852233887,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.011.epi",
+      "score": 10.243817329406738,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.011.stroma",
+      "score": 9.899088859558105,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.012.epi",
+      "score": 7.396811485290527,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.012.stroma",
+      "score": 12.583111763000488,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.013.epi",
+      "score": 7.896121501922607,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.013.stroma",
+      "score": 11.414834022521973,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.014.epi",
+      "score": 8.640480995178223,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.014.stroma",
+      "score": 9.564343452453613,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.015.epi",
+      "score": 7.178062438964844,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.015.stroma",
+      "score": 8.59401798248291,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.016.epi",
+      "score": 9.705021858215332,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.016.stroma",
+      "score": 10.962393760681152,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.017.epi",
+      "score": 6.713923454284668,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.017.stroma",
+      "score": 9.653374671936035,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.018.epi",
+      "score": 9.002251625061035,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.018.stroma",
+      "score": 11.925665855407715,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.019.epi",
+      "score": 6.642845153808594,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.019.stroma",
+      "score": 8.648369789123535,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.020.epi",
+      "score": 12.385550498962402,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.020.stroma",
+      "score": 10.626967430114746,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.021.epi",
+      "score": 11.172239303588867,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.021.stroma",
+      "score": 11.101025581359863,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.022.epi",
+      "score": 13.633162498474121,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.022.stroma",
+      "score": 10.4628267288208,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.023.epi",
+      "score": 11.590693473815918,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.023.stroma",
+      "score": 8.391572952270508,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.024.epi",
+      "score": 13.834195137023926,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.024.stroma",
+      "score": 11.586076736450195,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.025.epi",
+      "score": 13.91247272491455,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.025.stroma",
+      "score": 10.324345588684082,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.026.epi",
+      "score": 11.628451347351074,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.026.stroma",
+      "score": 8.5697603225708,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.027.epi",
+      "score": 7.543216228485107,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.027.stroma",
+      "score": 8.546585083007812,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.028.epi",
+      "score": 5.715384483337402,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.028.stroma",
+      "score": 8.401717185974121,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.029.epi",
+      "score": 11.167330741882324,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.029.stroma",
+      "score": 9.367613792419434,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.030.epi",
+      "score": 9.617339134216309,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.030.stroma",
+      "score": 8.958258628845215,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.031.epi",
+      "score": 10.901917457580566,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.031.stroma",
+      "score": 8.637982368469238,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.032.epi",
+      "score": 11.68172836303711,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.032.stroma",
+      "score": 8.136353492736816,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.033.epi",
+      "score": 13.833561897277832,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.033.stroma",
+      "score": 10.899359703063965,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.034.epi",
+      "score": 12.357129096984863,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.034.stroma",
+      "score": 11.30233383178711,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.035.epi",
+      "score": 8.461859703063965,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.035.stroma",
+      "score": 9.994277000427246,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.036.epi",
+      "score": 10.444825172424316,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.036.stroma",
+      "score": 7.084898471832275,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.037.epi",
+      "score": 11.49947738647461,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.037.stroma",
+      "score": 7.3495588302612305,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.038.epi",
+      "score": 9.826187133789062,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.038.stroma",
+      "score": 8.243491172790527,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.039.epi",
+      "score": 8.518464088439941,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.039.stroma",
+      "score": 7.771303176879883,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.040.epi",
+      "score": 10.611340522766113,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.040.stroma",
+      "score": 9.55764102935791,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.041.epi",
+      "score": 8.882018089294434,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.041.stroma",
+      "score": 9.744707107543945,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.042.epi",
+      "score": 8.499849319458008,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.042.stroma",
+      "score": 10.674553871154785,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.043.epi",
+      "score": 4.927811622619629,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.043.stroma",
+      "score": 9.21878719329834,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.044.epi",
+      "score": 5.552786827087402,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.044.stroma",
+      "score": 14.270363807678223,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.045.epi",
+      "score": 9.342525482177734,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.045.stroma",
+      "score": 10.652194023132324,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.046.epi",
+      "score": 9.567072868347168,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.046.stroma",
+      "score": 9.995539665222168,
+      "pattern": "1b",
+      "compartment": "stroma"
+    }
+  ]
+}

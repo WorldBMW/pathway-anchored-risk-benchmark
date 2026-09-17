@@ -1,0 +1,602 @@
+{
+  "generated": "2026-09-04T13:55:49.607753",
+  "recommended_thresholds": {
+    "auc": 0.8,
+    "moran": 0.7,
+    "kendall": 0.2
+  },
+  "full_metrics": {
+    "hpv_proxy_auc": 0.9914036889557373,
+    "moran_i": 0.8664757383157715,
+    "kendall_tau": null,
+    "n_samples": 35,
+    "run_id": "CERVIX35_PROG"
+  },
+  "ablation_metrics": {
+    "results/results_NO-NEIGH.json": {
+      "hpv_proxy_auc": 0.9983066394464232,
+      "moran_i": 0.5440346892921019,
+      "kendall_tau": null,
+      "n_samples": 35,
+      "run_id": "NO-NEIGH"
+    },
+    "results/results_NO-HPV.json": {
+      "hpv_proxy_auc": 0.9978856778232787,
+      "moran_i": 0.5574624263280632,
+      "kendall_tau": null,
+      "n_samples": 35,
+      "run_id": "NO-HPV"
+    },
+    "results/results_FULL.json": {
+      "hpv_proxy_auc": 0.9999820086666996,
+      "moran_i": 0.5491066825800155,
+      "kendall_tau": null,
+      "n_samples": 35,
+      "run_id": "FULL"
+    }
+  },
+  "single_metric_sweeps": {
+    "AUC": [
+      {
+        "threshold": 0.6,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.65,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.7,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.75,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.8,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.85,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.9,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.95,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      }
+    ],
+    "Moran_I": [
+      {
+        "threshold": 0.5,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": true,
+            "passed": 2,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": true,
+            "passed": 2,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": true,
+            "passed": 2,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.55,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": true,
+            "passed": 2,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.6,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.65,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.7,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.75,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.8,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      }
+    ],
+    "Kendall_tau": [
+      {
+        "threshold": 0.1,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.15,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.2,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.25,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.3,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      },
+      {
+        "threshold": 0.35,
+        "FULL_all_pass": true,
+        "FULL_passed": 2,
+        "FULL_total": 2,
+        "ablations": {
+          "NO-NEIGH": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "NO-HPV": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          },
+          "FULL": {
+            "all_pass": false,
+            "passed": 1,
+            "total": 2
+          }
+        }
+      }
+    ]
+  },
+  "recommended_threshold_eval": {
+    "FULL": {
+      "checks": [
+        {
+          "metric": "AUC",
+          "pass": true,
+          "value": 0.9914036889557373,
+          "threshold": 0.8
+        },
+        {
+          "metric": "Moran_I",
+          "pass": true,
+          "value": 0.8664757383157715,
+          "threshold": 0.7
+        }
+      ],
+      "all_pass": true
+    },
+    "ablations": {
+      "NO-NEIGH": {
+        "checks": [
+          {
+            "metric": "AUC",
+            "pass": true,
+            "value": 0.9983066394464232,
+            "threshold": 0.8
+          },
+          {
+            "metric": "Moran_I",
+            "pass": false,
+            "value": 0.5440346892921019,
+            "threshold": 0.7
+          }
+        ],
+        "all_pass": false
+      },
+      "NO-HPV": {
+        "checks": [
+          {
+            "metric": "AUC",
+            "pass": true,
+            "value": 0.9978856778232787,
+            "threshold": 0.8
+          },
+          {
+            "metric": "Moran_I",
+            "pass": false,
+            "value": 0.5574624263280632,
+            "threshold": 0.7
+          }
+        ],
+        "all_pass": false
+      },
+      "FULL": {
+        "checks": [
+          {
+            "metric": "AUC",
+            "pass": true,
+            "value": 0.9999820086666996,
+            "threshold": 0.8
+          },
+          {
+            "metric": "Moran_I",
+            "pass": false,
+            "value": 0.5491066825800155,
+            "threshold": 0.7
+          }
+        ],
+        "all_pass": false
+      }
+    }
+  },
+  "interpretation": "Stability criterion: FULL should PASS all checks at recommended thresholds, and at least one ablation should FAIL at the same thresholds. If this holds across a reasonable range, the threshold choice is not cherry-picked."
+}

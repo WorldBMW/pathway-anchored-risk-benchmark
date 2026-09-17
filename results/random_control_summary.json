@@ -1,0 +1,187 @@
+{
+  "kegg": {
+    "moran_i": 0.9433267997119505,
+    "hpv_auc": 0.9999498622186569,
+    "kendall_tau": 0.4620014915032857
+  },
+  "random": {
+    "n": 30,
+    "moran_i": {
+      "mean": 0.9157485512043234,
+      "std": 0.014540068586730579,
+      "min": 0.8765142249188279,
+      "max": 0.9350439914447165
+    },
+    "hpv_auc": {
+      "mean": 0.9958093156872435,
+      "std": 0.009851626609350354,
+      "min": 0.9506157506163027,
+      "max": 0.9999942933332319
+    },
+    "kendall_tau_mean": 0.46054636869540133
+  },
+  "permutation_test": {
+    "moran_i": {
+      "n_random_ge_kegg": 0,
+      "p_value": 0.03225806451612903,
+      "interpretation": "KEGG Moran's I significantly higher than random (p<0.05)"
+    },
+    "hpv_auc": {
+      "n_random_ge_kegg": 4,
+      "p_value": 0.16129032258064516,
+      "interpretation": "KEGG AUC NOT significantly higher than random (confirms label-controllability)"
+    }
+  },
+  "random_runs": [
+    {
+      "file": "results_RANDOM108_S0.json",
+      "moran_i": 0.9306612968586769,
+      "hpv_auc": 0.9965841994534718
+    },
+    {
+      "file": "results_RANDOM108_S1.json",
+      "moran_i": 0.9168377396152103,
+      "hpv_auc": 0.9999724399998774
+    },
+    {
+      "file": "results_RANDOM108_S10.json",
+      "moran_i": 0.9312751236362194,
+      "hpv_auc": 0.9862557606950845
+    },
+    {
+      "file": "results_RANDOM108_S11.json",
+      "moran_i": 0.9164191508121997,
+      "hpv_auc": 0.9996980711097692
+    },
+    {
+      "file": "results_RANDOM108_S12.json",
+      "moran_i": 0.9077906090960066,
+      "hpv_auc": 0.9998761688222952
+    },
+    {
+      "file": "results_RANDOM108_S13.json",
+      "moran_i": 0.9201834290454185,
+      "hpv_auc": 0.9997375376832913
+    },
+    {
+      "file": "results_RANDOM108_S14.json",
+      "moran_i": 0.9225359322217535,
+      "hpv_auc": 0.9922153732987349
+    },
+    {
+      "file": "results_RANDOM108_S15.json",
+      "moran_i": 0.9145980526343963,
+      "hpv_auc": 0.9999868977775448
+    },
+    {
+      "file": "results_RANDOM108_S16.json",
+      "moran_i": 0.9009553415512082,
+      "hpv_auc": 0.996875719777829
+    },
+    {
+      "file": "results_RANDOM108_S17.json",
+      "moran_i": 0.8765142249188279,
+      "hpv_auc": 0.9982204399920909
+    },
+    {
+      "file": "results_RANDOM108_S18.json",
+      "moran_i": 0.917927307279838,
+      "hpv_auc": 0.9998812622216944
+    },
+    {
+      "file": "results_RANDOM108_S19.json",
+      "moran_i": 0.9163536254521946,
+      "hpv_auc": 0.9994936799977497
+    },
+    {
+      "file": "results_RANDOM108_S2.json",
+      "moran_i": 0.9283413281218291,
+      "hpv_auc": 0.9998506622195673
+    },
+    {
+      "file": "results_RANDOM108_S20.json",
+      "moran_i": 0.9241766537557915,
+      "hpv_auc": 0.9997995598494471
+    },
+    {
+      "file": "results_RANDOM108_S21.json",
+      "moran_i": 0.927688105481019,
+      "hpv_auc": 0.9999931955550717
+    },
+    {
+      "file": "results_RANDOM108_S22.json",
+      "moran_i": 0.9262505843901675,
+      "hpv_auc": 0.9996218529551864
+    },
+    {
+      "file": "results_RANDOM108_S23.json",
+      "moran_i": 0.8905889499074071,
+      "hpv_auc": 0.9997683511100816
+    },
+    {
+      "file": "results_RANDOM108_S24.json",
+      "moran_i": 0.9254620984006477,
+      "hpv_auc": 0.9988693687079879
+    },
+    {
+      "file": "results_RANDOM108_S25.json",
+      "moran_i": 0.9273733144605432,
+      "hpv_auc": 0.9999012888884501
+    },
+    {
+      "file": "results_RANDOM108_S26.json",
+      "moran_i": 0.927034007017643,
+      "hpv_auc": 0.9506157506163027
+    },
+    {
+      "file": "results_RANDOM108_S27.json",
+      "moran_i": 0.9159188766930353,
+      "hpv_auc": 0.9976056755449141
+    },
+    {
+      "file": "results_RANDOM108_S28.json",
+      "moran_i": 0.9024127024737658,
+      "hpv_auc": 0.9769716843420964
+    },
+    {
+      "file": "results_RANDOM108_S29.json",
+      "moran_i": 0.9302850324626364,
+      "hpv_auc": 0.998969924426132
+    },
+    {
+      "file": "results_RANDOM108_S3.json",
+      "moran_i": 0.9191454852862433,
+      "hpv_auc": 0.9992599369595517
+    },
+    {
+      "file": "results_RANDOM108_S4.json",
+      "moran_i": 0.8801327783532926,
+      "hpv_auc": 0.9864372730922183
+    },
+    {
+      "file": "results_RANDOM108_S5.json",
+      "moran_i": 0.9090738870247456,
+      "hpv_auc": 0.9993895466558143
+    },
+    {
+      "file": "results_RANDOM108_S6.json",
+      "moran_i": 0.9350439914447165,
+      "hpv_auc": 0.9997635822211715
+    },
+    {
+      "file": "results_RANDOM108_S7.json",
+      "moran_i": 0.8973367462094035,
+      "hpv_auc": 0.9987486088833272
+    },
+    {
+      "file": "results_RANDOM108_S8.json",
+      "moran_i": 0.9106372072756275,
+      "hpv_auc": 0.9999213644273194
+    },
+    {
+      "file": "results_RANDOM108_S9.json",
+      "moran_i": 0.923502954249238,
+      "hpv_auc": 0.9999942933332319
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "mode": "loso_cross_sample",
+  "fm": "uni",
+  "samples": [
+    "CA_HPV_1",
+    "CA_HPV_2"
+  ],
+  "n_samples": 2,
+  "n_hpv_genes_panel": 40,
+  "n_final_genes": 535,
+  "per_regressor": [
+    {
+      "aggregate": {
+        "regressor": "ridge",
+        "n_valid_folds": 2,
+        "n_failed_folds": 0,
+        "mean_mse": 2.46986,
+        "mean_pearson": -0.1588,
+        "mean_hpv_overlap": 0.0,
+        "fit_seconds_sum": 0.2
+      },
+      "per_fold": [
+        {
+          "label": "loso_held=CA_HPV_1",
+          "regressor": "ridge",
+          "n_train": 1593,
+          "n_test": 1757,
+          "fit_seconds": 0.1,
+          "heldout_recon_mse": 2.35141,
+          "mean_per_gene_pearson": -0.0621,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=CA_HPV_2",
+          "regressor": "ridge",
+          "n_train": 1757,
+          "n_test": 1593,
+          "fit_seconds": 0.1,
+          "heldout_recon_mse": 2.58832,
+          "mean_per_gene_pearson": -0.2556,
+          "hpv_top50_overlap": 0.0
+        }
+      ]
+    }
+  ],
+  "wall_seconds_total": 0.7
+}

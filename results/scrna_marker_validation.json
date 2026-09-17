@@ -1,0 +1,145 @@
+{
+  "reference": "GSE308792 integrated cervical scRNA-seq",
+  "n_cells": 31002,
+  "n_marker_genes_used": 52,
+  "within_set_gene_corr_mean": 0.2419694694390157,
+  "between_set_gene_corr_mean": -0.03734813909121518,
+  "coherence_minus_between": 0.2793176085302309,
+  "lineage_score_corr": {
+    "tumor_epithelial": {
+      "tumor_epithelial": 1.0,
+      "T_cell": -0.568,
+      "B_cell": -0.286,
+      "myeloid": -0.244,
+      "fibroblast": -0.049,
+      "endothelial": 0.021,
+      "NK": -0.189
+    },
+    "T_cell": {
+      "tumor_epithelial": -0.568,
+      "T_cell": 1.0,
+      "B_cell": 0.032,
+      "myeloid": -0.157,
+      "fibroblast": -0.237,
+      "endothelial": -0.425,
+      "NK": -0.056
+    },
+    "B_cell": {
+      "tumor_epithelial": -0.286,
+      "T_cell": 0.032,
+      "B_cell": 1.0,
+      "myeloid": 0.028,
+      "fibroblast": -0.15,
+      "endothelial": 0.024,
+      "NK": -0.158
+    },
+    "myeloid": {
+      "tumor_epithelial": -0.244,
+      "T_cell": -0.157,
+      "B_cell": 0.028,
+      "myeloid": 1.0,
+      "fibroblast": -0.042,
+      "endothelial": -0.048,
+      "NK": -0.277
+    },
+    "fibroblast": {
+      "tumor_epithelial": -0.049,
+      "T_cell": -0.237,
+      "B_cell": -0.15,
+      "myeloid": -0.042,
+      "fibroblast": 1.0,
+      "endothelial": -0.13,
+      "NK": -0.245
+    },
+    "endothelial": {
+      "tumor_epithelial": 0.021,
+      "T_cell": -0.425,
+      "B_cell": 0.024,
+      "myeloid": -0.048,
+      "fibroblast": -0.13,
+      "endothelial": 1.0,
+      "NK": 0.11
+    },
+    "NK": {
+      "tumor_epithelial": -0.189,
+      "T_cell": -0.056,
+      "B_cell": -0.158,
+      "myeloid": -0.277,
+      "fibroblast": -0.245,
+      "endothelial": 0.11,
+      "NK": 1.0
+    }
+  },
+  "dominant_lineage_overall_fraction": {
+    "tumor_epithelial": 0.545,
+    "T_cell": 0.148,
+    "B_cell": 0.03,
+    "myeloid": 0.083,
+    "fibroblast": 0.024,
+    "endothelial": 0.016,
+    "NK": 0.154
+  },
+  "per_sample_composition": {
+    "sample_1": {
+      "tumor_epithelial": 6317,
+      "T_cell": 47,
+      "B_cell": 30,
+      "myeloid": 78,
+      "fibroblast": 10,
+      "endothelial": 3,
+      "NK": 791,
+      "total_cells": 7276
+    },
+    "sample_2": {
+      "tumor_epithelial": 1957,
+      "T_cell": 788,
+      "B_cell": 96,
+      "myeloid": 332,
+      "fibroblast": 69,
+      "endothelial": 64,
+      "NK": 351,
+      "total_cells": 3657
+    },
+    "sample_3": {
+      "tumor_epithelial": 2903,
+      "T_cell": 504,
+      "B_cell": 90,
+      "myeloid": 672,
+      "fibroblast": 342,
+      "endothelial": 268,
+      "NK": 478,
+      "total_cells": 5257
+    },
+    "sample_4": {
+      "tumor_epithelial": 1498,
+      "T_cell": 1580,
+      "B_cell": 377,
+      "myeloid": 538,
+      "fibroblast": 123,
+      "endothelial": 58,
+      "NK": 1510,
+      "total_cells": 5684
+    },
+    "sample_5": {
+      "tumor_epithelial": 3228,
+      "T_cell": 634,
+      "B_cell": 89,
+      "myeloid": 437,
+      "fibroblast": 44,
+      "endothelial": 30,
+      "NK": 215,
+      "total_cells": 4677
+    },
+    "sample_6": {
+      "tumor_epithelial": 991,
+      "T_cell": 1045,
+      "B_cell": 259,
+      "myeloid": 505,
+      "fibroblast": 153,
+      "endothelial": 58,
+      "NK": 1440,
+      "total_cells": 4451
+    }
+  },
+  "interpretation": "Marker validation PASSED if within-set gene correlation is clearly higher than between-set (markers co-vary by lineage) and the lineage-score correlation matrix shows off-diagonal negatives between epithelial vs immune lineages (distinct populations)."
+}

@@ -1,0 +1,74 @@
+{
+  "run_id": "XCOHORT_HNSCC_FINAL",
+  "checkpoint": "results/checkpoint_FULL_DEPLOY_FAST_seed42.pt",
+  "mode": "expr_only",
+  "fm": "uni",
+  "n_genes": 4991,
+  "n_samples": 8,
+  "per_sample": [
+    {
+      "name": "GSM8283897",
+      "n_spots": 4048,
+      "mean_score": 2.7352330684661865,
+      "std_score": 1.4609875679016113,
+      "median_score": 2.797299861907959,
+      "moran_i": 0.867365852844906
+    },
+    {
+      "name": "GSM8283898",
+      "n_spots": 4096,
+      "mean_score": 0.5308697819709778,
+      "std_score": 0.5352548360824585,
+      "median_score": 0.4048183262348175,
+      "moran_i": 0.8170595820717771
+    },
+    {
+      "name": "GSM8283899",
+      "n_spots": 3333,
+      "mean_score": 2.0661656856536865,
+      "std_score": 0.8486700654029846,
+      "median_score": 2.0656261444091797,
+      "moran_i": 0.7083829979106461
+    },
+    {
+      "name": "GSM8283900",
+      "n_spots": 4128,
+      "mean_score": 1.81440269947052,
+      "std_score": 0.8308300971984863,
+      "median_score": 1.7732281684875488,
+      "moran_i": 0.6743764559919456
+    },
+    {
+      "name": "GSM8283901",
+      "n_spots": 3606,
+      "mean_score": 2.440464973449707,
+      "std_score": 1.214475393295288,
+      "median_score": 2.6526103019714355,
+      "moran_i": 0.7597662963815088
+    },
+    {
+      "name": "GSM8283902",
+      "n_spots": 2685,
+      "mean_score": 1.4113657474517822,
+      "std_score": 1.036320686340332,
+      "median_score": 1.3334802389144897,
+      "moran_i": 0.7507183673894646
+    },
+    {
+      "name": "GSM8283903",
+      "n_spots": 2978,
+      "mean_score": 3.028805732727051,
+      "std_score": 1.188400149345398,
+      "median_score": 2.979048252105713,
+      "moran_i": 0.7538617915855249
+    },
+    {
+      "name": "GSM8283904",
+      "n_spots": 4908,
+      "mean_score": 2.7080085277557373,
+      "std_score": 1.0234423875808716,
+      "median_score": 2.64169979095459,
+      "moran_i": 0.7345974412691426
+    }
+  ]
+}

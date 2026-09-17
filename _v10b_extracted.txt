@@ -1,0 +1,172 @@
+极端小样本宫颈病变空间转录组中的通路锚定多模态风险表征：跨平台迁移与标签依赖的多种子消融基准
+Pathway-anchored multimodal spatial-transcriptomic risk representation in the extreme low-sample cervical-lesion regime: cross-platform transfer and a label-dependence ablation benchmark
+（概念验证研究 / proof-of-concept；非诊断工具）
+
+摘要
+背景与目的：空间转录组（spatial transcriptomics, ST）与病理组学的多模态融合有望刻画宫颈病变微环境，但公开 ST 队列中疾病样本极少（本研究可获得的宫颈 Visium 病变样本仅 4 例），模型极易把少量疾病标签“背下来”，形成看似完美、实则不泛化的结果。本研究提出一个以 HPV 通路为先验的多模态 ST 风险表征框架，目标不是构建诊断器，而是回答两个在小样本 ST 研究中普遍回避的问题：通路锚定的风险表征是否生物学可解释、并可在无标签下跨平台/跨器官迁移；以及队列内的疾病区分究竟来自模型学习还是标签锚定。
+方法：框架在 35 例宫颈 Visium 样本（31 例正常、4 例病变[HSIL/SCC/ADC]，共 46,820 个 spot、107 个通路相关基因面板）上，联合基因表达分支与基于 UNI 病理基础模型的图像分支，并施加 HPV 通路一致性正则、空间邻域约束与风险监督。所有比较在同一队列、同一数据协议下以多种子重复运行：FULL（完整）、NO-IMAGE（关闭图像分支）、NO-HPV（关闭通路一致性正则 λ_hpv）、NO-NEIGH（关闭空间邻域约束）、NO-PROG（关闭疾病严重度标签回归 λ_prog）。以 Moran's I 度量空间一致性，以 Kendall τ 及置换检验度量疾病有序排序；下游用基于秩的 ssGSEA 检验spot 风险与 7 条通路/8 类细胞状态评分的相关。外部验证全部在表达分支、不使用任何宫颈标签下进行：GeoMx DSP（GSE316098）、头颈部鳞癌 ST（HNSCC）、TCGA-CESC 生存、独立宫颈 scRNA-seq（GSE308792）。
+结果：(1) 队列内 FULL 模型空间一致性 Moran's I=0.849±0.014，疾病有序排序 Kendall τ=0.457（置换 p<0.001）。(2) 决定性消融：关闭疾病严重度标签回归后（NO-PROG，4 个种子），Kendall τ 降至 0.231±0.018、置换 p=0.07–0.14（不再显著），每一种子均有 1 个癌症样本风险分低于正常——表明有序疾病区分依赖标签锚定，而非模型自主识别。(3) 关闭空间邻域约束（NO-NEIGH，Moran's I=0.843）或关闭图像分支（NO-IMAGE，0.859）均不降低 FULL 的空间一致性（0.849），疾病排序也不变（τ≈0.457），说明高 Moran's I 主要来自 Visium spot 级通路表达的内在平滑，而非邻域正则或病理图像特征。(4) 风险评分具强生物学可解释性且跨种子稳定：与肿瘤上皮（ρ=+0.60）、HPV 致癌驱动（+0.24）、抗原呈递（+0.51）正相关，与干扰素-抗病毒（-0.62，符合高级病变免疫逃逸）负相关，全部 BH q<5×10⁻⁹（最弱项 q=4.9×10⁻⁹）。(5) 可迁移的是“肿瘤 vs 正常”方向，而非风险分级：在独立 GeoMx 宫颈腺癌队列（7 例患者，WU-01~WU-07/93 组织区）上，以 GEO 原始 Silva 注释为准，肿瘤区（Silva A/B/C 合并）通路风险高于良性（10.38 vs 8.45，Mann-Whitney p=1.0e-09；6 例同时含良/恶性的患者内配对全部一致（6/6 肿瘤>正常，双侧配对 Wilcoxon p=0.031），且无上皮/基质区室偏倚（p=0.50）。但该评分不能作侵袭性分级：Silva A（非破坏、预后最好）反而最高（A 11.36≈C 10.28>B 9.56，A vs B p=0.002，非单调），病理 High vs Low 风险不显著（p=0.10）。HNSCC 中通路评分 Moran's I=0.74（8 例，0.59–0.86），而标签随机置换对照≈0.01。(6) 诚实的阴性/边界结果：11 个空间 DEG 在 TCGA-CESC（302 例、72 事件）单因素 Cox 中无一经 FDR 显著（最小 p=0.114）；全无监督外推仅部分成立且不稳定——全无监督留一疾病外推（LODO，λ_sup=λ_prog=0）中 3/4 折的留出疾病高于正常中位、仅 1/4 折高于全部正常（平均百分位 0.69，范围 0.00–1.00，唯一腺癌折完全失败为 0.00）；而少量标签即可将该部分方向稳定为可迁移方向——半监督 LODO（训练保留其余 3 个有标签疾病）中 4/4 折高于正常中位、3/4 折高于全部正常（平均百分位 0.90，最弱腺癌折由 0.00 升至 0.61）。
+结论：在 n=4 疾病的极端小样本条件下，一个通路锚定的多模态 ST 框架能够产生生物学可解释、空间一致、并可在无标签下跨平台/跨器官迁移的通路风险表征；但疾病的“有序排序”在如此小样本下依赖少量标签锚定，且病理图像分支未显示增益。我们主张：小样本 ST 风险研究必须像本研究一样报告去标签消融，否则队列内高 AUC/高相关可能是标签记忆而非泛化。本框架应被视为可迁移通路表征的概念验证与方法学基准，而非诊断工具。
+关键词：空间转录组；宫颈病变；HPV 通路；多模态融合；病理基础模型；小样本学习；消融基准；迁移验证
+1 引言
+宫颈癌是全球女性第四大恶性肿瘤[1]，高危型 HPV 持续感染是其主要病因[2]，病变沿 CIN→原位癌→浸润癌逐步进展；TCGA 多组学研究已系统刻画了宫颈癌的分子图谱[3]，而宫颈腺癌的间质浸润模式（Silva A/B/C）是公认的、与淋巴结转移及预后直接相关的组织学分级体系[4-7]。随着空间转录组（如 10x Visium[8]）与数字病理基础模型（如 UNI[9]、Virchow[10]、GigaPath[11]）成熟，将“表达+图像+通路先验”联合，有望在组织原位刻画肿瘤上皮转化、免疫编辑与微环境重塑。然而该方向存在一个被普遍低估的方法学风险：公开 ST 数据中宫颈疾病样本极少，本研究可聚合获得的疾病 Visium 样本仅 4 例（HSIL 1 例、鳞癌/腺癌 3 例）。在此规模下，任何带监督的风险模型都可能把 4 个疾病标签“记住”，在队列内给出近乎完美的区分，却把标签记忆误当泛化——这类结果若不加去标签消融与留出检验即写入论文，将构成严重的可重复性隐患。
+通路生物学为缓解小样本问题提供了天然的归纳偏置：HPV 致癌是一条由 E6/E7 驱动、经 p53/Rb 失活、抗原呈递改变与免疫逃逸展开的保守程序。若把这条通路作为先验锚定风险表征，理论上即使疾病样本稀少，学到的评分也应（i）在生物学上可解释，（ii）空间上平滑一致，（iii）在同样受 HPV/上皮转化影响的其它平台与器官中可迁移。但这些预期是否成立、以及队列内的疾病区分究竟来自通路先验还是标签，必须用对照实验逐条检验，不能假设。
+相关工作与本文定位：计算病理与空间组学方向近年已涌现一批大规模模型——HE2RNA[12] 与 ST-Net[13] 率先证明可从 H&E 图像直接预测（空间）基因表达，OmiCLIP[14] 将视觉-组学对齐扩展为病理-空间转录组基础模型；SPADE[15]、SEAL[16]、MINT[17] 等工作在数十万至七十万配准 spot/区域上以 ST 监督微调病理视觉编码器；ST-Align[18] 构建 spot 与微龛双层的图像-基因对齐预训练，STPath[19] 则在大规模 WSI-ST 对上训练可跨 17 个器官直接预测近 4 万基因的生成式基础模型。上述工作的共同前提是大规模多样本数据，目标是表示学习或分子预测，既未覆盖“疾病样本仅 4 例”的极端小样本场景，也不回答“队列内的完美区分究竟来自学习还是标签记忆”。本文不与这些模型做规模或预测精度竞争，而是把问题界定为任务端（task-side）的可迁移通路风险表征，并配套一套去标签消融基准。
+本研究的贡献与定位（明确不作为诊断模型主张）：(1) 提出一个通路锚定、表达+图像融合的 ST 风险表征框架，并在 35 例宫颈 Visium 上以同队列、多种子、全量 spot 协议运行；(2) 通过 FULL/NO-IMAGE/NO-HPV/NO-NEIGH/NO-PROG 消融，把“空间一致性”“生物学可解释性”“疾病有序排序”三个属性的来源逐一解耦；(3) 在完全不使用宫颈标签的条件下，用 GeoMx DSP[20] 与跨器官 HNSCC 检验通路评分的迁移性，并以正确的 GEO Silva 注释区分“肿瘤 vs 正常方向”与“侵袭性分级”；(4) 诚实报告阴性/边界结果（图像分支无增益、TCGA 生存不显著、全无监督外推仅部分且不稳定，而少量标签即稳定可迁移），并据此给出小样本 ST 风险研究应遵循的报告规范。
+2 材料与方法
+2.1 数据队列
+表1 数据队列总览
+队列
+类型
+规模
+用途
+宫颈 Visium 聚合队列
+ST（10x Visium）
+35 例（31 正常 / 4 病变）；46,820 spot
+主模型与同队列消融
+GSE316098 [21]
+GeoMx DSP（宫颈腺癌）[20]
+7 例患者（WU-01~WU-07）/ 186 ROI（93 组织区）
+跨平台：肿瘤 vs 正常方向（非分级）
+GSE268014 [22]
+ST（头颈部鳞癌；Simkin 等）
+8 例
+跨器官空间一致性迁移
+GSE281978 [23]
+ST（HPV± HNSCC；Lee 等）
+6 例
+跨器官复制
+TCGA-CESC [3]
+bulk RNA-seq
+302 例 / 72 事件
+生存迁移（阴性）
+GSE308792 [24]
+scRNA-seq（宫颈）
+31,002 细胞
+细胞 marker 有效性
+
+宫颈 Visium 队列经符号链接聚合自公开数据集（geo_cesc 病变 4 例、geo_ectocervix 正常 P001–P030、cervical_cancer_1），组织学标签为正常/HSIL/癌（严重度 0/1/2）。为消除此前“样本数与 spot 数不一致”导致的跨协议假象，本研究所有训练/消融均在同一 35 例、全量 46,820 spot、统一基因面板（4,991 基因，通路相关子面板 107 基因）下进行。
+2.2 框架与损失
+框架由三路构成：(a) 表达分支：基因表达编码为潜变量并重构（重构损失 l_rec，权重 0.2；潜变量正则 l_var，0.1）；(b) 图像分支：UNI 病理基础模型提取 patch 特征后编码、与表达潜变量融合（可整体关闭）；(c) 通路与空间先验：以 KEGG HPV 通路（108 基因[26]）为锚的通路一致性正则 l_hpv（λ_hpv=1.0）、以及相邻 spot 一致的邻域约束 l_neigh（0.3）。风险头输出 spot 级风险分，受两项监督：HPV 状态代理二分类 l_sup（权重 5.0）与疾病严重度回归 l_prog（MSE 到 0/1/2 标签，权重 1.5）。
+消融定义（关键，避免误读）：FULL 为完整配置；NO-IMAGE 关闭图像分支（仅表达）；NO-NEIGH 关闭空间邻域约束 l_neigh（保留其余全部项），用于检验高空间一致性是否来自邻域正则；NO-HPV 仅置 λ_hpv=0（注意：HPV 代理监督 l_sup 仍开启，故该消融只检验通路一致性正则项，不检验全部 HPV 信号）；NO-PROG 置 λ_prog=0，即训练时完全不使用疾病严重度标签，但保留表达、图像、通路与 HPV 代理监督——它检验“在不直接告诉模型谁是癌”时，有序疾病风险轴能否自发形成。留一疾病外推（leave-one-disease-out, LODO）在 4 个疾病样本上逐折进行，分两种协议：半监督 LODO（主报告协议）训练时保留其余 3 个疾病的严重度/HPV 标签、仅留出目标疾病片，训后用拟合模型对其推断风险，报告其相对 31 个训练正常样本的风险百分位；全无监督 LODO 则在该折同时置 λ_sup=λ_prog=0。两种 LODO 协议在同一终协议下完成、可直接横比：均不设 spot 上限、使用全部 spot（4 个训练折实际使用 44,039–46,241 个 spot，随留出片不同而变化；两套协议各折 spot 数逐折相同），共同固定 λ_recon/λ_hpv/λ_neigh=0.2/1.0/0.3；唯一差别是监督项——半监督 LODO 的 λ_sup/λ_prog=5.0/1.5，全无监督 LODO 的 λ_sup/λ_prog=0/0。两协议训练队列完全相同（排除非宫颈外部队列后 35 例，各折训练 34 例），唯一变量是疾病标签是否参与训练，因而二者差异可解释为标签的因果效应。
+2.3 评估与统计
+空间一致性用 Moran's I（全局空间自相关[27]）；疾病有序排序用样本级风险与严重度的 Kendall τ[28]，并以 1,000 次标签置换得到经验 p 值；疾病 vs 正常样本均差用单尾 Mann-Whitney U[29]；GeoMx 上皮/间质配对 ROI 的患者内比较用双侧配对 Wilcoxon 符号秩检验。下游通路/细胞评分采用基于秩的 ssGSEA[25]（纯 NumPy[35] 实现），在每样本内 z 标准化后与风险做 Spearman 相关，Benjamini-Hochberg 法[30]控制 FDR；分类指标由 scikit-learn[34] 计算，统计检验由 SciPy[36] 完成。外部迁移仅用表达分支、不读取任何宫颈标签来打分。GSE316098 的 Silva/风险分组以 GEO SOFT 元数据的 `silva pattern`/`risk`/`caseid` 注释为准（计数矩阵列名前缀 1A/1b-1 是 TMA 组织芯编号，并非 Silva 分型，二者不可混用）；ROI 在组织芯内为上皮/间质配对，主分析在芯级（配对均值）与患者内配对两个层面进行，ROI 级 p 值因非独立仅作描述。每个变体在多个随机种子下重复，报告均值±标准差；所有数字均可追溯至 results/*.json 与融合嵌入 *.npz。
+3 结果
+3.1 框架概览与队列内风险分层
+
+图1 框架概览：表达/图像双分支融合，HPV 通路先验与空间邻域约束锚定风险表征，产出 spot 级风险分。
+
+
+图2 spot 级风险随组织学严重度升高（FULL，seed 0；正常 -0.04 / HSIL 0.71 / 癌 1.77）。**该图为训练集内描述性结果，样本量疾病 n=4，不代表泛化。**
+
+队列内 spot 风险均值随严重度单调升高（正常/HSIL/癌），样本级疾病 vs 正常 Mann-Whitney p≈1.9×10⁻⁵。但如图注所强调，这是监督训练集内的描述性现象；它能否代表“学到的疾病信号”，必须由去标签消融判定（见 3.2）。
+3.2 决定性消融：疾病有序排序依赖标签锚定
+
+图3 同队列多种子消融。左：空间一致性 Moran's I；右：疾病有序排序 Kendall τ（点为各种子，柱为均值±SD）。NO-PROG（去除疾病严重度标签）后 Kendall τ 不再显著（红色 n.s.），而 Moran's I 仅轻度下降。
+
+表2 同队列多种子消融（35 例 / 46,820 spot，统一协议）。注：NO-HPV 的 Kendall τ 在其 3 个种子下完全相同（SD=0.000），非四舍五入所致。
+配置
+种子数
+Moran's I（均值±SD）
+Kendall τ（均值±SD）
+τ 置换 p 区间
+解释
+FULL
+3
+0.849 ± 0.014
+0.457 ± 0.004
+<0.001
+完整模型
+NO-IMAGE
+3
+0.859 ± 0.032
+0.457 ± 0.008
+0.001–0.001
+图像分支无增益
+NO-HPV
+3
+0.839 ± 0.012
+0.462 ± 0.000
+0.001
+通路正则项不决定排序
+NO-NEIGH
+3
+0.843 ± 0.013
+0.460 ± 0.004
+0.001
+空间一致性非邻域所致
+NO-PROG
+4
+0.763 ± 0.015
+0.231 ± 0.018
+**0.074–0.140（n.s.）**
+去标签后排序崩溃
+
+结果清晰：去除疾病严重度标签回归（NO-PROG）后，Kendall τ 由 FULL 的 0.457 降至 0.231±0.018（4 个种子一致），置换 p 升至 0.07–0.14（不再显著），且每一个种子中同一癌症样本（cervical_cancer_1）风险分（约 −0.8 至 −1.2）都低于 31 个正常样本中的 30 个；疾病 vs 正常 Mann-Whitney 也降到边缘（p=0.041–0.080，4 个种子中 3 个 >0.05）。这说明队列内看似完美的疾病排序主要由标签回归锚定，而非模型从未标注数据中自主识别病变。但这并不等于模型只死记这 4 个样本——3.4 的半监督 LODO 显示，只要保留极少量（另外 3 张疾病片的）标签，模型就能把一条可迁移的疾病方向推广到未见过的疾病片；零标签极限下该方向仅部分存在且不稳定（见 3.4）。
+相反，空间一致性对标签、邻域正则和图像都不敏感：NO-PROG 的 Moran's I 仅由 0.849 降至 0.763，仍处高位；更关键的是，关闭空间邻域约束的 NO-NEIGH（0.843）与关闭图像分支的 NO-IMAGE（0.859）Moran's I 都与 FULL 无实质差异，疾病 τ 也都不变（≈0.46）。这说明高 Moran's I 并非由邻域正则或 UNI 图像特征产生，而主要来自 Visium 相邻 spot 共享组织/细胞、通路表达本征平滑——它是数据属性而非模型贡献，因此不应作为模型性能来宣称。同时，在 n=4 且表达信息充足的协议下，UNI 病理特征未带来额外判别力，我们将图像分支的阴性结果如实报告，而非回避。
+最简通路基线（明确为队列内 in-sample 口径）：作为参照，不经任何学习、直接取 108 个 KEGG-HPV 基因在每个样本的平均表达作疾病/正常判分，队列内 AUC=0.75，而 FULL 模型队列内 AUC=1.00。二者同为 n=35 训练队列上的 in-sample 描述性指标，不是外部验证；模型相对该基线 0.25 的 AUC 增量同样可能来自标签锚定（NO-PROG 已证明排序对标签的依赖），故此处仅报告增量大小，不据此宣称泛化优势。
+3.3 通路锚定风险的生物学可解释性
+
+图4 spot 风险与通路/细胞状态评分的 Spearman 相关（within-sample z，3 个 FULL 种子均值，11 项相关全部 BH q<5×10⁻⁹，最弱项 q=4.9×10⁻⁹）。
+
+风险高的 spot 富集肿瘤上皮与 HPV 致癌程序、并表现干扰素/增殖下调，方向与宫颈鳞癌上皮转化及免疫逃逸一致：
+· 肿瘤上皮 marker（KRT5/14/17、EPCAM 等）：ρ=+0.60；HPV 致癌驱动（CDKN2A/MYC/EGFR/PIK3CA 等）：ρ=+0.24；抗原呈递（B2M/HLA-A/B2M/PSMB8）：ρ=+0.51。
+· 干扰素-抗病毒（STAT1/MX1/ISG15 等）：ρ=-0.62（高危区干扰素应答减弱，符合 HPV E6/E7 介导的免疫逃逸）；增殖：ρ=+0.05、EMT：ρ=-0.11（经 within-sample z，受基底/分化异质性影响，谨慎解读）。
+为确认这些 marker 不是任意基因组合，在独立宫颈 scRNA-seq（GSE308792[24]，31,002 个整合后全细胞、52 marker；口径注：原始数据集论文报告为 14,441 个免疫细胞，本文 31,002 为整合矩阵全细胞口径，二者不可直接互代）上验证：同谱系基因内平均相关 +0.242，跨谱系 -0.037（差异 +0.279），肿瘤上皮与 T 细胞谱系评分相关 −0.57，表明 marker 按谱系正确共变。
+3.4 无标签跨平台/跨器官迁移与少量标签留出外推
+
+图5 外部迁移与留出外推。A：HNSCC ST 中通路评分 Moran's I 高，标签随机置换对照≈0；B：GeoMx 中肿瘤区（Silva A/B/C 合并）风险高于良性（芯级 Mann-Whitney p=2.0e-07）；C：按真实 Silva 模式 A/B/C 与病理风险分层均非单调/不显著，故该评分不支持侵袭性分级；D：终协议 LODO 4 折留出疾病对 31 个正常样本的风险百分位，半监督（3 个疾病带标签）与全无监督（λ_sup=λ_prog=0）逐折对照。
+
+跨平台方向可迁移，但不支持分级（GeoMx DSP，GSE316098[21]）。评分仅用表达分支、不读取任何宫颈标签；分组以 GEO SOFT 原始注释为准（列名前缀 1A/1b-1 是 TMA 芯编号，已纠正，不作 Silva 分型）。在 7 例患者（WU-01~WU-07）、186 个 ROI（93 个上皮/间质配对组织区）上，肿瘤区（Silva A/B/C 合并）通路风险 10.38 高于良性 8.45（ROI 级 Mann-Whitney p=1.0e-09；芯级 p=2.0e-07），且在 6 例同时含良、恶性组织的患者内配对中 6/6 一致为肿瘤>正常（双侧配对 Wilcoxon p=0.031），上皮/基质区室无系统差异（p=0.50），故该方向不是区室组成或批次假象。然而它不是风险分级轴：生物学上非破坏、预后最好的 Silva A 反而得分最高（A 11.36≈C 10.28>B 9.56，非单调；A vs B p=0.002），病理 High vs Low 风险亦无显著差异（p=0.10）。因此外部证据支持“肿瘤 vs 正常的方向性迁移”，不支持“侵袭性/风险高低分级”，本文据此严格限定结论。
+跨器官（HNSCC）：通路空间评分在 8 例头颈部鳞癌 ST（GSE268014[22]）中 Moran's I=0.74（0.59–0.86；在独立 HPV± HNSCC 集 GSE281978[23] 中为 0.66），而将疾病标签随机置换的阴性对照 Moran's I≈0.01。通路程序在同样受上皮转化/HPV 影响的另一器官中保持空间自组织，且该性质不依赖标签。
+少量标签将部分方向稳定为可迁移方向（半监督 vs 全无监督 LODO，同一终协议逐折对照）。两套 LODO 均在主文锁定超参、全量 spot、相同 35 例队列下逐折留出 1 个疾病片（各折训练 34 例、44,039–46,241 spot），唯一差别是监督项。全无监督 LODO（λ_sup=λ_prog=0）给出的是部分且不稳定的方向：3/4 折的留出疾病高于 31 个训练正常样本的中位，仅 1/4 折高于全部正常，平均风险百分位 0.69（HSIL 0.81、CA_HPV_1 0.97、cervical_cancer_1 1.00，而唯一腺癌 CA_HPV_2 为 0.00，低于全部正常；折间范围 0.00–1.00）。即仅凭通路一致性、空间邻域与重建先验，模型在多数留出片上能形成粗略的“肿瘤 vs 正常”方向，但不足以稳定覆盖所有组织学亚型。加入另外 3 张疾病片的标签（半监督 LODO）后该方向被稳定：4/4 折高于正常中位、3/4 折高于全部正常，平均百分位升至 0.90；最关键的是失败的腺癌折由 0.00 升至 0.61（仍高于正常中位）。这构成一个清晰的标签剂量效应：零标签→部分、不稳定；3 张疾病片标签→4/4 稳定迁移。风险轴并非仅记忆这 4 个样本，但无标签先验只能提供部分方向，少量标签才使其可靠；腺癌折两协议下均最弱，提示组织学亚型（腺 vs 鳞）泛化是主要瓶颈。
+3.5 通路特异性与阴性结果
+随机基因集对照：KEGG-HPV 锚定评分 Moran's I=0.943，高于 30 个随机同规模基因集（0.916，0.877–0.935；置换 p=0.032），即空间一致性具弱但显著的通路特异性；然而疾病排序 Kendall τ 在随机基因集上同样很高（KEGG 0.462 vs 随机 0.461，AUC 置换 p=0.16），再次证明排序来自标签而非通路——与 3.2 完全自洽。
+TCGA-CESC 生存（阴性）：11 个空间 DEG 在 302 例（72 事件）bulk 队列单因素 Cox 比例风险回归[31]中无一经 BH-FDR 显著（最显著 PSME2 原始 p=0.114）。spot 级空间信号不能直接映射到 bulk 预后，提示空间风险与人群生存之间存在尺度/混杂差异，不应宣称预后价值。
+4 讨论
+本研究在一个极端小样本（疾病 n=4）的公开宫颈 ST 队列中，系统检验了“通路锚定多模态风险表征”能与不能做什么。可辩护的正面结论有三点：其一，风险评分在 spot 水平与肿瘤上皮、HPV 致癌驱动、抗原呈递正相关、与干扰素应答负相关，方向与宫颈病变已知生物学一致且跨种子稳定，并经独立 scRNA-seq 验证 marker 有效；其二，空间一致性高且对标签不敏感；其三，也是最重要的，通路表达评分在不读取宫颈标签的情况下，把“肿瘤 vs 正常”的方向稳定迁移到独立 GeoMx 宫颈腺癌队列（肿瘤>良性，芯级 p=2e-07，6 例患者内双侧配对 Wilcoxon p=0.031）并跨器官迁移到 HNSCC（随机置换对照接近零）；但同一评分在 GeoMx 上不能区分 Silva 侵袭模式或病理风险等级，说明真正可迁移、可复现的信号是“肿瘤相关通路程序的空间组织与方向”，而非对 4 个标签的拟合，也不是精细的风险分级。
+必须诚实面对的边界：(1) 队列内近乎完美的疾病有序排序在去除严重度标签后即不显著（NO-PROG τ 0.46→0.23，p≈0.10），全无监督留出外推只给出部分且不稳定的方向（3/4 折高于正常中位、平均百分位 0.69，腺癌折 0.00）；但半监督 LODO 证明少量（3 张疾病片）标签足以把该方向稳定推广到留出片（4/4 折高于正常中位、3/4 折高于全部正常、平均百分位 0.90，腺癌折由 0.00 升至 0.61）。故本框架可作为“少量标签下的肿瘤方向检出/表征”，但不能被表述为无监督诊断或侵袭性风险分级工具；(2) UNI 病理图像分支在此协议下无可测增益，图像多模态的价值在更大样本或配准更好的 H&E-ST 数据中才可能显现；(3) 空间 DEG 不带 bulk 预后信号；GeoMx 的腺癌样本以腺上皮为主、与主队列鳞癌存在组织学差异，且唯一腺癌留出折最弱，跨亚型外推需谨慎；(4) 疾病样本仅 4 例、HSIL 仅 1 例，GeoMx 患者仅 7 例，统计功效天然受限，置换、多种子与患者内配对只能部分缓解。
+对领域的方法学建议：小样本 ST 风险研究应将“去标签消融（如本研究 NO-PROG）”“无标签跨平台/跨器官表达分支迁移”“少量标签留出外推（半监督 LODO）”与“随机基因集对照”列为必报项。仅报告队列内 AUC≈1 或高相关，而不证明其在去标签/跨数据下成立，无法区分生物学泛化与标签记忆——这正是本研究用代价最小的一组实验所揭示的核心风险。该报告规范亦与小样本机器学习评估建议（留出验证、报告方差与置信区间而非点估计[32]；防止过乐观报告与模型选择偏差[33]）相一致。
+5 结论
+通路锚定的多模态空间转录组框架在 n=4 疾病的极端约束下，能够给出生物学可解释、空间一致的通路风险表征，并把“肿瘤 vs 正常”的方向在无宫颈标签下跨平台（GeoMx）/跨器官（HNSCC）迁移；疾病的精细有序排序依赖少量标签锚定，但半监督留一疾病外推表明该方向在少量标签下可推广到未见过的疾病片；病理图像分支未见增益，且评分不支持侵袭性分级。我们将该框架定位为可迁移通路表征的概念验证与小样本 ST 消融基准，其价值在于提供一套可复现的流程与诚实的证据边界，为后续在更大、配准的 H&E-ST 多中心队列上构建真正可外推的诊断模型奠定基础。
+数据与代码可得性
+全部训练脚本、配置、结果 JSON 与融合嵌入均可在 GitHub 公开仓库获取（链接：__________）；数据来自公开数据库（GEO Visium、GeoMx GSE316098、TCGA-CESC、GEO scRNA-seq），编号见表1。
+参考文献
+[1] Sung H, Ferlay J, Siegel RL, Laversanne M, Soerjomataram I, Jemal A, et al. Global cancer statistics 2020: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries. CA Cancer J Clin. 2021;71(3):209–249.
+[2] zur Hausen H. Papillomaviruses and cancer: from basic studies to clinical application. Nat Rev Cancer. 2002;2(5):342–350.
+[3] Cancer Genome Atlas Research Network. Integrated genomic and molecular characterization of cervical cancer. Nature. 2017;543(7645):378–384.
+[4] Diaz De Vivar A, Roma AA, Park KJ, Alvarado-Cabrero I, Rasty G, Chanona-Vilchis JG, et al. Invasive endocervical adenocarcinoma: proposal for a new pattern-based classification system with significant clinical implications: a multi-institutional study. Int J Gynecol Pathol. 2013;32(6):592–601.
+[5] Roma AA, Diaz De Vivar A, Park KJ, Alvarado-Cabrero I, Rasty G, Chanona-Vilchis JG, et al. Invasive endocervical adenocarcinoma: a new pattern-based classification system with important clinical significance. Am J Surg Pathol. 2015;39(5):667–672.
+[6] Alvarado-Cabrero I, Parra-Herran C, Stolnicu S, Roma A, Oliva E, Malpica A. The Silva pattern-based classification for HPV-associated invasive endocervical adenocarcinoma and the distinction between in situ and invasive adenocarcinoma: relevant issues and recommendations from the International Society of Gynecological Pathologists. Int J Gynecol Pathol. 2021;40(Suppl 1):S48–S65.
+[7] Powell A, Hodgson A, Cohen PA, Rabban JT, Park KJ, McCluggage WG, et al. Improved risk prediction in human papillomavirus-associated endocervical adenocarcinoma through assessment of binary Silva pattern-based classification: an international multicenter retrospective observational study led by the International Society of Gynecological Pathologists (ISGyP). Int J Gynecol Pathol. 2024;43(5):436–446.
+[8] Ståhl PL, Salmén F, Vickovic S, Lundmark A, Navarro JF, Magnusson J, et al. Visualization and analysis of gene expression in tissue sections by spatial transcriptomics. Science. 2016;353(6294):78–82.
+[9] Chen RJ, Ding T, Lu MY, Williamson DFK, Jaume G, Song AH, et al. Towards a general-purpose foundation model for computational pathology. Nat Med. 2024;30(3):850–862.
+[10] Vorontsov E, Bozkurt A, Cassonnet P, Bontempi G, Mangeol P, Rémy C, et al. A foundation model for clinical-grade computational pathology and rare cancers detection. Nat Med. 2024;30(10):2924–2935.
+[11] Xu H, Usuyama N, Bagga J, Zhang S, Xu W, Rao U, et al. A whole-slide foundation model for digital pathology from real-world data. Nature. 2024;630(8015):181–188.
+[12] Schmauch B, Romagnoni A, Pronier E, Maillard A, Grista A, Katz J, et al. Transcriptomic learning for digital pathology. Nat Commun. 2020;11(1):3877.
+[13] He B, Bergenstråhle L, Stenbeck L, Abid A, Andersson A, Borg Å, et al. Integrating spatial gene expression and breast tumour morphology via deep learning. Nat Biomed Eng. 2020;4(8):827–834.
+[14] Chen W, Zhang P, Tran TN, Xiao Y, Li S, Shah VV, et al. A visual-omics foundation model to bridge histopathology with spatial transcriptomics. Nat Methods. 2025;22(7):1568–1582.
+[15] Redekop E, Pleasure M, Wang Z, Flores K, Sisk A, Speier W, Arnold CW. SPADE: spatial transcriptomics and pathology alignment using a mixture of data experts for an expressive latent space. arXiv [preprint]. 2025;arXiv:2506.21857.
+[16] Hemker K, Song AH, Almagro-Pérez C, Jaume G, Wagner SJ, Vaidya A, et al. Towards spatial transcriptomics-driven pathology foundation models. arXiv [preprint]. 2026;arXiv:2602.14177.
+[17] Lee M, Kim J, Yun J, Yu S, Jang J. MINT: molecularly informed training with spatial transcriptomics supervision for pathology foundation models. arXiv [preprint]. 2026;arXiv:2603.07895.
+[18] Lin Y, Luo L, Chen Y, Zhang X, Wang Z, Yang W, et al. ST-Align: a multimodal foundation model for image-gene alignment in spatial transcriptomics. arXiv [preprint]. 2024;arXiv:2411.16793.
+[19] Huang T, Liu T, Babadi M, Ying R, Jin W. STPath: a generative foundation model for integrating spatial transcriptomics and whole-slide images. NPJ Digit Med. 2025;8(1):659.
+[20] Merritt CR, Ong GT, Church S, Barker K, Danaher P, Geiss G, et al. Multiplex digital spatial profiling of proteins and RNA in fixed tissue. Nat Biotechnol. 2020;38(5):586–599.
+[21] Axelrod ML, Zhou R, Sun L. Spatial transcriptomic landscape of invasion patterns in human papillomavirus-associated endocervical adenocarcinoma. Sci Rep. 2026;16(1):13246.
+[22] Simkin D, Barrett TF, Zhang L, Moore MJ, Greenwald AC, Galili N, et al. Spatial analysis of head and neck cancer identifies two ecosystems with distinct modes of epithelial-to-mesenchymal transition. Nat Genet. 2026;58(9):2240–2253.
+[23] Lee H, Park S, Yun JH, Seo C, Ahn JM, Cha HY, et al. Deciphering head and neck cancer microenvironment: single-cell and spatial transcriptomics reveals human papillomavirus-associated differences. J Med Virol. 2024;96(1):e29386.
+[24] Yuan Y, Sun D, Yang M, Xia Y, Yuan C, Wang X. Profiling of immune cell subsets and functional characteristics of cervical cancer based on single cell RNA sequencing. Front Immunol. 2025;16:1658705.
+[25] Barbie DA, Tamayo P, Boehm JS, Kim SY, Moody SE, Dunn IF, et al. Systematic RNA interference reveals that oncogenic KRAS-driven cancers require TBK1. Nature. 2009;462(7269):108–112.
+[26] Kanehisa M, Goto S. KEGG: kyoto encyclopedia of genes and genomes. Nucleic Acids Res. 2000;28(1):27–30.
+[27] Moran PAP. Notes on continuous stochastic phenomena. Biometrika. 1950;37(1-2):17–23.
+[28] Kendall MG. A new measure of rank correlation. Biometrika. 1938;30(1-2):81–93.
+[29] Mann HB, Whitney DR. On a test of whether one of two random variables is stochastically larger than the other. Ann Math Stat. 1947;18(1):50–60.
+[30] Benjamini Y, Hochberg Y. Controlling the false discovery rate: a practical and powerful approach to multiple testing. J R Stat Soc B. 1995;57(1):289–300.
+[31] Cox DR. Regression models and life-tables. J R Stat Soc B. 1972;34(2):187–220.
+[32] Vabalas A, Gowen E, Poliakoff E, Casson AJ. Machine learning algorithm validation with a limited sample size. eLife. 2019;8:e47794.
+[33] Boulesteix AL. Ten simple rules for reducing overoptimistic reporting in methodological computational research. PLoS Comput Biol. 2015;11(4):e1004191.
+[34] Pedregosa F, Varoquaux G, Gramfort A, Michel V, Thirion B, Grisel O, et al. Scikit-learn: machine learning in Python. J Mach Learn Res. 2011;12:2825–2830.
+[35] Harris CR, Millman KJ, van der Walt SJ, Gommers R, Virtanen P, Cournapeau D, et al. Array programming with NumPy. Nature. 2020;585(7825):357–362.
+[36] Virtanen P, Gommers R, Oliphant TE, Haberland M, Reddy T, Cournapeau D, et al. SciPy 1.0: fundamental algorithms for scientific computing in Python. Nat Methods. 2020;17(3):261–272.
+作者贡献 / 资助 / 利益冲突
+作者贡献（CRediT）：__________；资助项目编号：__________；作者声明无利益冲突。

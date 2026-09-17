@@ -216,3 +216,36 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# ===== Project-specific: pathway-anchored-risk-benchmark =====
+# IDE / editor config
+.idea/
+.vscode/
+
+# Local workspace / agent memory
+.workbuddy/
+
+# Raw public datasets (re-downloadable from GEO / 10x) + foundation-model weights
+data/
+fm_cache/
+
+# Recomputable results cache & model checkpoints
+results/cache/
+results/checkpoint_*
+
+# Large / binary / intermediate files (any location)
+*.pt
+*.bin
+*.npz
+*.h5
+*.tiff
+*.tar.gz
+*.tsv.gz
+*.mtx.gz
+*.csv.gz
+*.filepart
+*.tmp
+
+# Logs / stderr capture
+*.err

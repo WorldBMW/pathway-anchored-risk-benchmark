@@ -1,0 +1,8 @@
+config,run_id,fm,hpv_gene_set_mode,hpv_gene_set_size,lambda_hpv,lambda_sup,lambda_prog,lambda_neigh,lambda_recon,recon_mse_proxy,hpv_auc,hpv_high_low_gap,moran_i,n_deg_perm,n_deg_naive,high_risk_ratio,n_prior_genes,prog_kendall_tau,prog_perm_p,subtype_kruskal_p,spearman_rho_vs_full
+FULL,FULL,uni,default,40,1.0,2.0,1.0,0.3,1.0,0.1285,1.0,0.2088,0.5491,5,15,0.5,54,0.8367,0.058941058941058944,,1.0
+BASELINE-CNN,BASELINE-CNN,none,default,40,1.0,2.0,1.0,0.3,1.0,0.0917,1.0,0.2039,0.5632,5,15,0.5,54,0.8367,0.058941058941058944,,0.9896
+NO-HPV,NO-HPV,uni,default,40,0.0,2.0,1.0,0.3,1.0,0.1048,0.9979,0.2014,0.5575,5,15,0.5,54,0.8367,0.058941058941058944,,0.9669
+NO-NEIGH,NO-NEIGH,uni,default,40,1.0,2.0,1.0,0.0,1.0,0.1522,0.9983,-0.0612,0.544,0,4,0.5,54,0.8367,0.058941058941058944,,0.6291
+FM-UNI2,FM-UNI2,uni2,default,40,1.0,2.0,1.0,0.3,1.0,0.1663,0.995,0.203,0.5977,6,15,0.5,54,0.8367,0.058941058941058944,,0.9527
+HPV-ROBUST-A,HPV-ROBUST-A,uni,dropout_20pct,32,1.0,2.0,1.0,0.3,1.0,0.1684,0.9923,0.2136,0.6208,3,13,0.5,51,0.8367,0.058941058941058944,,0.9748
+HPV-ROBUST-B,HPV-ROBUST-B,uni,kegg_hpv,108,1.0,2.0,1.0,0.3,1.0,0.0913,1.0,0.3652,0.7313,16,35,0.5,92,0.8367,0.058941058941058944,,0.8894

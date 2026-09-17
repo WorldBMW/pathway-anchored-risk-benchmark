@@ -1,0 +1,539 @@
+{
+  "GSE268014": {
+    "n_sections": 8,
+    "per_section": [
+      {
+        "gsm": "GSM8283897",
+        "patient": "P5909",
+        "hpv_positive": false,
+        "n_joined": 3674,
+        "n_malignant": 1522,
+        "n_nonmalignant": 652,
+        "mean_malignant": 3.7141043016694377,
+        "mean_nonmalignant": 2.0928276889940345,
+        "malignant_vs_non": {
+          "n_x": 1522,
+          "n_y": 652,
+          "mean_x": 3.7141043016694377,
+          "mean_y": 2.0928276889940345,
+          "median_x": 3.8755818605422974,
+          "median_y": 2.041722893714905,
+          "mwu_U": 855837.0,
+          "mwu_p": 1.9894971426904333e-158,
+          "rank_biserial_r": 0.7248796788210541
+        },
+        "n_zone1_edge": 1189,
+        "n_zone3_core": 324,
+        "mean_edge": 3.3511874980040215,
+        "mean_core": 3.790393780043096,
+        "edge_vs_core": {
+          "n_x": 1189,
+          "n_y": 324,
+          "mean_x": 3.3511874980040215,
+          "mean_y": 3.790393780043096,
+          "median_x": 3.509521722793579,
+          "median_y": 3.846010684967041,
+          "mwu_U": 158473.0,
+          "mwu_p": 9.700481432357071e-07,
+          "rank_biserial_r": -0.17726796041906778
+        }
+      },
+      {
+        "gsm": "GSM8283898",
+        "patient": "P5903",
+        "hpv_positive": true,
+        "n_joined": 3023,
+        "n_malignant": 1262,
+        "n_nonmalignant": 908,
+        "mean_malignant": 0.5564895194679168,
+        "mean_nonmalignant": 0.9567852494786884,
+        "malignant_vs_non": {
+          "n_x": 1262,
+          "n_y": 908,
+          "mean_x": 0.5564895194679168,
+          "mean_y": 0.9567852494786884,
+          "median_x": 0.4447038471698761,
+          "median_y": 0.8604767918586731,
+          "mwu_U": 283049.0,
+          "mwu_p": 3.7034756986204338e-90,
+          "rank_biserial_r": -0.5059778548838638
+        },
+        "n_zone1_edge": 1175,
+        "n_zone3_core": 194,
+        "mean_edge": 0.707218610806034,
+        "mean_core": 0.6725291341888843,
+        "edge_vs_core": {
+          "n_x": 1175,
+          "n_y": 194,
+          "mean_x": 0.707218610806034,
+          "mean_y": 0.6725291341888843,
+          "median_x": 0.5604653358459473,
+          "median_y": 0.5768080949783325,
+          "mwu_U": 115165.0,
+          "mwu_p": 0.815628435335447,
+          "rank_biserial_r": 0.010440886159245544
+        }
+      },
+      {
+        "gsm": "GSM8283899",
+        "patient": "P5767",
+        "hpv_positive": true,
+        "n_joined": 3181,
+        "n_malignant": 1768,
+        "n_nonmalignant": 557,
+        "mean_malignant": 2.0747697625090096,
+        "mean_nonmalignant": 2.475451404573245,
+        "malignant_vs_non": {
+          "n_x": 1768,
+          "n_y": 557,
+          "mean_x": 2.0747697625090096,
+          "mean_y": 2.475451404573245,
+          "median_x": 2.0221508741378784,
+          "median_y": 2.4985287189483643,
+          "mwu_U": 337535.0,
+          "mwu_p": 3.717410776476723e-29,
+          "rank_biserial_r": -0.31449385443999445
+        },
+        "n_zone1_edge": 1623,
+        "n_zone3_core": 27,
+        "mean_edge": 2.206812105866325,
+        "mean_core": 1.448323079833278,
+        "edge_vs_core": {
+          "n_x": 1623,
+          "n_y": 27,
+          "mean_x": 2.206812105866325,
+          "mean_y": 1.448323079833278,
+          "median_x": 2.176269054412842,
+          "median_y": 1.4675297737121582,
+          "mwu_U": 34654.0,
+          "mwu_p": 2.105605294277192e-07,
+          "rank_biserial_r": 0.5816161201250543
+        }
+      },
+      {
+        "gsm": "GSM8283900",
+        "patient": "P5766",
+        "hpv_positive": true,
+        "n_joined": 4048,
+        "n_malignant": 1952,
+        "n_nonmalignant": 1154,
+        "mean_malignant": 2.0981438132155628,
+        "mean_nonmalignant": 1.4593980249462963,
+        "malignant_vs_non": {
+          "n_x": 1952,
+          "n_y": 1154,
+          "mean_x": 2.0981438132155628,
+          "mean_y": 1.4593980249462963,
+          "median_x": 2.1609601974487305,
+          "median_y": 1.429063618183136,
+          "mwu_U": 1681105.0,
+          "mwu_p": 8.719649930122407e-117,
+          "rank_biserial_r": 0.4925854831377674
+        },
+        "n_zone1_edge": 1423,
+        "n_zone3_core": 126,
+        "mean_edge": 2.1370267236391927,
+        "mean_core": 2.0897808486507055,
+        "edge_vs_core": {
+          "n_x": 1423,
+          "n_y": 126,
+          "mean_x": 2.1370267236391927,
+          "mean_y": 2.0897808486507055,
+          "median_x": 2.187636375427246,
+          "median_y": 2.1841927766799927,
+          "mwu_U": 92145.0,
+          "mwu_p": 0.6040712636701784,
+          "rank_biserial_r": 0.027841916808887923
+        }
+      },
+      {
+        "gsm": "GSM8283901",
+        "patient": "P5764",
+        "hpv_positive": true,
+        "n_joined": 3455,
+        "n_malignant": 2405,
+        "n_nonmalignant": 382,
+        "mean_malignant": 3.0285829710117746,
+        "mean_nonmalignant": 0.9436609685733056,
+        "malignant_vs_non": {
+          "n_x": 2405,
+          "n_y": 382,
+          "mean_x": 3.0285829710117746,
+          "mean_y": 0.9436609685733056,
+          "median_x": 3.0680787563323975,
+          "median_y": 0.8090027570724487,
+          "mwu_U": 892052.0,
+          "mwu_p": 9.076545312543958e-193,
+          "rank_biserial_r": 0.9419664529612173
+        },
+        "n_zone1_edge": 1232,
+        "n_zone3_core": 289,
+        "mean_edge": 3.012401651639443,
+        "mean_core": 2.905416377687949,
+        "edge_vs_core": {
+          "n_x": 1232,
+          "n_y": 289,
+          "mean_x": 3.012401651639443,
+          "mean_y": 2.905416377687949,
+          "median_x": 3.1490591764450073,
+          "median_y": 2.9821629524230957,
+          "mwu_U": 200679.0,
+          "mwu_p": 0.0007484364392694508,
+          "rank_biserial_r": 0.12725812250033708
+        }
+      },
+      {
+        "gsm": "GSM8283902",
+        "patient": "P5756",
+        "hpv_positive": false,
+        "n_joined": 2507,
+        "n_malignant": 1126,
+        "n_nonmalignant": 696,
+        "mean_malignant": 1.3670892330055286,
+        "mean_nonmalignant": 2.110033131461462,
+        "malignant_vs_non": {
+          "n_x": 1126,
+          "n_y": 696,
+          "mean_x": 1.3670892330055286,
+          "mean_y": 2.110033131461462,
+          "median_x": 1.274534285068512,
+          "median_y": 1.9785646200180054,
+          "mwu_U": 226374.0,
+          "mwu_p": 5.9994636648380356e-52,
+          "rank_biserial_r": -0.422291296625222
+        },
+        "n_zone1_edge": 877,
+        "n_zone3_core": 351,
+        "mean_edge": 1.8304038333282844,
+        "mean_core": 1.0052976481234417,
+        "edge_vs_core": {
+          "n_x": 877,
+          "n_y": 351,
+          "mean_x": 1.8304038333282844,
+          "mean_y": 1.0052976481234417,
+          "median_x": 1.7844268083572388,
+          "median_y": 0.8511168360710144,
+          "mwu_U": 220877.0,
+          "mwu_p": 8.659672430601302e-33,
+          "rank_biserial_r": 0.4350722971019436
+        }
+      },
+      {
+        "gsm": "GSM8283903",
+        "patient": "P5751",
+        "hpv_positive": false,
+        "n_joined": 2918,
+        "n_malignant": 2145,
+        "n_nonmalignant": 269,
+        "mean_malignant": 3.1736895650416823,
+        "mean_nonmalignant": 2.2000497005686,
+        "malignant_vs_non": {
+          "n_x": 2145,
+          "n_y": 269,
+          "mean_x": 3.1736895650416823,
+          "mean_y": 2.2000497005686,
+          "median_x": 3.1122095584869385,
+          "median_y": 2.1533942222595215,
+          "mwu_U": 423499.0,
+          "mwu_p": 5.282484199258333e-36,
+          "rank_biserial_r": 0.4679214218247676
+        },
+        "n_zone1_edge": 1401,
+        "n_zone3_core": 69,
+        "mean_edge": 3.3817032775140334,
+        "mean_core": 2.507766841114431,
+        "edge_vs_core": {
+          "n_x": 1401,
+          "n_y": 69,
+          "mean_x": 3.3817032775140334,
+          "mean_y": 2.507766841114431,
+          "median_x": 3.4111337661743164,
+          "median_y": 2.4547159671783447,
+          "mwu_U": 69411.0,
+          "mwu_p": 9.211784807224112e-10,
+          "rank_biserial_r": 0.43605499177606055
+        }
+      },
+      {
+        "gsm": "GSM8283904",
+        "patient": "P5736",
+        "hpv_positive": false,
+        "n_joined": 4801,
+        "n_malignant": 3652,
+        "n_nonmalignant": 389,
+        "mean_malignant": 2.889810217016041,
+        "mean_nonmalignant": 2.1736622867593423,
+        "malignant_vs_non": {
+          "n_x": 3652,
+          "n_y": 389,
+          "mean_x": 2.889810217016041,
+          "mean_y": 2.1736622867593423,
+          "median_x": 2.871910810470581,
+          "median_y": 2.151141405105591,
+          "mwu_U": 1028952.0,
+          "mwu_p": 4.6016529185071143e-48,
+          "rank_biserial_r": 0.4485875260800154
+        },
+        "n_zone1_edge": 1799,
+        "n_zone3_core": 393,
+        "mean_edge": 3.038068391834119,
+        "mean_core": 2.4634840853948328,
+        "edge_vs_core": {
+          "n_x": 1799,
+          "n_y": 393,
+          "mean_x": 3.038068391834119,
+          "mean_y": 2.4634840853948328,
+          "median_x": 3.0525612831115723,
+          "median_y": 2.4919371604919434,
+          "mwu_U": 462830.0,
+          "mwu_p": 6.715048919075479e-22,
+          "rank_biserial_r": 0.3092656791234034
+        }
+      }
+    ],
+    "pooled_spot_level_PSEUDOREPLICATION": {
+      "malignant_vs_nonmalignant": {
+        "n_x": 15832,
+        "n_y": 5007,
+        "mean_x": 2.5456772192664627,
+        "mean_y": 1.710142992087198,
+        "median_x": 2.5513789653778076,
+        "median_y": 1.6150977611541748,
+        "mwu_U": 55729113.0,
+        "mwu_p": 0.0,
+        "rank_biserial_r": 0.4060434895946079
+      },
+      "edge_zone1_vs_core_zone3": {
+        "n_x": 10719,
+        "n_y": 1773,
+        "mean_x": 2.5149718447372824,
+        "mean_y": 2.2530656018569117,
+        "median_x": 2.511401653289795,
+        "median_y": 2.3165831565856934,
+        "mwu_U": 10559649.5,
+        "mwu_p": 5.63362676710596e-14,
+        "rank_biserial_r": 0.11126207307664115
+      }
+    },
+    "sample_level_paired": {
+      "malignant_minus_nonmalignant": {
+        "n_sections": 8,
+        "mean_delta": 0.5613513659477474,
+        "median_delta": 0.6774468592629825,
+        "wilcoxon_p": 0.1953125,
+        "n_sections_positive": 5,
+        "per_section_delta": [
+          1.6212766126754032,
+          -0.40029573001077157,
+          -0.4006816420642356,
+          0.6387457882692664,
+          2.084922002438469,
+          -0.7429438984559336,
+          0.9736398644730824,
+          0.7161479302566987
+        ]
+      },
+      "edge_zone1_minus_core_zone3": {
+        "n_sections": 8,
+        "mean_delta": 0.3477287871993543,
+        "median_delta": 0.34078479019539,
+        "wilcoxon_p": 0.0546875,
+        "n_sections_positive": 7,
+        "per_section_delta": [
+          -0.4392062820390743,
+          0.03468947661714972,
+          0.7584890260330468,
+          0.0472458749884872,
+          0.10698527395149382,
+          0.8251061852048427,
+          0.8739364363996023,
+          0.5745843064392862
+        ]
+      }
+    },
+    "sample_level_hpv": {
+      "n_hpv_pos": 4,
+      "n_hpv_neg": 4,
+      "per_section": [
+        {
+          "gsm": "GSM8283897",
+          "patient": "P5909",
+          "hpv_positive": false,
+          "score_mean_all": 2.984325848953777,
+          "score_mean_malignant": 3.7141043016694377
+        },
+        {
+          "gsm": "GSM8283898",
+          "patient": "P5903",
+          "hpv_positive": true,
+          "score_mean_all": 0.7084832560706033,
+          "score_mean_malignant": 0.5564895194679168
+        },
+        {
+          "gsm": "GSM8283899",
+          "patient": "P5767",
+          "hpv_positive": true,
+          "score_mean_all": 2.1454649080985826,
+          "score_mean_malignant": 2.0747697625090096
+        },
+        {
+          "gsm": "GSM8283900",
+          "patient": "P5766",
+          "hpv_positive": true,
+          "score_mean_all": 1.8458393234188997,
+          "score_mean_malignant": 2.0981438132155628
+        },
+        {
+          "gsm": "GSM8283901",
+          "patient": "P5764",
+          "hpv_positive": true,
+          "score_mean_all": 2.530171167494678,
+          "score_mean_malignant": 3.0285829710117746
+        },
+        {
+          "gsm": "GSM8283902",
+          "patient": "P5756",
+          "hpv_positive": false,
+          "score_mean_all": 1.5054984549183055,
+          "score_mean_malignant": 1.3670892330055286
+        },
+        {
+          "gsm": "GSM8283903",
+          "patient": "P5751",
+          "hpv_positive": false,
+          "score_mean_all": 3.062591504813711,
+          "score_mean_malignant": 3.1736895650416823
+        },
+        {
+          "gsm": "GSM8283904",
+          "patient": "P5736",
+          "hpv_positive": false,
+          "score_mean_all": 2.7683918525920115,
+          "score_mean_malignant": 2.889810217016041
+        }
+      ],
+      "all_spots_mean": {
+        "n_x": 4,
+        "n_y": 4,
+        "mean_x": 1.8074896637706908,
+        "mean_y": 2.580201915319451,
+        "median_x": 1.995652115758741,
+        "median_y": 2.8763588507728945,
+        "mwu_U": 3.0,
+        "mwu_p": 0.2,
+        "rank_biserial_r": -0.625
+      },
+      "malignant_only_mean": {
+        "n_x": 4,
+        "n_y": 4,
+        "mean_x": 1.939496516551066,
+        "mean_y": 2.7861733291831725,
+        "median_x": 2.086456787862286,
+        "median_y": 3.031749891028862,
+        "mwu_U": 4.0,
+        "mwu_p": 0.34285714285714286,
+        "rank_biserial_r": -0.5
+      }
+    },
+    "annotation_source": "Simkin et al. merged_metadata_Extend.rds (binCNAstatus; Zone_1=edge ... Zone_3=core)"
+  },
+  "GSE281978": {
+    "n_sections": 6,
+    "per_section": [
+      {
+        "section": "LI_SING_21_00757",
+        "gsm": "GSM8633891",
+        "hpv_positive": false,
+        "site": "primary",
+        "n_spots": 1187,
+        "score_mean": 3.268025054611272,
+        "score_median": 3.3645379543304443
+      },
+      {
+        "section": "LI_SING_21_00758",
+        "gsm": "GSM8633892",
+        "hpv_positive": false,
+        "site": "lymph_node_metastasis",
+        "n_spots": 1579,
+        "score_mean": 3.327938778282269,
+        "score_median": 3.369396448135376
+      },
+      {
+        "section": "LI_SING_21_01569",
+        "gsm": "GSM8633893",
+        "hpv_positive": true,
+        "site": "primary",
+        "n_spots": 1359,
+        "score_mean": 1.2207560004492382,
+        "score_median": 1.236807942390442
+      },
+      {
+        "section": "LI_SING_21_01570",
+        "gsm": "GSM8633894",
+        "hpv_positive": true,
+        "site": "lymph_node_metastasis",
+        "n_spots": 1908,
+        "score_mean": 1.171893556383624,
+        "score_median": 1.0854076743125916
+      },
+      {
+        "section": "LI_SING_21_01586",
+        "gsm": "GSM8633895",
+        "hpv_positive": false,
+        "site": "primary",
+        "n_spots": 1195,
+        "score_mean": 2.3475377222078864,
+        "score_median": 2.166224956512451
+      },
+      {
+        "section": "LI_SING_21_01587",
+        "gsm": "GSM8633896",
+        "hpv_positive": false,
+        "site": "lymph_node_metastasis",
+        "n_spots": 1439,
+        "score_mean": 2.383345547416315,
+        "score_median": 2.336275100708008
+      }
+    ],
+    "sample_level": {
+      "hpv_pos_vs_neg": {
+        "n_pos": 2,
+        "n_neg": 4,
+        "n_x": 2,
+        "n_y": 4,
+        "mean_x": 1.196324778416431,
+        "mean_y": 2.8317117756294357,
+        "median_x": 1.196324778416431,
+        "median_y": 2.8256853010137934,
+        "mwu_U": 0.0,
+        "mwu_p": 0.13333333333333333,
+        "rank_biserial_r": -1.0
+      },
+      "primary_vs_lnmt": {
+        "n_pt": 3,
+        "n_lnmt": 3,
+        "n_x": 3,
+        "n_y": 3,
+        "mean_x": 2.278772925756132,
+        "mean_y": 2.294392627360736,
+        "median_x": 2.3475377222078864,
+        "median_y": 2.383345547416315,
+        "mwu_U": 4.0,
+        "mwu_p": 1.0,
+        "rank_biserial_r": -0.11111111111111116
+      }
+    },
+    "note": "n=2 HPV+ vs n=4 HPV- sections: extremely limited power; per-section values are the primary evidence.",
+    "pooled_spot_level_PSEUDOREPLICATION_hpv": {
+      "n_x": 3267,
+      "n_y": 5400,
+      "mean_x": 1.192219256256648,
+      "mean_y": 2.846093128055886,
+      "median_x": 1.1544698476791382,
+      "median_y": 2.8613165616989136,
+      "mwu_U": 2281463.5,
+      "mwu_p": 0.0,
+      "rank_biserial_r": -0.7413570610708657
+    }
+  }
+}

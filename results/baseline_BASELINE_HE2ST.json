@@ -1,0 +1,18 @@
+{
+  "mode": "single_sample_80_20",
+  "fm": "uni",
+  "sample": "cervical_cancer_1",
+  "n_hpv_genes_panel": 40,
+  "per_regressor": [
+    {
+      "label": "single@cervical_cancer_1",
+      "regressor": "ridge",
+      "n_train": 2224,
+      "n_test": 557,
+      "fit_seconds": 0.6,
+      "heldout_recon_mse": 0.57861,
+      "mean_per_gene_pearson": NaN,
+      "hpv_top50_overlap": 0.0
+    }
+  ]
+}

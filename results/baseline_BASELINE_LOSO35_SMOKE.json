@@ -1,0 +1,237 @@
+{
+  "mode": "loso_cross_sample",
+  "fm": "uni",
+  "samples": [
+    "CA_HPV_1",
+    "CA_HPV_2",
+    "HSIL_HPV",
+    "N_HPV",
+    "cervical_cancer_1",
+    "ecto_P001"
+  ],
+  "n_samples": 6,
+  "n_hpv_genes_panel": 40,
+  "n_final_genes": 1233,
+  "per_regressor": [
+    {
+      "aggregate": {
+        "regressor": "ridge",
+        "n_valid_folds": 6,
+        "n_failed_folds": 0,
+        "mean_mse": 1.11689,
+        "mean_pearson": -0.036,
+        "mean_hpv_overlap": 0.0,
+        "fit_seconds_sum": 7.5
+      },
+      "per_fold": [
+        {
+          "label": "loso_held=CA_HPV_1",
+          "regressor": "ridge",
+          "n_train": 7386,
+          "n_test": 1757,
+          "fit_seconds": 1.2,
+          "heldout_recon_mse": 1.02459,
+          "mean_per_gene_pearson": -0.0793,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=CA_HPV_2",
+          "regressor": "ridge",
+          "n_train": 7550,
+          "n_test": 1593,
+          "fit_seconds": 1.2,
+          "heldout_recon_mse": 0.71432,
+          "mean_per_gene_pearson": 0.0567,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=HSIL_HPV",
+          "regressor": "ridge",
+          "n_train": 8564,
+          "n_test": 579,
+          "fit_seconds": 1.4,
+          "heldout_recon_mse": 0.93382,
+          "mean_per_gene_pearson": -0.1091,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=N_HPV",
+          "regressor": "ridge",
+          "n_train": 8089,
+          "n_test": 1054,
+          "fit_seconds": 1.3,
+          "heldout_recon_mse": 0.70271,
+          "mean_per_gene_pearson": -0.0125,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=cervical_cancer_1",
+          "regressor": "ridge",
+          "n_train": 6362,
+          "n_test": 2781,
+          "fit_seconds": 1.1,
+          "heldout_recon_mse": 2.6374,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P001",
+          "regressor": "ridge",
+          "n_train": 7764,
+          "n_test": 1379,
+          "fit_seconds": 1.3,
+          "heldout_recon_mse": 0.68848,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "regressor": "svr",
+        "n_valid_folds": 6,
+        "n_failed_folds": 0,
+        "mean_mse": 1.25757,
+        "mean_pearson": -0.0464,
+        "mean_hpv_overlap": 0.0,
+        "fit_seconds_sum": 561.0
+      },
+      "per_fold": [
+        {
+          "label": "loso_held=CA_HPV_1",
+          "regressor": "svr",
+          "n_train": 7386,
+          "n_test": 1757,
+          "fit_seconds": 88.9,
+          "heldout_recon_mse": 1.22466,
+          "mean_per_gene_pearson": -0.0848,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=CA_HPV_2",
+          "regressor": "svr",
+          "n_train": 7550,
+          "n_test": 1593,
+          "fit_seconds": 95.6,
+          "heldout_recon_mse": 0.69671,
+          "mean_per_gene_pearson": 0.0577,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=HSIL_HPV",
+          "regressor": "svr",
+          "n_train": 8564,
+          "n_test": 579,
+          "fit_seconds": 102.1,
+          "heldout_recon_mse": 1.18157,
+          "mean_per_gene_pearson": -0.1414,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=N_HPV",
+          "regressor": "svr",
+          "n_train": 8089,
+          "n_test": 1054,
+          "fit_seconds": 101.0,
+          "heldout_recon_mse": 0.77534,
+          "mean_per_gene_pearson": -0.0171,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=cervical_cancer_1",
+          "regressor": "svr",
+          "n_train": 6362,
+          "n_test": 2781,
+          "fit_seconds": 85.8,
+          "heldout_recon_mse": 2.89002,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P001",
+          "regressor": "svr",
+          "n_train": 7764,
+          "n_test": 1379,
+          "fit_seconds": 87.6,
+          "heldout_recon_mse": 0.7771,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "regressor": "rf",
+        "n_valid_folds": 6,
+        "n_failed_folds": 0,
+        "mean_mse": 1.04017,
+        "mean_pearson": -0.0095,
+        "mean_hpv_overlap": 0.0,
+        "fit_seconds_sum": 9591.2
+      },
+      "per_fold": [
+        {
+          "label": "loso_held=CA_HPV_1",
+          "regressor": "rf",
+          "n_train": 7386,
+          "n_test": 1757,
+          "fit_seconds": 1247.4,
+          "heldout_recon_mse": 0.92496,
+          "mean_per_gene_pearson": 0.0109,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=CA_HPV_2",
+          "regressor": "rf",
+          "n_train": 7550,
+          "n_test": 1593,
+          "fit_seconds": 1369.2,
+          "heldout_recon_mse": 0.83516,
+          "mean_per_gene_pearson": -0.0107,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=HSIL_HPV",
+          "regressor": "rf",
+          "n_train": 8564,
+          "n_test": 579,
+          "fit_seconds": 1688.1,
+          "heldout_recon_mse": 0.76555,
+          "mean_per_gene_pearson": -0.012,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=N_HPV",
+          "regressor": "rf",
+          "n_train": 8089,
+          "n_test": 1054,
+          "fit_seconds": 1544.3,
+          "heldout_recon_mse": 0.70758,
+          "mean_per_gene_pearson": -0.0263,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=cervical_cancer_1",
+          "regressor": "rf",
+          "n_train": 6362,
+          "n_test": 2781,
+          "fit_seconds": 1819.9,
+          "heldout_recon_mse": 2.47375,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P001",
+          "regressor": "rf",
+          "n_train": 7764,
+          "n_test": 1379,
+          "fit_seconds": 1922.3,
+          "heldout_recon_mse": 0.53401,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        }
+      ]
+    }
+  ],
+  "wall_seconds_total": 10164.4
+}

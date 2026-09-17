@@ -1,0 +1,49 @@
+{
+  "checkpoint": "results/checkpoint_MAIN_KEGG_seed42.pt",
+  "checkpoint_run_id": "MAIN_KEGG",
+  "checkpoint_fm": "uni",
+  "checkpoint_hpv_gene_set": "kegg_hpv",
+  "n_genes_panel": 4991,
+  "n_genes_in_tcga": 4480,
+  "n_samples": 302,
+  "n_events": 72,
+  "score_median": 1.2864972352981567,
+  "documented_direction": "no flip; higher model risk score tested as higher hazard",
+  "score_range": [
+    -0.3014265298843384,
+    6.035147666931152
+  ],
+  "cox": {
+    "cox_continuous": {
+      "HR_per_unit": 0.9868265765601493,
+      "coef": -0.013260962626210992,
+      "HR_95CI_low": 0.7747357753623241,
+      "HR_95CI_high": 1.256979118784066,
+      "wald_p": 0.9144612084947945,
+      "concordance_index": 0.509023409301846,
+      "n_samples": 302,
+      "n_events": 72
+    },
+    "cox_univariate": {
+      "HR": 0.9684587005464711,
+      "HR_95CI_low": 0.6086591035061919,
+      "HR_95CI_high": 1.5409483720218733,
+      "wald_p": 0.8924155365063806,
+      "concordance_index": 0.5208827472414149,
+      "n_samples": 302,
+      "n_events": 72
+    },
+    "cox_age_adjusted": {
+      "HR": 1.0094229628948168,
+      "HR_95CI_low": 0.631902972297821,
+      "HR_95CI_high": 1.6124860345475927,
+      "wald_p": 0.9686952164588081,
+      "concordance_index": 0.5718779003815613,
+      "age_HR": 1.013040048460596,
+      "age_p": 0.12924716955893267,
+      "n_samples": 302,
+      "n_events": 72
+    },
+    "cox_method": "lifelines.CoxPHFitter"
+  }
+}

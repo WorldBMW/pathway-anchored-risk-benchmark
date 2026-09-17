@@ -1,0 +1,14 @@
+序号,检查项名称(中),Check Name (EN),预定义阈值(Threshold),主模型实际值(Actual Value),是否通过(PASS?),对应CMPB主文位置,备注(样本量/检验方法/置换次数)
+1,样本量,Sample size n,== 35,35,✅,Results 3.1 / Table 1 Row 1,n_st = 35 张 Visium 切片(共 46 820 个捕获点)
+2,HPV通路基因集合模式,HPV gene set mode,"in {kegg_hpv, dropout_20pct}",kegg_hpv,✅,Methods 2.2 / Table 1 Row 2,使用 Release 107.0 版 KEGG hsa05165
+3,HPV基因集合大小,HPV gene set size,>= 60,108,✅,Methods 2.2 / Table 1 Row 3,108 个基因构成训练阶段锚定软标签 ŝ_i 的基础
+4,HPV通路AUC,HPV-proxy AUC,>= 0.80,0.9914,✅,Results 3.1 / Table 1 Row 4 / Abstract,HPV代理 ROC 以 HPV高/低中位数二分
+5,HPV高低表达差,HPV high-low expression gap,>= 0.15,0.3700,✅,Results 3.3 / Table 1 Row 5,HPV通路锚定对齐损失 ℒ_hpv 直接贡献
+6,置换差异基因数,Permutation n DEGs (FDR 0.05),>= 3,11,✅,Methods 2.4 / Table 1 Row 6,10 000次重采样置换(Bootstrap + Wilcoxon)
+7,Moran空间自相关,Moran I spatial autocorrelation,>= 0.70,0.8665,✅,Results 3.2 / Table 1 Row 7 / Abstract,10 000次空间置换 p = 0.000999
+8,Kendall进展单调性,Kendall τ CIN monotonicity,>= 0.20,0.4620,✅,Results 3.3 / Table 1 Row 8 / Abstract,双侧检验 p = 0.001013
+9,进展置换检验p,Progression permutation p,< 0.05,0.000999,✅,Methods 2.7 / Table 1 Row 9,10 000次置换检验
+10,组织学亚型Kruskal-Wallis p,Histology subtype Kruskal-Wallis p,< 0.05,0.019517,✅,Results 3.3 / Table 1 Row 10,⚠ 注意 HSIL n=1 / ADC n=1 亚型效能有限
+11,组织学MWU Bonf5,Histology MW Bonferroni-5 (focus pairs),Present (any p < 0.05 in 5 pairs),Normal_Ecto vs SCC p = 0.020161,✅,Results 3.3 / Table 1 Row 11,关注对 = Normal_Ecto vs SCC/HSIL/ADC + Normal vs SCC + HSIL vs SCC
+12,CIN进展关联(KW/Dunn/MWU),CIN progression association (KW/Dunn/MWU),Present (τ + KW_p 均显著),τ = 0.4620 / KW_p = 0.004752,✅,Results 3.3 / Table 1 Row 12,CIN分级按 Normal/CIN1-2 合并 vs SCC/ADC 作为 0 vs 3 vs 4 序数
+,汇总,SUMMARY (MAIN_MODEL_PASS),,"12 / 12 全部通过 ✅",,,,

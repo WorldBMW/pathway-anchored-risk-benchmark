@@ -1,0 +1,91 @@
+{
+ "source": "recomputed from external_gse316098_validation.json + GSE316098 SOFT metadata (true Silva/risk labels, 186/186 ROI matched)",
+ "note": "manuscript original grouping 1A vs 1b-1 was TMA block number, NOT Silva pattern",
+ "by_silva": {
+  "normal": {
+   "n": 50,
+   "mean": 8.45
+  },
+  "A": {
+   "n": 42,
+   "mean": 11.36
+  },
+  "B": {
+   "n": 44,
+   "mean": 9.56
+  },
+  "C": {
+   "n": 50,
+   "mean": 10.28
+  }
+ },
+ "tests": {
+  "kruskal_4group": 6.196e-10,
+  "A_vs_B": 0.001687,
+  "A_vs_C": 0.03671,
+  "B_vs_C": 0.0794,
+  "normal_vs_A": 2.89e-09,
+  "normal_vs_C": 4.944e-06
+ },
+ "by_risk_label": {
+  "Normal": {
+   "n": 50,
+   "mean": 8.45
+  },
+  "Low": {
+   "n": 52,
+   "mean": 10.92
+  },
+  "High": {
+   "n": 84,
+   "mean": 10.05
+  },
+  "High_vs_Low_p": 0.1008,
+  "Low_vs_Normal_p": 1.576e-08,
+  "High_vs_Normal_p": 1.509e-07,
+  "kruskal_p": 2.706e-09
+ },
+ "tumor_epithelium_only": {
+  "normal": 8.13,
+  "A": 12.53,
+  "B": 9.54,
+  "C": 9.5,
+  "A_vs_B_p": 8.713e-05,
+  "C_vs_A_p": 4.956e-05
+ },
+ "compartment": {
+  "overall_epi": 9.82,
+  "overall_stroma": 9.9,
+  "overall_p": 0.5028,
+  "A_epi_vs_stroma_p": 0.000684,
+  "C_epi_vs_stroma_p": 0.00281
+ },
+ "old_block_grouping": {
+  "1A": 10.43,
+  "1b-1": 9.29,
+  "p": 0.001117
+ },
+ "lodo_actual": {
+  "folds": {
+   "HSIL_HPV": {
+    "risk": 0.678,
+    "pct": 1.0
+   },
+   "CA_HPV_1": {
+    "risk": 0.799,
+    "pct": 1.0
+   },
+   "CA_HPV_2": {
+    "risk": 0.047,
+    "pct": 0.645
+   },
+   "cervical_cancer_1": {
+    "risk": 1.713,
+    "pct": 1.0
+   }
+  },
+  "n_above_median": 4,
+  "n_above_all_normal": 3,
+  "mean_pct": 0.911
+ }
+}

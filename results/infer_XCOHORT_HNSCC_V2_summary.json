@@ -1,0 +1,74 @@
+{
+  "run_id": "XCOHORT_HNSCC_V2",
+  "checkpoint": "results\\checkpoint_MAIN_KEGG_seed42.pt",
+  "mode": "expr_only",
+  "fm": "uni",
+  "n_genes": 4991,
+  "n_samples": 8,
+  "per_sample": [
+    {
+      "name": "GSM8283897",
+      "n_spots": 4048,
+      "mean_score": 3.0296828746795654,
+      "std_score": 1.7017351388931274,
+      "median_score": 3.030301332473755,
+      "moran_i": 0.860060314370264
+    },
+    {
+      "name": "GSM8283898",
+      "n_spots": 4096,
+      "mean_score": 0.7119266986846924,
+      "std_score": 0.6908025741577148,
+      "median_score": 0.5053232908248901,
+      "moran_i": 0.8399158041391763
+    },
+    {
+      "name": "GSM8283899",
+      "n_spots": 3333,
+      "mean_score": 2.003261089324951,
+      "std_score": 0.9274894595146179,
+      "median_score": 1.901581048965454,
+      "moran_i": 0.7245487663690222
+    },
+    {
+      "name": "GSM8283900",
+      "n_spots": 4128,
+      "mean_score": 1.4309157133102417,
+      "std_score": 0.6843620538711548,
+      "median_score": 1.3760998249053955,
+      "moran_i": 0.5939946842609696
+    },
+    {
+      "name": "GSM8283901",
+      "n_spots": 3606,
+      "mean_score": 1.8622630834579468,
+      "std_score": 0.921869695186615,
+      "median_score": 1.9771292209625244,
+      "moran_i": 0.7260742716166173
+    },
+    {
+      "name": "GSM8283902",
+      "n_spots": 2685,
+      "mean_score": 1.1808083057403564,
+      "std_score": 0.9135399460792542,
+      "median_score": 1.012423038482666,
+      "moran_i": 0.7161684260907455
+    },
+    {
+      "name": "GSM8283903",
+      "n_spots": 2978,
+      "mean_score": 2.797621250152588,
+      "std_score": 1.2570407390594482,
+      "median_score": 2.7343201637268066,
+      "moran_i": 0.7243273384174569
+    },
+    {
+      "name": "GSM8283904",
+      "n_spots": 4908,
+      "mean_score": 2.400951862335205,
+      "std_score": 0.9129754900932312,
+      "median_score": 2.3897318840026855,
+      "moran_i": 0.7184338239045369
+    }
+  ]
+}

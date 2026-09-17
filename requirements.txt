@@ -1,0 +1,23 @@
+# CMPB v1.3 Server Environment — Python 3.10.x
+# 12 pinned packages from v1.2 submission + supplements
+pandas==2.3.3
+numpy==2.1.3
+scipy==1.14.1
+scikit-learn==1.6.1
+lifelines==0.30.0
+matplotlib==3.10.9
+seaborn==0.13.5
+statsmodels==0.14.4
+scanpy==1.10.3
+squidpy==1.5.1
+torch==2.3.1
+python-docx==1.2.0
+openpyxl==3.1.5
+# CMPB v1.3 supplement packages (for validation scripts)
+gseapy>=1.1.0         # GSVA pathway enrichment; tested with 1.3.1
+spaGCN>=1.2.0          # Spatial baseline comparison
+# NOTE: anndata>=0.11 forces torch import chain via experimental.pytorch
+# (adds ~2GB RAM overhead on import). This only crashed Windows with tiny
+# page file; Linux servers handle it fine. If you have <16GB RAM, pin:
+#   anndata==0.10.9
+
