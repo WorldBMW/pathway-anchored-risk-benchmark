@@ -249,3 +249,6 @@ results/checkpoint_*
 
 # Logs / stderr capture
 *.err
+
+# Evidence package: pooled representations must ship with the release (paper Data availability)
+!evidence/*.npz
