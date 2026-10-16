@@ -252,3 +252,4 @@ results/checkpoint_*
 
 # Evidence package: pooled representations must ship with the release (paper Data availability)
 !evidence/*.npz
+!evidence/st_method_embeddings/*.npz

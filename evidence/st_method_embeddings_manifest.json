@@ -1,0 +1,97 @@
+{
+  "analysis_date": "2026-10-15",
+  "protocol": "统一 LODO：簇级 HPV 通路均值表达 -> 样本级风险（agg=max）-> LODO 线性探针 Kendall tau + 置换",
+  "n_seed_groups": 6,
+  "groups": {
+    "group_A_g20261006_L1": {
+      "n_samples": 90,
+      "methods": {
+        "STAGATE": {
+          "export": "evidence/st_method_embeddings/group_A_g20261006_L1__STAGATE.npz",
+          "n_samples": 90,
+          "emb_dim": 30
+        },
+        "GraphST": {
+          "export": "evidence/st_method_embeddings/group_A_g20261006_L1__GraphST.npz",
+          "n_samples": 90,
+          "emb_dim": 3000
+        }
+      }
+    },
+    "group_A_g20261006_L3": {
+      "n_samples": 90,
+      "methods": {
+        "STAGATE": {
+          "export": "evidence/st_method_embeddings/group_A_g20261006_L3__STAGATE.npz",
+          "n_samples": 90,
+          "emb_dim": 30
+        },
+        "GraphST": {
+          "export": "evidence/st_method_embeddings/group_A_g20261006_L3__GraphST.npz",
+          "n_samples": 90,
+          "emb_dim": 3000
+        }
+      }
+    },
+    "group_A_g20261006_L4": {
+      "n_samples": 90,
+      "methods": {
+        "STAGATE": {
+          "export": "evidence/st_method_embeddings/group_A_g20261006_L4__STAGATE.npz",
+          "n_samples": 90,
+          "emb_dim": 30
+        },
+        "GraphST": {
+          "export": "evidence/st_method_embeddings/group_A_g20261006_L4__GraphST.npz",
+          "n_samples": 90,
+          "emb_dim": 3000
+        }
+      }
+    },
+    "group_A_g20261006_L1_small": {
+      "n_samples": 35,
+      "methods": {
+        "STAGATE": {
+          "export": "evidence/st_method_embeddings/group_A_g20261006_L1_small__STAGATE.npz",
+          "n_samples": 35,
+          "emb_dim": 30
+        },
+        "GraphST": {
+          "export": "evidence/st_method_embeddings/group_A_g20261006_L1_small__GraphST.npz",
+          "n_samples": 35,
+          "emb_dim": 3000
+        }
+      }
+    },
+    "group_A_g20261006_L3_small": {
+      "n_samples": 35,
+      "methods": {
+        "STAGATE": {
+          "export": "evidence/st_method_embeddings/group_A_g20261006_L3_small__STAGATE.npz",
+          "n_samples": 35,
+          "emb_dim": 30
+        },
+        "GraphST": {
+          "export": "evidence/st_method_embeddings/group_A_g20261006_L3_small__GraphST.npz",
+          "n_samples": 35,
+          "emb_dim": 3000
+        }
+      }
+    },
+    "group_A_g20261006_L4_small": {
+      "n_samples": 35,
+      "methods": {
+        "STAGATE": {
+          "export": "evidence/st_method_embeddings/group_A_g20261006_L4_small__STAGATE.npz",
+          "n_samples": 35,
+          "emb_dim": 30
+        },
+        "GraphST": {
+          "export": "evidence/st_method_embeddings/group_A_g20261006_L4_small__GraphST.npz",
+          "n_samples": 35,
+          "emb_dim": 3000
+        }
+      }
+    }
+  }
+}
