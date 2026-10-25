@@ -1,10 +1,40 @@
-# 投稿前状态（Patterns · v25）
+# 投稿前状态（Patterns · v26）
 
 生成于 2026-10-25。这份清单只列"上传输之前必须为真"的事，不重复正文里的论证。
 
 ---
 
-## A0'. 本轮处置（v24 → v25）
+## A0''. 本轮处置（v25 → v26）：引用编号系统性漏移
+
+| 评审意见 | 判断 | 处置 |
+|---|---|---|
+| 第 16 页 `[8,40,41]` 的 [8] 指向 Golchin（LLM 污染检测），语义不通，应改为 [7]（Saeb） | **正确，但只找到 1/9** | 实际是**系统性 bug**，共 **9 类多号引用、16 处**全部漏移（见下表） |
+| 通篇核对所有"前移"过来的编号 | **正确，已全量核对** | 以 v24（git `HEAD~1`）为基线逐句对齐：v25 的**单号**引用全部正确、**多号**引用全部错误；修正后残留 0 处 |
+
+**根因**：v25 的重编号用的是正则 `\[(\d+)\]`，只匹配**单个数字**。
+`[3,4]`、`[8,40,41]`、`[27–29,36,37]` 这类多号引用一个都没匹配到，于是停在旧编号上。
+单号引用（占大多数）全部正确，所以抽查容易漏掉：你抽查到的 [1]/[4]/[7]/[9]/[10]/[26]/[27]/[28]/[31] 恰好全是单号，都对。
+
+**已修全部 9 类（16 处）**：
+
+| v25（错） | v26（对） | 解析出的文献 | 出现 | 语境 |
+|---|---|---|---|---|
+| `[3,4]` | `[2,3]` | Ganin & Lempitsky + Ganin et al.（domain-adversarial） | 7 | domain shift / DANN / gradient-reversal layer |
+| `[8,40,41]` | `[7,39,40]` | Saeb + Roberts + Ploton | 1 | "construct the split so that no group straddles it" |
+| `[40,41]` | `[39,40]` | Roberts + Ploton | 2 | blocked cross-validation literature |
+| `[6,7]` | `[5,6]` | Roberts + Zech | 1 | chest-radiograph across hospitals |
+| `[27–29]` | `[26–28]` | Edwards + Xie + Madras | 1 | canonical adversarial design |
+| `[27–29,36,37]` | `[26–28,35,36]` | 上述 + Zemel + Louizos | 1 | fairness adversarial/constrained objectives |
+| `[21,38]` | `[20,37]` | Mehrabi survey + Barocas | 1 | "the surveys of that literature" |
+| `[24,26]` | `[23,25]` | Anguita HAR + UCI repo | 1 | KRT 表 HAR 行 |
+| `[25,26]` | `[24,25]` | Vergara gas sensor + UCI repo | 1 | KRT 表 Gas Sensor 行 |
+
+**防回归**：`scripts/_qa_v26.py` 新增"多号引用清单"，每次 QA 逐条打印 `[token] → 文献名`。
+语义匹配无法自动判定，只能靠人眼过一遍；以后任何重编号都必须同时处理单号与多号。
+
+---
+
+## A0'. 上轮处置（v24 → v25）
 
 | 评审意见 | 判断 | 处置 |
 |---|---|---|
@@ -137,7 +167,7 @@ analysis"写明 n 的两重含义、两个种子族、B = 2,000 与 B = 10,000�
 
 ### 2. GitHub 仓库 + tag + Zenodo 归档（阻塞 Data availability）
 
-**仓库本地已建好**（commit `cdf26ea`，tag `v1.0.0`，785 文件 / 46.3 MB，工作区干净）。
+**仓库本地已建好**（commit df1c404，tag `v1.0.0`，785 文件 / 46.3 MB，工作区干净）。
 线上 `github.com/WorldBMW/cervix-st-multimodal` 目前仍是 **404**，所以这一步还没走完；
 只要不 push，正文里六处链接就都是死链，等同"代码不可访问"——这是本稿唯一真正的
 desk-reject 风险点。你要做的只有三行：
@@ -170,7 +200,7 @@ availability、Data availability 三处）。**如果你的实际 tag 不叫 v1.
 ```bash
 python scripts/_fill_dois.py --check                       # 列出 4 个填充点
 python scripts/_fill_dois.py --companion 10.xxxx/xxxxx --zenodo 10.5281/zenodo.xxxxxxx --build
-python scripts/_qa_v25.py                                  # 重建后必须再跑一遍 QA
+python scripts/_qa_v26.py                                  # 重建后必须再跑一遍 QA
 ```
 
 脚本会同时改 ref [1]、Key Resources Table 的 Zenodo 行、`**Code.**` 段、Data availability 段，
@@ -275,7 +305,7 @@ Device），由一名专职编辑协调，各刊**独立**决定是否送审；*
 ## E. 上传前 30 秒自查
 
 ```bash
-python scripts/_qa_v25.py                      # 格式硬指标（含 Highlights ≤4 条且 ≤85 字符、In brief ≤50、Summary ≤150）
+python scripts/_qa_v26.py                      # 格式硬指标（含 Highlights ≤4 条且 ≤85 字符、In brief ≤50、Summary ≤150）
 python scripts/_fill_dois.py --check           # 4 个填充点；若已拿到 DOI 应先 --build 再自查
 python -c "from docx import Document; d=Document('papers/20_MRP-ST-Repair_Patterns/Manuscript_Patterns.docx'); print(len(d.tables), 'main tables')"
 ```
