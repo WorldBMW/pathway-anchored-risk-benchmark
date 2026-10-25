@@ -1,6 +1,28 @@
-# 投稿前状态（Patterns · v26）
+# 投稿前状态（Patterns · v27b）
 
-生成于 2026-10-25。这份清单只列"上传输之前必须为真"的事，不重复正文里的论证。
+生成于 2026-10-25。这份清单只列"上传之前必须为真"的事，不重复正文里的论证。
+
+**本文件曾在第 9 轮后被覆盖成 996 字节的指针文件，现从 `SUBMISSION_READINESS_v26pre_20261025.md`
+恢复，并在顶部补 v27/v27b 的新增结论。** 方法与证据层面的未决项以
+`REVIEW_REPORT_v27_20261025.md` 为准，那份报告取代本文件旧版"全部通过""唯一风险是代码链接"的判断。
+
+## A0'''. v27 → v27b：本轮修掉的三处"未完成稿件"标记
+
+| 问题 | 性质 | 处置 |
+|---|---|---|
+| Data and code availability 段写着"Both the repository and release returned HTTP 404 in the 25 October 2026 audit … **this text must be updated after successful verification**" | **hard blocker**：编辑读到等于稿件未就绪，与 v23 已清掉的 `TO BE INSERTED` 同类 | 改为 Cell Press 标准时点口径：tagged release + 接收前存入 Zenodo、DOI 在 version of record 报告 |
+| Resource availability 的 **Code.** 段写着"Public accessibility and an immutable archive **must be verified before submission**; a proposed URL is not evidence of a released artifact" | 同上，内部核查语进了正文 | 同上 |
+| 投稿信：丢失 broad-interest 论证、写出内部路径 `papers/19_ISCLS_20261016/Manuscript_ISCLS.md`、残留"must be confirmed by the corresponding author before upload" | 前者削弱送审概率，后两者暴露内部流程 | 恢复 **Why this is a Patterns paper** 段；删除内部路径与流程语；保留政策要求的 related-file 披露。投稿信 379 → 564 词 |
+
+**注意**：`Manuscript_Patterns.docx` 现在内嵌 5 幅图（2.25 MB），
+**不能用 `scripts/_md2docx.py` 直接重建**，会丢图；改文本要就地改 docx
+（见 `scripts/_rev_v27b_patterns.py::patch_docx`）。嵌图由 `scripts/_finalize_patterns_v27.py` 负责。
+
+**官方 IFA 已重新抓到（2026-10-25 13:5x）**，两条结论：
+- **不需要 Inclusion and diversity**（官方 Components to include 列表里没有这一项，v27 未写是对的）。
+- **初投不需要满足格式要求**（原话："Formatting requirements listed in other sections do not need
+  to be met during the initial submission"），所以 Highlights / 字数 / 图表数在初投阶段不是硬性退回理由。
+- 官方仍列 **Presubmission inquiry**（patterns@cell.com，2–5 个工作日），见 C4。
 
 ---
 
@@ -213,7 +235,8 @@ v23 起稿件里已无 `TO BE INSERTED BEFORE SUBMISSION` 字样，`--check` 报
 
 ## C. 一个待你决定的问题
 
-**正文 17,521 词**（Introduction 至 Experimental Procedures，不含图注与表）。
+**正文约 12,600 词**（Introduction–Discussion，不含图注、表格与参考文献；v27 重写压缩后从旧稿
+17,521 词降下来）。不同统计口径会给出 8,510–17,220 的差别，**投稿时不要写死一个数字**。
 TitlePage 已写明"要么在投稿信里申请豁免，要么压缩 Results"。
 
 现状分布：Introduction 3,532 / Results 8,534 / Discussion 4,813 / Procedures 3,129。
@@ -279,7 +302,7 @@ operator；② 它读的是 representation 而非 training objective，因此可
 Device），由一名专职编辑协调，各刊**独立**决定是否送审；**超过 80% 的 MJS 投稿至少获得一本
 期刊的评审机会**；2025 年通过 MJS 最终接收的论文里 70% 落在作者最初选中的目标刊之一。
 
-对本稿最实际的两点：**MJS 初始投稿阶段大幅放宽格式要求**（17,521 词与 6 张主表不会被卡），
+对本稿最实际的两点：**MJS 初始投稿阶段大幅放宽格式要求**（当前体量与 6 张主表不会被卡），
 且多刊若都要审会共用同一组审稿人，不会重复消耗审稿资源。
 
 投稿前需自行确认：Patterns 是否在当期 MJS 参与刊名单内（名单会变动）。若不在，MJS 就只能当

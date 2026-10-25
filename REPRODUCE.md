@@ -3,14 +3,12 @@
 Auditable repair of identity leakage in group-structured data: the sibling-unit
 trap, decision boundaries, and validation in spatial transcriptomics.
 
-Everything reported in the paper is regenerated from public data by the scripts
-listed below. The archive does not redistribute raw data; the scripts download
-it. Released from the tagged GitHub release, archived at Zenodo (DOI in the
-manuscript's Data and code availability statement).
+The scripts and archived results below support reconstruction of the analyses. Full raw-data reproduction has not been verified in this editorial audit. The archive does not redistribute raw data; the scripts download
+it. Public release and immutable archiving remain to be verified before submission.
 
 ## Environment
 
-Python 3.13, CPU only (no GPU run is needed for any reported number).
+Python 3.13, The archived key resources table records GPU hardware for some training runs; exact hardware and dependency provenance require verification.
 
 ```bash
 python -m venv .venv && . .venv/bin/activate      # Windows: .venv\Scripts\activate
@@ -29,7 +27,7 @@ about 24 minutes.
 
 | Cohort | Role in the paper | Where it comes from |
 |---|---|---|
-| Cervical Visium, 35 slides | validation domain, decision boundary I | 10x Genomics, Human Cervical Cancer FFPE |
+| Cervical Visium, 35 slides | validation domain, decision boundary I | 10x Genomics plus GEO GSE208654 and GSE217237 |
 | GSE268014 (HNSCC, 16 patients) | external replication, real-cohort head-to-head | GEO |
 | GSE278936 (prostate, 52 sections) | external replication, real-cohort head-to-head | GEO |
 | GSE316098 (GeoMx, 186 ROIs / 7 cases) | within-group-label control | GEO |
@@ -72,8 +70,8 @@ python scripts/exp_within_group_label_geomx.py --epochs 30 --seeds 0,1,2 \
        --doses 0,0.5,1,2,5                       # -> results/within_group_label_geomx.json
 
 # Manuscript, supplement, title page, cover letter
-python scripts/_md2docx.py papers/20_MRP-ST-Repair_Patterns/MRP-ST-Repair_manuscript_Patterns_v15.md papers/20_MRP-ST-Repair_Patterns/Manuscript_Patterns.docx
-python scripts/_qa_v15.py
+python scripts/_md2docx.py papers/20_MRP-ST-Repair_Patterns/MRP-ST-Repair_manuscript_Patterns_v27.md papers/20_MRP-ST-Repair_Patterns/Manuscript_Patterns.docx
+python scripts/_qa_patterns_v27.py
 ```
 
 ## What the numbers mean, in one line each
@@ -97,10 +95,10 @@ Two caveats that are load-bearing when comparing numbers across cohorts:
 ## Manuscript build chain
 
 `papers/20_MRP-ST-Repair_Patterns/` holds the markdown sources
-(`MRP-ST-Repair_manuscript_Patterns_v15.md`, `TitlePage_Patterns.md`,
+(`MRP-ST-Repair_manuscript_Patterns_v27.md`, `TitlePage_Patterns.md`,
 `CoverLetter_Patterns.md`). The revision scripts `scripts/_rev_v14_*.py` and
 `scripts/_rev_v15_*.py` record exactly which sentence was changed in which
-version, and `scripts/_qa_v15.py` enforces the formatting constraints (no em
+version, and `scripts/_qa_patterns_v27.py` enforces the formatting constraints (no em
 dashes, no literal markdown emphasis left in the docx, five main tables, the
 word limits on In brief, Summary, Highlights and the Bigger picture box).
 
@@ -144,3 +142,8 @@ python scripts/_md2docx.py papers/20_MRP-ST-Repair_Patterns/TitlePage_Patterns.m
 python scripts/_md2docx.py papers/20_MRP-ST-Repair_Patterns/CoverLetter_Patterns.md         papers/20_MRP-ST-Repair_Patterns/CoverLetter_Patterns.docx
 python scripts/_qa_v16.py
 ```
+
+
+## Interpretation corrected in v27
+
+LDI uses unit-level tau_LOO and a unit-label permutation reference. tau_LGO is separate. The multi-unit dual gate in exp_crossdomain_audit.py uses tau_LOO for both axes; it does not certify group-level acceptance. Group-preserving permutations and class-aware metrics are needed before inferential claims for clustered nominal-label data. The cervical resolution ladder uses 35 section groups; the main cervical archive reports 34 donor groups. GeoMx has 7 specimens from 6 patients, with 186 compartment measurements paired within 93 ROIs.

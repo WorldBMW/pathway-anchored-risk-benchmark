@@ -1,0 +1,700 @@
+[
+  {
+    "n": 1,
+    "input": "1. Kaufman, S., Rosset, S., Perlich, C., and Stitelman, O. Leakage in data mining: formulation, detection, and avoidance. ACM Trans. Knowl. Discov. Data 6, 1–21 (2012).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 2,
+    "input": "2. Ganin, Y., and Lempitsky, V. Unsupervised domain adaptation by backpropagation. In Proceedings of the 32nd International Conference on Machine Learning, 1180–1189 (2015).",
+    "matched_title": [
+      "Incremental Dictionary Learning for Unsupervised Domain Adaptation"
+    ],
+    "DOI": "10.5244/c.29.108",
+    "author": [
+      {
+        "given": "Boyu",
+        "family": "Lu",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Rama",
+        "family": "Chellappa",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "volume": null,
+    "page": "108.1-108.12",
+    "article_number": "108",
+    "match_score": 42.427765,
+    "status": 200
+  },
+  {
+    "n": 3,
+    "input": "3. Ganin, Y. et al. Domain-adversarial training of neural networks. J. Mach. Learn. Res. 17, 1–35 (2016).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 4,
+    "input": "4. Geirhos, R. et al. Shortcut learning in deep neural networks. Nat. Mach. Intell. 2, 665–673 (2020).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 5,
+    "input": "5. Roberts, M. et al. Common pitfalls and recommendations for using machine learning to detect and prognosticate for COVID-19 using chest radiographs and CT scans. Nat. Mach. Intell. 3, 199–217 (2021).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 6,
+    "input": "6. Zech, J.R. et al. Variable generalization performance of a deep learning model to detect pneumonia in chest radiographs: a cross-sectional study. PLoS Med. 15, e1002683 (2018).",
+    "matched_title": [
+      "Variable generalization performance of a deep learning model to detect pneumonia in chest radiographs: A cross-sectional study"
+    ],
+    "DOI": "10.1371/journal.pmed.1002683",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-1317-8951",
+        "authenticated-orcid": true,
+        "given": "John R.",
+        "family": "Zech",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-8064-9050",
+        "authenticated-orcid": true,
+        "given": "Marcus A.",
+        "family": "Badgeley",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2018,
+          11,
+          6
+        ]
+      ]
+    },
+    "volume": "15",
+    "page": "e1002683",
+    "article_number": null,
+    "match_score": 106.81964,
+    "status": 200
+  },
+  {
+    "n": 7,
+    "input": "7. Saeb, A., Lonini, L., Jayaraman, A., Mohr, D.C., and Kording, K.P. The need to approximate the use-case in clinical machine learning. GigaScience 6, 1–9 (2017).",
+    "matched_title": [
+      "The need to approximate the use-case in clinical machine learning"
+    ],
+    "DOI": "10.1093/gigascience/gix019",
+    "author": [
+      {
+        "given": "Sohrab",
+        "family": "Saeb",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "1Department of Preventive Medicine, Northwestern University, 10th floor, Rubloff Bldg, 750 N Lake Shore Dr, Chicago, IL 60611, USA"
+          },
+          {
+            "name": "2Department of Physical Medicine and Rehabilitation, Northwestern University, 345 E Superior St, Suite 1479, Chicago, IL 60611, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Luca",
+        "family": "Lonini",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "2Department of Physical Medicine and Rehabilitation, Northwestern University, 345 E Superior St, Suite 1479, Chicago, IL 60611, USA"
+          },
+          {
+            "name": "3Shirley Ryan Ability Lab, Room 1401, 11th Floor, 355 E Erie St., Chicago, IL 60611, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2017,
+          3,
+          15
+        ]
+      ]
+    },
+    "volume": "6",
+    "page": null,
+    "article_number": "gix019",
+    "match_score": 113.144905,
+    "status": 200
+  },
+  {
+    "n": 8,
+    "input": "8. Golchin, A., and Surdeanu, M. Time travel in LLMs: tracing data contamination in large language models. In International Conference on Learning Representations (2024).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 9,
+    "input": "9. Sagawa, S. et al. Distributionally robust neural networks for group shifts: on the importance of regularization for worst-case generalization. In International Conference on Learning Representations (2020).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 10,
+    "input": "10. Arjovsky, M., Bottou, L., Gulrajani, I., and Lopez-Paz, D. Invariant risk minimization. arXiv:1907.02893 (2019).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 11,
+    "input": "11. Korsunsky, I. et al. Fast, sensitive and accurate integration of single-cell data with Harmony. Nat. Methods 16, 1289–1296 (2019).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 12,
+    "input": "12. Lopez, R., Regier, J., Cole, M.B., Jordan, M.I., and Yosef, N. Deep generative modeling for single-cell transcriptomics. Nat. Methods 15, 1053–1058 (2018).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 13,
+    "input": "13. Veličković, P. et al. Graph attention networks. In International Conference on Learning Representations (2018).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 14,
+    "input": "14. Kipf, T.N., and Welling, M. Semi-supervised classification with graph convolutional networks. In International Conference on Learning Representations (2017).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 15,
+    "input": "15. Puram, S.V. et al. Single-cell transcriptomic analysis of primary and metastatic tumor ecosystems in head and neck cancer. Cell 171, 1611–1624 (2017).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 16,
+    "input": "16. [Dataset] Simkin, D. et al. Spatial analysis of head and neck cancer identifies two ecosystems with distinct modes of epithelial-to-mesenchymal transition. Nat. Genet. 58(9), 2240–2253 (2026). https://doi.org/10.1038/s41588-026-02723-7. GSE268014.",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 17,
+    "input": "17. [Dataset] GSE217237: Spatially resolved transcriptomics of human cervical tissue. Gene Expression Omnibus.",
+    "matched_title": [
+      "Reviewer #2 (Public Review): The gene expression landscape of the human locus coeruleus revealed by single-nucleus and spatially-resolved transcriptomics"
+    ],
+    "DOI": "10.7554/elife.84628.3.sa2",
+    "author": [],
+    "year": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          24
+        ]
+      ]
+    },
+    "volume": null,
+    "page": null,
+    "article_number": null,
+    "match_score": 45.021976,
+    "status": 200
+  },
+  {
+    "n": 18,
+    "input": "18. [Dataset] GSE278936: Spatial transcriptomics of prostate cancer. Gene Expression Omnibus.",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 19,
+    "input": "19. Nishimura, K., Bise, R., and Kojima, Y. Towards spatial transcriptomics-guided pathological image recognition with a batch-agnostic encoder. ISBI (2025). arXiv:2503.07173.",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 20,
+    "input": "20. Mehrabi, N., Morstatter, F., Saxena, N., Lerman, K., and Galstyan, A. A survey on bias and fairness in machine learning. ACM Comput. Surv. 54, 1–35 (2021).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 21,
+    "input": "21. Wilkinson, M.D. et al. The FAIR guiding principles for scientific data management and stewardship. Sci. Data 3, 160018 (2016).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 22,
+    "input": "22. Kapoor, S., and Narayanan, A. Leakage and the reproducibility crisis in machine-learning-based science. Patterns 4, 100804 (2023). https://doi.org/10.1016/j.patter.2023.100804.",
+    "matched_title": [
+      "Leakage and the reproducibility crisis in machine-learning-based science"
+    ],
+    "DOI": "10.1016/j.patter.2023.100804",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-5695-280X",
+        "authenticated-orcid": false,
+        "given": "Sayash",
+        "family": "Kapoor",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Arvind",
+        "family": "Narayanan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2023,
+          9
+        ]
+      ]
+    },
+    "volume": "4",
+    "page": "100804",
+    "article_number": "100804",
+    "match_score": 1,
+    "status": 200
+  },
+  {
+    "n": 23,
+    "input": "23. [Dataset] Anguita, D., Ghio, A., Oneto, L., Parra, X., and Reyes-Ortiz, J.L. A public domain dataset for human activity recognition using smartphones. In Proceedings of the 21st European Symposium on Artificial Neural Networks, 437–442 (2013).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 24,
+    "input": "24. [Dataset] Vergara, A., Vembu, S., Ayhan, T., Ryan, M.A., Homer, M.L., and Huerta, R. Chemical gas sensor drift compensation using classifier ensembles. Sens. Actuators B Chem. 166–167, 320–329 (2012).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 25,
+    "input": "25. [Dataset] Dua, D., and Graff, C. UCI Machine Learning Repository. University of California, Irvine, School of Information and Computer Science (2019).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 26,
+    "input": "26. Edwards, H., and Storkey, A. Censoring representations with an adversary. arXiv:1511.05897 (2015).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 27,
+    "input": "27. Xie, Q., Dai, Z., Du, Y., Hovy, E., and Neubig, G. Controllable invariance through adversarial feature learning. In Advances in Neural Information Processing Systems 30 (2017).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 28,
+    "input": "28. Madras, D., Creager, E., Pitassi, T., and Zemel, R. Learning adversarially fair and transferable representations. In Proceedings of the 35th International Conference on Machine Learning, 3384–3393 (2018).",
+    "matched_title": [
+      "Fairness through Causal Awareness"
+    ],
+    "DOI": "10.1145/3287560.3287564",
+    "author": [
+      {
+        "given": "David",
+        "family": "Madras",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Toronto, Vector Institute"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Elliot",
+        "family": "Creager",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Toronto, Vector Institute"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2019,
+          1,
+          29
+        ]
+      ]
+    },
+    "volume": null,
+    "page": "349-358",
+    "article_number": null,
+    "match_score": 56.357334,
+    "status": 200
+  },
+  {
+    "n": 29,
+    "input": "29. Elazar, Y., and Goldberg, Y. Adversarial removal of demographic attributes from text data. In Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing, 11–21 (2018).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 30,
+    "input": "30. Alvi, M., Zisserman, A., and Nellåker, C. Turning a blind eye: explicit removal of biases and variation from deep neural network embeddings. In Proceedings of the European Conference on Computer Vision, 556–572 (2018).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 31,
+    "input": "31. Ravfogel, S., Elazar, Y., Gonen, H., Twiton, M., and Goldberg, Y. Null it out: guarding protected attributes by iterative nullspace projection. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, 7237–7256 (2020).",
+    "matched_title": [
+      "Null It Out: Guarding Protected Attributes by Iterative Nullspace Projection"
+    ],
+    "DOI": "10.18653/v1/2020.acl-main.647",
+    "author": [
+      {
+        "given": "Shauli",
+        "family": "Ravfogel",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yanai",
+        "family": "Elazar",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "volume": null,
+    "page": "7237-7256",
+    "article_number": null,
+    "match_score": 183.99039,
+    "status": 200
+  },
+  {
+    "n": 32,
+    "input": "32. Wang, D. et al. iMAP: integration of multiple single-cell datasets by adversarial paired transfer networks. Genome Biol. 22, 63 (2021).",
+    "matched_title": [
+      "iMAP: integration of multiple single-cell datasets by adversarial paired transfer networks"
+    ],
+    "DOI": "10.1186/s13059-021-02280-8",
+    "author": [
+      {
+        "given": "Dongfang",
+        "family": "Wang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Siyu",
+        "family": "Hou",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2021,
+          2,
+          18
+        ]
+      ]
+    },
+    "volume": "22",
+    "page": null,
+    "article_number": "63",
+    "match_score": 92.56291,
+    "status": 200
+  },
+  {
+    "n": 33,
+    "input": "33. Guo, T., Chen, Y., Shi, M., Li, X., and Zhang, M.Q. Integration of single cell data by disentangled representation learning. Nucleic Acids Res. 50, e8 (2022).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 34,
+    "input": "34. Hu, J., Zhong, Y., and Shang, X. A versatile and scalable single-cell data integration algorithm based on domain-adversarial and variational approximation. Brief. Bioinform., bbab400 (2021).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 35,
+    "input": "35. Zemel, R., Wu, Y., Swersky, K., Pitassi, T., and Dwork, C. Learning fair representations. In Proceedings of the 30th International Conference on Machine Learning, 325–333 (2013).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 36,
+    "input": "36. Louizos, C., Swersky, K., Li, Y., Welling, M., and Zemel, R. The variational fair autoencoder. arXiv:1511.00830 (2015).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 37,
+    "input": "37. Barocas, S., Hardt, M., and Narayanan, A. Fairness and Machine Learning: Limitations and Opportunities. MIT Press (2023).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 38,
+    "input": "38. Ojala, M., and Garriga, G. Permutation tests for studying classifier performance. J. Mach. Learn. Res. 11, 1833–1863 (2010).",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 39,
+    "input": "39. Roberts, D.R., Bahn, V., Ciuti, S., Boyce, M.S., Elith, J., Guillera-Arroita, G., Hauenstein, S., Lahoz-Monfort, J.J., Schröder, B., Thuiller, W., Warton, D.I., Wintle, B.A., Hartig, F., and Dormann, C.F. Cross-validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure. Ecography 40, 913–929 (2017). https://doi.org/10.1111/ecog.02881.",
+    "matched_title": [
+      "Cross‐validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure"
+    ],
+    "DOI": "10.1111/ecog.02881",
+    "author": [
+      {
+        "given": "David R.",
+        "family": "Roberts",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Dept of Biometry and Environmental System Analysis Univ. of Freiburg Freiburg Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Volker",
+        "family": "Bahn",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Dept of Biological Sciences Wright State Univ. Dayton OH USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2017,
+          3,
+          3
+        ]
+      ]
+    },
+    "volume": "40",
+    "page": "913-929",
+    "article_number": null,
+    "match_score": 1,
+    "status": 200
+  },
+  {
+    "n": 40,
+    "input": "40. Ploton, P., Mortier, F., Réjou-Méchain, M., Barbier, N., Picard, N., Rossi, V., Dormann, C., Cornu, G., Viennois, G., Bayol, N., Lyapustin, A., Gourlet-Fleury, S., and Pélissier, R. Spatial validation reveals poor predictive performance of large-scale ecological mapping models. Nat. Commun. 11, 4540 (2020). https://doi.org/10.1038/s41467-020-18321-y.",
+    "matched_title": [
+      "Spatial validation reveals poor predictive performance of large-scale ecological mapping models"
+    ],
+    "DOI": "10.1038/s41467-020-18321-y",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-8800-3593",
+        "authenticated-orcid": false,
+        "given": "Pierre",
+        "family": "Ploton",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-5473-709X",
+        "authenticated-orcid": false,
+        "given": "Frédéric",
+        "family": "Mortier",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2020,
+          9,
+          11
+        ]
+      ]
+    },
+    "volume": "11",
+    "page": null,
+    "article_number": "4540",
+    "match_score": 1,
+    "status": 200
+  },
+  {
+    "n": 41,
+    "input": "41. Yagis, E., Atnafu, S.W., García Seco de Herrera, A., Marzi, C., Scheda, R., Giannelli, M., Tessa, C., Citi, L., and Diciotti, S. Effect of data leakage in brain MRI classification using 2D convolutional neural networks. Sci. Rep. 11, 22544 (2021). https://doi.org/10.1038/s41598-021-01681-w.",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "n": 42,
+    "input": "42. [Dataset] Axelrod, M.L., Zhou, R., and Sun, L. Spatial transcriptomic landscape of invasion patterns in human papillomavirus-associated endocervical adenocarcinoma. Sci. Rep. 16, 13246 (2026). https://doi.org/10.1038/s41598-026-43717-z. GSE316098.",
+    "matched_title": [
+      "Spatial transcriptomic landscape of invasion patterns in human papillomavirus-associated endocervical adenocarcinoma"
+    ],
+    "DOI": "10.1038/s41598-026-43717-z",
+    "author": [
+      {
+        "given": "Margaret L.",
+        "family": "Axelrod",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Ruiwen",
+        "family": "Zhou",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          12
+        ]
+      ]
+    },
+    "volume": "16",
+    "page": null,
+    "article_number": "13246",
+    "match_score": 1,
+    "status": 200
+  },
+  {
+    "n": 43,
+    "input": "43. [Dataset] Guo, C. Spatiotemporally deciphering the unknown role of persistent HPV infection in precancer to cervical cancer progression: integrating single-cell RNA-sequencing landscape and spatial transcriptomics atlas. Gene Expression Omnibus GSE208654 (2023).",
+    "error": "HTTP Error 429: Too Many Requests"
+  }
+]

@@ -1,0 +1,181 @@
+{
+  "checks": [
+    {
+      "check": "43 consecutively numbered references",
+      "pass": true
+    },
+    {
+      "check": "all numbered citations within bibliography",
+      "pass": true
+    },
+    {
+      "check": "Summary at most 150 words",
+      "pass": true
+    },
+    {
+      "check": "In brief at most 50 words",
+      "pass": true
+    },
+    {
+      "check": "four highlights at most 85 characters",
+      "pass": true
+    },
+    {
+      "check": "five embedded main figures",
+      "pass": true
+    },
+    {
+      "check": "six main table objects",
+      "pass": true
+    },
+    {
+      "check": "HAR has 15 recorded seed-dose cells",
+      "pass": true
+    },
+    {
+      "check": "HAR LDI matches implemented unit-level formula",
+      "pass": true
+    },
+    {
+      "check": "HAR inflation matches paired holdout difference",
+      "pass": true
+    },
+    {
+      "check": "HAR dual gate matches recorded unit-level convention",
+      "pass": true
+    },
+    {
+      "check": "HAR zero of 12 dosed cells pass",
+      "pass": true
+    },
+    {
+      "check": "GASDRIFT has 15 recorded seed-dose cells",
+      "pass": true
+    },
+    {
+      "check": "GASDRIFT LDI matches implemented unit-level formula",
+      "pass": true
+    },
+    {
+      "check": "GASDRIFT inflation matches paired holdout difference",
+      "pass": true
+    },
+    {
+      "check": "GASDRIFT dual gate matches recorded unit-level convention",
+      "pass": true
+    },
+    {
+      "check": "GASDRIFT zero of 12 dosed cells pass",
+      "pass": true
+    },
+    {
+      "check": "GeoMx risk inflation correctly assigned",
+      "pass": true
+    },
+    {
+      "check": "GeoMx cell-type inflation correctly assigned",
+      "pass": true
+    }
+  ],
+  "failures": [],
+  "word_counts": {
+    "summary": 131,
+    "in_brief": 48,
+    "main_Introduction_to_Discussion_including_tables": 8510
+  },
+  "highlight_characters": [
+    60,
+    69,
+    66,
+    70
+  ],
+  "uncited_reference_numbers": [],
+  "figures": [
+    {
+      "file": "fig1.pdf",
+      "sha256": "f5023173eff96cfbad0793637c156a7869de72c1f229211582a5ade6c6519891",
+      "bytes": 58907
+    },
+    {
+      "file": "fig1.png",
+      "sha256": "c743c227927ec30ce7190a26fd0adde79d80235c3a17a6bfdf445c97202cb0d4",
+      "bytes": 281343
+    },
+    {
+      "file": "fig2.pdf",
+      "sha256": "bde32d7ae05b6297013df403692769b6d3b3857ffd6b58f9b2ac6ebf082a5952",
+      "bytes": 71556
+    },
+    {
+      "file": "fig2.png",
+      "sha256": "2b2b1e242eaac7782a18594b29b36a332e07caad8be741ea354a3708333d43bd",
+      "bytes": 807382
+    },
+    {
+      "file": "fig3.pdf",
+      "sha256": "d3c1d0d45a6104065863d5f597fa1b6efcc2834f90bdfa450fc77d49f21450b1",
+      "bytes": 53400
+    },
+    {
+      "file": "fig3.png",
+      "sha256": "5e1dd24840c59da4231afaabcd7f4d56ac0b3f5144c2d7c00d99ac8a2f6d2da3",
+      "bytes": 676509
+    },
+    {
+      "file": "fig4.pdf",
+      "sha256": "803d0321878320ed1e072517168e7b182871b85a03fed8325de9ea7e55d8794a",
+      "bytes": 50018
+    },
+    {
+      "file": "fig4.png",
+      "sha256": "fc8e14fc866067bf67f47dde43c2dd9eb380a8eaffa31c5932eb439d5e6c77d5",
+      "bytes": 335965
+    },
+    {
+      "file": "fig5_crossdomain.pdf",
+      "sha256": "72774bf13aa9fcc63531314b0ec01095f6bc5787bdb0bb239851a8fcb241a249",
+      "bytes": 32798
+    },
+    {
+      "file": "fig5_crossdomain.png",
+      "sha256": "72dce4472662347703c5ab900b103bc0eeb80e7e63765700838581643c6e6546",
+      "bytes": 366046
+    },
+    {
+      "file": "graphical_abstract.png",
+      "sha256": "43d87326a33da03c5fe10f513e25cc93d8bb20dea45841c619f306e51b3d19ed",
+      "bytes": 398707
+    },
+    {
+      "file": "graphical_abstract_1200.pdf",
+      "sha256": "e3b9a4458f70c80f0294b1ab33c497b1db5c6bb84b1da31a70131a7988a6392d",
+      "bytes": 65959
+    },
+    {
+      "file": "graphical_abstract_1200.png",
+      "sha256": "40f8cf7244044ae6757413696f3da5e344950ee7f93fdff66c45de140b943472",
+      "bytes": 246752
+    },
+    {
+      "file": "graphical_abstract_300dpi.tif",
+      "sha256": "87f00d9e0efe71fbadee7e81f1572fa33329407d33fd448a167bab485668c771",
+      "bytes": 377296
+    },
+    {
+      "file": "graphical_abstract_v27.pdf",
+      "sha256": "38fb8a2cfd58b99f9af53a31d4f182951531a8d5b34b47ead8dfbf21ac2b3a03",
+      "bytes": 24117
+    },
+    {
+      "file": "graphical_abstract_v27.png",
+      "sha256": "0871335026c0e0642bfb0753d13282958f824f8ba7553612f24f26f475709357",
+      "bytes": 116907
+    },
+    {
+      "file": "graphical_abstract_v27.tif",
+      "sha256": "b97daca20f48c96efb0ec6ef4e3f1e9f2af7c538282a58b838f4ae103dec63d5",
+      "bytes": 5760206
+    }
+  ],
+  "limitations": "Structure and specified archive arithmetic only. Not a full experiment rerun, group-null validation, complete source verification or journal acceptance certification."
+}
