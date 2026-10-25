@@ -1,0 +1,71 @@
+{
+  "protocol": {
+    "purpose": "re-run of the six remediable method gaps in REVIEW_REPORT_v27_20261025.md",
+    "instrument": "refit_grid_audit operator (LOO ridge hat matrix, alpha=1)",
+    "tau_perp": 0.001,
+    "ldi_gate": 1.645,
+    "fidelity_keep": 0.7,
+    "perm_seed": 20261010,
+    "B_sigma_and_p": 2000,
+    "null_modes": [
+      "free (whole-sample label permutation, legacy)",
+      "group (within-group label permutation, preserves kappa)"
+    ],
+    "recoding_R": 20,
+    "recode_seed": 20261011,
+    "operator_primal_vs_kernel_max_abs_diff": 3.83026943495679e-15,
+    "identity": "leave-one-GROUP-out multinomial logistic; chance=1/G",
+    "doses": [
+      0.0
+    ],
+    "seeds": [
+      0
+    ],
+    "epochs": 30,
+    "elapsed_sec": 129.8
+  },
+  "runs": [
+    {
+      "domain": "HAR",
+      "arm": "",
+      "seed": 0,
+      "lam": 0.0,
+      "label": "activity (6-class nominal)",
+      "group": "subject (G=30)",
+      "G": 30,
+      "m_units": 299,
+      "n_obs": 10299,
+      "train_sec": 119.7,
+      "tau_loo": 0.7993280464052999,
+      "tau_in": 0.8519131525074731,
+      "tau_lgo": 0.7922445522250258,
+      "gap": 0.05258510610217326,
+      "R": 0.9382740999509196,
+      "inflation": 0.007083494180274097,
+      "sigma_free": 0.05912630756699609,
+      "p_free": 0.0004997501249375312,
+      "null_degenerate_free": false,
+      "sigma_group": 0.058005934293464165,
+      "p_group": 0.0004997501249375312,
+      "null_degenerate_group": false,
+      "ldi_free": 13.502078503730566,
+      "ldi_free_gate_pass": false,
+      "ldi_group": 13.762868508701043,
+      "ldi_group_gate_pass": false,
+      "frac_groups_varying": 1.0,
+      "kappa_units": 0.12119310214806531,
+      "macro_ovr_auc": 0.9639049293998682,
+      "balanced_acc": 0.8364845561779987,
+      "n_classes": 6,
+      "tau_loo_recode_sd": 0.08435810623637079,
+      "tau_loo_recode_range": 0.3816724398940719,
+      "tau_loo_identity": 0.7993280464052999,
+      "auc_recode_sd": 1.1102230246251565e-16,
+      "auc_recode_delta": -1.1102230246251565e-16,
+      "id_acc": NaN,
+      "id_chance": NaN,
+      "id_lift": NaN,
+      "id_note": "empty group"
+    }
+  ]
+}

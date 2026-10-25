@@ -10,7 +10,7 @@
 
 **Corresponding author and lead contact:** Lang Guo, School of Pharmacy, Shenyang Medical College, 146 Huanghe North Avenue, Shenyang 110034, China. guolang1016@symc.edu.cn; +86 13555707001
 
-**Contents:** Four highlights; In brief (48 words); Summary (131 words); Bigger picture; five main figures supplied separately; six main tables including the key resources table; seventeen numbered supplemental tables (some contain multiple Word table objects); 43 references.
+**Contents:** Four highlights; In brief (48 words); Summary (131 words); Bigger picture; five main figures supplied separately; seven main tables including the key resources table; nineteen numbered supplemental tables (some contain multiple Word table objects); 43 references.
 
 **Keywords:** grouped data; evaluation leakage; permutation inference; representation auditing; adversarial training; spatial transcriptomics
 
