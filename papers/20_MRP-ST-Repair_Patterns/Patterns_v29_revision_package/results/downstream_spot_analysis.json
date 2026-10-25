@@ -1,0 +1,290 @@
+[
+  {
+    "run_id": "FULL_seed0",
+    "n_spots": 46820,
+    "n_samples": 35,
+    "risk_by_severity_spot": {
+      "normal": {
+        "mean": -0.0897364043878873,
+        "sd": 0.5214358557973748,
+        "n_spots": 40110
+      },
+      "HSIL": {
+        "mean": 1.0854891761494012,
+        "sd": 0.24023368990060442,
+        "n_spots": 579
+      },
+      "cancer": {
+        "mean": 1.794620597302729,
+        "sd": 0.46686295224381263,
+        "n_spots": 6131
+      }
+    },
+    "spot_level_KW": {
+      "H": 17070.512050968868,
+      "p": 0.0,
+      "note": "spots non-independent; descriptive only"
+    },
+    "per_sample_disease_vs_normal_MWU_p": 1.9098548510313215e-05,
+    "pathway_cell_corr": [
+      {
+        "set": "CELL_tumor_epithelial",
+        "spearman_rho": 0.4591867651990783,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "INTERFERON_ANTIVIRAL",
+        "spearman_rho": -0.44649298419380556,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "HPV_INTEGRATION_CANDIDATE",
+        "spearman_rho": 0.4077164785724208,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "ANTIGEN_PRESENTATION",
+        "spearman_rho": 0.39900466702857756,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "PROLIFERATION",
+        "spearman_rho": -0.3391757388207145,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "EMT",
+        "spearman_rho": -0.19231417253913502,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "CELL_myeloid",
+        "spearman_rho": 0.11515652131200586,
+        "p": 6.109364146950241e-138,
+        "BH_q": 9.60042937377895e-138
+      },
+      {
+        "set": "CELL_plasma",
+        "spearman_rho": 0.10434672250303918,
+        "p": 1.7627407194258434e-113,
+        "BH_q": 2.4237684892105346e-113
+      },
+      {
+        "set": "CELL_endothelial",
+        "spearman_rho": -0.08640627026255787,
+        "p": 2.7632173107868034e-78,
+        "BH_q": 3.37726560207276e-78
+      },
+      {
+        "set": "CELL_fibroblast",
+        "spearman_rho": -0.08403869470974694,
+        "p": 3.854727665521319e-74,
+        "BH_q": 4.240200432073451e-74
+      },
+      {
+        "set": "P53_PATHWAY",
+        "spearman_rho": -0.04141537899495502,
+        "p": 3.101752007042258e-19,
+        "BH_q": 3.101752007042258e-19
+      }
+    ]
+  },
+  {
+    "run_id": "FULL_seed3",
+    "n_spots": 46820,
+    "n_samples": 35,
+    "risk_by_severity_spot": {
+      "normal": {
+        "mean": -0.07804588057840073,
+        "sd": 0.5497640050042705,
+        "n_spots": 40110
+      },
+      "HSIL": {
+        "mean": 1.1410677060870926,
+        "sd": 0.4340210682377388,
+        "n_spots": 579
+      },
+      "cancer": {
+        "mean": 1.8457414598242627,
+        "sd": 0.5753239631572546,
+        "n_spots": 6131
+      }
+    },
+    "spot_level_KW": {
+      "H": 15960.913035757916,
+      "p": 0.0,
+      "note": "spots non-independent; descriptive only"
+    },
+    "per_sample_disease_vs_normal_MWU_p": 1.9098548510313215e-05,
+    "pathway_cell_corr": [
+      {
+        "set": "CELL_tumor_epithelial",
+        "spearman_rho": 0.46143024519789816,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "INTERFERON_ANTIVIRAL",
+        "spearman_rho": -0.44860717627600777,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "HPV_INTEGRATION_CANDIDATE",
+        "spearman_rho": 0.4094545556437313,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "ANTIGEN_PRESENTATION",
+        "spearman_rho": 0.4058139746976317,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "PROLIFERATION",
+        "spearman_rho": -0.3419854569625393,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "EMT",
+        "spearman_rho": -0.19089503651749523,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "CELL_myeloid",
+        "spearman_rho": 0.11173015994670657,
+        "p": 6.389220931368842e-130,
+        "BH_q": 1.0040204320722466e-129
+      },
+      {
+        "set": "CELL_plasma",
+        "spearman_rho": 0.10163555685386462,
+        "p": 9.906062199926966e-108,
+        "BH_q": 1.3620835524899578e-107
+      },
+      {
+        "set": "CELL_endothelial",
+        "spearman_rho": -0.09916847259981913,
+        "p": 1.2424027464101905e-102,
+        "BH_q": 1.5184922456124549e-102
+      },
+      {
+        "set": "CELL_fibroblast",
+        "spearman_rho": -0.08179488606155387,
+        "p": 2.5513693138757668e-70,
+        "BH_q": 2.8065062452633436e-70
+      },
+      {
+        "set": "P53_PATHWAY",
+        "spearman_rho": -0.03944679181128509,
+        "p": 1.3589975754790082e-17,
+        "BH_q": 1.3589975754790082e-17
+      }
+    ]
+  },
+  {
+    "run_id": "FULL_seed4",
+    "n_spots": 46820,
+    "n_samples": 35,
+    "risk_by_severity_spot": {
+      "normal": {
+        "mean": -0.05350689062362477,
+        "sd": 0.5137495970657396,
+        "n_spots": 40110
+      },
+      "HSIL": {
+        "mean": 1.087513496658551,
+        "sd": 0.4078927411672541,
+        "n_spots": 579
+      },
+      "cancer": {
+        "mean": 1.8288397424043323,
+        "sd": 0.46753181775888675,
+        "n_spots": 6131
+      }
+    },
+    "spot_level_KW": {
+      "H": 16721.749332656073,
+      "p": 0.0,
+      "note": "spots non-independent; descriptive only"
+    },
+    "per_sample_disease_vs_normal_MWU_p": 1.9098548510313215e-05,
+    "pathway_cell_corr": [
+      {
+        "set": "INTERFERON_ANTIVIRAL",
+        "spearman_rho": -0.4500488098015765,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "CELL_tumor_epithelial",
+        "spearman_rho": 0.449288756902897,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "HPV_INTEGRATION_CANDIDATE",
+        "spearman_rho": 0.4093668109143364,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "ANTIGEN_PRESENTATION",
+        "spearman_rho": 0.40161429086144873,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "PROLIFERATION",
+        "spearman_rho": -0.3410066173833992,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "EMT",
+        "spearman_rho": -0.18855448568029545,
+        "p": 0.0,
+        "BH_q": 0.0
+      },
+      {
+        "set": "CELL_myeloid",
+        "spearman_rho": 0.11472403254897856,
+        "p": 6.484972848912306e-137,
+        "BH_q": 1.0190671619719338e-136
+      },
+      {
+        "set": "CELL_plasma",
+        "spearman_rho": 0.10009509745444693,
+        "p": 1.5641178151918105e-104,
+        "BH_q": 2.1506619958887394e-104
+      },
+      {
+        "set": "CELL_endothelial",
+        "spearman_rho": -0.08658458341030255,
+        "p": 1.3321791196144174e-78,
+        "BH_q": 1.6282189239731767e-78
+      },
+      {
+        "set": "CELL_fibroblast",
+        "spearman_rho": -0.07745993269744729,
+        "p": 3.115890003198078e-63,
+        "BH_q": 3.4274790035178864e-63
+      },
+      {
+        "set": "P53_PATHWAY",
+        "spearman_rho": -0.04569537216290111,
+        "p": 4.489690025206083e-23,
+        "BH_q": 4.489690025206083e-23
+      }
+    ]
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "signature_genes_used": 11,
+  "signature_source": "results/align_hpv_cervix35.json 352-gene proxy",
+  "models": {
+    "model_1_univariate": {
+      "HR": 1.120179312099352,
+      "HR_95CI_low": 0.7357434512782394,
+      "HR_95CI_high": 1.7054880870164122,
+      "wald_p": 0.596702957123459,
+      "concordance_index": 0.5196452511085903,
+      "n": 302,
+      "n_events": 72,
+      "n_covariates": 1,
+      "covariate_details": {},
+      "variables": [
+        "signature_high"
+      ]
+    },
+    "model_2_age_adjusted": {
+      "HR": 1.170138720232704,
+      "HR_95CI_low": 0.7656444110678958,
+      "HR_95CI_high": 1.7883296799333788,
+      "wald_p": 0.46781840510439665,
+      "concordance_index": 0.5695060327936475,
+      "n": 302,
+      "n_events": 72,
+      "n_covariates": 2,
+      "covariate_details": {
+        "age_HR": 1.0115171306017954,
+        "age_p": 0.1411361992935591
+      },
+      "variables": [
+        "signature_high",
+        "age"
+      ]
+    },
+    "model_3_age_hpv": {
+      "HR": 1.1842399364595073,
+      "HR_95CI_low": 0.7730867943390438,
+      "HR_95CI_high": 1.8140579264513639,
+      "wald_p": 0.437063602320063,
+      "concordance_index": 0.5654841703619676,
+      "n": 302,
+      "n_events": 72,
+      "n_covariates": 3,
+      "covariate_details": {
+        "age_HR": 1.0109105806634062,
+        "age_p": 0.16478776525874367,
+        "hpv_pos_HR": 0.8588182789448668,
+        "hpv_pos_p": 0.5293716579878489
+      },
+      "variables": [
+        "signature_high",
+        "age",
+        "hpv_pos"
+      ]
+    },
+    "model_4_age_hpv_continuous": {
+      "HR": 1.3638894758150142,
+      "HR_95CI_low": 0.7627841545952806,
+      "HR_95CI_high": 2.438690540479226,
+      "wald_p": 0.29524017599739083,
+      "concordance_index": 0.5820356811384965,
+      "n": 302,
+      "n_events": 72,
+      "n_covariates": 3,
+      "covariate_details": {
+        "age_HR": 1.0107825832719428,
+        "age_p": 0.1723658835986633,
+        "hpv_pos_HR": 0.8704345491722558,
+        "hpv_pos_p": 0.5677341132546851
+      },
+      "variables": [
+        "signature_high",
+        "age",
+        "hpv_pos"
+      ]
+    }
+  }
+}

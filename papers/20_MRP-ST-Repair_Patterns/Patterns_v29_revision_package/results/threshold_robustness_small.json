@@ -1,0 +1,193 @@
+{
+  "pre_registered": {
+    "supported_tau": 0.35,
+    "unsupported_abs_tau": 0.15,
+    "alpha": 0.05
+  },
+  "arms_per_seed": {
+    "group_A_small": {
+      "tau_lodo": [
+        0.4565121699851361,
+        0.4565121699851361,
+        0.4565121699851361
+      ],
+      "p": [
+        0.001996007984031936,
+        0.001996007984031936,
+        0.001996007984031936
+      ]
+    },
+    "group_B_small": {
+      "tau_lodo": [
+        -0.1914405874131216,
+        0.014726199031778584,
+        -0.13253579128600726
+      ],
+      "p": [
+        0.9021956087824351,
+        0.4590818363273453,
+        0.8163672654690619
+      ]
+    },
+    "group_C_small": {
+      "tau_lodo": [
+        -0.029452398063557168,
+        0.007363099515889292,
+        0.007363099515889292
+      ],
+      "p": [
+        0.5768463073852296,
+        0.45708582834331335,
+        0.46107784431137727
+      ]
+    }
+  },
+  "grid": [
+    {
+      "tau_up": 0.2,
+      "tau_low": 0.1,
+      "group_A_small": "supported",
+      "group_B_small": "suggestive",
+      "group_C_small": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.2,
+      "tau_low": 0.15,
+      "group_A_small": "supported",
+      "group_B_small": "unsupported",
+      "group_C_small": "unsupported",
+      "intended": false
+    },
+    {
+      "tau_up": 0.2,
+      "tau_low": 0.2,
+      "group_A_small": "supported",
+      "group_B_small": "unsupported",
+      "group_C_small": "unsupported",
+      "intended": false
+    },
+    {
+      "tau_up": 0.25,
+      "tau_low": 0.1,
+      "group_A_small": "supported",
+      "group_B_small": "suggestive",
+      "group_C_small": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.25,
+      "tau_low": 0.15,
+      "group_A_small": "supported",
+      "group_B_small": "unsupported",
+      "group_C_small": "unsupported",
+      "intended": false
+    },
+    {
+      "tau_up": 0.25,
+      "tau_low": 0.2,
+      "group_A_small": "supported",
+      "group_B_small": "unsupported",
+      "group_C_small": "unsupported",
+      "intended": false
+    },
+    {
+      "tau_up": 0.3,
+      "tau_low": 0.1,
+      "group_A_small": "supported",
+      "group_B_small": "suggestive",
+      "group_C_small": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.3,
+      "tau_low": 0.15,
+      "group_A_small": "supported",
+      "group_B_small": "unsupported",
+      "group_C_small": "unsupported",
+      "intended": false
+    },
+    {
+      "tau_up": 0.3,
+      "tau_low": 0.2,
+      "group_A_small": "supported",
+      "group_B_small": "unsupported",
+      "group_C_small": "unsupported",
+      "intended": false
+    },
+    {
+      "tau_up": 0.35,
+      "tau_low": 0.1,
+      "group_A_small": "supported",
+      "group_B_small": "suggestive",
+      "group_C_small": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.35,
+      "tau_low": 0.15,
+      "group_A_small": "supported",
+      "group_B_small": "unsupported",
+      "group_C_small": "unsupported",
+      "intended": false
+    },
+    {
+      "tau_up": 0.35,
+      "tau_low": 0.2,
+      "group_A_small": "supported",
+      "group_B_small": "unsupported",
+      "group_C_small": "unsupported",
+      "intended": false
+    },
+    {
+      "tau_up": 0.4,
+      "tau_low": 0.1,
+      "group_A_small": "supported",
+      "group_B_small": "suggestive",
+      "group_C_small": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.4,
+      "tau_low": 0.15,
+      "group_A_small": "supported",
+      "group_B_small": "unsupported",
+      "group_C_small": "unsupported",
+      "intended": false
+    },
+    {
+      "tau_up": 0.4,
+      "tau_low": 0.2,
+      "group_A_small": "supported",
+      "group_B_small": "unsupported",
+      "group_C_small": "unsupported",
+      "intended": false
+    },
+    {
+      "tau_up": 0.45,
+      "tau_low": 0.1,
+      "group_A_small": "supported",
+      "group_B_small": "suggestive",
+      "group_C_small": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.45,
+      "tau_low": 0.15,
+      "group_A_small": "supported",
+      "group_B_small": "unsupported",
+      "group_C_small": "unsupported",
+      "intended": false
+    },
+    {
+      "tau_up": 0.45,
+      "tau_low": 0.2,
+      "group_A_small": "supported",
+      "group_B_small": "unsupported",
+      "group_C_small": "unsupported",
+      "intended": false
+    }
+  ],
+  "n_intended_combos": 6,
+  "n_combos": 18
+}

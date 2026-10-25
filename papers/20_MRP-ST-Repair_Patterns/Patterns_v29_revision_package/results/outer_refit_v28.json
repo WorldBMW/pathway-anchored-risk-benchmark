@@ -1,0 +1,46 @@
+{
+  "protocol": {
+    "purpose": "outer-loop group-disjoint refit (encoder + adversary + probe)",
+    "contrast": "tau_lgo_frozen (encoder saw the group) vs tau_outer_lgo (encoder trained only on the remaining groups)",
+    "epochs": 30,
+    "doses": [
+      0.0,
+      2.0
+    ],
+    "seeds": [
+      0
+    ],
+    "n_units": 300,
+    "perm_seed": 20261010
+  },
+  "runs": [
+    {
+      "domain": "HAR",
+      "seed": 0,
+      "lam": 0.0,
+      "G": 30,
+      "m_units": 299,
+      "tau_lgo_frozen": 0.8022033185221995,
+      "tau_outer_lgo": 0.8063417852058108,
+      "tau_loo_all": 0.7993280464052999,
+      "n_folds": 30,
+      "fold_sd": 0.10306742692921725,
+      "optimism": -0.004138466683611286,
+      "sec": 423.4
+    },
+    {
+      "domain": "HAR",
+      "seed": 0,
+      "lam": 2.0,
+      "G": 30,
+      "m_units": 299,
+      "tau_lgo_frozen": 0.7756794907602457,
+      "tau_outer_lgo": 0.8035153236875687,
+      "tau_loo_all": 0.7688296686846754,
+      "n_folds": 30,
+      "fold_sd": 0.09432781729474317,
+      "optimism": -0.027835832927323056,
+      "sec": 159.2
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "params": {
+    "data": "data/sim_st/group_A_expA",
+    "out": "results/expA_A_baseline.json",
+    "log_every": 50,
+    "n_genes": 2000,
+    "k": 6,
+    "dim": 128,
+    "hid": 256,
+    "lr": 0.001,
+    "epochs": 150,
+    "adv_list": [
+      0.0
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "grl_cap": 1.0,
+    "warmup": 50,
+    "clip": 1.0,
+    "adv_sn": true,
+    "seed": 2,
+    "backbone": "gat",
+    "method": "mrp",
+    "recon_chunk": 0,
+    "dump_xs": false,
+    "dump_w": "",
+    "dump_lam": 2.0,
+    "device": "cuda:0"
+  },
+  "n_spots": 25600,
+  "n_genes_union": 3000,
+  "n_donors": 32,
+  "samples": [
+    "CA_018",
+    "CA_019",
+    "CA_020",
+    "CA_021",
+    "CA_022",
+    "CA_023",
+    "CA_024",
+    "CA_025",
+    "CA_026",
+    "CA_027",
+    "CA_028",
+    "CA_029",
+    "CA_030",
+    "CA_031",
+    "N_000",
+    "N_001",
+    "N_002",
+    "N_003",
+    "N_004",
+    "N_005",
+    "N_006",
+    "N_007",
+    "N_008",
+    "N_009",
+    "N_010",
+    "N_011",
+    "N_012",
+    "N_013",
+    "N_014",
+    "N_015",
+    "N_016",
+    "N_017"
+  ],
+  "scan": {
+    "s0_lam0.0": {
+      "tau_lodo": 0.7127864449672373,
+      "p_refit": 9.999000099990002e-05,
+      "tau_insample": 0.7127864449672372,
+      "sigma_null": 0.19891736998448914,
+      "ldi": 3.5783021111868707,
+      "tau_ldo": 0.7127864449672372,
+      "n_samples": 32,
+      "train_seconds": 6.0
+    },
+    "s1_lam0.0": {
+      "tau_lodo": 0.7127864449672373,
+      "p_refit": 9.999000099990002e-05,
+      "tau_insample": 0.7127864449672372,
+      "sigma_null": 0.20517507140415517,
+      "ldi": 3.469166308050922,
+      "tau_ldo": 0.7127864449672372,
+      "n_samples": 32,
+      "train_seconds": 4.3
+    },
+    "s2_lam0.0": {
+      "tau_lodo": 0.7127864449672373,
+      "p_refit": 9.999000099990002e-05,
+      "tau_insample": 0.7127864449672372,
+      "sigma_null": 0.19956097955087496,
+      "ldi": 3.566761631302669,
+      "tau_ldo": 0.7127864449672372,
+      "n_samples": 32,
+      "train_seconds": 4.3
+    }
+  },
+  "verdict": {
+    "E3": "no-go",
+    "base_mean_ldi": 3.5380766835134874,
+    "base_mean_tau_lodo": 0.7127864449672373,
+    "passing_lambdas": [],
+    "gate": {
+      "ldi": 1.645,
+      "fidelity_keep": 0.7,
+      "fidelity_metric": "tau_lodo"
+    }
+  }
+}

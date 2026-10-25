@@ -1,0 +1,411 @@
+{
+  "gate": 1.645,
+  "fidelity_keep": 0.7,
+  "tau_perp": 0.001,
+  "table": {
+    "A": {
+      "baseline": {
+        "0.0": {
+          "desc": "safety (shared signal)",
+          "metrics": {
+            "ldi_mean": 3.5380766835134874,
+            "ldi_sd": 0.059956447141097276,
+            "tau_lodo_mean": 0.7127864449672373,
+            "tau_lodo_sd": 0.0,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": 1.0000000000000002,
+            "p_mean": 9.999000099990002e-05,
+            "gap_mean": -1.1102230246251565e-16,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "1.000",
+          "axis2_gap_ratio": "n/a",
+          "axis3_supported": true
+        }
+      },
+      "mrp": {
+        "0.5": {
+          "desc": "safety (shared signal)",
+          "metrics": {
+            "ldi_mean": 3.436259278361875,
+            "ldi_sd": 0.028271993383775583,
+            "tau_lodo_mean": 0.7127864449672373,
+            "tau_lodo_sd": 0.0,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": 1.0000000000000002,
+            "p_mean": 9.999000099990002e-05,
+            "gap_mean": -1.1102230246251565e-16,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "1.000",
+          "axis2_gap_ratio": "n/a",
+          "axis3_supported": true
+        },
+        "1.0": {
+          "desc": "safety (shared signal)",
+          "metrics": {
+            "ldi_mean": 3.4911374340872157,
+            "ldi_sd": 0.02323153205384272,
+            "tau_lodo_mean": 0.7127864449672373,
+            "tau_lodo_sd": 0.0,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": 1.0000000000000002,
+            "p_mean": 9.999000099990002e-05,
+            "gap_mean": -1.1102230246251565e-16,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "1.000",
+          "axis2_gap_ratio": "n/a",
+          "axis3_supported": true
+        },
+        "2.0": {
+          "desc": "safety (shared signal)",
+          "metrics": {
+            "ldi_mean": 3.5026965905765226,
+            "ldi_sd": 0.04782847050100222,
+            "tau_lodo_mean": 0.7127864449672373,
+            "tau_lodo_sd": 0.0,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": 1.0000000000000002,
+            "p_mean": 9.999000099990002e-05,
+            "gap_mean": -1.1102230246251565e-16,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "1.000",
+          "axis2_gap_ratio": "n/a",
+          "axis3_supported": true
+        },
+        "5.0": {
+          "desc": "safety (shared signal)",
+          "metrics": {
+            "ldi_mean": 3.4906476872273458,
+            "ldi_sd": 0.04117584375639714,
+            "tau_lodo_mean": 0.7127864449672373,
+            "tau_lodo_sd": 0.0,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": 1.0000000000000002,
+            "p_mean": 9.999000099990002e-05,
+            "gap_mean": -1.1102230246251565e-16,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "1.000",
+          "axis2_gap_ratio": "n/a",
+          "axis3_supported": true
+        }
+      },
+      "groupdro": {
+        "1.0": {
+          "desc": "safety (shared signal)",
+          "metrics": {
+            "ldi_mean": 4.07828838640203,
+            "ldi_sd": 0.07051094046628738,
+            "tau_lodo_mean": 0.7127864449672373,
+            "tau_lodo_sd": 0.0,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": 1.0000000000000002,
+            "p_mean": 9.999000099990002e-05,
+            "gap_mean": -1.1102230246251565e-16,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "1.000",
+          "axis2_gap_ratio": "n/a",
+          "axis3_supported": true
+        },
+        "10.0": {
+          "desc": "safety (shared signal)",
+          "metrics": {
+            "ldi_mean": 3.6761642889889568,
+            "ldi_sd": 0.42427949379730656,
+            "tau_lodo_mean": 0.6637588058954167,
+            "tau_lodo_sd": 0.08491836184754227,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": 0.9312169312169315,
+            "p_mean": 0.000333300003333,
+            "gap_mean": 0.04902763907182047,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "0.931",
+          "axis2_gap_ratio": "n/a",
+          "axis3_supported": true
+        }
+      },
+      "irm": {
+        "10.0": {
+          "desc": "safety (shared signal)",
+          "metrics": {
+            "ldi_mean": 3.458263268624529,
+            "ldi_sd": 0.050189763378051165,
+            "tau_lodo_mean": 0.7127864449672373,
+            "tau_lodo_sd": 0.0,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": 1.0000000000000002,
+            "p_mean": 0.00013332000133320002,
+            "gap_mean": -1.1102230246251565e-16,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "1.000",
+          "axis2_gap_ratio": "n/a",
+          "axis3_supported": true
+        },
+        "100.0": {
+          "desc": "safety (shared signal)",
+          "metrics": {
+            "ldi_mean": 3.5604019472212003,
+            "ldi_sd": 0.027659881943068215,
+            "tau_lodo_mean": 0.7127864449672373,
+            "tau_lodo_sd": 0.0,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": 1.0000000000000002,
+            "p_mean": 0.00013332000133320002,
+            "gap_mean": -1.1102230246251565e-16,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "1.000",
+          "axis2_gap_ratio": "n/a",
+          "axis3_supported": true
+        }
+      }
+    },
+    "C": {
+      "baseline": {
+        "0.0": {
+          "desc": "leakage (identity confound)",
+          "metrics": {
+            "ldi_mean": 0.34474549032032575,
+            "ldi_sd": 0.7324163366871799,
+            "tau_lodo_mean": 0.07165578018189156,
+            "tau_lodo_sd": 0.15034664389310384,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": 0.10052910052910051,
+            "p_mean": 0.39846015398460155,
+            "gap_mean": 0.6411306647853457,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "1.000",
+          "axis2_gap_ratio": "1.000",
+          "axis3_supported": false
+        }
+      },
+      "mrp": {
+        "0.5": {
+          "desc": "leakage (identity confound)",
+          "metrics": {
+            "ldi_mean": -0.24405350769736478,
+            "ldi_sd": 0.9621893716046518,
+            "tau_lodo_mean": -0.04902763907182054,
+            "tau_lodo_sd": 0.20083139195488917,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": -0.06878306878306878,
+            "p_mean": 0.5764756857647568,
+            "gap_mean": 0.7618140840390577,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "-0.684",
+          "axis2_gap_ratio": "1.188",
+          "axis3_supported": false
+        },
+        "1.0": {
+          "desc": "leakage (identity confound)",
+          "metrics": {
+            "ldi_mean": -0.5162898916531399,
+            "ldi_sd": 0.3263995245221919,
+            "tau_lodo_mean": -0.10748367027283735,
+            "tau_lodo_sd": 0.06882080443732039,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": -0.15079365079365079,
+            "p_mean": 0.7083291670832916,
+            "gap_mean": 0.8202701152400745,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "-1.500",
+          "axis2_gap_ratio": "1.279",
+          "axis3_supported": false
+        },
+        "2.0": {
+          "desc": "leakage (identity confound)",
+          "metrics": {
+            "ldi_mean": -0.21300269318829865,
+            "ldi_sd": 0.35167930614280174,
+            "tau_lodo_mean": -0.04337060379430279,
+            "tau_lodo_sd": 0.0736139489738841,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": -0.06084656084656084,
+            "p_mean": 0.6027397260273973,
+            "gap_mean": 0.75615704876154,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "-0.605",
+          "axis2_gap_ratio": "1.179",
+          "axis3_supported": false
+        },
+        "5.0": {
+          "desc": "leakage (identity confound)",
+          "metrics": {
+            "ldi_mean": -0.20014031048993006,
+            "ldi_sd": 1.2509177864200798,
+            "tau_lodo_mean": -0.04148492536846355,
+            "tau_lodo_sd": 0.2599980634585935,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": -0.05820105820105823,
+            "p_mean": 0.5411125554111256,
+            "gap_mean": 0.7542713703357008,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "-0.579",
+          "axis2_gap_ratio": "1.176",
+          "axis3_supported": false
+        }
+      },
+      "groupdro": {
+        "1.0": {
+          "desc": "leakage (identity confound)",
+          "metrics": {
+            "ldi_mean": 0.4278369833266759,
+            "ldi_sd": 0.4708686622981406,
+            "tau_lodo_mean": 0.08862688601444484,
+            "tau_lodo_sd": 0.09639118895101534,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": 0.12433862433862435,
+            "p_mean": 0.3601306536013065,
+            "gap_mean": 0.6241595589527923,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "1.237",
+          "axis2_gap_ratio": "0.974",
+          "axis3_supported": false
+        },
+        "10.0": {
+          "desc": "leakage (identity confound)",
+          "metrics": {
+            "ldi_mean": 0.9053600078142384,
+            "ldi_sd": 0.7004503967793357,
+            "tau_lodo_mean": 0.1734824151772112,
+            "tau_lodo_sd": 0.13319084808647916,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": 0.2433862433862434,
+            "p_mean": 0.22821051228210512,
+            "gap_mean": 0.539304029790026,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "2.421",
+          "axis2_gap_ratio": "0.841",
+          "axis3_supported": false
+        }
+      },
+      "irm": {
+        "10.0": {
+          "desc": "leakage (identity confound)",
+          "metrics": {
+            "ldi_mean": 3.214828861803358,
+            "ldi_sd": 0.23853914253220154,
+            "tau_lodo_mean": 0.6599874490437382,
+            "tau_lodo_sd": 0.045373984063185074,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": 0.9259259259259259,
+            "p_mean": 0.0006332700063327001,
+            "gap_mean": 0.05279899592349905,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "9.211",
+          "axis2_gap_ratio": "0.082",
+          "axis3_supported": true
+        },
+        "100.0": {
+          "desc": "leakage (identity confound)",
+          "metrics": {
+            "ldi_mean": 3.17751825044139,
+            "ldi_sd": 0.43342143326142746,
+            "tau_lodo_mean": 0.658101770617899,
+            "tau_lodo_sd": 0.085106581572762,
+            "tau_in_mean": 0.7127864449672372,
+            "R_mean": 0.9232804232804234,
+            "p_mean": 0.0020331300203313,
+            "gap_mean": 0.05468467434933825,
+            "n_seeds": 3
+          },
+          "axis1_safety_ratio": "9.184",
+          "axis2_gap_ratio": "0.085",
+          "axis3_supported": true
+        }
+      }
+    }
+  },
+  "three_axis": {
+    "mrp": {
+      "0.5": {
+        "safety": true,
+        "leakage_cut": false,
+        "non_blind": true,
+        "three_axis_pass": false,
+        "A_retention": 1.0,
+        "C_gap_ratio": 1.1882352941176468
+      },
+      "1.0": {
+        "safety": true,
+        "leakage_cut": false,
+        "non_blind": true,
+        "three_axis_pass": false,
+        "A_retention": 1.0,
+        "C_gap_ratio": 1.279411764705882
+      },
+      "2.0": {
+        "safety": true,
+        "leakage_cut": false,
+        "non_blind": true,
+        "three_axis_pass": false,
+        "A_retention": 1.0,
+        "C_gap_ratio": 1.1794117647058822
+      },
+      "5.0": {
+        "safety": true,
+        "leakage_cut": false,
+        "non_blind": true,
+        "three_axis_pass": false,
+        "A_retention": 1.0,
+        "C_gap_ratio": 1.176470588235294
+      },
+      "_passing_doses": []
+    },
+    "groupdro": {
+      "1.0": {
+        "safety": true,
+        "leakage_cut": true,
+        "non_blind": true,
+        "three_axis_pass": true,
+        "A_retention": 1.0,
+        "C_gap_ratio": 0.9735294117647056
+      },
+      "10.0": {
+        "safety": true,
+        "leakage_cut": true,
+        "non_blind": true,
+        "three_axis_pass": true,
+        "A_retention": 0.9312169312169312,
+        "C_gap_ratio": 0.8411764705882351
+      },
+      "_passing_doses": [
+        "1.0",
+        "10.0"
+      ]
+    },
+    "irm": {
+      "10.0": {
+        "safety": true,
+        "leakage_cut": true,
+        "non_blind": false,
+        "three_axis_pass": false,
+        "A_retention": 1.0,
+        "C_gap_ratio": 0.08235294117647057
+      },
+      "100.0": {
+        "safety": true,
+        "leakage_cut": true,
+        "non_blind": false,
+        "three_axis_pass": false,
+        "A_retention": 1.0,
+        "C_gap_ratio": 0.08529411764705871
+      },
+      "_passing_doses": []
+    }
+  }
+}

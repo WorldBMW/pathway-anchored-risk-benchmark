@@ -1,0 +1,155 @@
+{
+  "params": {
+    "data": "data/e2_reseed/e2br_n32_s4/group_A",
+    "out": "results/e2br_n32_s4.json",
+    "log_every": 50,
+    "n_genes": 2000,
+    "k": 6,
+    "dim": 128,
+    "hid": 256,
+    "lr": 0.001,
+    "epochs": 300,
+    "adv_list": [
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      5.0
+    ],
+    "seeds": [
+      4
+    ],
+    "grl_cap": 1.0,
+    "warmup": 0,
+    "clip": 0.0,
+    "adv_sn": false,
+    "seed": 4,
+    "backbone": "gat",
+    "dump_xs": false,
+    "dump_w": "",
+    "dump_lam": 2.0,
+    "device": "cuda:0"
+  },
+  "n_spots": 48000,
+  "n_genes_union": 3000,
+  "n_donors": 32,
+  "samples": [
+    "CA_018",
+    "CA_019",
+    "CA_020",
+    "CA_021",
+    "CA_022",
+    "CA_023",
+    "CA_024",
+    "CA_025",
+    "CA_026",
+    "CA_027",
+    "CA_028",
+    "CA_029",
+    "CA_030",
+    "CA_031",
+    "N_000",
+    "N_001",
+    "N_002",
+    "N_003",
+    "N_004",
+    "N_005",
+    "N_006",
+    "N_007",
+    "N_008",
+    "N_009",
+    "N_010",
+    "N_011",
+    "N_012",
+    "N_013",
+    "N_014",
+    "N_015",
+    "N_016",
+    "N_017"
+  ],
+  "scan": {
+    "s4_lam0.0": {
+      "tau_lodo": 0.7127864449672373,
+      "p_refit": 9.999000099990002e-05,
+      "tau_insample": 0.7127864449672372,
+      "sigma_null": 0.2055322610103482,
+      "ldi": 3.4631373268034067,
+      "tau_ldo": 0.7127864449672372,
+      "n_samples": 32,
+      "train_seconds": 15.6
+    },
+    "s4_lam0.5": {
+      "tau_lodo": 0.7014723744122017,
+      "p_refit": 0.00019998000199980003,
+      "tau_insample": 0.7127864449672372,
+      "sigma_null": 0.2050695824525519,
+      "ldi": 3.4157790055201085,
+      "tau_ldo": 0.7014723744122017,
+      "n_samples": 32,
+      "train_seconds": 14.1
+    },
+    "s4_lam1.0": {
+      "tau_lodo": 0.6053027746943999,
+      "p_refit": 0.0011998800119988001,
+      "tau_insample": 0.7127864449672372,
+      "sigma_null": 0.19841515520705005,
+      "ldi": 3.0456482725011513,
+      "tau_ldo": 0.6053027746943997,
+      "n_samples": 32,
+      "train_seconds": 14.3
+    },
+    "s4_lam2.0": {
+      "tau_lodo": 0.49216206914404476,
+      "p_refit": 0.014898510148985102,
+      "tau_insample": 0.7127864449672372,
+      "sigma_null": 0.21158315055253188,
+      "ldi": 2.3213666488159177,
+      "tau_ldo": 0.4921620691440447,
+      "n_samples": 32,
+      "train_seconds": 14.3
+    },
+    "s4_lam5.0": {
+      "tau_lodo": 0.6109598099719176,
+      "p_refit": 0.0028997100289971,
+      "tau_insample": 0.7127864449672372,
+      "sigma_null": 0.20402887370312756,
+      "ldi": 2.989575930607941,
+      "tau_ldo": 0.6109598099719176,
+      "n_samples": 32,
+      "train_seconds": 14.1
+    }
+  },
+  "lam_means": {
+    "0.5": {
+      "mean_ldi": 3.4157790055201085,
+      "mean_tau_lodo": 0.7014723744122017,
+      "n_seeds": 1
+    },
+    "1.0": {
+      "mean_ldi": 3.0456482725011513,
+      "mean_tau_lodo": 0.6053027746943999,
+      "n_seeds": 1
+    },
+    "2.0": {
+      "mean_ldi": 2.3213666488159177,
+      "mean_tau_lodo": 0.49216206914404476,
+      "n_seeds": 1
+    },
+    "5.0": {
+      "mean_ldi": 2.989575930607941,
+      "mean_tau_lodo": 0.6109598099719176,
+      "n_seeds": 1
+    }
+  },
+  "verdict": {
+    "E3": "no-go",
+    "base_mean_ldi": 3.4631373268034067,
+    "base_mean_tau_lodo": 0.7127864449672373,
+    "passing_lambdas": [],
+    "gate": {
+      "ldi": 1.645,
+      "fidelity_keep": 0.7,
+      "fidelity_metric": "tau_lodo"
+    }
+  }
+}

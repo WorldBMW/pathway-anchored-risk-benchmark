@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "check": "preserve 5 embedded figures",
+      "pass": true
+    },
+    {
+      "check": "preserve 7 main tables",
+      "pass": true
+    },
+    {
+      "check": "44 contiguous references including archive",
+      "pass": true
+    },
+    {
+      "check": "manuscript contains 10.5281/zenodo.23640979",
+      "pass": true
+    },
+    {
+      "check": "manuscript contains pathway-anchored-risk-benchmark",
+      "pass": true
+    },
+    {
+      "check": "manuscript contains 73ad0f1710953651c43055afc693f7a18ce93c6f",
+      "pass": true
+    },
+    {
+      "check": "manuscript contains not contain",
+      "pass": true
+    },
+    {
+      "check": "manuscript contains Corrected train-only preprocessing check.",
+      "pass": true
+    },
+    {
+      "check": "remove unverified replacement repository from manuscript",
+      "pass": true
+    },
+    {
+      "check": "remove false full-reproducibility promise",
+      "pass": true
+    },
+    {
+      "check": "correct code-assisted AI declaration",
+      "pass": true
+    },
+    {
+      "check": "Summary <=150 words",
+      "pass": true
+    },
+    {
+      "check": "In brief <=50 words",
+      "pass": true
+    },
+    {
+      "check": "4 highlights <=85 chars",
+      "pass": true
+    },
+    {
+      "check": "CoverLetter DOI present",
+      "pass": true
+    },
+    {
+      "check": "TitlePage DOI present",
+      "pass": true
+    },
+    {
+      "check": "Supplemental_Information DOI present",
+      "pass": true
+    },
+    {
+      "check": "outer analysis fitted preprocessing in training fold",
+      "pass": true
+    },
+    {
+      "check": "outer dose 0.0 30 unique group holdouts",
+      "pass": true
+    },
+    {
+      "check": "outer dose 0.0 matches manuscript rounded results",
+      "pass": true
+    },
+    {
+      "check": "outer dose 2.0 30 unique group holdouts",
+      "pass": true
+    },
+    {
+      "check": "outer dose 2.0 matches manuscript rounded results",
+      "pass": true
+    },
+    {
+      "check": "frozen public ZIP really lacks current audit runner",
+      "pass": true
+    }
+  ],
+  "summary_words": 131,
+  "in_brief_words": 48,
+  "highlight_chars": [
+    60,
+    69,
+    66,
+    70
+  ],
+  "all_pass": true,
+  "scope": "Document integrity, archive coverage and new-run consistency; not acceptance certification or proof of every scientific claim."
+}

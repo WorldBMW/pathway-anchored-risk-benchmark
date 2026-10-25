@@ -1,0 +1,106 @@
+{
+  "protocol": "LOO ridge probe (train-fold scaling, alpha=1, no intercept) + refit permutation B=10000 seed=20261010; identical to reference protocol and the 21 primary tests",
+  "single_run_criteria": {
+    "supported": "tau>=0.35 & p<0.05",
+    "unsupported": "|tau|<=0.15 & p>=0.05",
+    "suggestive": "otherwise"
+  },
+  "probes": {
+    "group_A_g20261006_L1__GraphST": {
+      "group": "group_A_g20261006_L1",
+      "method": "GraphST",
+      "n": 90,
+      "tau": 0.7067,
+      "p_refit": 0.0001,
+      "grade": "supported"
+    },
+    "group_A_g20261006_L1__STAGATE": {
+      "group": "group_A_g20261006_L1",
+      "method": "STAGATE",
+      "n": 90,
+      "tau": -0.0452,
+      "p_refit": 0.6458,
+      "grade": "unsupported"
+    },
+    "group_A_g20261006_L1_small__GraphST": {
+      "group": "group_A_g20261006_L1_small",
+      "method": "GraphST",
+      "n": 35,
+      "tau": 0.4565,
+      "p_refit": 0.0001,
+      "grade": "supported"
+    },
+    "group_A_g20261006_L1_small__STAGATE": {
+      "group": "group_A_g20261006_L1_small",
+      "method": "STAGATE",
+      "n": 35,
+      "tau": 0.1031,
+      "p_refit": 0.3378,
+      "grade": "unsupported"
+    },
+    "group_A_g20261006_L3__GraphST": {
+      "group": "group_A_g20261006_L3",
+      "method": "GraphST",
+      "n": 90,
+      "tau": 0.3526,
+      "p_refit": 0.0003,
+      "grade": "supported"
+    },
+    "group_A_g20261006_L3__STAGATE": {
+      "group": "group_A_g20261006_L3",
+      "method": "STAGATE",
+      "n": 90,
+      "tau": -0.0261,
+      "p_refit": 0.587,
+      "grade": "unsupported"
+    },
+    "group_A_g20261006_L3_small__GraphST": {
+      "group": "group_A_g20261006_L3_small",
+      "method": "GraphST",
+      "n": 35,
+      "tau": 0.3387,
+      "p_refit": 0.0153,
+      "grade": "suggestive"
+    },
+    "group_A_g20261006_L3_small__STAGATE": {
+      "group": "group_A_g20261006_L3_small",
+      "method": "STAGATE",
+      "n": 35,
+      "tau": 0.0295,
+      "p_refit": 0.471,
+      "grade": "unsupported"
+    },
+    "group_A_g20261006_L4__GraphST": {
+      "group": "group_A_g20261006_L4",
+      "method": "GraphST",
+      "n": 90,
+      "tau": 0.2071,
+      "p_refit": 0.0349,
+      "grade": "suggestive"
+    },
+    "group_A_g20261006_L4__STAGATE": {
+      "group": "group_A_g20261006_L4",
+      "method": "STAGATE",
+      "n": 90,
+      "tau": -0.0049,
+      "p_refit": 0.5088,
+      "grade": "unsupported"
+    },
+    "group_A_g20261006_L4_small__GraphST": {
+      "group": "group_A_g20261006_L4_small",
+      "method": "GraphST",
+      "n": 35,
+      "tau": 0.3387,
+      "p_refit": 0.0153,
+      "grade": "suggestive"
+    },
+    "group_A_g20261006_L4_small__STAGATE": {
+      "group": "group_A_g20261006_L4_small",
+      "method": "STAGATE",
+      "n": 35,
+      "tau": -0.0221,
+      "p_refit": 0.5723,
+      "grade": "unsupported"
+    }
+  }
+}

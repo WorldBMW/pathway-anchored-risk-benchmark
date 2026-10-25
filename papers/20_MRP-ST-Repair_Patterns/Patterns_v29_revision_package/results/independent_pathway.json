@@ -1,0 +1,749 @@
+{
+  "generated": "2026-09-04T13:49:57.326311",
+  "what_this_proves": "If KEGG_HPV gets high AUC but WNT/ANGIOGENESIS get ~0.55-0.65, our model is truly HPV-specific not just capturing any pathway that correlates with tissue structure.",
+  "pathways_evaluated": [
+    "KEGG_HPV_INFECTION",
+    "KEGG_WNT_SIGNALING",
+    "HALLMARK_ANGIOGENESIS",
+    "KEGG_P53_SIGNALING"
+  ],
+  "model_hpv_auc_from_results_full": 0.9914036889557373,
+  "per_pathway": [
+    {
+      "pathway": "KEGG_HPV_INFECTION",
+      "role": "TARGET",
+      "expected_auc": "high (~0.99)",
+      "n_valid_slices": 35,
+      "mean_auc_hpv_vs_pathway": 1.0,
+      "per_slice": [
+        {
+          "slice": "CA_HPV_1",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "CA_HPV_2",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "HSIL_HPV",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "N_HPV",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P001",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P004",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P007",
+          "auc_hpv_vs_pathway_label": 0.9999999999999999,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P008",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P014",
+          "auc_hpv_vs_pathway_label": 0.9999999999999999,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P016",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P018",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P020",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P021",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P023",
+          "auc_hpv_vs_pathway_label": 0.9999999999999999,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P024",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P026",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P028",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P031",
+          "auc_hpv_vs_pathway_label": 0.9999999999999999,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P044",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P045",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P047",
+          "auc_hpv_vs_pathway_label": 0.9999999999999999,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P050",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P057",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P067",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P080",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P081",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P087",
+          "auc_hpv_vs_pathway_label": 0.9999999999999999,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P097",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P105",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P107",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P108",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P114",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P117",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "P118",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 108
+        },
+        {
+          "slice": "cervical_cancer_1",
+          "auc_hpv_vs_pathway_label": 1.0,
+          "pathway_genes_found": 101
+        }
+      ]
+    },
+    {
+      "pathway": "KEGG_WNT_SIGNALING",
+      "role": "NEGATIVE_CONTROL",
+      "expected_auc": "low (~0.55-0.65)",
+      "n_valid_slices": 35,
+      "mean_auc_hpv_vs_pathway": 0.7904,
+      "per_slice": [
+        {
+          "slice": "CA_HPV_1",
+          "auc_hpv_vs_pathway_label": 0.9525691110056212,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "CA_HPV_2",
+          "auc_hpv_vs_pathway_label": 0.9160521070161697,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "HSIL_HPV",
+          "auc_hpv_vs_pathway_label": 0.9741276361986195,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "N_HPV",
+          "auc_hpv_vs_pathway_label": 0.918415590405904,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P001",
+          "auc_hpv_vs_pathway_label": 0.5959256664968585,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P004",
+          "auc_hpv_vs_pathway_label": 0.8828001630074881,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P007",
+          "auc_hpv_vs_pathway_label": 0.8126232741617357,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P008",
+          "auc_hpv_vs_pathway_label": 0.885837037037037,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P014",
+          "auc_hpv_vs_pathway_label": 0.8726093857748509,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P016",
+          "auc_hpv_vs_pathway_label": 0.786355776045358,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P018",
+          "auc_hpv_vs_pathway_label": 0.8562448037008058,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P020",
+          "auc_hpv_vs_pathway_label": 0.8670485659394643,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P021",
+          "auc_hpv_vs_pathway_label": 0.7734181072005968,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P023",
+          "auc_hpv_vs_pathway_label": 0.6609536912358761,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P024",
+          "auc_hpv_vs_pathway_label": 0.7637374363210794,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P026",
+          "auc_hpv_vs_pathway_label": 0.8419678983316097,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P028",
+          "auc_hpv_vs_pathway_label": 0.9138072322767374,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P031",
+          "auc_hpv_vs_pathway_label": 0.8657638633221959,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P044",
+          "auc_hpv_vs_pathway_label": 0.642641325487483,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P045",
+          "auc_hpv_vs_pathway_label": 0.7246433577966521,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P047",
+          "auc_hpv_vs_pathway_label": 0.5968424137762594,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P050",
+          "auc_hpv_vs_pathway_label": 0.5857434306594843,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P057",
+          "auc_hpv_vs_pathway_label": 0.8087497846428461,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P067",
+          "auc_hpv_vs_pathway_label": 0.8425573148869671,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P080",
+          "auc_hpv_vs_pathway_label": 0.6785444588283075,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P081",
+          "auc_hpv_vs_pathway_label": 0.714382779912635,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P087",
+          "auc_hpv_vs_pathway_label": 0.42679975129901854,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P097",
+          "auc_hpv_vs_pathway_label": 0.8000281060364101,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P105",
+          "auc_hpv_vs_pathway_label": 0.8813315236689893,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P107",
+          "auc_hpv_vs_pathway_label": 0.719790063624044,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P108",
+          "auc_hpv_vs_pathway_label": 0.9192699490662138,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P114",
+          "auc_hpv_vs_pathway_label": 0.6443996182913426,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P117",
+          "auc_hpv_vs_pathway_label": 0.7572885533008233,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "P118",
+          "auc_hpv_vs_pathway_label": 0.8840258428094484,
+          "pathway_genes_found": 56
+        },
+        {
+          "slice": "cervical_cancer_1",
+          "auc_hpv_vs_pathway_label": 0.8979443694497458,
+          "pathway_genes_found": 55
+        }
+      ]
+    },
+    {
+      "pathway": "HALLMARK_ANGIOGENESIS",
+      "role": "NEGATIVE_CONTROL",
+      "expected_auc": "low (~0.55-0.65)",
+      "n_valid_slices": 35,
+      "mean_auc_hpv_vs_pathway": 0.7305,
+      "per_slice": [
+        {
+          "slice": "CA_HPV_1",
+          "auc_hpv_vs_pathway_label": 0.9681489169815428,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "CA_HPV_2",
+          "auc_hpv_vs_pathway_label": 0.9631327906786127,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "HSIL_HPV",
+          "auc_hpv_vs_pathway_label": 0.9807393971216496,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "N_HPV",
+          "auc_hpv_vs_pathway_label": 0.8657492299655962,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P001",
+          "auc_hpv_vs_pathway_label": 0.5536550544952242,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P004",
+          "auc_hpv_vs_pathway_label": 0.8022215291301525,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P007",
+          "auc_hpv_vs_pathway_label": 0.7836870830806549,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P008",
+          "auc_hpv_vs_pathway_label": 0.851249265138154,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P014",
+          "auc_hpv_vs_pathway_label": 0.4476708821043789,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P016",
+          "auc_hpv_vs_pathway_label": 0.7658446712018141,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P018",
+          "auc_hpv_vs_pathway_label": 0.8838959147837473,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P020",
+          "auc_hpv_vs_pathway_label": 0.8115600087119064,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P021",
+          "auc_hpv_vs_pathway_label": 0.7805315834492118,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P023",
+          "auc_hpv_vs_pathway_label": 0.7319661983017391,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P024",
+          "auc_hpv_vs_pathway_label": 0.8320822262456206,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P026",
+          "auc_hpv_vs_pathway_label": 0.6182709363840246,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P028",
+          "auc_hpv_vs_pathway_label": 0.9345489093654016,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P031",
+          "auc_hpv_vs_pathway_label": 0.8972081394060284,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P044",
+          "auc_hpv_vs_pathway_label": 0.4929147952582021,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P045",
+          "auc_hpv_vs_pathway_label": 0.6296808615749432,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P047",
+          "auc_hpv_vs_pathway_label": 0.48062045567496603,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P050",
+          "auc_hpv_vs_pathway_label": 0.5744485242749917,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P057",
+          "auc_hpv_vs_pathway_label": 0.7498307859955401,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P067",
+          "auc_hpv_vs_pathway_label": 0.7978518047384322,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P080",
+          "auc_hpv_vs_pathway_label": 0.6158205082659832,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P081",
+          "auc_hpv_vs_pathway_label": 0.42011674970099716,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P087",
+          "auc_hpv_vs_pathway_label": 0.2190902366863905,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P097",
+          "auc_hpv_vs_pathway_label": 0.8331783036579679,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P105",
+          "auc_hpv_vs_pathway_label": 0.864258089976322,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P107",
+          "auc_hpv_vs_pathway_label": 0.536997595328066,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P108",
+          "auc_hpv_vs_pathway_label": 0.8761247877758914,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P114",
+          "auc_hpv_vs_pathway_label": 0.6913061819297438,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P117",
+          "auc_hpv_vs_pathway_label": 0.7490064260036678,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "P118",
+          "auc_hpv_vs_pathway_label": 0.8262583640327794,
+          "pathway_genes_found": 85
+        },
+        {
+          "slice": "cervical_cancer_1",
+          "auc_hpv_vs_pathway_label": 0.7381117886494231,
+          "pathway_genes_found": 84
+        }
+      ]
+    },
+    {
+      "pathway": "KEGG_P53_SIGNALING",
+      "role": "RELATED_CONTROL",
+      "expected_auc": "medium (~0.60-0.70) \u2014 p53 crosses with HPV pathway",
+      "n_valid_slices": 35,
+      "mean_auc_hpv_vs_pathway": 0.954,
+      "per_slice": [
+        {
+          "slice": "CA_HPV_1",
+          "auc_hpv_vs_pathway_label": 0.9659318546391245,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "CA_HPV_2",
+          "auc_hpv_vs_pathway_label": 0.9412713185694286,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "HSIL_HPV",
+          "auc_hpv_vs_pathway_label": 0.9843585762064023,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "N_HPV",
+          "auc_hpv_vs_pathway_label": 0.9718420446032385,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P001",
+          "auc_hpv_vs_pathway_label": 0.9223216167235638,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P004",
+          "auc_hpv_vs_pathway_label": 0.9815322449642626,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P007",
+          "auc_hpv_vs_pathway_label": 0.9597576335798005,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P008",
+          "auc_hpv_vs_pathway_label": 0.9939313255278132,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P014",
+          "auc_hpv_vs_pathway_label": 0.9750332852405903,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P016",
+          "auc_hpv_vs_pathway_label": 0.9685791264889394,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P018",
+          "auc_hpv_vs_pathway_label": 0.9130371042185627,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P020",
+          "auc_hpv_vs_pathway_label": 0.9238161522979568,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P021",
+          "auc_hpv_vs_pathway_label": 0.8685608347912426,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P023",
+          "auc_hpv_vs_pathway_label": 0.9706193212342046,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P024",
+          "auc_hpv_vs_pathway_label": 0.8776764484484962,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P026",
+          "auc_hpv_vs_pathway_label": 0.9440324064108334,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P028",
+          "auc_hpv_vs_pathway_label": 0.9905903482742464,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P031",
+          "auc_hpv_vs_pathway_label": 0.9959061815965199,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P044",
+          "auc_hpv_vs_pathway_label": 0.9399380804953561,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P045",
+          "auc_hpv_vs_pathway_label": 0.991485927902113,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P047",
+          "auc_hpv_vs_pathway_label": 0.9524195402298851,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P050",
+          "auc_hpv_vs_pathway_label": 0.9455254851040729,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P057",
+          "auc_hpv_vs_pathway_label": 0.9482895372094626,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P067",
+          "auc_hpv_vs_pathway_label": 0.9276235476292749,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P080",
+          "auc_hpv_vs_pathway_label": 0.9505746907948094,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P081",
+          "auc_hpv_vs_pathway_label": 0.9466127269270982,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P087",
+          "auc_hpv_vs_pathway_label": 0.9478057661778256,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P097",
+          "auc_hpv_vs_pathway_label": 0.9282377450980392,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P105",
+          "auc_hpv_vs_pathway_label": 0.9606338615512927,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P107",
+          "auc_hpv_vs_pathway_label": 0.9408336196038017,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P108",
+          "auc_hpv_vs_pathway_label": 0.9892826825127334,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P114",
+          "auc_hpv_vs_pathway_label": 0.943477462708232,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P117",
+          "auc_hpv_vs_pathway_label": 0.9644959126741123,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "P118",
+          "auc_hpv_vs_pathway_label": 0.9817323204636228,
+          "pathway_genes_found": 75
+        },
+        {
+          "slice": "cervical_cancer_1",
+          "auc_hpv_vs_pathway_label": 0.9813592975168142,
+          "pathway_genes_found": 70
+        }
+      ]
+    }
+  ]
+}

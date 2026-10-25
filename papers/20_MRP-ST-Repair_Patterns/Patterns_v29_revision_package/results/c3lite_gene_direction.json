@@ -1,0 +1,97 @@
+{
+  "panel_size": 6586,
+  "note": "gene names normalized (GRCh38_ prefix stripped); STRICT pairing only: decoder W is the s0/lam2.0 run, so only s0_lam2.0 is a valid pairing. Cross-run rows are reported as coordinate-system-mismatched and are NOT evidence.",
+  "runs": {
+    "s0_lam2.0": {
+      "hpvpos_hits_n": 3,
+      "hpvneg_hits_n": 0,
+      "keratinization_n": 3,
+      "mismatched": true
+    },
+    "s0_lam0.0": {
+      "hpvpos_hits_n": 4,
+      "hpvneg_hits_n": 0,
+      "keratinization_n": 4,
+      "mismatched": true
+    },
+    "s0_lam0.5": {
+      "hpvpos_hits_n": 0,
+      "hpvneg_hits_n": 0,
+      "keratinization_n": 1,
+      "mismatched": true
+    },
+    "s0_lam1.0": {
+      "hpvpos_hits_n": 1,
+      "hpvneg_hits_n": 0,
+      "keratinization_n": 3,
+      "mismatched": true
+    },
+    "s0_lam5.0": {
+      "hpvpos_hits_n": 2,
+      "hpvneg_hits_n": 1,
+      "keratinization_n": 4,
+      "mismatched": true
+    },
+    "s1_lam0.0": {
+      "hpvpos_hits_n": 1,
+      "hpvneg_hits_n": 1,
+      "keratinization_n": 2,
+      "mismatched": true
+    },
+    "s1_lam0.5": {
+      "hpvpos_hits_n": 0,
+      "hpvneg_hits_n": 0,
+      "keratinization_n": 1,
+      "mismatched": true
+    },
+    "s1_lam1.0": {
+      "hpvpos_hits_n": 3,
+      "hpvneg_hits_n": 0,
+      "keratinization_n": 3,
+      "mismatched": true
+    },
+    "s1_lam2.0": {
+      "hpvpos_hits_n": 3,
+      "hpvneg_hits_n": 1,
+      "keratinization_n": 4,
+      "mismatched": true
+    },
+    "s1_lam5.0": {
+      "hpvpos_hits_n": 2,
+      "hpvneg_hits_n": 0,
+      "keratinization_n": 1,
+      "mismatched": true
+    },
+    "s2_lam0.0": {
+      "hpvpos_hits_n": 1,
+      "hpvneg_hits_n": 1,
+      "keratinization_n": 1,
+      "mismatched": true
+    },
+    "s2_lam0.5": {
+      "hpvpos_hits_n": 4,
+      "hpvneg_hits_n": 0,
+      "keratinization_n": 4,
+      "mismatched": true
+    },
+    "s2_lam1.0": {
+      "hpvpos_hits_n": 4,
+      "hpvneg_hits_n": 0,
+      "keratinization_n": 5,
+      "mismatched": true
+    },
+    "s2_lam2.0": {
+      "hpvpos_hits_n": 3,
+      "hpvneg_hits_n": 0,
+      "keratinization_n": 3,
+      "mismatched": true
+    },
+    "s2_lam5.0": {
+      "hpvpos_hits_n": 3,
+      "hpvneg_hits_n": 0,
+      "keratinization_n": 4,
+      "mismatched": true
+    }
+  },
+  "null_mean_hits": 0.2935
+}

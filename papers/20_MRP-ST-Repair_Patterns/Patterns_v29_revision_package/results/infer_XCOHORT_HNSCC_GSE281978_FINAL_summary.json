@@ -1,0 +1,58 @@
+{
+  "run_id": "XCOHORT_HNSCC_GSE281978_FINAL",
+  "checkpoint": "results/checkpoint_FULL_DEPLOY_FAST_seed42.pt",
+  "mode": "expr_only",
+  "fm": "uni",
+  "n_genes": 4991,
+  "n_samples": 6,
+  "per_sample": [
+    {
+      "name": "LI_SING_21_00757",
+      "n_spots": 1187,
+      "mean_score": -4.761419296264648,
+      "std_score": 1.607670783996582,
+      "median_score": -4.9926838874816895,
+      "moran_i": 0.6527946337734569
+    },
+    {
+      "name": "LI_SING_21_00758",
+      "n_spots": 1579,
+      "mean_score": -4.762065410614014,
+      "std_score": 1.4667210578918457,
+      "median_score": -4.851218223571777,
+      "moran_i": 0.656250902465916
+    },
+    {
+      "name": "LI_SING_21_01569",
+      "n_spots": 1359,
+      "mean_score": -1.9235076904296875,
+      "std_score": 0.885694146156311,
+      "median_score": -1.9166514873504639,
+      "moran_i": 0.5876133047976372
+    },
+    {
+      "name": "LI_SING_21_01570",
+      "n_spots": 1908,
+      "mean_score": -1.8273776769638062,
+      "std_score": 1.1332019567489624,
+      "median_score": -1.6561414003372192,
+      "moran_i": 0.6292792729817146
+    },
+    {
+      "name": "LI_SING_21_01586",
+      "n_spots": 1195,
+      "mean_score": -3.7504305839538574,
+      "std_score": 2.031054973602295,
+      "median_score": -3.492619037628174,
+      "moran_i": 0.8744714553175146
+    },
+    {
+      "name": "LI_SING_21_01587",
+      "n_spots": 1439,
+      "mean_score": -3.548213243484497,
+      "std_score": 1.4238770008087158,
+      "median_score": -3.5195698738098145,
+      "moran_i": 0.602894862410631
+    }
+  ]
+}

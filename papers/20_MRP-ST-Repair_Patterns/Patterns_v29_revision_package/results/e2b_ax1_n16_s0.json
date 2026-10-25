@@ -1,0 +1,139 @@
+{
+  "params": {
+    "data": "data/e2_phaseB/ax1_n16_s0/group_A",
+    "out": "results/e2b_ax1_n16_s0.json",
+    "log_every": 50,
+    "n_genes": 2000,
+    "k": 6,
+    "dim": 128,
+    "hid": 256,
+    "lr": 0.001,
+    "epochs": 300,
+    "adv_list": [
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      5.0
+    ],
+    "seeds": [
+      0
+    ],
+    "grl_cap": 1.0,
+    "warmup": 0,
+    "clip": 0.0,
+    "adv_sn": false,
+    "seed": 0,
+    "backbone": "gat",
+    "dump_xs": false,
+    "dump_w": "",
+    "dump_lam": 2.0,
+    "device": "cuda:0"
+  },
+  "n_spots": 24000,
+  "n_genes_union": 3000,
+  "n_donors": 16,
+  "samples": [
+    "CA_009",
+    "CA_010",
+    "CA_011",
+    "CA_012",
+    "CA_013",
+    "CA_014",
+    "CA_015",
+    "N_000",
+    "N_001",
+    "N_002",
+    "N_003",
+    "N_004",
+    "N_005",
+    "N_006",
+    "N_007",
+    "N_008"
+  ],
+  "scan": {
+    "s0_lam0.0": {
+      "tau_lodo": 0.7245688373094719,
+      "p_refit": 0.0022997700229977,
+      "tau_insample": 0.724568837309472,
+      "sigma_null": 0.2859703252915171,
+      "ldi": 2.5302234998399515,
+      "tau_ldo": 0.724568837309472,
+      "n_samples": 16,
+      "train_seconds": 9.0
+    },
+    "s0_lam0.5": {
+      "tau_lodo": -0.05750546327852952,
+      "p_refit": 0.5981401859814018,
+      "tau_insample": 0.724568837309472,
+      "sigma_null": 0.2935713716904227,
+      "ldi": -0.1992887213138234,
+      "tau_ldo": -0.05750546327852952,
+      "n_samples": 16,
+      "train_seconds": 7.2
+    },
+    "s0_lam1.0": {
+      "tau_lodo": 0.586555725441001,
+      "p_refit": 0.047595240475952406,
+      "tau_insample": 0.724568837309472,
+      "sigma_null": 0.2960915578573927,
+      "ldi": 1.977617091410028,
+      "tau_ldo": 0.5865557254410011,
+      "n_samples": 16,
+      "train_seconds": 7.1
+    },
+    "s0_lam2.0": {
+      "tau_lodo": 0.28752731639264756,
+      "p_refit": 0.20637936206379362,
+      "tau_insample": 0.724568837309472,
+      "sigma_null": 0.29428972949987775,
+      "ldi": 0.9736232279651016,
+      "tau_ldo": 0.2875273163926476,
+      "n_samples": 16,
+      "train_seconds": 7.0
+    },
+    "s0_lam5.0": {
+      "tau_lodo": 0.49454698419535387,
+      "p_refit": 0.0724927507249275,
+      "tau_insample": 0.724568837309472,
+      "sigma_null": 0.28636338032415903,
+      "ldi": 1.7234989461175731,
+      "tau_ldo": 0.49454698419535387,
+      "n_samples": 16,
+      "train_seconds": 7.2
+    }
+  },
+  "lam_means": {
+    "0.5": {
+      "mean_ldi": -0.1992887213138234,
+      "mean_tau_lodo": -0.05750546327852952,
+      "n_seeds": 1
+    },
+    "1.0": {
+      "mean_ldi": 1.977617091410028,
+      "mean_tau_lodo": 0.586555725441001,
+      "n_seeds": 1
+    },
+    "2.0": {
+      "mean_ldi": 0.9736232279651016,
+      "mean_tau_lodo": 0.28752731639264756,
+      "n_seeds": 1
+    },
+    "5.0": {
+      "mean_ldi": 1.7234989461175731,
+      "mean_tau_lodo": 0.49454698419535387,
+      "n_seeds": 1
+    }
+  },
+  "verdict": {
+    "E3": "no-go",
+    "base_mean_ldi": 2.5302234998399515,
+    "base_mean_tau_lodo": 0.7245688373094719,
+    "passing_lambdas": [],
+    "gate": {
+      "ldi": 1.645,
+      "fidelity_keep": 0.7,
+      "fidelity_metric": "tau_lodo"
+    }
+  }
+}

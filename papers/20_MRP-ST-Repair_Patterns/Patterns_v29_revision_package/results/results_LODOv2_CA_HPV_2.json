@@ -1,0 +1,1668 @@
+{
+  "run_id": "LODOv2_CA_HPV_2",
+  "n_samples": 34,
+  "per_sample_spots": {
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_cesc/CA_HPV_1": 1757,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_cesc/HSIL_HPV": 579,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_cesc/N_HPV": 1054,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/cervical_cancer_1": 2781,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P001": 1379,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P004": 1256,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P007": 978,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P008": 825,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P014": 1988,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P016": 840,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P018": 1808,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P020": 2966,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P021": 1831,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P023": 1171,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P024": 1167,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P026": 1431,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P028": 679,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P031": 760,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P044": 2004,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P045": 697,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P047": 1180,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P050": 1692,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P057": 2387,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P067": 2749,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P080": 1124,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P081": 1005,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P087": 1040,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P097": 1280,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P105": 712,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P107": 418,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P108": 307,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P114": 969,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P117": 1283,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P118": 1130
+  },
+  "per_sample_score": {
+    "CA_HPV_1": 2.283449172973633,
+    "HSIL_HPV": 1.1494090557098389,
+    "N_HPV": 0.6898269653320312,
+    "cervical_cancer_1": 2.360004186630249,
+    "ecto_P001": -0.08096235245466232,
+    "ecto_P004": -0.074335478246212,
+    "ecto_P007": -0.03489892929792404,
+    "ecto_P008": 0.39835265278816223,
+    "ecto_P014": -0.03747342899441719,
+    "ecto_P016": 0.01858360879123211,
+    "ecto_P018": -0.25083959102630615,
+    "ecto_P020": -0.38160160183906555,
+    "ecto_P021": -0.5174206495285034,
+    "ecto_P023": 0.2556038200855255,
+    "ecto_P024": -0.35750478506088257,
+    "ecto_P026": -0.18821263313293457,
+    "ecto_P028": 0.33819565176963806,
+    "ecto_P031": -0.05379005894064903,
+    "ecto_P044": -0.09442028403282166,
+    "ecto_P045": 0.12752382457256317,
+    "ecto_P047": 0.6544422507286072,
+    "ecto_P050": -0.19692181050777435,
+    "ecto_P057": -0.19638149440288544,
+    "ecto_P067": -0.17953959107398987,
+    "ecto_P080": -0.2505638301372528,
+    "ecto_P081": -0.06186815723776817,
+    "ecto_P087": 0.4074099659919739,
+    "ecto_P097": -0.2099512815475464,
+    "ecto_P105": -0.11672142148017883,
+    "ecto_P107": 0.020708957687020302,
+    "ecto_P108": 0.30904948711395264,
+    "ecto_P114": -0.16934223473072052,
+    "ecto_P117": -0.2888184189796448,
+    "ecto_P118": 0.1205301359295845
+  },
+  "progression_monotonicity": {
+    "order": [
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_cesc/N_HPV",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P001",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P004",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P007",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P008",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P014",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P016",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P018",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P020",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P021",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P023",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P024",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P026",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P028",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P031",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P044",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P045",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P047",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P050",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P057",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P067",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P080",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P081",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P087",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P097",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P105",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P107",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P108",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P114",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P117",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_ectocervix/P118",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_cesc/HSIL_HPV",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/geo_cesc/CA_HPV_1",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/st_visium/cervical_cancer_1"
+    ],
+    "severity": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      2
+    ],
+    "score": [
+      0.6898269653320312,
+      -0.08096235245466232,
+      -0.074335478246212,
+      -0.03489892929792404,
+      0.39835265278816223,
+      -0.03747342899441719,
+      0.01858360879123211,
+      -0.25083959102630615,
+      -0.38160160183906555,
+      -0.5174206495285034,
+      0.2556038200855255,
+      -0.35750478506088257,
+      -0.18821263313293457,
+      0.33819565176963806,
+      -0.05379005894064903,
+      -0.09442028403282166,
+      0.12752382457256317,
+      0.6544422507286072,
+      -0.19692181050777435,
+      -0.19638149440288544,
+      -0.17953959107398987,
+      -0.2505638301372528,
+      -0.06186815723776817,
+      0.4074099659919739,
+      -0.2099512815475464,
+      -0.11672142148017883,
+      0.020708957687020302,
+      0.30904948711395264,
+      -0.16934223473072052,
+      -0.2888184189796448,
+      0.1205301359295845,
+      1.1494090557098389,
+      2.283449172973633,
+      2.360004186630249
+    ],
+    "kendall_tau": 0.41150997977948306,
+    "kendall_p": 0.003969796604039755,
+    "permutation_p": 0.001998001998001998,
+    "permutation_n": 1000,
+    "n_up": 2,
+    "n_pairs": 33
+  },
+  "histology_association": {
+    "per_sample": [
+      {
+        "sample_id": "CA_HPV_1",
+        "mean_risk": 2.283449125276347,
+        "median_risk": 2.361849546432495,
+        "std_risk": 0.2496738300478188,
+        "n_spots": 1757,
+        "cin_grade": 4,
+        "histology_subtype": "SCC"
+      },
+      {
+        "sample_id": "HSIL_HPV",
+        "mean_risk": 1.1494090159090689,
+        "median_risk": 1.4543163776397705,
+        "std_risk": 0.5988237800126284,
+        "n_spots": 579,
+        "cin_grade": 3,
+        "histology_subtype": "HSIL"
+      },
+      {
+        "sample_id": "N_HPV",
+        "mean_risk": 0.6898269799787135,
+        "median_risk": 0.7118511497974396,
+        "std_risk": 0.08031790870488707,
+        "n_spots": 1054,
+        "cin_grade": 0,
+        "histology_subtype": "Normal"
+      },
+      {
+        "sample_id": "cervical_cancer_1",
+        "mean_risk": 2.3600043203147227,
+        "median_risk": 2.4786856174468994,
+        "std_risk": 0.33882547597980267,
+        "n_spots": 2781,
+        "cin_grade": 4,
+        "histology_subtype": "SCC"
+      },
+      {
+        "sample_id": "ecto_P001",
+        "mean_risk": -0.0809623531462318,
+        "median_risk": -0.4359145760536194,
+        "std_risk": 0.5300815405289429,
+        "n_spots": 1379,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P004",
+        "mean_risk": -0.07433547161424615,
+        "median_risk": -0.5145992040634155,
+        "std_risk": 0.5824179083534625,
+        "n_spots": 1256,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P007",
+        "mean_risk": -0.03489893099677831,
+        "median_risk": -0.42833930253982544,
+        "std_risk": 0.5728450700364202,
+        "n_spots": 978,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P008",
+        "mean_risk": 0.3983526601529483,
+        "median_risk": 0.559995710849762,
+        "std_risk": 0.4686927538440612,
+        "n_spots": 825,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P014",
+        "mean_risk": -0.03747342754027973,
+        "median_risk": -0.4356752783060074,
+        "std_risk": 0.5760103311468705,
+        "n_spots": 1988,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P016",
+        "mean_risk": 0.018583608480791252,
+        "median_risk": 0.056432198733091354,
+        "std_risk": 0.5764463263697027,
+        "n_spots": 840,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P018",
+        "mean_risk": -0.2508396018292359,
+        "median_risk": -0.5888524055480957,
+        "std_risk": 0.5418868982881764,
+        "n_spots": 1808,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P020",
+        "mean_risk": -0.3816016034442311,
+        "median_risk": -0.6187453866004944,
+        "std_risk": 0.4465006972173467,
+        "n_spots": 2966,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P021",
+        "mean_risk": -0.5174206540533781,
+        "median_risk": -0.6250399351119995,
+        "std_risk": 0.3111951337850537,
+        "n_spots": 1831,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P023",
+        "mean_risk": 0.25560382072496474,
+        "median_risk": 0.4849570393562317,
+        "std_risk": 0.4992580877562478,
+        "n_spots": 1171,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P024",
+        "mean_risk": -0.3575047625463389,
+        "median_risk": -0.6116488575935364,
+        "std_risk": 0.47482646704259496,
+        "n_spots": 1167,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P026",
+        "mean_risk": -0.18821264591242448,
+        "median_risk": -0.5402137041091919,
+        "std_risk": 0.5221588083761369,
+        "n_spots": 1431,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P028",
+        "mean_risk": 0.3381956372689867,
+        "median_risk": 0.5551015734672546,
+        "std_risk": 0.5249079782950081,
+        "n_spots": 679,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P031",
+        "mean_risk": -0.05379005804854004,
+        "median_risk": -0.3737189769744873,
+        "std_risk": 0.5687420283181331,
+        "n_spots": 760,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P044",
+        "mean_risk": -0.09442028122770037,
+        "median_risk": -0.4607354998588562,
+        "std_risk": 0.542371639846617,
+        "n_spots": 2004,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P045",
+        "mean_risk": 0.12752383620273777,
+        "median_risk": 0.45213884115219116,
+        "std_risk": 0.5727988641792139,
+        "n_spots": 697,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P047",
+        "mean_risk": 0.654442210748034,
+        "median_risk": 0.6806922256946564,
+        "std_risk": 0.19254587902253556,
+        "n_spots": 1180,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P050",
+        "mean_risk": -0.19692181074996226,
+        "median_risk": -0.5396142601966858,
+        "std_risk": 0.5117223315007455,
+        "n_spots": 1692,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P057",
+        "mean_risk": -0.19638149292026047,
+        "median_risk": -0.5295234322547913,
+        "std_risk": 0.508754801764795,
+        "n_spots": 2387,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P067",
+        "mean_risk": -0.17953958688930582,
+        "median_risk": -0.555768609046936,
+        "std_risk": 0.5531743280227652,
+        "n_spots": 2749,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P080",
+        "mean_risk": -0.2505638468016297,
+        "median_risk": -0.597572386264801,
+        "std_risk": 0.5216959650626731,
+        "n_spots": 1124,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P081",
+        "mean_risk": -0.06186816170811653,
+        "median_risk": -0.281833678483963,
+        "std_risk": 0.5391779009430737,
+        "n_spots": 1005,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P087",
+        "mean_risk": 0.40740996286487924,
+        "median_risk": 0.5314234793186188,
+        "std_risk": 0.36707221381989913,
+        "n_spots": 1040,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P097",
+        "mean_risk": -0.20995127967325972,
+        "median_risk": -0.5733045041561127,
+        "std_risk": 0.5537404091661772,
+        "n_spots": 1280,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P105",
+        "mean_risk": -0.11672142430553946,
+        "median_risk": -0.5243047773838043,
+        "std_risk": 0.5674654795160899,
+        "n_spots": 712,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P107",
+        "mean_risk": 0.020708953257667962,
+        "median_risk": 0.04540744796395302,
+        "std_risk": 0.540434983305903,
+        "n_spots": 418,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P108",
+        "mean_risk": 0.3090494962148247,
+        "median_risk": 0.573959469795227,
+        "std_risk": 0.5655225429810595,
+        "n_spots": 307,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P114",
+        "mean_risk": -0.16934223286230868,
+        "median_risk": -0.5251069068908691,
+        "std_risk": 0.5126298166054689,
+        "n_spots": 969,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P117",
+        "mean_risk": -0.2888184272199985,
+        "median_risk": -0.5766081809997559,
+        "std_risk": 0.4811189545991637,
+        "n_spots": 1283,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      },
+      {
+        "sample_id": "ecto_P118",
+        "mean_risk": 0.12053013564936355,
+        "median_risk": 0.4357033967971802,
+        "std_risk": 0.5724670305128565,
+        "n_spots": 1130,
+        "cin_grade": 0,
+        "histology_subtype": "Normal_Ecto"
+      }
+    ],
+    "by_cin_grade": {
+      "grade_4": {
+        "n_samples": 2,
+        "overall_mean": 2.321726722795535,
+        "overall_std": 0.0382775975191878,
+        "per_sample_means": [
+          2.283449125276347,
+          2.3600043203147227
+        ]
+      },
+      "grade_3": {
+        "n_samples": 1,
+        "overall_mean": 1.1494090159090689,
+        "overall_std": 0.0,
+        "per_sample_means": [
+          1.1494090159090689
+        ]
+      },
+      "grade_0": {
+        "n_samples": 31,
+        "overall_mean": -0.012946475869221109,
+        "overall_std": 0.28637934208538907,
+        "per_sample_means": [
+          0.6898269799787135,
+          -0.0809623531462318,
+          -0.07433547161424615,
+          -0.03489893099677831,
+          0.3983526601529483,
+          -0.03747342754027973,
+          0.018583608480791252,
+          -0.2508396018292359,
+          -0.3816016034442311,
+          -0.5174206540533781,
+          0.25560382072496474,
+          -0.3575047625463389,
+          -0.18821264591242448,
+          0.3381956372689867,
+          -0.05379005804854004,
+          -0.09442028122770037,
+          0.12752383620273777,
+          0.654442210748034,
+          -0.19692181074996226,
+          -0.19638149292026047,
+          -0.17953958688930582,
+          -0.2505638468016297,
+          -0.06186816170811653,
+          0.40740996286487924,
+          -0.20995127967325972,
+          -0.11672142430553946,
+          0.020708953257667962,
+          0.3090494962148247,
+          -0.16934223286230868,
+          -0.2888184272199985,
+          0.12053013564936355
+        ]
+      }
+    },
+    "by_histology_subtype": {
+      "SCC": {
+        "n_samples": 2,
+        "overall_mean": 2.321726722795535,
+        "overall_std": 0.0382775975191878,
+        "per_sample_means": [
+          2.283449125276347,
+          2.3600043203147227
+        ]
+      },
+      "HSIL": {
+        "n_samples": 1,
+        "overall_mean": 1.1494090159090689,
+        "overall_std": 0.0,
+        "per_sample_means": [
+          1.1494090159090689
+        ]
+      },
+      "Normal": {
+        "n_samples": 1,
+        "overall_mean": 0.6898269799787135,
+        "overall_std": 0.0,
+        "per_sample_means": [
+          0.6898269799787135
+        ]
+      },
+      "Normal_Ecto": {
+        "n_samples": 30,
+        "overall_mean": -0.03637225773081894,
+        "overall_std": 0.2602597040683149,
+        "per_sample_means": [
+          -0.0809623531462318,
+          -0.07433547161424615,
+          -0.03489893099677831,
+          0.3983526601529483,
+          -0.03747342754027973,
+          0.018583608480791252,
+          -0.2508396018292359,
+          -0.3816016034442311,
+          -0.5174206540533781,
+          0.25560382072496474,
+          -0.3575047625463389,
+          -0.18821264591242448,
+          0.3381956372689867,
+          -0.05379005804854004,
+          -0.09442028122770037,
+          0.12752383620273777,
+          0.654442210748034,
+          -0.19692181074996226,
+          -0.19638149292026047,
+          -0.17953958688930582,
+          -0.2505638468016297,
+          -0.06186816170811653,
+          0.40740996286487924,
+          -0.20995127967325972,
+          -0.11672142430553946,
+          0.020708953257667962,
+          0.3090494962148247,
+          -0.16934223286230868,
+          -0.2888184272199985,
+          0.12053013564936355
+        ]
+      }
+    },
+    "cin_kruskal_stat": 5.470588235294116,
+    "cin_kruskal_p": 0.0193391153269327,
+    "subtype_kruskal_stat": 5.454545454545453,
+    "subtype_kruskal_p": 0.019517481182177762,
+    "dunn_by_grade": {
+      "grade_0_vs_grade_3": {
+        "z": -1.581404545375551,
+        "p_raw": 0.11378556884660962,
+        "p_bonferroni": 0.34135670653982886
+      },
+      "grade_0_vs_grade_4": {
+        "z": -2.408762968295792,
+        "p_raw": 0.016006690095582643,
+        "p_bonferroni": 0.04802007028674793
+      },
+      "grade_3_vs_grade_4": {
+        "z": -0.12298800925361816,
+        "p_raw": 0.9021165931072543,
+        "p_bonferroni": 1.0
+      }
+    },
+    "dunn_by_subtype": {
+      "HSIL_vs_Normal": {
+        "z": 0.07100716024967263,
+        "p_raw": 0.9433920568226559,
+        "p_bonferroni": 1.0
+      },
+      "HSIL_vs_Normal_Ecto": {
+        "z": 1.6299747132198006,
+        "p_raw": 0.1031068414427605,
+        "p_bonferroni": 0.618641048656563
+      },
+      "HSIL_vs_SCC": {
+        "z": -0.12298800925361816,
+        "p_raw": 0.9021165931072543,
+        "p_bonferroni": 1.0
+      },
+      "Normal_vs_Normal_Ecto": {
+        "z": 1.5311883669640551,
+        "p_raw": 0.12572284502729558,
+        "p_bonferroni": 0.7543370701637735
+      },
+      "Normal_vs_SCC": {
+        "z": -0.20498001542269695,
+        "p_raw": 0.8375877388859716,
+        "p_bonferroni": 1.0
+      },
+      "Normal_Ecto_vs_SCC": {
+        "z": -2.4750859419761704,
+        "p_raw": 0.013320411782367536,
+        "p_bonferroni": 0.07992247069420522
+      }
+    },
+    "mannwhitney_by_subtype_bonf5": {
+      "Normal_Ecto_vs_SCC": {
+        "u": 0.0,
+        "p_raw": 0.004032258064516129,
+        "p_bonf5": 0.020161290322580645,
+        "n_a": 30,
+        "n_b": 2
+      },
+      "Normal_Ecto_vs_HSIL": {
+        "u": 0.0,
+        "p_raw": 0.06451612903225806,
+        "p_bonf5": 0.3225806451612903,
+        "n_a": 30,
+        "n_b": 1
+      },
+      "Normal_vs_SCC": {
+        "u": 0.0,
+        "p_raw": 0.6666666666666666,
+        "p_bonf5": 1.0,
+        "n_a": 1,
+        "n_b": 2
+      },
+      "HSIL_vs_SCC": {
+        "u": 0.0,
+        "p_raw": 0.6666666666666666,
+        "p_bonf5": 1.0,
+        "n_a": 1,
+        "n_b": 2
+      }
+    },
+    "spot_level_robustness": {
+      "subtype_kruskal_stat": 16080.844039733121,
+      "subtype_kruskal_p": 0.0,
+      "dunn_by_subtype": {
+        "HSIL_vs_Normal": {
+          "z": 1.2099228800350426,
+          "p_raw": 0.22630848676549897,
+          "p_bonferroni": 1.0
+        },
+        "HSIL_vs_Normal_Ecto": {
+          "z": 38.214871122815794,
+          "p_raw": 0.0,
+          "p_bonferroni": 0.0
+        },
+        "HSIL_vs_SCC": {
+          "z": -4.44410433002803,
+          "p_raw": 8.825877114704284e-06,
+          "p_bonferroni": 5.29552626882257e-05
+        },
+        "Normal_vs_Normal_Ecto": {
+          "z": 49.24878575020136,
+          "p_raw": 0.0,
+          "p_bonferroni": 0.0
+        },
+        "Normal_vs_SCC": {
+          "z": -7.566198876181998,
+          "p_raw": 3.8413716652030416e-14,
+          "p_bonferroni": 2.304822999121825e-13
+        },
+        "Normal_Ecto_vs_SCC": {
+          "z": -114.51702600812706,
+          "p_raw": 0.0,
+          "p_bonferroni": 0.0
+        }
+      },
+      "note": "per-sample mean repeated to n_spots per sample; used as Fig.2 sensitivity analysis only; primary = per-sample Mann-Whitney U."
+    },
+    "label_source": "data/st_visium/labels/cervix_histology_labels_extended.csv"
+  },
+  "hpv_gene_set_mode": "kegg_hpv",
+  "hpv_gene_set_size": 108,
+  "fm": "uni",
+  "lambda_neigh": 0.3,
+  "lambda_recon": 0.2,
+  "lambda_hpv": 1.0,
+  "lambda_sup": 5.0,
+  "lambda_prog": 1.5,
+  "recon_mse_proxy": 0.12792925536632538,
+  "no_neigh": false,
+  "n_spots": 45227,
+  "score_median": -0.03759021684527397,
+  "score_std": 0.9182521104812622,
+  "high_risk_ratio": 0.5000110553430472,
+  "hpv_proxy_auc": 0.9969491907216058,
+  "hpv_gene_high_low_gap": 0.38884302973747253,
+  "moran_i": 0.9371696014683623,
+  "n_prior_genes": 91,
+  "n_deg_perm_fdr05_effect": 21,
+  "n_deg_naive_fdr05_effect": 36,
+  "spatial_perm_n": 1000,
+  "top_degs": [
+    [
+      "KRT5",
+      2.1235170364379883,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "B2M",
+      1.6576006412506104,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "KRT6A",
+      1.422459602355957,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "HLA-A",
+      1.394126296043396,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "KRT14",
+      1.377800703048706,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "HLA-B",
+      1.2837806940078735,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "HLA-C",
+      0.9280433058738708,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "KRT19",
+      0.8844066858291626,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "CDH1",
+      0.8688119649887085,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "PSME1",
+      0.8281903266906738,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "TP63",
+      0.7597161531448364,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "PSME2",
+      0.7350711226463318,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "ERBB2",
+      0.6200515031814575,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "CCND1",
+      0.5331018567085266,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "S100A4",
+      0.49143335223197937,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "NUMA1",
+      0.47478562593460083,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "EGFR",
+      0.4458528757095337,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "KRT17",
+      0.4231002628803253,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "MMP2",
+      0.4167422652244568,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "PTEN",
+      0.35822373628616333,
+      0.0033670033670033673,
+      0.0
+    ],
+    [
+      "PSMB8",
+      0.32325321435928345,
+      0.0033670033670033673,
+      0.0
+    ]
+  ],
+  "tme_markers": {
+    "HPV_related": [
+      [
+        "AKT1",
+        0.2647017240524292,
+        3.06525980704464e-05,
+        0.26467105746269226,
+        1.0
+      ],
+      [
+        "AURKB",
+        0.02356885001063347,
+        0.0,
+        0.02356885001063347,
+        1.0
+      ],
+      [
+        "B2M",
+        3.1517629623413086,
+        1.4941623210906982,
+        1.6576006412506104,
+        0.0033670033670033673
+      ],
+      [
+        "CCL2",
+        0.09084965288639069,
+        0.0044706701301038265,
+        0.08637898415327072,
+        1.0
+      ],
+      [
+        "CCL5",
+        0.2206754833459854,
+        0.01118478737771511,
+        0.20949070155620575,
+        1.0
+      ],
+      [
+        "CCNA2",
+        0.02332945726811886,
+        0.0,
+        0.02332945726811886,
+        1.0
+      ],
+      [
+        "CCNB1",
+        0.04714026302099228,
+        3.06525980704464e-05,
+        0.047109611332416534,
+        1.0
+      ],
+      [
+        "CCND1",
+        0.6417459845542908,
+        0.10864414274692535,
+        0.5331018567085266,
+        0.0033670033670033673
+      ],
+      [
+        "CDK1",
+        0.025335276499390602,
+        0.0,
+        0.025335276499390602,
+        1.0
+      ],
+      [
+        "CDK4",
+        0.30782994627952576,
+        9.19577942113392e-05,
+        0.30773797631263733,
+        1.0
+      ],
+      [
+        "CDKN1A",
+        0.6376583576202393,
+        0.05038048326969147,
+        0.587277889251709,
+        1.0
+      ],
+      [
+        "CDKN2A",
+        0.15442802011966705,
+        0.0,
+        0.15442802011966705,
+        1.0
+      ],
+      [
+        "CREBBP",
+        0.009972918778657913,
+        0.010400640778243542,
+        -0.0004277219995856285,
+        1.0
+      ],
+      [
+        "CXCL10",
+        0.19794708490371704,
+        0.002774359891191125,
+        0.1951727271080017,
+        1.0
+      ],
+      [
+        "CXCL8",
+        0.004082333762198687,
+        0.0,
+        0.004082333762198687,
+        1.0
+      ],
+      [
+        "E2F1",
+        0.025639742612838745,
+        0.0,
+        0.025639742612838745,
+        1.0
+      ],
+      [
+        "EGFR",
+        0.5390613079071045,
+        0.093208447098732,
+        0.4458528757095337,
+        0.0033670033670033673
+      ],
+      [
+        "EP300",
+        0.16426192224025726,
+        0.011180177330970764,
+        0.1530817449092865,
+        1.0
+      ],
+      [
+        "EPCAM",
+        0.28655529022216797,
+        6.13051961408928e-05,
+        0.2864939868450165,
+        1.0
+      ],
+      [
+        "ERBB2",
+        0.6784953474998474,
+        0.05844387412071228,
+        0.6200515031814575,
+        0.0033670033670033673
+      ],
+      [
+        "HLA-A",
+        2.21366810798645,
+        0.8195418119430542,
+        1.394126296043396,
+        0.0033670033670033673
+      ],
+      [
+        "HLA-B",
+        2.445976734161377,
+        1.1621960401535034,
+        1.2837806940078735,
+        0.0033670033670033673
+      ],
+      [
+        "HLA-C",
+        1.3519059419631958,
+        0.42386263608932495,
+        0.9280433058738708,
+        0.0033670033670033673
+      ],
+      [
+        "HMGB2",
+        0.2819651961326599,
+        0.015550777316093445,
+        0.2664144039154053,
+        0.0033670033670033673
+      ],
+      [
+        "ICAM1",
+        0.09203702211380005,
+        0.0,
+        0.09203702211380005,
+        1.0
+      ],
+      [
+        "IRF1",
+        0.1885259449481964,
+        0.007313848007470369,
+        0.18121209740638733,
+        1.0
+      ],
+      [
+        "IRF3",
+        0.06520575284957886,
+        0.0,
+        0.06520575284957886,
+        1.0
+      ],
+      [
+        "JAK1",
+        0.13000273704528809,
+        0.05964682623744011,
+        0.07035590708255768,
+        1.0
+      ],
+      [
+        "KPNA2",
+        0.3971879780292511,
+        0.013044178485870361,
+        0.38414379954338074,
+        1.0
+      ],
+      [
+        "KRT14",
+        1.7777438163757324,
+        0.3999430537223816,
+        1.377800703048706,
+        0.0033670033670033673
+      ],
+      [
+        "KRT17",
+        0.474679172039032,
+        0.05157890543341637,
+        0.4231002628803253,
+        0.0033670033670033673
+      ],
+      [
+        "KRT18",
+        0.5363921523094177,
+        0.011535445228219032,
+        0.524856686592102,
+        1.0
+      ],
+      [
+        "KRT19",
+        1.1408514976501465,
+        0.2564448118209839,
+        0.8844066858291626,
+        0.0033670033670033673
+      ],
+      [
+        "KRT5",
+        2.956287384033203,
+        0.8327704071998596,
+        2.1235170364379883,
+        0.0033670033670033673
+      ],
+      [
+        "KRT6A",
+        3.2962279319763184,
+        1.8737683296203613,
+        1.422459602355957,
+        0.0033670033670033673
+      ],
+      [
+        "KRT8",
+        0.66289883852005,
+        0.009099312126636505,
+        0.6537995338439941,
+        1.0
+      ],
+      [
+        "LIG1",
+        0.02192341350018978,
+        0.0,
+        0.02192341350018978,
+        1.0
+      ],
+      [
+        "MAPK1",
+        0.33233022689819336,
+        0.07339806109666824,
+        0.2589321732521057,
+        0.0033670033670033673
+      ],
+      [
+        "MAPK3",
+        0.2115403115749359,
+        0.06941422075033188,
+        0.14212608337402344,
+        0.0033670033670033673
+      ],
+      [
+        "MCM2",
+        0.1629253327846527,
+        0.0,
+        0.1629253327846527,
+        1.0
+      ],
+      [
+        "MCM3",
+        0.35013362765312195,
+        0.001849573221988976,
+        0.3482840657234192,
+        1.0
+      ],
+      [
+        "MCM4",
+        0.248250812292099,
+        0.0,
+        0.248250812292099,
+        1.0
+      ],
+      [
+        "MCM5",
+        0.31467652320861816,
+        0.0,
+        0.31467652320861816,
+        1.0
+      ],
+      [
+        "MCM6",
+        0.23571687936782837,
+        0.0,
+        0.23571687936782837,
+        1.0
+      ],
+      [
+        "MCM7",
+        0.4618566334247589,
+        0.003908505663275719,
+        0.45794811844825745,
+        1.0
+      ],
+      [
+        "MDM2",
+        0.033540990203619,
+        0.0,
+        0.033540990203619,
+        1.0
+      ],
+      [
+        "MKI67",
+        0.16068381071090698,
+        0.0004597889492288232,
+        0.16022402048110962,
+        1.0
+      ],
+      [
+        "MX1",
+        0.18539755046367645,
+        0.010352719575166702,
+        0.17504483461380005,
+        1.0
+      ],
+      [
+        "MYC",
+        0.2889719307422638,
+        0.004396642558276653,
+        0.28457528352737427,
+        1.0
+      ],
+      [
+        "NUMA1",
+        0.6787856221199036,
+        0.20399999618530273,
+        0.47478562593460083,
+        0.0033670033670033673
+      ],
+      [
+        "OAS1",
+        0.022644734010100365,
+        0.0011879380326718092,
+        0.021456796675920486,
+        0.0033670033670033673
+      ],
+      [
+        "OAS2",
+        0.1653687059879303,
+        0.0,
+        0.1653687059879303,
+        1.0
+      ],
+      [
+        "PCNA",
+        0.5852804183959961,
+        0.025158360600471497,
+        0.5601220726966858,
+        1.0
+      ],
+      [
+        "PLK1",
+        0.1312074214220047,
+        0.0,
+        0.1312074214220047,
+        1.0
+      ],
+      [
+        "PSMB8",
+        0.3636460602283478,
+        0.04039284586906433,
+        0.32325321435928345,
+        0.0033670033670033673
+      ],
+      [
+        "PSMB9",
+        0.21801818907260895,
+        0.017206666991114616,
+        0.20081152021884918,
+        1.0
+      ],
+      [
+        "PSME1",
+        0.9792006015777588,
+        0.15101030468940735,
+        0.8281903266906738,
+        0.0033670033670033673
+      ],
+      [
+        "PSME2",
+        0.8412315249443054,
+        0.10616042464971542,
+        0.7350711226463318,
+        0.0033670033670033673
+      ],
+      [
+        "PTEN",
+        0.5949504971504211,
+        0.236726775765419,
+        0.35822373628616333,
+        0.0033670033670033673
+      ],
+      [
+        "RB1",
+        0.13975951075553894,
+        0.0,
+        0.13975951075553894,
+        1.0
+      ],
+      [
+        "RRM2",
+        0.2766808867454529,
+        0.0013487142277881503,
+        0.27533218264579773,
+        1.0
+      ],
+      [
+        "SMAD3",
+        0.23350076377391815,
+        0.005145026836544275,
+        0.22835573554039001,
+        1.0
+      ],
+      [
+        "STAT1",
+        0.3153635859489441,
+        0.030001619830727577,
+        0.28536197543144226,
+        0.0033670033670033673
+      ],
+      [
+        "TAP1",
+        0.5952834486961365,
+        0.023661043494939804,
+        0.5716224312782288,
+        1.0
+      ],
+      [
+        "TAP2",
+        0.09214209765195847,
+        0.001566186547279358,
+        0.09057591110467911,
+        1.0
+      ],
+      [
+        "TGFB1",
+        0.134036585688591,
+        0.0,
+        0.134036585688591,
+        1.0
+      ],
+      [
+        "TK1",
+        0.14572572708129883,
+        3.06525980704464e-05,
+        0.14569507539272308,
+        1.0
+      ],
+      [
+        "TOP2A",
+        0.22487756609916687,
+        0.0010421883780509233,
+        0.22383537888526917,
+        1.0
+      ],
+      [
+        "TP53",
+        0.19647838175296783,
+        0.003985437098890543,
+        0.19249294698238373,
+        1.0
+      ],
+      [
+        "TP63",
+        0.815850555896759,
+        0.056134406477212906,
+        0.7597161531448364,
+        0.0033670033670033673
+      ],
+      [
+        "TYMS",
+        0.1931728571653366,
+        0.0,
+        0.1931728571653366,
+        1.0
+      ]
+    ],
+    "Immuno_inhibitory": [
+      [
+        "IDO1",
+        0.2443086802959442,
+        0.0,
+        0.2443086802959442,
+        1.0
+      ]
+    ],
+    "Immune_activation": [
+      [
+        "CXCL9",
+        0.12249621748924255,
+        0.001425645430572331,
+        0.12107057124376297,
+        1.0
+      ],
+      [
+        "CXCL10",
+        0.19794708490371704,
+        0.002774359891191125,
+        0.1951727271080017,
+        1.0
+      ]
+    ],
+    "Macrophage_M1": [
+      [
+        "CD68",
+        0.19237661361694336,
+        0.027264771983027458,
+        0.16511183977127075,
+        1.0
+      ]
+    ],
+    "Macrophage_M2": [
+      [
+        "CD163",
+        0.056052058935165405,
+        0.0,
+        0.056052058935165405,
+        1.0
+      ],
+      [
+        "MRC1",
+        0.052024614065885544,
+        0.0,
+        0.052024614065885544,
+        1.0
+      ],
+      [
+        "MSR1",
+        0.07084628194570541,
+        0.0,
+        0.07084628194570541,
+        1.0
+      ],
+      [
+        "TGFB1",
+        0.134036585688591,
+        0.0,
+        0.134036585688591,
+        1.0
+      ]
+    ],
+    "Stroma_CAF": [
+      [
+        "ACTA2",
+        0.5432289838790894,
+        0.4496709108352661,
+        0.09355807304382324,
+        1.0
+      ],
+      [
+        "COL1A1",
+        2.0692622661590576,
+        1.5882211923599243,
+        0.4810410737991333,
+        1.0
+      ],
+      [
+        "COL3A1",
+        2.1205880641937256,
+        1.429763674736023,
+        0.6908243894577026,
+        1.0
+      ],
+      [
+        "S100A4",
+        0.9640647172927856,
+        0.4726313650608063,
+        0.49143335223197937,
+        0.0033670033670033673
+      ],
+      [
+        "PDGFRB",
+        0.6109350919723511,
+        0.26848605275154114,
+        0.34244903922080994,
+        1.0
+      ]
+    ],
+    "Proliferation": [
+      [
+        "MKI67",
+        0.16068381071090698,
+        0.0004597889492288232,
+        0.16022402048110962,
+        1.0
+      ],
+      [
+        "PCNA",
+        0.5852804183959961,
+        0.025158360600471497,
+        0.5601220726966858,
+        1.0
+      ],
+      [
+        "TOP2A",
+        0.22487756609916687,
+        0.0010421883780509233,
+        0.22383537888526917,
+        1.0
+      ],
+      [
+        "CCNB1",
+        0.04714026302099228,
+        3.06525980704464e-05,
+        0.047109611332416534,
+        1.0
+      ],
+      [
+        "CDK1",
+        0.025335276499390602,
+        0.0,
+        0.025335276499390602,
+        1.0
+      ]
+    ],
+    "Epithelial": [
+      [
+        "EPCAM",
+        0.28655529022216797,
+        6.13051961408928e-05,
+        0.2864939868450165,
+        1.0
+      ],
+      [
+        "KRT8",
+        0.66289883852005,
+        0.009099312126636505,
+        0.6537995338439941,
+        1.0
+      ],
+      [
+        "KRT18",
+        0.5363921523094177,
+        0.011535445228219032,
+        0.524856686592102,
+        1.0
+      ],
+      [
+        "KRT19",
+        1.1408514976501465,
+        0.2564448118209839,
+        0.8844066858291626,
+        0.0033670033670033673
+      ],
+      [
+        "CDH1",
+        0.9302899837493896,
+        0.061478015035390854,
+        0.8688119649887085,
+        0.0033670033670033673
+      ]
+    ],
+    "Angiogenesis": [
+      [
+        "VEGFA",
+        0.43162161111831665,
+        0.04493486136198044,
+        0.3866867423057556,
+        1.0
+      ],
+      [
+        "PECAM1",
+        0.24036715924739838,
+        0.12358059734106064,
+        0.11678656190633774,
+        0.0033670033670033673
+      ],
+      [
+        "CD34",
+        0.0845838114619255,
+        0.0410616360604763,
+        0.043522175401449203,
+        1.0
+      ]
+    ],
+    "Tumor_drivers": [
+      [
+        "TP53",
+        0.19647838175296783,
+        0.003985437098890543,
+        0.19249294698238373,
+        1.0
+      ],
+      [
+        "MYC",
+        0.2889719307422638,
+        0.004396642558276653,
+        0.28457528352737427,
+        1.0
+      ],
+      [
+        "EGFR",
+        0.5390613079071045,
+        0.093208447098732,
+        0.4458528757095337,
+        0.0033670033670033673
+      ],
+      [
+        "ERBB2",
+        0.6784953474998474,
+        0.05844387412071228,
+        0.6200515031814575,
+        0.0033670033670033673
+      ]
+    ],
+    "Extracellular_MMP": [
+      [
+        "MMP1",
+        0.09098592400550842,
+        0.0,
+        0.09098592400550842,
+        1.0
+      ],
+      [
+        "MMP2",
+        0.8773353695869446,
+        0.4605931043624878,
+        0.4167422652244568,
+        0.0033670033670033673
+      ],
+      [
+        "MMP3",
+        0.004394459538161755,
+        0.0,
+        0.004394459538161755,
+        1.0
+      ],
+      [
+        "MMP9",
+        0.09963960200548172,
+        6.13051961408928e-05,
+        0.09957829862833023,
+        1.0
+      ],
+      [
+        "MMP11",
+        0.4753820300102234,
+        0.07204745709896088,
+        0.4033345580101013,
+        1.0
+      ]
+    ]
+  },
+  "holdout": {
+    "CA_HPV_2": {
+      "mean_risk": 0.02738344669342041,
+      "median_risk": -0.19335076212882996,
+      "std_risk": 0.4294314980506897,
+      "n_spots": 1593,
+      "moran_i": 0.7878606614710586
+    }
+  }
+}

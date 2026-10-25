@@ -1,0 +1,98 @@
+{
+  "params": {
+    "data": "data/e4_hnscc2",
+    "out": "results/sota_hnscc_irm.json",
+    "log_every": 50,
+    "n_genes": 2000,
+    "k": 6,
+    "dim": 128,
+    "hid": 256,
+    "lr": 0.001,
+    "epochs": 100,
+    "adv_list": [
+      10.0,
+      100.0
+    ],
+    "seeds": [
+      0
+    ],
+    "grl_cap": 1.0,
+    "warmup": 30,
+    "clip": 1.0,
+    "adv_sn": true,
+    "seed": 0,
+    "backbone": "gat",
+    "method": "irm",
+    "recon_chunk": 0,
+    "dump_xs": false,
+    "dump_w": "",
+    "dump_lam": 2.0,
+    "device": "cpu"
+  },
+  "n_spots": 57872,
+  "n_genes_union": 6586,
+  "n_donors": 16,
+  "samples": [
+    "HPVn_P5666",
+    "HPVn_P5684",
+    "HPVn_P5707",
+    "HPVn_P5709",
+    "HPVn_P5736",
+    "HPVn_P5751",
+    "HPVn_P5756",
+    "HPVn_P5909",
+    "HPVp_P5636",
+    "HPVp_P5692",
+    "HPVp_P5710",
+    "HPVp_P5735",
+    "HPVp_P5764",
+    "HPVp_P5766",
+    "HPVp_P5767",
+    "HPVp_P5903"
+  ],
+  "scan": {
+    "s0_lam10.0": {
+      "tau_lodo": 0.6846531968814576,
+      "p_refit": 0.0031996800319968005,
+      "tau_insample": 0.7302967433402214,
+      "sigma_null": 0.2700462141771214,
+      "ldi": 2.5316155568581844,
+      "tau_ldo": 0.6846531968814576,
+      "n_samples": 16,
+      "train_seconds": 573.5
+    },
+    "s0_lam100.0": {
+      "tau_lodo": 0.6846531968814576,
+      "p_refit": 0.0053994600539946005,
+      "tau_insample": 0.7302967433402214,
+      "sigma_null": 0.27880041723215626,
+      "ldi": 2.4521240092412837,
+      "tau_ldo": 0.6846531968814576,
+      "n_samples": 16,
+      "train_seconds": 536.0
+    }
+  },
+  "lam_means": {
+    "10.0": {
+      "mean_ldi": 2.5316155568581844,
+      "mean_tau_lodo": 0.6846531968814576,
+      "n_seeds": 1
+    },
+    "100.0": {
+      "mean_ldi": 2.4521240092412837,
+      "mean_tau_lodo": 0.6846531968814576,
+      "n_seeds": 1
+    }
+  },
+  "verdict": {
+    "E3": "no-go",
+    "base_mean_ldi": NaN,
+    "base_mean_tau_lodo": NaN,
+    "passing_lambdas": [],
+    "gate": {
+      "ldi": 1.645,
+      "fidelity_keep": 0.7,
+      "fidelity_metric": "tau_lodo"
+    }
+  }
+}

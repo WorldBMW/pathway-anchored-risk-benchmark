@@ -1,0 +1,410 @@
+{
+  "mode": "loso_cross_sample",
+  "fm": "uni",
+  "samples": [
+    "CA_HPV_1",
+    "CA_HPV_2",
+    "HSIL_HPV",
+    "N_HPV",
+    "cervical_cancer_1",
+    "ecto_P001",
+    "ecto_P004",
+    "ecto_P007",
+    "ecto_P008",
+    "ecto_P014",
+    "ecto_P016",
+    "ecto_P018",
+    "ecto_P020",
+    "ecto_P021",
+    "ecto_P023",
+    "ecto_P024",
+    "ecto_P026",
+    "ecto_P028",
+    "ecto_P031",
+    "ecto_P044",
+    "ecto_P045",
+    "ecto_P047",
+    "ecto_P050",
+    "ecto_P057",
+    "ecto_P067",
+    "ecto_P080",
+    "ecto_P081",
+    "ecto_P087",
+    "ecto_P097",
+    "ecto_P105",
+    "ecto_P107",
+    "ecto_P108",
+    "ecto_P114",
+    "ecto_P117",
+    "ecto_P118"
+  ],
+  "n_samples": 35,
+  "n_hpv_genes_panel": 40,
+  "n_final_genes": 1533,
+  "per_regressor": [
+    {
+      "aggregate": {
+        "regressor": "ridge",
+        "n_valid_folds": 35,
+        "n_failed_folds": 0,
+        "mean_mse": 0.59659,
+        "mean_pearson": -0.0145,
+        "mean_hpv_overlap": 0.0,
+        "fit_seconds_sum": 506.0
+      },
+      "per_fold": [
+        {
+          "label": "loso_held=CA_HPV_1",
+          "regressor": "ridge",
+          "n_train": 45063,
+          "n_test": 1757,
+          "fit_seconds": 15.4,
+          "heldout_recon_mse": 0.96476,
+          "mean_per_gene_pearson": 0.0322,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=CA_HPV_2",
+          "regressor": "ridge",
+          "n_train": 45227,
+          "n_test": 1593,
+          "fit_seconds": 14.8,
+          "heldout_recon_mse": 0.8792,
+          "mean_per_gene_pearson": -0.0413,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=HSIL_HPV",
+          "regressor": "ridge",
+          "n_train": 46241,
+          "n_test": 579,
+          "fit_seconds": 14.8,
+          "heldout_recon_mse": 0.81536,
+          "mean_per_gene_pearson": -0.0441,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=N_HPV",
+          "regressor": "ridge",
+          "n_train": 45766,
+          "n_test": 1054,
+          "fit_seconds": 14.5,
+          "heldout_recon_mse": 0.61335,
+          "mean_per_gene_pearson": -0.0048,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=cervical_cancer_1",
+          "regressor": "ridge",
+          "n_train": 44039,
+          "n_test": 2781,
+          "fit_seconds": 14.5,
+          "heldout_recon_mse": 2.19292,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P001",
+          "regressor": "ridge",
+          "n_train": 45441,
+          "n_test": 1379,
+          "fit_seconds": 14.4,
+          "heldout_recon_mse": 0.42574,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P004",
+          "regressor": "ridge",
+          "n_train": 45564,
+          "n_test": 1256,
+          "fit_seconds": 14.4,
+          "heldout_recon_mse": 0.51262,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P007",
+          "regressor": "ridge",
+          "n_train": 45842,
+          "n_test": 978,
+          "fit_seconds": 14.5,
+          "heldout_recon_mse": 0.47905,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P008",
+          "regressor": "ridge",
+          "n_train": 45995,
+          "n_test": 825,
+          "fit_seconds": 15.2,
+          "heldout_recon_mse": 0.76517,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P014",
+          "regressor": "ridge",
+          "n_train": 44832,
+          "n_test": 1988,
+          "fit_seconds": 15.0,
+          "heldout_recon_mse": 0.50712,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P016",
+          "regressor": "ridge",
+          "n_train": 45980,
+          "n_test": 840,
+          "fit_seconds": 14.5,
+          "heldout_recon_mse": 0.6757,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P018",
+          "regressor": "ridge",
+          "n_train": 45012,
+          "n_test": 1808,
+          "fit_seconds": 14.2,
+          "heldout_recon_mse": 0.41002,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P020",
+          "regressor": "ridge",
+          "n_train": 43854,
+          "n_test": 2966,
+          "fit_seconds": 13.8,
+          "heldout_recon_mse": 0.38734,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P021",
+          "regressor": "ridge",
+          "n_train": 44989,
+          "n_test": 1831,
+          "fit_seconds": 14.3,
+          "heldout_recon_mse": 0.34732,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P023",
+          "regressor": "ridge",
+          "n_train": 45649,
+          "n_test": 1171,
+          "fit_seconds": 14.7,
+          "heldout_recon_mse": 0.65087,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P024",
+          "regressor": "ridge",
+          "n_train": 45653,
+          "n_test": 1167,
+          "fit_seconds": 14.7,
+          "heldout_recon_mse": 0.39316,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P026",
+          "regressor": "ridge",
+          "n_train": 45389,
+          "n_test": 1431,
+          "fit_seconds": 14.6,
+          "heldout_recon_mse": 0.511,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P028",
+          "regressor": "ridge",
+          "n_train": 46141,
+          "n_test": 679,
+          "fit_seconds": 14.5,
+          "heldout_recon_mse": 0.82277,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P031",
+          "regressor": "ridge",
+          "n_train": 46060,
+          "n_test": 760,
+          "fit_seconds": 14.2,
+          "heldout_recon_mse": 0.44594,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P044",
+          "regressor": "ridge",
+          "n_train": 44816,
+          "n_test": 2004,
+          "fit_seconds": 14.6,
+          "heldout_recon_mse": 0.45442,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P045",
+          "regressor": "ridge",
+          "n_train": 46123,
+          "n_test": 697,
+          "fit_seconds": 13.9,
+          "heldout_recon_mse": 0.72424,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P047",
+          "regressor": "ridge",
+          "n_train": 45640,
+          "n_test": 1180,
+          "fit_seconds": 15.2,
+          "heldout_recon_mse": 1.12227,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P050",
+          "regressor": "ridge",
+          "n_train": 45128,
+          "n_test": 1692,
+          "fit_seconds": 14.0,
+          "heldout_recon_mse": 0.4341,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P057",
+          "regressor": "ridge",
+          "n_train": 44433,
+          "n_test": 2387,
+          "fit_seconds": 14.7,
+          "heldout_recon_mse": 0.39701,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P067",
+          "regressor": "ridge",
+          "n_train": 44071,
+          "n_test": 2749,
+          "fit_seconds": 14.0,
+          "heldout_recon_mse": 0.44479,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P080",
+          "regressor": "ridge",
+          "n_train": 45696,
+          "n_test": 1124,
+          "fit_seconds": 14.8,
+          "heldout_recon_mse": 0.36554,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P081",
+          "regressor": "ridge",
+          "n_train": 45815,
+          "n_test": 1005,
+          "fit_seconds": 14.5,
+          "heldout_recon_mse": 0.39633,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P087",
+          "regressor": "ridge",
+          "n_train": 45780,
+          "n_test": 1040,
+          "fit_seconds": 13.7,
+          "heldout_recon_mse": 0.51081,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P097",
+          "regressor": "ridge",
+          "n_train": 45540,
+          "n_test": 1280,
+          "fit_seconds": 14.7,
+          "heldout_recon_mse": 0.40321,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P105",
+          "regressor": "ridge",
+          "n_train": 46108,
+          "n_test": 712,
+          "fit_seconds": 14.3,
+          "heldout_recon_mse": 0.40974,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P107",
+          "regressor": "ridge",
+          "n_train": 46402,
+          "n_test": 418,
+          "fit_seconds": 14.2,
+          "heldout_recon_mse": 0.439,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P108",
+          "regressor": "ridge",
+          "n_train": 46513,
+          "n_test": 307,
+          "fit_seconds": 14.8,
+          "heldout_recon_mse": 0.78428,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P114",
+          "regressor": "ridge",
+          "n_train": 45851,
+          "n_test": 969,
+          "fit_seconds": 13.7,
+          "heldout_recon_mse": 0.33109,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P117",
+          "regressor": "ridge",
+          "n_train": 45537,
+          "n_test": 1283,
+          "fit_seconds": 14.1,
+          "heldout_recon_mse": 0.32954,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        },
+        {
+          "label": "loso_held=ecto_P118",
+          "regressor": "ridge",
+          "n_train": 45690,
+          "n_test": 1130,
+          "fit_seconds": 13.8,
+          "heldout_recon_mse": 0.53486,
+          "mean_per_gene_pearson": NaN,
+          "hpv_top50_overlap": 0.0
+        }
+      ]
+    }
+  ],
+  "wall_seconds_total": 516.7
+}

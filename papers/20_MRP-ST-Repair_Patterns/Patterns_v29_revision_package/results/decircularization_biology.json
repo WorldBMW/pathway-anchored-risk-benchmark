@@ -1,0 +1,274 @@
+{
+  "variants": {
+    "FULL": {
+      "CELL_tumor_epithelial": {
+        "rho_mean": 0.45663525576662445,
+        "rho_sd": 0.006460385808319671,
+        "n_seeds": 3,
+        "rhos": [
+          0.4591867651990783,
+          0.46143024519789816,
+          0.449288756902897
+        ]
+      },
+      "HPV_INTEGRATION_CANDIDATE": {
+        "rho_mean": 0.40884594837682947,
+        "rho_sd": 0.0009791329397417822,
+        "n_seeds": 3,
+        "rhos": [
+          0.4077164785724208,
+          0.4094545556437313,
+          0.4093668109143364
+        ]
+      },
+      "ANTIGEN_PRESENTATION": {
+        "rho_mean": 0.4021443108625527,
+        "rho_sd": 0.0034354561027813346,
+        "n_seeds": 3,
+        "rhos": [
+          0.39900466702857756,
+          0.4058139746976317,
+          0.40161429086144873
+        ]
+      },
+      "INTERFERON_ANTIVIRAL": {
+        "rho_mean": -0.4483829900904633,
+        "rho_sd": 0.001788482184021318,
+        "n_seeds": 3,
+        "rhos": [
+          -0.44649298419380556,
+          -0.44860717627600777,
+          -0.4500488098015765
+        ]
+      },
+      "PROLIFERATION": {
+        "rho_mean": -0.3407226043888843,
+        "rho_sd": 0.0014262280830620395,
+        "n_seeds": 3,
+        "rhos": [
+          -0.3391757388207145,
+          -0.3419854569625393,
+          -0.3410066173833992
+        ]
+      },
+      "CELL_stromal": {
+        "rho_mean": null,
+        "rho_sd": null,
+        "n_seeds": 0,
+        "rhos": []
+      },
+      "CELL_immune": {
+        "rho_mean": null,
+        "rho_sd": null,
+        "n_seeds": 0,
+        "rhos": []
+      }
+    },
+    "NOPROG": {
+      "CELL_tumor_epithelial": {
+        "rho_mean": 0.5051646543402177,
+        "rho_sd": 0.016540105077797487,
+        "n_seeds": 4,
+        "rhos": [
+          0.48844519767296923,
+          0.5273552405817782,
+          0.5065398224288493,
+          0.49831835667727437
+        ]
+      },
+      "HPV_INTEGRATION_CANDIDATE": {
+        "rho_mean": 0.41763083000700507,
+        "rho_sd": 0.006547237184974599,
+        "n_seeds": 4,
+        "rhos": [
+          0.41399063760984084,
+          0.41038201822919146,
+          0.4217491598905442,
+          0.4244015042984438
+        ]
+      },
+      "ANTIGEN_PRESENTATION": {
+        "rho_mean": 0.4066240754380346,
+        "rho_sd": 0.010489936420271108,
+        "n_seeds": 4,
+        "rhos": [
+          0.41290211229075446,
+          0.3925239277383994,
+          0.40499908184718447,
+          0.41607117987580017
+        ]
+      },
+      "INTERFERON_ANTIVIRAL": {
+        "rho_mean": -0.4470412107974424,
+        "rho_sd": 0.024269326061210898,
+        "n_seeds": 4,
+        "rhos": [
+          -0.47170851731478136,
+          -0.41413044926513193,
+          -0.44661161697770757,
+          -0.4557142596321485
+        ]
+      },
+      "PROLIFERATION": {
+        "rho_mean": -0.34917264647084223,
+        "rho_sd": 0.02402772663704593,
+        "n_seeds": 4,
+        "rhos": [
+          -0.37119275393883333,
+          -0.3151148204313073,
+          -0.3524784852637991,
+          -0.35790452624942937
+        ]
+      },
+      "CELL_stromal": {
+        "rho_mean": null,
+        "rho_sd": null,
+        "n_seeds": 0,
+        "rhos": []
+      },
+      "CELL_immune": {
+        "rho_mean": null,
+        "rho_sd": null,
+        "n_seeds": 0,
+        "rhos": []
+      }
+    },
+    "NOSUP": {
+      "CELL_tumor_epithelial": {
+        "rho_mean": 0.5355533835565861,
+        "rho_sd": 0.0023875750144023346,
+        "n_seeds": 3,
+        "rhos": [
+          0.5364773660381188,
+          0.5328419019891538,
+          0.5373408826424858
+        ]
+      },
+      "HPV_INTEGRATION_CANDIDATE": {
+        "rho_mean": 0.446463063910391,
+        "rho_sd": 0.0007500429561475846,
+        "n_seeds": 3,
+        "rhos": [
+          0.44634955564057077,
+          0.44577624468605637,
+          0.44726339140454574
+        ]
+      },
+      "ANTIGEN_PRESENTATION": {
+        "rho_mean": 0.46050050033408413,
+        "rho_sd": 0.0018330705611481353,
+        "n_seeds": 3,
+        "rhos": [
+          0.4615603905295717,
+          0.4583838535434315,
+          0.46155725692924926
+        ]
+      },
+      "INTERFERON_ANTIVIRAL": {
+        "rho_mean": -0.46954851163417405,
+        "rho_sd": 0.003470981353977508,
+        "n_seeds": 3,
+        "rhos": [
+          -0.4689156078726564,
+          -0.47329239494111086,
+          -0.466437532088755
+        ]
+      },
+      "PROLIFERATION": {
+        "rho_mean": -0.3689567775897243,
+        "rho_sd": 0.004523690748525757,
+        "n_seeds": 3,
+        "rhos": [
+          -0.36730751623344976,
+          -0.3740736956210478,
+          -0.36548912091467545
+        ]
+      },
+      "CELL_stromal": {
+        "rho_mean": null,
+        "rho_sd": null,
+        "n_seeds": 0,
+        "rhos": []
+      },
+      "CELL_immune": {
+        "rho_mean": null,
+        "rho_sd": null,
+        "n_seeds": 0,
+        "rhos": []
+      }
+    },
+    "NOALL": {
+      "CELL_tumor_epithelial": {
+        "rho_mean": -0.24101238999663646,
+        "rho_sd": 0.7620685185147021,
+        "n_seeds": 3,
+        "rhos": [
+          -0.6744250579127461,
+          -0.6875281314994132,
+          0.6389160194222498
+        ]
+      },
+      "HPV_INTEGRATION_CANDIDATE": {
+        "rho_mean": -0.1520396581918956,
+        "rho_sd": 0.46278736382238295,
+        "n_seeds": 3,
+        "rhos": [
+          -0.42399129750041364,
+          -0.41444038594188315,
+          0.38231270886660995
+        ]
+      },
+      "ANTIGEN_PRESENTATION": {
+        "rho_mean": -0.08821574138734689,
+        "rho_sd": 0.377092169043449,
+        "n_seeds": 3,
+        "rhos": [
+          -0.32000649364398615,
+          -0.29154331137994616,
+          0.34690258086189163
+        ]
+      },
+      "INTERFERON_ANTIVIRAL": {
+        "rho_mean": -0.028498303432339295,
+        "rho_sd": 0.22134429001887942,
+        "n_seeds": 3,
+        "rhos": [
+          0.1376017928775848,
+          0.056681738552177716,
+          -0.2797784417267804
+        ]
+      },
+      "PROLIFERATION": {
+        "rho_mean": -0.09186149849273466,
+        "rho_sd": 0.1081966747616738,
+        "n_seeds": 3,
+        "rhos": [
+          0.01568497360720598,
+          -0.090572608869735,
+          -0.20069686021567493
+        ]
+      },
+      "CELL_stromal": {
+        "rho_mean": null,
+        "rho_sd": null,
+        "n_seeds": 0,
+        "rhos": []
+      },
+      "CELL_immune": {
+        "rho_mean": null,
+        "rho_sd": null,
+        "n_seeds": 0,
+        "rhos": []
+      }
+    }
+  },
+  "classification": {
+    "CELL_tumor_epithelial": "REAL (survives NO-SUP)",
+    "HPV_INTEGRATION_CANDIDATE": "REAL (survives NO-SUP)",
+    "ANTIGEN_PRESENTATION": "REAL (survives NO-SUP)",
+    "INTERFERON_ANTIVIRAL": "REAL (survives NO-SUP)",
+    "PROLIFERATION": "REAL (survives NO-SUP)",
+    "CELL_stromal": "no_data",
+    "CELL_immune": "no_data"
+  }
+}
