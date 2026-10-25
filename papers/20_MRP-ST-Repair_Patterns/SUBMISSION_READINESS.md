@@ -1,16 +1,59 @@
-# 投稿前状态（Patterns · v23）
+# 投稿前状态（Patterns · v24）
 
 生成于 2026-10-25。这份清单只列"上传输之前必须为真"的事，不重复正文里的论证。
 
 ---
 
-## A0. 本轮处置（v22 → v23）
+## A0. 本轮处置（v23 → v24）
+
+| 评审意见 | 判断 | 处置 |
+|---|---|---|
+| ref [1] 的"related submission"会触发一稿多投/重复发表审查，建议删除 ref [1] | **前半正确、后半危险** | 措辞已改（见下）；**没有删除**。删除会撤掉 Cell Press 明文要求的披露，反而构成"未提供相关稿件"这一拒稿理由，且要重编 42 条参考文献、与累积式 SI 的交叉引用全部错位 |
+| Highlights 5 条超过上限 | **正确**（但严重性被高估） | 已压缩为 4 条（第 4 条合并了原第 4、5 条：语义 + 验证范围都在）。Cell Press 上限确实是 4 条 × 85 字符 |
+| DSML 需以 IFA PDF 原文逐字核对 | **方向正确，结论不变** | 已再取证：官方 IFA 全文无 DSML；且 Patterns 2024 新年社论原话"我们还将**逐步淘汰**数据科学成熟度水平(DSML)的使用"。**仍未添加**，见 C3 |
+| 结构性匹配度风险未改善 | **正确，且改稿解决不了** | 唯一能真正降险的是**投稿前问询**（见新增的 C4）：Patterns 官方 FAQ 明确欢迎 pre-submission enquiry，并可预约与编辑视频会 |
+
+### ref [1] 到底改成什么、为什么
+
+Cell Press《Journal policies》原文（2026-10-25 实抓）：
+
+> "If you or your co-authors have any related papers in preparation, submitted, or in press
+> elsewhere, you **must** inform us of these in the cover letter, indicating how they are
+> related to the submitted manuscript, and **include them with your initial submission as a
+> related file**... **Failure to provide copies of related manuscripts can delay the review
+> process and may be grounds for rejection.**"
+
+也就是说：Cell Press **不禁止**相关稿件，它**强制要求披露**，且要求随初稿上传相关稿件文件。
+真正会导致拒稿的是"藏着不报"。评审担心的那半句原文是
+
+> "we cannot consider any paper that contains data that have been published or submitted for
+> publication elsewhere."
+
+约束的是**数据/结果重叠**，不是"存在一篇相关稿件"。所以正确的做法是"披露 + 切割"，不是"删除"。
+
+现在的两处写法：
+
+- **ref [1]**：`Manuscript in preparation, declared as a related manuscript in the cover letter
+  and supplied with this submission as a related file; the cervical cohort definition is
+  restated in Experimental Procedures, and every number in this paper was produced here from
+  the public accessions.`（去掉了原来指向本仓库 release 的"Interim access"链接——那里并没有
+  companion 稿件，是误导）
+- **投稿信**：新增"Related manuscript"声明段，逐条对齐政策三要素（声明 / 说明关系 / 随稿提供），
+  并补上关键一句：宫颈数据来自**公开 accession**（10x 公共数据与 GSE217237），因此没有任何
+  数据集为两稿任何一方专有；**两稿不共享的是结果**。这是对上面那条"data submitted elsewhere"
+  条款的正面回答。
+
+> ⚠️ **你需要核对的一件事**：上面写的是 `Manuscript in preparation`。如果 companion 稿件
+> **已经在别刊送审**，这两个词必须改成 `Manuscript under consideration elsewhere`，并在投稿信
+> 里点名期刊——政策要求的正是这个。写错状态比不写更糟。
+
+---
 
 | 评审意见 | 判断 | 处置 |
 |---|---|---|
 | 两处 Zenodo 占位符未清零 | **正确，且实际是 3 处**（漏了 Key Resources Table 那一行） | 已清：改写为 Cell Press 的真实时点口径——归档与 DOI 要求发生在**接收前**，tagged release 是冻结态与 interim 可访问位置。全库 `TO BE INSERTED BEFORE SUBMISSION` 计数为 0 |
 | ref [1] 预印本 DOI 占位 | **正确** | 已清：ref [1] 改写为"相关稿件"本体 + 可验证 interim 地址，分工边界在投稿信里单列成段。参考文献编号不动：重编 42 条会让累积式 SI 的引用号错位 |
-| 稿件声称代码已发布 | **比占位符更致命，评审未发现** | 实测 `github.com/WorldBMW/cervix-st-multimodal` 返回 **404**（该用户存在）。本轮已 `git init` + 白名单 `.gitignore` + 提交 `39a3cc3` + 打 `v1.0.0` 标签；**只剩 push**（见 B2） |
+| 稿件声称代码已发布 | **比占位符更致命，评审未发现** | 实测 `github.com/WorldBMW/cervix-st-multimodal` 返回 **404**（该用户存在）。本轮已 `git init` + 白名单 `.gitignore` + 提交 `256dd43` + 打 `v1.0.0` 标签；**只剩 push**（见 B2） |
 | DSML 仍是强制项 | **不正确** | 已取证：官方 IFA 现版（2026-10-25 实抓）在 Policies / Components to include / Final file requirements 三处均无 DSML；期刊 2024 年起逐步淘汰。**未添加**，理由见 C3 |
 | cover letter 正面论证 broad interest | **正确** | 已新增 `Why this is a Patterns paper...` 段并前置到第一段之后；另修投稿信里 3 个评审没看到的瑕疵（整句重复、`sigma_hat` 未统一、`[status to be inserted: under review elsewhere]`） |
 
@@ -49,6 +92,10 @@ analysis"写明 n 的两重含义、两个种子族、B = 2,000 与 B = 10,000�
 `papers/19_ISCLS_20261016/Manuscript_ISCLS.md` 已完稿。挂到 bioRxiv/medRxiv 后拿到 DOI。
 注意 Patterns 的口径：**投稿时该 preprint 必须已 online 且可访问**，只有"已提交待审"不算。
 
+**但 preprint 没上线也照样能投**，只需要在投稿系统里多做一件事：把 companion 稿件 PDF 作为
+**related file** 上传（政策强制，见 D 节）。ref [1] 现在写的是 `Manuscript in preparation`，
+与"随稿上传、尚无 DOI"完全自洽，不需要任何占位符。
+
 ### 2. GitHub 仓库 + tag + Zenodo 归档（阻塞 Data availability）
 
 **仓库本地已建好**（commit `39a3cc3`，tag `v1.0.0`，785 文件 / 46.3 MB，工作区干净）。
@@ -84,7 +131,7 @@ availability、Data availability 三处）。**如果你的实际 tag 不叫 v1.
 ```bash
 python scripts/_fill_dois.py --check                       # 列出 4 个填充点
 python scripts/_fill_dois.py --companion 10.xxxx/xxxxx --zenodo 10.5281/zenodo.xxxxxxx --build
-python scripts/_qa_v23.py                                  # 重建后必须再跑一遍 QA
+python scripts/_qa_v24.py                                  # 重建后必须再跑一遍 QA
 ```
 
 脚本会同时改 ref [1]、Key Resources Table 的 Zenodo 行、`**Code.**` 段、Data availability 段，
@@ -116,8 +163,11 @@ TitlePage 已写明"要么在投稿信里申请豁免，要么压缩 Results"。
   2026-10-25 实抓）全文**没有** DSML / "maturity scale" 任何一处：Policies 目录下无，
   "Components to include"（Title / Summary / … / Resource availability / …）无，
   "Final file requirements" 无。
-- 该刊 2024 年起在主编 Andrew Hufton 任内**逐步淘汰** DSML（与"明确聚焦机器学习与 AI 的
-  创造性应用"同步调整）。
+- 该刊 2024 年起在主编 Andrew Hufton 任内**逐步淘汰** DSML。官方 2024 新年社论原话：
+  "我们还将**逐步淘汰数据科学成熟度水平（DSML）的使用**……然而，这个五级评分系统在实际
+  应用中存在困难，特别是对于那些不针对于方法开发的研究论文。"（社论中文版见
+  <https://www.thepaper.cn/newsDetail_forward_26200356>，原文载于 Patterns 官网社论）——
+  即淘汰是**官方公告**，不是百科二手信息。
 - 因此若在正文里加一段 `Data Science Maturity Scale: Proof-of-Concept`，等于告诉编辑
   这份稿子是按 2022 年的模板准备的——**扣分而非加分**。
 
@@ -129,6 +179,29 @@ TitlePage 已写明"要么在投稿信里申请豁免，要么压缩 Results"。
 
 除此之外，本稿也**不适用** IFA 里的 "Standardized data reporting checklists"：
 Cell Press 现只有 battery、photovoltaic cell、catalysis 三张表，与本稿无关。
+
+## C4. 结构性匹配度风险：改稿解决不了，但投稿前问询能
+
+这条风险是真的，而且**再改十版正文也不会消失**——它由证据结构决定（一个领域端到端验证 +
+两个领域只做预测检验 + Table 4 六行 Not tested）。诚实标注是对的；问题是编辑在 5 天内读完
+Summary 与 Table 4 后可能直接判为"计算生物学方法学论文"。
+
+有一件事比改稿有效得多，而且是官方提供的。Patterns 官方 FAQ 原文：
+
+> "For questions about a submitted paper or to ask for **pre-submission advice** on a potential
+> submission, please write to <patterns@cell.com>. You can also **arrange a web meeting with one
+> of the journal editors** via our online booking app. Pre-submission enquiries are welcome but
+> not required."
+
+也就是：**可以先发一封约 200 词的 pre-submission enquiry**，把"为什么这是跨领域基础设施问题、
+空间转录组只是 demanding testbed"直接交给编辑，问一句是否在 scope 内。成本是一封邮件；
+收益是把 5 天初审的二元判断变成一次可回应的对话。最坏情况是编辑直说不合适，你省下一轮投稿
+周期并立刻转 MJS。
+
+邮件里必须包含的三句话（与投稿信 `Why this is a Patterns paper` 段顺序一致，可直接复用）：
+① 交付物是**测量**——一个 calibrated index、三轴接受协议、两条决策边界——不是新的 repair
+operator；② 它读的是 representation 而非 training objective，因此可套在任何一个已有的去混淆
+流程上；③ 空间转录组是 demanding testbed，不是论文的主题。
 
 ## C2. 若担心匹配度：Cell Press Multi-Journal Submission（MJS）
 
@@ -152,7 +225,8 @@ Device），由一名专职编辑协调，各刊**独立**决定是否送审；*
 | `Manuscript_Patterns.docx` | 正文 + 6 主表（含 STAR-Methods Key Resources Table）+ 图注，0 em-dash，0 字面 `**` |
 | `Supplemental_Information_Patterns.docx` | 19 个表对象（S1–S17 + 两张分表），**追加式维护，勿从 md 重建** |
 | `TitlePage_Patterns.docx` | 首页、统计、投稿前清单 |
-| `CoverLetter_Patterns.docx` | 含三级证据说明与"算子不是贡献"的声明 |
+| `CoverLetter_Patterns.docx` | 含三级证据说明、"算子不是贡献"声明，以及 **Related manuscript** 披露段 |
+| **companion 稿件 PDF（related file）** | ⚠️ **政策强制项，不是可选**。投稿系统里选 "related file" 上传。政策原文：未提供相关稿件"may be grounds for rejection" |
 | `figures/fig1–4, fig5_crossdomain` | 每图 PDF（矢量）+ PNG（300 dpi） |
 | `figures/graphical_abstract_300dpi.tif` | Cell Press 接受格式，1200 × 1200 |
 | `figures/graphical_abstract_1200.png` | 备用（系统若要求 png） |
@@ -162,7 +236,7 @@ Device），由一名专职编辑协调，各刊**独立**决定是否送审；*
 ## E. 上传前 30 秒自查
 
 ```bash
-python scripts/_qa_v23.py                      # 格式硬指标（含 Highlights ≤85、In brief ≤50、Summary ≤150）
+python scripts/_qa_v24.py                      # 格式硬指标（含 Highlights ≤4 条且 ≤85 字符、In brief ≤50、Summary ≤150）
 python scripts/_fill_dois.py --check           # 4 个填充点；若已拿到 DOI 应先 --build 再自查
 python -c "from docx import Document; d=Document('papers/20_MRP-ST-Repair_Patterns/Manuscript_Patterns.docx'); print(len(d.tables), 'main tables')"
 ```

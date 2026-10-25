@@ -75,15 +75,15 @@ ZENODO_PATTERNS = [
 ]
 COMPANION_PATTERN = (
     "reference 1",
-    re.compile(r"Companion manuscript \(related submission\);"),
-    lambda g, doi: "Companion manuscript. Preprint DOI: " + doi + ";",
+    re.compile(r"Manuscript in preparation, declared as a related manuscript in "
+               r"the cover letter and supplied with this submission as a related "
+               r"file;"),
+    lambda g, doi: "Preprint, https://doi.org/" + doi + ";",
 )
 COVER_PATTERN = (
     "cover letter",
-    re.compile(r"reference \[1\] records the tagged code release as interim "
-               r"access"),
-    lambda g, doi: ("reference [1] records the preprint DOI " + doi
-                    + ", with the tagged code release as interim access"),
+    re.compile(r"No DOI is recorded for it yet"),
+    lambda g, doi: "Its preprint DOI is " + doi,
 )
 
 
