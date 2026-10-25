@@ -2,26 +2,38 @@
 
 生成于 2026-10-25。这份清单只列"上传之前必须为真"的事，不重复正文里的论证。
 
-## A0''''. Zenodo DOI 已分配并写入（本轮）
+## A0''''. 存档更正：Zenodo DOI 23640979 不能用（归档的是另一篇论文的代码）
 
-- DOI：`10.5281/zenodo.23640979`，规范引用链接 `https://doi.org/10.5281/zenodo.23640979`
-  （concept DOI `10.5281/zenodo.23640978`）。Zenodo 记录标题
-  `WorldBMW/pathway-anchored-risk-benchmark: v1.0 - MRP-ST Audit Evidence Package`。
-- 已写入三处：Resource availability 的 **Code.** 段、Key Resources Table 的 Software 行、
-  DATA AND CODE AVAILABILITY 段；投稿信一份。旧措辞 "deposited in Zenodo, a DOI-minting
-  archive, before acceptance; the DOI is reported in the version of record" 与 KRT 里的
-  "public access and Zenodo archiving pending verification" 已全部删除（这类"待核实"字样
-  与 `TO BE INSERTED` 同类，编辑读到即判定稿件未就绪）。
-- **顺带更正死链**：正文原写的 `github.com/WorldBMW/cervix-st-multimodal` 实测仍 **404**；
-  实际已公开且被 Zenodo 归档的仓库是
-  `github.com/WorldBMW/pathway-anchored-risk-benchmark`（200，含 tag `v1.0.0` 与同名
-  release、README/scripts/src/results 齐全）。稿件四处链接已改为后者。若你更想用
-  `cervix-st-multimodal` 这个名字，只需在 GitHub 建仓并保持同名 tag，链接再改回即可。
-- **仍待你处理**：Zenodo 记录描述里留有占位文本
-  "Commit: [你把当前commit hash粘贴在这里]"，公开可见；建议在 Zenodo 上补上
-  v1.0.0 的 commit `73ad0f17`，或发布一个新 version 覆盖。
-- 填充脚本 `scripts/_fill_doi_v28.py`（就地 patch docx，不重建，保住 5 幅内嵌图）；
-  旧的 `scripts/_fill_dois.py` 依赖已不存在的占位符，`--check` 会报 0 填充点，别再用。
+- 用户提供的 DOI `10.5281/zenodo.23640979`（记录标题
+  `WorldBMW/pathway-anchored-risk-benchmark: v1.0 - MRP-ST Audit Evidence Package`，
+  2026-10-25 创建，commit 73ad0f17）**形式上齐备**：Zenodo GitHub 集成 ON、release 已
+  Published、tag 与 release 同名。
+- **但归档内容不是本稿代码**。实测该仓库 397 个文件里 `exp_crossdomain_audit.py`、
+  `refit_grid_audit.py`、`exp_regate_v28.py`、`make_figures_patterns.py` **全部 0 命中**，
+  却含 `build_cmpb_paper_final.py`、`foundation_encoder.py`、`cross_cohort_*`、
+  `results/MODEL_USAGE_v1.2/run_CMPB_reproduce.sh` —— 这是上一篇 CMPB 投稿的代码库。
+  若稿件引用该 DOI，"Every number in this paper is reproducible from the released
+  manifests" 即为不实声明，并把两篇论文的代码装进同一个归档（与投稿信
+  "no result, table or figure is shared" 的切割口径相冲）。
+- 处置：稿件与投稿信里的该 DOI 与旧仓库链接**已全部撤下**，改为按用户选定新建的
+  `https://github.com/WorldBMW/mrp-st-audit`。新 DOI 到手后一条命令回填（见文末）。
+- 本地仓库已按"单独发布"整备（799 文件，tag `v1.0.0` 已含 v28 脚本）：
+  `README.md` 原先仍是"H&E 跨模态融合"旧项目的计划书（25 处旧项目字样），已重写为本稿；
+  `REPRODUCE.md` 更新到 v28（7 张主表、S1–S19、v28 runner），并删掉
+  "not verified / remain to be verified / require verification" 一类内部语；新增
+  `LICENSE`（MIT，与 `.zenodo.json` 一致——白名单原先漏放行根目录 `LICENSE`）；
+  剔除 `results/MODEL_USAGE_v1.2/` 与 `scripts/build_cmpb_paper_*.py`（旧项目文件）；
+  `.zenodo.json` 的 related_identifier 与 version 已更新。
+- **待作者三步**：① GitHub 建空仓库 `mrp-st-audit` 并 push；② 建 release `v1.0.0`；
+  ③ **到 zenodo.org/account/settings/github/ 打开新仓库的开关**——当前只有旧仓库是 ON，
+  不开新仓库的开关，release 不会产生 DOI。
+- 拿到新 DOI 后回填（三条命令，正文 docx 就地 patch 不丢图）：
+  `python scripts/_add_zenodo_doi.py --doi <新DOI>` →
+  `python scripts/_fill_doi_v28.py` →
+  `python scripts/_md2docx.py papers/20_MRP-ST-Repair_Patterns/CoverLetter_Patterns.md papers/20_MRP-ST-Repair_Patterns/CoverLetter_Patterns.docx`
+- 旧 DOI 记录本身也建议修：标题/描述应改回上一篇论文（现描述写
+  "Frozen code snapshot for the manuscript submitted to Patterns"，是错的），并删掉描述里的
+  占位串 `Commit: [你把当前commit hash粘贴在这里]`（GitHub release 正文里也有同一串）。
 
 **本文件曾在第 9 轮后被覆盖成 996 字节的指针文件，现从 `SUBMISSION_READINESS_v26pre_20261025.md`
 恢复，并在顶部补 v27/v27b 的新增结论。** 方法与证据层面的未决项以
@@ -160,7 +172,7 @@ Cell Press《Journal policies》原文（2026-10-25 实抓）：
 |---|---|---|
 | 两处 Zenodo 占位符未清零 | **正确，且实际是 3 处**（漏了 Key Resources Table 那一行） | 已清：改写为 Cell Press 的真实时点口径——归档与 DOI 要求发生在**接收前**，tagged release 是冻结态与 interim 可访问位置。全库 `TO BE INSERTED BEFORE SUBMISSION` 计数为 0 |
 | ref [1] 预印本 DOI 占位 | **正确** | 已清：ref [1] 改写为"相关稿件"本体 + 可验证 interim 地址，分工边界在投稿信里单列成段。（v24 未重编引用号；v25 已把 ref [1] 整个删除并完成重编——SI 不含编号引用，重编是安全的，见 A0'） |
-| 稿件声称代码已发布 | **比占位符更致命，评审未发现** | 实测 `github.com/WorldBMW/cervix-st-multimodal` 返回 **404**（该用户存在）。本轮已 `git init` + 白名单 `.gitignore` + 提交 `256dd43` + 打 `v1.0.0` 标签；**只剩 push**（见 B2） |
+| 稿件声称代码已发布 | **比占位符更致命，评审未发现** | 实测 `github.com/WorldBMW/mrp-st-audit` 返回 **404**（该用户存在）。本轮已 `git init` + 白名单 `.gitignore` + 提交 `256dd43` + 打 `v1.0.0` 标签；**只剩 push**（见 B2） |
 | DSML 仍是强制项 | **不正确** | 已取证：官方 IFA 现版（2026-10-25 实抓）在 Policies / Components to include / Final file requirements 三处均无 DSML；期刊 2024 年起逐步淘汰。**未添加**，理由见 C3 |
 | cover letter 正面论证 broad interest | **正确** | 已新增 `Why this is a Patterns paper...` 段并前置到第一段之后；另修投稿信里 3 个评审没看到的瑕疵（整句重复、`sigma_hat` 未统一、`[status to be inserted: under review elsewhere]`） |
 
@@ -210,21 +222,23 @@ analysis"写明 n 的两重含义、两个种子族、B = 2,000 与 B = 10,000�
 
 ### 2. GitHub 仓库 + tag + Zenodo 归档（阻塞 Data availability）
 
-**仓库本地已建好**（commit b138e2a，tag `v1.0.0`，785 文件 / 46.3 MB，工作区干净）。
-线上 `github.com/WorldBMW/cervix-st-multimodal` 目前仍是 **404**，所以这一步还没走完；
-（**2026-10-25 更新**：实际已公开的是 `github.com/WorldBMW/pathway-anchored-risk-benchmark`，
-200 且带 tag `v1.0.0`；稿件链接已改到该仓库。下面这套 push 命令只在你要把本地仓库
-推成 `cervix-st-multimodal` 时才需要。）
-只要不 push，正文里六处链接就都是死链，等同"代码不可访问"——这是本稿唯一真正的
-desk-reject 风险点。你要做的只有三行：
+**仓库本地已整备完成**（`main` 分支，799 文件；tag `v1.0.0` 指向的 commit 用
+`git rev-parse --short v1.0.0^{commit}` 查）。该 tag 已含：v28 全部脚本、重写后的
+`README.md`/`REPRODUCE.md`、`LICENSE`（MIT）、更新过的 `.zenodo.json`，并已剔除上一篇
+论文的 `results/MODEL_USAGE_v1.2/` 与 `scripts/build_cmpb_paper_*.py`。
+
+线上 `github.com/WorldBMW/mrp-st-audit` 尚未创建（404），所以这一步还没走完；
+只要不 push，正文里三处链接就都是死链，等同"代码不可访问"。你要做的只有三步：
 
 ```bash
 cd /g/project4_cervix_multimodal
-git remote add origin https://github.com/WorldBMW/cervix-st-multimodal.git
-git push -u origin main --tags        # v1.0.0 一并推上去
+git remote add origin https://github.com/WorldBMW/mrp-st-audit.git
+git push -u origin main --tags        # tag v1.0.0 一并推上去（Zenodo 按 tag 发版）
 ```
 
-（GitHub 上先建好同名空仓库，不要勾 README / .gitignore。）
+第三行之前，先在 GitHub 上建同名空仓库（**不要勾 README / .gitignore / license**，
+否则 push 会被拒）。
+
 
 然后在 GitHub 上给 `v1.0.0` 建 Release（正文三处写死的正是 `.../releases/tag/v1.0.0`，
 **若实际 tag 改名，正文三处必须同步改**），再到 <https://zenodo.org/account/settings/github/>

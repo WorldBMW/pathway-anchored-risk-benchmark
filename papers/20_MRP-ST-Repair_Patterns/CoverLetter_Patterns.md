@@ -14,7 +14,7 @@ Please consider our manuscript, "Auditing label dependence and sibling-unit infl
 
 **Related manuscript.** In line with the Cell Press policy on related manuscripts, we disclose a related manuscript by the same group and supply it with this submission as a related file. It also develops a label-dependence index and draws on overlapping public cervical accessions. It is not cited anywhere in this manuscript, and no result, table or figure is shared: every number reported here was recomputed by us from the public accessions listed in the key resources table.
 
-**Data and code.** All cohorts are public accessions re-downloaded by the released scripts. The code is released under the tagged state v1.0.0 at https://github.com/WorldBMW/pathway-anchored-risk-benchmark and is archived in Zenodo at https://doi.org/10.5281/zenodo.23640979.
+**Data and code.** All cohorts are public accessions re-downloaded by the released scripts. The code is released under the tagged state v1.0.0 at https://github.com/WorldBMW/mrp-st-audit.
 
 **Declarations.** The authors declare no competing interests. AI-assisted tools were used for editorial and language preparation, and the use is declared in the manuscript; no tool generated algorithmic logic or experimental results, and the authors take full responsibility for the content.
 
