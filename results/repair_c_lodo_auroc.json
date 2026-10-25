@@ -1,0 +1,404 @@
+{
+  "note": "\u5b9e\u9a8c C\uff1aLODO \u4e34\u5e8a\u7ec8\u70b9 AUROC\uff08\u4f9b\u8005\u7ea7\u7559\u51fa\uff0c\u95ed\u5f0f Ridge \u63a2\u9488\uff09",
+  "E4_HNSCC": {
+    "0.0": [
+      {
+        "seed": 0,
+        "lam": 0.0,
+        "n_samples": 16,
+        "n_donors": 16,
+        "tau_lodo_mine": 0.59336610396393,
+        "lodo_auroc": 0.90625,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 1,
+        "lam": 0.0,
+        "n_samples": 16,
+        "n_donors": 16,
+        "tau_lodo_mine": 0.5020790110464023,
+        "lodo_auroc": 0.84375,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 2,
+        "lam": 0.0,
+        "n_samples": 16,
+        "n_donors": 16,
+        "tau_lodo_mine": 0.6846531968814576,
+        "lodo_auroc": 0.96875,
+        "in_auroc": 1.0
+      }
+    ],
+    "0.5": [
+      {
+        "seed": 0,
+        "lam": 0.5,
+        "n_samples": 16,
+        "n_donors": 16,
+        "tau_lodo_mine": 0.38797014489949266,
+        "lodo_auroc": 0.765625,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 1,
+        "lam": 0.5,
+        "n_samples": 16,
+        "n_donors": 16,
+        "tau_lodo_mine": 0.3195048252113469,
+        "lodo_auroc": 0.71875,
+        "in_auroc": 0.984375
+      },
+      {
+        "seed": 2,
+        "lam": 0.5,
+        "n_samples": 16,
+        "n_donors": 16,
+        "tau_lodo_mine": 0.5249007842757842,
+        "lodo_auroc": 0.859375,
+        "in_auroc": 1.0
+      }
+    ],
+    "1.0": [
+      {
+        "seed": 0,
+        "lam": 1.0,
+        "n_samples": 16,
+        "n_donors": 16,
+        "tau_lodo_mine": 0.27386127875258304,
+        "lodo_auroc": 0.6875,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 1,
+        "lam": 1.0,
+        "n_samples": 16,
+        "n_donors": 16,
+        "tau_lodo_mine": 0.5477225575051661,
+        "lodo_auroc": 0.875,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 2,
+        "lam": 1.0,
+        "n_samples": 16,
+        "n_donors": 16,
+        "tau_lodo_mine": 0.3423265984407288,
+        "lodo_auroc": 0.734375,
+        "in_auroc": 1.0
+      }
+    ],
+    "2.0": [
+      {
+        "seed": 0,
+        "lam": 2.0,
+        "n_samples": 16,
+        "n_donors": 16,
+        "tau_lodo_mine": 0.5020790110464023,
+        "lodo_auroc": 0.84375,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 1,
+        "lam": 2.0,
+        "n_samples": 16,
+        "n_donors": 16,
+        "tau_lodo_mine": 0.47925723781702034,
+        "lodo_auroc": 0.828125,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 2,
+        "lam": 2.0,
+        "n_samples": 16,
+        "n_donors": 16,
+        "tau_lodo_mine": 0.38797014489949266,
+        "lodo_auroc": 0.765625,
+        "in_auroc": 0.953125
+      }
+    ],
+    "5.0": [
+      {
+        "seed": 0,
+        "lam": 5.0,
+        "n_samples": 16,
+        "n_donors": 16,
+        "tau_lodo_mine": 0.09128709291752768,
+        "lodo_auroc": 0.5625,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 1,
+        "lam": 5.0,
+        "n_samples": 16,
+        "n_donors": 16,
+        "tau_lodo_mine": 0.6390096504226938,
+        "lodo_auroc": 0.9375,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 2,
+        "lam": 5.0,
+        "n_samples": 16,
+        "n_donors": 16,
+        "tau_lodo_mine": 0.4336136913582565,
+        "lodo_auroc": 0.796875,
+        "in_auroc": 0.984375
+      }
+    ]
+  },
+  "prostate_GSE278936": {
+    "0.0": [
+      {
+        "seed": 0,
+        "lam": 0.0,
+        "n_samples": 52,
+        "n_donors": 52,
+        "tau_lodo_mine": 0.2893546589439839,
+        "lodo_auroc": 0.8802083333333334,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 1,
+        "lam": 0.0,
+        "n_samples": 52,
+        "n_donors": 52,
+        "tau_lodo_mine": 0.25368079688239686,
+        "lodo_auroc": 0.8333333333333334,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 2,
+        "lam": 0.0,
+        "n_samples": 52,
+        "n_donors": 52,
+        "tau_lodo_mine": 0.3210647585542835,
+        "lodo_auroc": 0.921875,
+        "in_auroc": 1.0
+      }
+    ],
+    "0.5": [
+      {
+        "seed": 0,
+        "lam": 0.5,
+        "n_samples": 52,
+        "n_donors": 52,
+        "tau_lodo_mine": 0.3567386206158706,
+        "lodo_auroc": 0.96875,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 1,
+        "lam": 0.5,
+        "n_samples": 52,
+        "n_donors": 52,
+        "tau_lodo_mine": 0.3052097087491337,
+        "lodo_auroc": 0.9010416666666666,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 2,
+        "lam": 0.5,
+        "n_samples": 52,
+        "n_donors": 52,
+        "tau_lodo_mine": 0.17440554785664783,
+        "lodo_auroc": 0.7291666666666666,
+        "in_auroc": 1.0
+      }
+    ],
+    "1.0": [
+      {
+        "seed": 0,
+        "lam": 1.0,
+        "n_samples": 52,
+        "n_donors": 52,
+        "tau_lodo_mine": 0.3369198083594333,
+        "lodo_auroc": 0.9427083333333334,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 1,
+        "lam": 1.0,
+        "n_samples": 52,
+        "n_donors": 52,
+        "tau_lodo_mine": 0.08323901147703647,
+        "lodo_auroc": 0.609375,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 2,
+        "lam": 1.0,
+        "n_samples": 52,
+        "n_donors": 52,
+        "tau_lodo_mine": 0.23782574707724705,
+        "lodo_auroc": 0.8125,
+        "in_auroc": 1.0
+      }
+    ],
+    "2.0": [
+      {
+        "seed": 0,
+        "lam": 2.0,
+        "n_samples": 52,
+        "n_donors": 52,
+        "tau_lodo_mine": 0.3210647585542835,
+        "lodo_auroc": 0.921875,
+        "in_auroc": 0.9895833333333334
+      },
+      {
+        "seed": 1,
+        "lam": 2.0,
+        "n_samples": 52,
+        "n_donors": 52,
+        "tau_lodo_mine": 0.281427134041409,
+        "lodo_auroc": 0.8697916666666666,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 2,
+        "lam": 2.0,
+        "n_samples": 52,
+        "n_donors": 52,
+        "tau_lodo_mine": 0.2655720842362592,
+        "lodo_auroc": 0.8489583333333334,
+        "in_auroc": 0.9791666666666666
+      }
+    ],
+    "5.0": [
+      {
+        "seed": 0,
+        "lam": 5.0,
+        "n_samples": 52,
+        "n_donors": 52,
+        "tau_lodo_mine": 0.33295604590814587,
+        "lodo_auroc": 0.9375,
+        "in_auroc": 0.9739583333333334
+      },
+      {
+        "seed": 1,
+        "lam": 5.0,
+        "n_samples": 52,
+        "n_donors": 52,
+        "tau_lodo_mine": 0.2972821838465588,
+        "lodo_auroc": 0.890625,
+        "in_auroc": 1.0
+      },
+      {
+        "seed": 2,
+        "lam": 5.0,
+        "n_samples": 52,
+        "n_donors": 52,
+        "tau_lodo_mine": 0.2655720842362592,
+        "lodo_auroc": 0.8489583333333334,
+        "in_auroc": 0.9895833333333334
+      }
+    ]
+  },
+  "cervix": {
+    "0.0": [
+      {
+        "seed": 0,
+        "lam": 0.0,
+        "n_samples": 35,
+        "n_donors": 34,
+        "tau_lodo_mine": 0.4183478072667547,
+        "lodo_auroc_macro": 0.6404504005903436,
+        "in_auroc_macro": 0.6372549019607843,
+        "lodo_auroc_neopl_vs_normal": 0.967741935483871,
+        "in_auroc_neopl_vs_normal": 1.0
+      },
+      {
+        "seed": 1,
+        "lam": 0.0,
+        "n_samples": 35,
+        "n_donors": 34,
+        "tau_lodo_mine": 0.4183478072667547,
+        "lodo_auroc_macro": 0.6404504005903436,
+        "in_auroc_macro": 0.6372549019607843,
+        "lodo_auroc_neopl_vs_normal": 0.967741935483871,
+        "in_auroc_neopl_vs_normal": 1.0
+      },
+      {
+        "seed": 2,
+        "lam": 0.0,
+        "n_samples": 35,
+        "n_donors": 34,
+        "tau_lodo_mine": 0.41107219322733285,
+        "lodo_auroc_macro": 0.646782099936749,
+        "in_auroc_macro": 0.6372549019607843,
+        "lodo_auroc_neopl_vs_normal": 0.967741935483871,
+        "in_auroc_neopl_vs_normal": 1.0
+      }
+    ],
+    "1.0": [
+      {
+        "seed": 0,
+        "lam": 1.0,
+        "n_samples": 35,
+        "n_donors": 34,
+        "tau_lodo_mine": 0.42562342130617653,
+        "lodo_auroc_macro": 0.6206712523719164,
+        "in_auroc_macro": 0.6372549019607843,
+        "lodo_auroc_neopl_vs_normal": 0.9596774193548387,
+        "in_auroc_neopl_vs_normal": 1.0
+      },
+      {
+        "seed": 1,
+        "lam": 1.0,
+        "n_samples": 35,
+        "n_donors": 34,
+        "tau_lodo_mine": 0.42562342130617653,
+        "lodo_auroc_macro": 0.6341187012439384,
+        "in_auroc_macro": 0.6372549019607843,
+        "lodo_auroc_neopl_vs_normal": 0.967741935483871,
+        "in_auroc_neopl_vs_normal": 1.0
+      },
+      {
+        "seed": 2,
+        "lam": 1.0,
+        "n_samples": 35,
+        "n_donors": 34,
+        "tau_lodo_mine": 0.4328990353455983,
+        "lodo_auroc_macro": 0.6349027514231499,
+        "in_auroc_macro": 0.6372549019607843,
+        "lodo_auroc_neopl_vs_normal": 0.9758064516129032,
+        "in_auroc_neopl_vs_normal": 1.0
+      }
+    ],
+    "2.0": [
+      {
+        "seed": 0,
+        "lam": 2.0,
+        "n_samples": 35,
+        "n_donors": 34,
+        "tau_lodo_mine": 0.3965209651484892,
+        "lodo_auroc_macro": 0.6309825005270926,
+        "in_auroc_macro": 0.642802551127978,
+        "lodo_auroc_neopl_vs_normal": 0.9354838709677419,
+        "in_auroc_neopl_vs_normal": 0.9919354838709677
+      },
+      {
+        "seed": 1,
+        "lam": 2.0,
+        "n_samples": 35,
+        "n_donors": 34,
+        "tau_lodo_mine": 0.2073550001235219,
+        "lodo_auroc_macro": 0.617712945393211,
+        "in_auroc_macro": 0.6372549019607843,
+        "lodo_auroc_neopl_vs_normal": 0.7338709677419355,
+        "in_auroc_neopl_vs_normal": 1.0
+      },
+      {
+        "seed": 2,
+        "lam": 2.0,
+        "n_samples": 35,
+        "n_donors": 34,
+        "tau_lodo_mine": 0.3528672809119583,
+        "lodo_auroc_macro": 0.6270622496310353,
+        "in_auroc_macro": 0.6372549019607843,
+        "lodo_auroc_neopl_vs_normal": 0.8951612903225806,
+        "in_auroc_neopl_vs_normal": 1.0
+      }
+    ]
+  }
+}

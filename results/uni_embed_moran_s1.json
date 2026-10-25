@@ -1,0 +1,605 @@
+{
+  "note": "Supplementary Note S1 — WITHIN-SECTION spatial autocorrelation of frozen UNI patch embeddings (morphology), independent of the risk head. Primary estimand is per-slide local-PC1 Moran's I; the pooled statistic uses within-slide-centred PC1 and a within-slide permutation null.",
+  "config": {
+    "n_samples": 35,
+    "n_spots": 46820,
+    "feat_dim": 1024,
+    "fm": "uni",
+    "k_neighbors": 6,
+    "coord_offset_per_sample": 10000.0,
+    "standardization": "per-slide z-score before local PCA",
+    "moran_definition": "identical to src.models.moran_i / train_st.py",
+    "null": "permutation of PC1 WITHIN each slide (means preserved), B=10000, seed=20260915",
+    "registration_fix": "src/st_data.py 2026-09-15: standard Visium coords now scaled by tissue_hires_scalef"
+  },
+  "n_bad_registration_samples": 0,
+  "bad_registration_samples": [],
+  "pooled_within_slide_pc1_moran": 0.6180219098642045,
+  "pooled_within_slide_perm_p": 9.999000099990002e-05,
+  "pooled_perm_null": {
+    "mean": -0.0007452315800078091,
+    "q025": -0.005954898371500036,
+    "q975": 0.004679419052978718,
+    "q990": 0.005535745452531756,
+    "max": 0.00962801215033441
+  },
+  "per_slide_pc1_moran_all": {
+    "n": 35,
+    "mean": 0.5930904723009441,
+    "median": 0.5787880315574323,
+    "sd": 0.17629434476836484,
+    "q25": 0.49093406426302233,
+    "q75": 0.7263525720009062,
+    "min": 0.24609859256276606,
+    "max": 0.9479950125565197
+  },
+  "by_cohort": {
+    "GSE208654": {
+      "n_samples": 4,
+      "n_spots": 4983,
+      "pc1_moran": {
+        "n": 4,
+        "mean": 0.8666357719216764,
+        "median": 0.8691210998254775,
+        "sd": 0.07970148473516105,
+        "q25": 0.8095207517996362,
+        "q75": 0.9262361199475176,
+        "min": 0.7803058754792312,
+        "max": 0.9479950125565197
+      },
+      "mean_dim_moran": {
+        "n": 4,
+        "mean": 0.4251626464207672,
+        "median": 0.4305687152210207,
+        "sd": 0.08711304317289434,
+        "q25": 0.3665747407184704,
+        "q75": 0.48915662092331746,
+        "min": 0.3260835619762065,
+        "max": 0.5134295932648208
+      },
+      "median_unique_patch_fraction": 1.0
+    },
+    "GSE217237": {
+      "n_samples": 30,
+      "n_spots": 39056,
+      "pc1_moran": {
+        "n": 30,
+        "mean": 0.5597643685541012,
+        "median": 0.5360878415902455,
+        "sd": 0.15493209699954405,
+        "q25": 0.4766738415639868,
+        "q75": 0.6826661113278509,
+        "min": 0.24609859256276606,
+        "max": 0.8314713748190972
+      },
+      "mean_dim_moran": {
+        "n": 30,
+        "mean": 0.28263315266165373,
+        "median": 0.2822072518781892,
+        "sd": 0.03950971187486801,
+        "q25": 0.26195913507057544,
+        "q75": 0.3081599888679134,
+        "min": 0.21277845728354433,
+        "max": 0.37157493914507034
+      },
+      "median_unique_patch_fraction": 1.0
+    },
+    "10x_cervical_cancer_1": {
+      "n_samples": 1,
+      "n_spots": 2781,
+      "pc1_moran": {
+        "n": 1,
+        "mean": 0.49869238622330864,
+        "median": 0.49869238622330864,
+        "sd": 0.0,
+        "q25": 0.49869238622330864,
+        "q75": 0.49869238622330864,
+        "min": 0.49869238622330864,
+        "max": 0.49869238622330864
+      },
+      "mean_dim_moran": {
+        "n": 1,
+        "mean": 0.21363582725768665,
+        "median": 0.21363582725768665,
+        "sd": 0.0,
+        "q25": 0.21363582725768665,
+        "q75": 0.21363582725768665,
+        "min": 0.21363582725768665,
+        "max": 0.21363582725768665
+      },
+      "median_unique_patch_fraction": 1.0
+    }
+  },
+  "per_sample": [
+    {
+      "name": "CA_HPV_1",
+      "cohort": "GSE208654",
+      "n_spots": 1757,
+      "pc1_moran": 0.9479950125565197,
+      "pc1_var_ratio": 0.3905516376556034,
+      "mean_dim_moran": 0.5134295932648208,
+      "median_dim_moran": 0.5121228966447728,
+      "patch_qc": {
+        "n_checked": 1500,
+        "n_unique": 1500,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "CA_HPV_2",
+      "cohort": "GSE208654",
+      "n_spots": 1593,
+      "pc1_moran": 0.9189831557445169,
+      "pc1_var_ratio": 0.34495692551863166,
+      "mean_dim_moran": 0.48106563014281634,
+      "median_dim_moran": 0.47018330813402864,
+      "patch_qc": {
+        "n_checked": 1500,
+        "n_unique": 1500,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "HSIL_HPV",
+      "cohort": "GSE208654",
+      "n_spots": 579,
+      "pc1_moran": 0.7803058754792312,
+      "pc1_var_ratio": 0.27485965625684605,
+      "mean_dim_moran": 0.3260835619762065,
+      "median_dim_moran": 0.29090768275762446,
+      "patch_qc": {
+        "n_checked": 579,
+        "n_unique": 579,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "N_HPV",
+      "cohort": "GSE208654",
+      "n_spots": 1054,
+      "pc1_moran": 0.8192590439064379,
+      "pc1_var_ratio": 0.3099667643072959,
+      "mean_dim_moran": 0.38007180029922505,
+      "median_dim_moran": 0.36507272440757493,
+      "patch_qc": {
+        "n_checked": 1054,
+        "n_unique": 1054,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "cervical_cancer_1",
+      "cohort": "10x_cervical_cancer_1",
+      "n_spots": 2781,
+      "pc1_moran": 0.49869238622330864,
+      "pc1_var_ratio": 0.12239923161418922,
+      "mean_dim_moran": 0.21363582725768665,
+      "median_dim_moran": 0.19359315704774133,
+      "patch_qc": {
+        "n_checked": 1500,
+        "n_unique": 1500,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P001",
+      "cohort": "GSE217237",
+      "n_spots": 1379,
+      "pc1_moran": 0.6120839125879425,
+      "pc1_var_ratio": 0.22649381506479294,
+      "mean_dim_moran": 0.3214830373674335,
+      "median_dim_moran": 0.31256575675874587,
+      "patch_qc": {
+        "n_checked": 1379,
+        "n_unique": 1379,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P004",
+      "cohort": "GSE217237",
+      "n_spots": 1256,
+      "pc1_moran": 0.2710844102085894,
+      "pc1_var_ratio": 0.18209837269635237,
+      "mean_dim_moran": 0.22054967468862294,
+      "median_dim_moran": 0.21267846525238177,
+      "patch_qc": {
+        "n_checked": 1256,
+        "n_unique": 1256,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P007",
+      "cohort": "GSE217237",
+      "n_spots": 978,
+      "pc1_moran": 0.5787880315574323,
+      "pc1_var_ratio": 0.16088112438640334,
+      "mean_dim_moran": 0.24585061170371258,
+      "median_dim_moran": 0.23031183647982667,
+      "patch_qc": {
+        "n_checked": 978,
+        "n_unique": 978,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P008",
+      "cohort": "GSE217237",
+      "n_spots": 825,
+      "pc1_moran": 0.5018108334590711,
+      "pc1_var_ratio": 0.2361623359936522,
+      "mean_dim_moran": 0.27397661054216194,
+      "median_dim_moran": 0.2650445536387195,
+      "patch_qc": {
+        "n_checked": 825,
+        "n_unique": 825,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P014",
+      "cohort": "GSE217237",
+      "n_spots": 1988,
+      "pc1_moran": 0.737796314443771,
+      "pc1_var_ratio": 0.2652323999964924,
+      "mean_dim_moran": 0.32116951552176753,
+      "median_dim_moran": 0.29735042964506464,
+      "patch_qc": {
+        "n_checked": 1500,
+        "n_unique": 1500,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P016",
+      "cohort": "GSE217237",
+      "n_spots": 840,
+      "pc1_moran": 0.5133519370393679,
+      "pc1_var_ratio": 0.1582629632560651,
+      "mean_dim_moran": 0.22709064330584977,
+      "median_dim_moran": 0.21230415649891643,
+      "patch_qc": {
+        "n_checked": 840,
+        "n_unique": 840,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P018",
+      "cohort": "GSE217237",
+      "n_spots": 1808,
+      "pc1_moran": 0.8314713748190972,
+      "pc1_var_ratio": 0.20591645196650163,
+      "mean_dim_moran": 0.37157493914507034,
+      "median_dim_moran": 0.3617563198290964,
+      "patch_qc": {
+        "n_checked": 1500,
+        "n_unique": 1500,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P020",
+      "cohort": "GSE217237",
+      "n_spots": 2966,
+      "pc1_moran": 0.33902424982991053,
+      "pc1_var_ratio": 0.1651566564381765,
+      "mean_dim_moran": 0.21277845728354433,
+      "median_dim_moran": 0.19542796866026002,
+      "patch_qc": {
+        "n_checked": 1500,
+        "n_unique": 1500,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P021",
+      "cohort": "GSE217237",
+      "n_spots": 1831,
+      "pc1_moran": 0.6393050564726738,
+      "pc1_var_ratio": 0.18887046680854147,
+      "mean_dim_moran": 0.31162318324377664,
+      "median_dim_moran": 0.29837159269254276,
+      "patch_qc": {
+        "n_checked": 1500,
+        "n_unique": 1500,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P023",
+      "cohort": "GSE217237",
+      "n_spots": 1171,
+      "pc1_moran": 0.49514637462056466,
+      "pc1_var_ratio": 0.1861538613301867,
+      "mean_dim_moran": 0.26125405566864723,
+      "median_dim_moran": 0.2428654675441549,
+      "patch_qc": {
+        "n_checked": 1171,
+        "n_unique": 1171,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P024",
+      "cohort": "GSE217237",
+      "n_spots": 1167,
+      "pc1_moran": 0.5375777426988488,
+      "pc1_var_ratio": 0.1848068886216495,
+      "mean_dim_moran": 0.26464507676174553,
+      "median_dim_moran": 0.25073038179793616,
+      "patch_qc": {
+        "n_checked": 1167,
+        "n_unique": 1167,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P026",
+      "cohort": "GSE217237",
+      "n_spots": 1431,
+      "pc1_moran": 0.4199514011029808,
+      "pc1_var_ratio": 0.18659512968074723,
+      "mean_dim_moran": 0.25816987399019387,
+      "median_dim_moran": 0.24743296688598593,
+      "patch_qc": {
+        "n_checked": 1431,
+        "n_unique": 1431,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P028",
+      "cohort": "GSE217237",
+      "n_spots": 679,
+      "pc1_moran": 0.33789466357283116,
+      "pc1_var_ratio": 0.16059428176188467,
+      "mean_dim_moran": 0.23285613514177045,
+      "median_dim_moran": 0.22934859602636945,
+      "patch_qc": {
+        "n_checked": 679,
+        "n_unique": 679,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P031",
+      "cohort": "GSE217237",
+      "n_spots": 760,
+      "pc1_moran": 0.6815535638455621,
+      "pc1_var_ratio": 0.19763170389876075,
+      "mean_dim_moran": 0.28923987759528547,
+      "median_dim_moran": 0.26768374405108397,
+      "patch_qc": {
+        "n_checked": 760,
+        "n_unique": 760,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P044",
+      "cohort": "GSE217237",
+      "n_spots": 2004,
+      "pc1_moran": 0.24609859256276606,
+      "pc1_var_ratio": 0.1778544988374266,
+      "mean_dim_moran": 0.22854422942505537,
+      "median_dim_moran": 0.21412096288471533,
+      "patch_qc": {
+        "n_checked": 1500,
+        "n_unique": 1500,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P045",
+      "cohort": "GSE217237",
+      "n_spots": 697,
+      "pc1_moran": 0.48672175390548006,
+      "pc1_var_ratio": 0.19347140830078782,
+      "mean_dim_moran": 0.26407437327635996,
+      "median_dim_moran": 0.25739503901037064,
+      "patch_qc": {
+        "n_checked": 697,
+        "n_unique": 697,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P047",
+      "cohort": "GSE217237",
+      "n_spots": 1180,
+      "pc1_moran": 0.4623990140574933,
+      "pc1_var_ratio": 0.2218060530533943,
+      "mean_dim_moran": 0.2841658072219522,
+      "median_dim_moran": 0.2732652351717071,
+      "patch_qc": {
+        "n_checked": 1180,
+        "n_unique": 1180,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P050",
+      "cohort": "GSE217237",
+      "n_spots": 1692,
+      "pc1_moran": 0.6397173574888193,
+      "pc1_var_ratio": 0.25392796964602316,
+      "mean_dim_moran": 0.3455831742116726,
+      "median_dim_moran": 0.3314733794530717,
+      "patch_qc": {
+        "n_checked": 1500,
+        "n_unique": 1500,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P057",
+      "cohort": "GSE217237",
+      "n_spots": 2387,
+      "pc1_moran": 0.40716488091480035,
+      "pc1_var_ratio": 0.20181349113539365,
+      "mean_dim_moran": 0.29556830015393143,
+      "median_dim_moran": 0.2867320928311451,
+      "patch_qc": {
+        "n_checked": 1500,
+        "n_unique": 1498,
+        "unique_fraction": 0.9986666666666667
+      }
+    },
+    {
+      "name": "ecto_P067",
+      "cohort": "GSE217237",
+      "n_spots": 2749,
+      "pc1_moran": 0.6366431545182218,
+      "pc1_var_ratio": 0.17620678342402477,
+      "mean_dim_moran": 0.28084923256372996,
+      "median_dim_moran": 0.26578246530102645,
+      "patch_qc": {
+        "n_checked": 1500,
+        "n_unique": 1500,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P080",
+      "cohort": "GSE217237",
+      "n_spots": 1124,
+      "pc1_moran": 0.683036960488614,
+      "pc1_var_ratio": 0.17637210027198508,
+      "mean_dim_moran": 0.2835652711926484,
+      "median_dim_moran": 0.26960404878585303,
+      "patch_qc": {
+        "n_checked": 1124,
+        "n_unique": 1124,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P081",
+      "cohort": "GSE217237",
+      "n_spots": 1005,
+      "pc1_moran": 0.4733245374501557,
+      "pc1_var_ratio": 0.18272788613444782,
+      "mean_dim_moran": 0.28661817281215307,
+      "median_dim_moran": 0.28195582265535274,
+      "patch_qc": {
+        "n_checked": 1005,
+        "n_unique": 1005,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P087",
+      "cohort": "GSE217237",
+      "n_spots": 1040,
+      "pc1_moran": 0.4979068299038505,
+      "pc1_var_ratio": 0.1609605410311769,
+      "mean_dim_moran": 0.28864861356615057,
+      "median_dim_moran": 0.2818917125800596,
+      "patch_qc": {
+        "n_checked": 1040,
+        "n_unique": 1040,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P097",
+      "cohort": "GSE217237",
+      "n_spots": 1280,
+      "pc1_moran": 0.506815199098053,
+      "pc1_var_ratio": 0.18526381465493147,
+      "mean_dim_moran": 0.2718455932686488,
+      "median_dim_moran": 0.2589723921942507,
+      "patch_qc": {
+        "n_checked": 1280,
+        "n_unique": 1280,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P105",
+      "cohort": "GSE217237",
+      "n_spots": 712,
+      "pc1_moran": 0.7629464154157987,
+      "pc1_var_ratio": 0.20766052956783726,
+      "mean_dim_moran": 0.31170912002742684,
+      "median_dim_moran": 0.2954460358143931,
+      "patch_qc": {
+        "n_checked": 712,
+        "n_unique": 712,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P107",
+      "cohort": "GSE217237",
+      "n_spots": 418,
+      "pc1_moran": 0.6946896826333987,
+      "pc1_var_ratio": 0.19469916554834882,
+      "mean_dim_moran": 0.2977704057403238,
+      "median_dim_moran": 0.27447839912053285,
+      "patch_qc": {
+        "n_checked": 418,
+        "n_unique": 418,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P108",
+      "cohort": "GSE217237",
+      "n_spots": 307,
+      "pc1_moran": 0.5345979404816422,
+      "pc1_var_ratio": 0.19222420076411828,
+      "mean_dim_moran": 0.27097821702730773,
+      "median_dim_moran": 0.26219823426414973,
+      "patch_qc": {
+        "n_checked": 307,
+        "n_unique": 307,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P114",
+      "cohort": "GSE217237",
+      "n_spots": 969,
+      "pc1_moran": 0.7941218308193814,
+      "pc1_var_ratio": 0.22512505024802035,
+      "mean_dim_moran": 0.3245523607885989,
+      "median_dim_moran": 0.30604367826882894,
+      "patch_qc": {
+        "n_checked": 969,
+        "n_unique": 969,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P117",
+      "cohort": "GSE217237",
+      "n_spots": 1283,
+      "pc1_moran": 0.754998211067875,
+      "pc1_var_ratio": 0.1785212978958646,
+      "mean_dim_moran": 0.27376196601719716,
+      "median_dim_moran": 0.24883317541638916,
+      "patch_qc": {
+        "n_checked": 1283,
+        "n_unique": 1283,
+        "unique_fraction": 1.0
+      }
+    },
+    {
+      "name": "ecto_P118",
+      "cohort": "GSE217237",
+      "n_spots": 1130,
+      "pc1_moran": 0.7149088295580414,
+      "pc1_var_ratio": 0.2842607837680947,
+      "mean_dim_moran": 0.3584980505968737,
+      "median_dim_moran": 0.33856779403777015,
+      "patch_qc": {
+        "n_checked": 1130,
+        "n_unique": 1130,
+        "unique_fraction": 1.0
+      }
+    }
+  ]
+}

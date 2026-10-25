@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "cohort": "GSM8594561_P2CRC",
+      "n_spots": 4269,
+      "moran_i": 0.6796,
+      "n_deg_perm_fdr05": 0,
+      "hpv_gene_overlap_in_deg": [],
+      "n_hpv_overlap": 0
+    }
+  ],
+  "config": {
+    "fm": "none",
+    "lambda_hpv": 0.5,
+    "lambda_neigh": 0.3,
+    "lambda_recon": 1.0,
+    "epochs": 2
+  }
+}

@@ -1,0 +1,1547 @@
+{
+  "run_id": "SIM_group_C_NONEIGH_seed1",
+  "n_samples": 70,
+  "per_sample_spots": {
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_040": 424,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_041": 412,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_042": 450,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_043": 395,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_044": 413,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_045": 390,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_046": 458,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_047": 419,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_048": 427,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_049": 429,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_050": 468,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_051": 422,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_052": 448,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_053": 435,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_054": 388,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_055": 426,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_056": 433,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_057": 432,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_058": 424,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_059": 418,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_060": 471,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_061": 429,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_062": 438,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_063": 446,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_064": 380,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_065": 398,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_066": 449,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_067": 435,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_068": 449,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_069": 417,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_000": 426,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_001": 432,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_002": 450,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_003": 405,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_004": 453,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_005": 440,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_006": 406,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_007": 441,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_008": 443,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_009": 456,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_010": 468,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_011": 418,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_012": 434,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_013": 453,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_014": 409,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_015": 401,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_016": 453,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_017": 390,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_018": 398,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_019": 413,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_020": 405,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_021": 441,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_022": 396,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_023": 439,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_024": 419,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_025": 438,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_026": 462,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_027": 421,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_028": 423,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_029": 410,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_030": 416,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_031": 426,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_032": 431,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_033": 450,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_034": 442,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_035": 463,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_036": 432,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_037": 412,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_038": 429,
+    "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_039": 433
+  },
+  "per_sample_score": {
+    "CA_040": 0.43633803725242615,
+    "CA_041": 0.3940008878707886,
+    "CA_042": 0.6004387140274048,
+    "CA_043": 0.5872250199317932,
+    "CA_044": 0.5277421474456787,
+    "CA_045": 0.2768719494342804,
+    "CA_046": 0.4536082446575165,
+    "CA_047": 0.23123659193515778,
+    "CA_048": 0.6128510236740112,
+    "CA_049": 0.5701444745063782,
+    "CA_050": 0.46994200348854065,
+    "CA_051": 0.5496296882629395,
+    "CA_052": 0.6259888410568237,
+    "CA_053": 0.5108288526535034,
+    "CA_054": 0.24878445267677307,
+    "CA_055": 0.060545239597558975,
+    "CA_056": 0.3042696416378021,
+    "CA_057": 0.49801012873649597,
+    "CA_058": 0.37185797095298767,
+    "CA_059": 0.2347373068332672,
+    "CA_060": 0.24320027232170105,
+    "CA_061": 0.34442198276519775,
+    "CA_062": 0.24124784767627716,
+    "CA_063": 0.5630729794502258,
+    "CA_064": 0.6263554692268372,
+    "CA_065": 0.6029041409492493,
+    "CA_066": 0.24878813326358795,
+    "CA_067": 0.5186184644699097,
+    "CA_068": 0.3869985044002533,
+    "CA_069": 0.12632039189338684,
+    "N_000": 0.6274660229682922,
+    "N_001": 0.559297502040863,
+    "N_002": 0.5067682266235352,
+    "N_003": 0.4292948544025421,
+    "N_004": 0.11781429499387741,
+    "N_005": 0.5603100061416626,
+    "N_006": 0.5788516402244568,
+    "N_007": 0.5894370675086975,
+    "N_008": 0.5890525579452515,
+    "N_009": 0.3022247850894928,
+    "N_010": 0.17351479828357697,
+    "N_011": 0.09785418212413788,
+    "N_012": 0.5412977933883667,
+    "N_013": 0.25930991768836975,
+    "N_014": 0.28007087111473083,
+    "N_015": 0.377763032913208,
+    "N_016": 0.5633848309516907,
+    "N_017": 0.3552978038787842,
+    "N_018": 0.5991299748420715,
+    "N_019": 0.6245598196983337,
+    "N_020": 0.2570614218711853,
+    "N_021": 0.4397980868816376,
+    "N_022": 0.49378466606140137,
+    "N_023": 0.48075100779533386,
+    "N_024": 0.0784207433462143,
+    "N_025": 0.5874424576759338,
+    "N_026": 0.37029364705085754,
+    "N_027": 0.6231769919395447,
+    "N_028": 0.5939406156539917,
+    "N_029": 0.1286534070968628,
+    "N_030": 0.6109668612480164,
+    "N_031": 0.6073690056800842,
+    "N_032": 0.6195517182350159,
+    "N_033": 0.5568344593048096,
+    "N_034": 0.6132773160934448,
+    "N_035": 0.6187931299209595,
+    "N_036": 0.26646989583969116,
+    "N_037": 0.3761093020439148,
+    "N_038": 0.6247550249099731,
+    "N_039": 0.4505387246608734
+  },
+  "progression_monotonicity": {
+    "order": [
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_000",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_001",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_002",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_003",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_004",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_005",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_006",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_007",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_008",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_009",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_010",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_011",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_012",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_013",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_014",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_015",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_016",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_017",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_018",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_019",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_020",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_021",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_022",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_023",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_024",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_025",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_026",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_027",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_028",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_029",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_030",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_031",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_032",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_033",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_034",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_035",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_036",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_037",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_038",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/N_039",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_040",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_041",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_042",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_043",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_044",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_045",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_046",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_047",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_048",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_049",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_050",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_051",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_052",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_053",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_054",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_055",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_056",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_057",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_058",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_059",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_060",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_061",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_062",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_063",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_064",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_065",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_066",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_067",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_068",
+      "/root/autodl-tmp/project/project4_cervix_multimodal/data/sim_st/group_C/CA_069"
+    ],
+    "severity": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "score": [
+      0.6274660229682922,
+      0.559297502040863,
+      0.5067682266235352,
+      0.4292948544025421,
+      0.11781429499387741,
+      0.5603100061416626,
+      0.5788516402244568,
+      0.5894370675086975,
+      0.5890525579452515,
+      0.3022247850894928,
+      0.17351479828357697,
+      0.09785418212413788,
+      0.5412977933883667,
+      0.25930991768836975,
+      0.28007087111473083,
+      0.377763032913208,
+      0.5633848309516907,
+      0.3552978038787842,
+      0.5991299748420715,
+      0.6245598196983337,
+      0.2570614218711853,
+      0.4397980868816376,
+      0.49378466606140137,
+      0.48075100779533386,
+      0.0784207433462143,
+      0.5874424576759338,
+      0.37029364705085754,
+      0.6231769919395447,
+      0.5939406156539917,
+      0.1286534070968628,
+      0.6109668612480164,
+      0.6073690056800842,
+      0.6195517182350159,
+      0.5568344593048096,
+      0.6132773160934448,
+      0.6187931299209595,
+      0.26646989583969116,
+      0.3761093020439148,
+      0.6247550249099731,
+      0.4505387246608734,
+      0.43633803725242615,
+      0.3940008878707886,
+      0.6004387140274048,
+      0.5872250199317932,
+      0.5277421474456787,
+      0.2768719494342804,
+      0.4536082446575165,
+      0.23123659193515778,
+      0.6128510236740112,
+      0.5701444745063782,
+      0.46994200348854065,
+      0.5496296882629395,
+      0.6259888410568237,
+      0.5108288526535034,
+      0.24878445267677307,
+      0.060545239597558975,
+      0.3042696416378021,
+      0.49801012873649597,
+      0.37185797095298767,
+      0.2347373068332672,
+      0.24320027232170105,
+      0.34442198276519775,
+      0.24124784767627716,
+      0.5630729794502258,
+      0.6263554692268372,
+      0.6029041409492493,
+      0.24878813326358795,
+      0.5186184644699097,
+      0.3869985044002533,
+      0.12632039189338684
+    ],
+    "kendall_tau": -0.11983425406454101,
+    "kendall_p": 0.2260804598053019,
+    "permutation_p": 0.8865113488651135,
+    "permutation_n": 10000,
+    "n_up": 0,
+    "n_pairs": 69
+  },
+  "histology_association": null,
+  "hpv_gene_set_mode": "kegg_hpv",
+  "hpv_gene_set_size": 108,
+  "fm": "none",
+  "lambda_neigh": 0.0,
+  "lambda_recon": 1.0,
+  "lambda_hpv": 0.5,
+  "lambda_sup": 2.0,
+  "lambda_prog": 1.0,
+  "recon_mse_proxy": 0.209342360496521,
+  "no_neigh": true,
+  "n_spots": 30000,
+  "score_median": 0.49449825286865234,
+  "score_std": 0.17198915779590607,
+  "high_risk_ratio": 0.5,
+  "hpv_proxy_auc": 0.8347932148213032,
+  "hpv_gene_high_low_gap": 0.49941861629486084,
+  "moran_i": 0.945694782977287,
+  "n_prior_genes": 108,
+  "n_deg_perm_fdr05_effect": 108,
+  "n_deg_naive_fdr05_effect": 108,
+  "spatial_perm_n": 10000,
+  "top_degs": [
+    [
+      "TK1",
+      0.5214834809303284,
+      9.999000099990002e-05,
+      6.2932398754515914e-136
+    ],
+    [
+      "MCM7",
+      0.5205835103988647,
+      9.999000099990002e-05,
+      4.018747621297455e-142
+    ],
+    [
+      "CCNA2",
+      0.5165420770645142,
+      9.999000099990002e-05,
+      1.1643757154488777e-140
+    ],
+    [
+      "CENPF",
+      0.5160718560218811,
+      9.999000099990002e-05,
+      1.1729210832863386e-133
+    ],
+    [
+      "OAS3",
+      0.5159558653831482,
+      9.999000099990002e-05,
+      9.280976008835088e-130
+    ],
+    [
+      "MDM2",
+      0.513932466506958,
+      9.999000099990002e-05,
+      4.6554993058576077e-123
+    ],
+    [
+      "MAPK3",
+      0.5138981342315674,
+      9.999000099990002e-05,
+      6.620218556946199e-127
+    ],
+    [
+      "HAVCR2",
+      0.5138411521911621,
+      9.999000099990002e-05,
+      5.2461573457676465e-132
+    ],
+    [
+      "PCNA",
+      0.5132172107696533,
+      9.999000099990002e-05,
+      1.7787535990736592e-125
+    ],
+    [
+      "MAPK1",
+      0.5131174921989441,
+      9.999000099990002e-05,
+      2.269383210245197e-131
+    ],
+    [
+      "PSMB9",
+      0.5125875473022461,
+      9.999000099990002e-05,
+      5.4269798649173105e-137
+    ],
+    [
+      "CDKN1A",
+      0.5124219059944153,
+      9.999000099990002e-05,
+      2.5757805099986723e-128
+    ],
+    [
+      "MYC",
+      0.5124191045761108,
+      9.999000099990002e-05,
+      5.534967888788867e-139
+    ],
+    [
+      "PIK3CA",
+      0.5114904642105103,
+      9.999000099990002e-05,
+      3.2793735326440145e-128
+    ],
+    [
+      "OAS2",
+      0.5107662677764893,
+      9.999000099990002e-05,
+      6.709983363899944e-130
+    ],
+    [
+      "RRM2",
+      0.5105671882629395,
+      9.999000099990002e-05,
+      6.2065739185247525e-124
+    ],
+    [
+      "POLA1",
+      0.5104630589485168,
+      9.999000099990002e-05,
+      2.2170846792297214e-123
+    ],
+    [
+      "CXCL8",
+      0.510278582572937,
+      9.999000099990002e-05,
+      5.226696153835726e-139
+    ],
+    [
+      "FEN1",
+      0.5100775957107544,
+      9.999000099990002e-05,
+      2.4494274695055423e-128
+    ],
+    [
+      "HLA-C",
+      0.509380578994751,
+      9.999000099990002e-05,
+      2.8671787358336815e-127
+    ],
+    [
+      "KRT8",
+      0.508782148361206,
+      9.999000099990002e-05,
+      7.368898536121724e-133
+    ],
+    [
+      "CD8A",
+      0.5085210800170898,
+      9.999000099990002e-05,
+      1.4276387823072696e-135
+    ],
+    [
+      "PTEN",
+      0.5082124471664429,
+      9.999000099990002e-05,
+      3.7572052981467806e-136
+    ],
+    [
+      "IFNB1",
+      0.5081539750099182,
+      9.999000099990002e-05,
+      2.7069554249045892e-132
+    ],
+    [
+      "EGFR",
+      0.507689356803894,
+      9.999000099990002e-05,
+      4.38024204477175e-125
+    ],
+    [
+      "PDCD1LG2",
+      0.5069994330406189,
+      9.999000099990002e-05,
+      6.875372575984235e-129
+    ],
+    [
+      "AURKB",
+      0.5066750049591064,
+      9.999000099990002e-05,
+      3.480301882192261e-126
+    ],
+    [
+      "TGFB1",
+      0.5064369440078735,
+      9.999000099990002e-05,
+      1.7546184368736857e-130
+    ],
+    [
+      "CCL2",
+      0.5059645175933838,
+      9.999000099990002e-05,
+      6.842390176225532e-136
+    ],
+    [
+      "TNF",
+      0.5056315660476685,
+      9.999000099990002e-05,
+      2.764227799093541e-123
+    ]
+  ],
+  "tme_markers": {
+    "HPV_related": [
+      [
+        "AKT1",
+        0.6870511770248413,
+        0.18851162493228912,
+        0.4985395669937134,
+        9.999000099990002e-05
+      ],
+      [
+        "AURKA",
+        0.6904942989349365,
+        0.18895776569843292,
+        0.5015365481376648,
+        9.999000099990002e-05
+      ],
+      [
+        "AURKB",
+        0.688880205154419,
+        0.1822051703929901,
+        0.5066750049591064,
+        9.999000099990002e-05
+      ],
+      [
+        "B2M",
+        0.687554121017456,
+        0.18785156309604645,
+        0.4997025728225708,
+        9.999000099990002e-05
+      ],
+      [
+        "BUB1",
+        0.6888389587402344,
+        0.18618746101856232,
+        0.5026515126228333,
+        9.999000099990002e-05
+      ],
+      [
+        "CCL2",
+        0.6929959654808044,
+        0.18703144788742065,
+        0.5059645175933838,
+        9.999000099990002e-05
+      ],
+      [
+        "CCL5",
+        0.6795448660850525,
+        0.1840178519487381,
+        0.4955270290374756,
+        9.999000099990002e-05
+      ],
+      [
+        "CCNA2",
+        0.7002177238464355,
+        0.18367567658424377,
+        0.5165420770645142,
+        9.999000099990002e-05
+      ],
+      [
+        "CCNB1",
+        0.6708135604858398,
+        0.1925816386938095,
+        0.47823190689086914,
+        9.999000099990002e-05
+      ],
+      [
+        "CCND1",
+        0.6913046836853027,
+        0.1871243268251419,
+        0.504180371761322,
+        9.999000099990002e-05
+      ],
+      [
+        "CCNE1",
+        0.6756062507629395,
+        0.1840270459651947,
+        0.49157920479774475,
+        9.999000099990002e-05
+      ],
+      [
+        "CD274",
+        0.683796763420105,
+        0.18641343712806702,
+        0.49738332629203796,
+        9.999000099990002e-05
+      ],
+      [
+        "CD4",
+        0.6764376163482666,
+        0.18454407155513763,
+        0.4918935298919678,
+        9.999000099990002e-05
+      ],
+      [
+        "CD8A",
+        0.6900981664657593,
+        0.18157708644866943,
+        0.5085210800170898,
+        9.999000099990002e-05
+      ],
+      [
+        "CDC25A",
+        0.6825284361839294,
+        0.18473106622695923,
+        0.4977973699569702,
+        9.999000099990002e-05
+      ],
+      [
+        "CDC6",
+        0.6767001748085022,
+        0.18835759162902832,
+        0.4883425831794739,
+        9.999000099990002e-05
+      ],
+      [
+        "CDK1",
+        0.6944423317909241,
+        0.18944847583770752,
+        0.5049938559532166,
+        9.999000099990002e-05
+      ],
+      [
+        "CDK2",
+        0.6911985278129578,
+        0.18793246150016785,
+        0.5032660961151123,
+        9.999000099990002e-05
+      ],
+      [
+        "CDK4",
+        0.680885374546051,
+        0.1854504495859146,
+        0.4954349398612976,
+        9.999000099990002e-05
+      ],
+      [
+        "CDKN1A",
+        0.6961575746536255,
+        0.1837356835603714,
+        0.5124219059944153,
+        9.999000099990002e-05
+      ],
+      [
+        "CDKN2A",
+        0.6716240644454956,
+        0.1805141717195511,
+        0.4911099076271057,
+        9.999000099990002e-05
+      ],
+      [
+        "CENPF",
+        0.7010862231254578,
+        0.18501435220241547,
+        0.5160718560218811,
+        9.999000099990002e-05
+      ],
+      [
+        "CREBBP",
+        0.6795761585235596,
+        0.184271901845932,
+        0.49530425667762756,
+        9.999000099990002e-05
+      ],
+      [
+        "CTLA4",
+        0.6849390864372253,
+        0.18570035696029663,
+        0.4992387294769287,
+        9.999000099990002e-05
+      ],
+      [
+        "CXCL10",
+        0.6866675615310669,
+        0.19014737010002136,
+        0.49652019143104553,
+        9.999000099990002e-05
+      ],
+      [
+        "CXCL8",
+        0.691749632358551,
+        0.18147103488445282,
+        0.510278582572937,
+        9.999000099990002e-05
+      ],
+      [
+        "E2F1",
+        0.6877049207687378,
+        0.18400348722934723,
+        0.5037014484405518,
+        9.999000099990002e-05
+      ],
+      [
+        "E2F2",
+        0.6843442916870117,
+        0.18659231066703796,
+        0.49775198101997375,
+        9.999000099990002e-05
+      ],
+      [
+        "E2F3",
+        0.6873946785926819,
+        0.18730250000953674,
+        0.5000921487808228,
+        9.999000099990002e-05
+      ],
+      [
+        "EGFR",
+        0.6878098845481873,
+        0.1801205426454544,
+        0.507689356803894,
+        9.999000099990002e-05
+      ],
+      [
+        "EP300",
+        0.6754416823387146,
+        0.18155013024806976,
+        0.49389153718948364,
+        9.999000099990002e-05
+      ],
+      [
+        "EPCAM",
+        0.6860486268997192,
+        0.18777203559875488,
+        0.49827659130096436,
+        9.999000099990002e-05
+      ],
+      [
+        "ERBB2",
+        0.6793785095214844,
+        0.18962107598781586,
+        0.4897574186325073,
+        9.999000099990002e-05
+      ],
+      [
+        "FEN1",
+        0.6992017030715942,
+        0.18912412226200104,
+        0.5100775957107544,
+        9.999000099990002e-05
+      ],
+      [
+        "FOXP3",
+        0.6933819651603699,
+        0.18875253200531006,
+        0.5046294331550598,
+        9.999000099990002e-05
+      ],
+      [
+        "GZMB",
+        0.6713035702705383,
+        0.1891595870256424,
+        0.48214399814605713,
+        9.999000099990002e-05
+      ],
+      [
+        "HAVCR2",
+        0.7037928104400635,
+        0.18995168805122375,
+        0.5138411521911621,
+        9.999000099990002e-05
+      ],
+      [
+        "HLA-A",
+        0.6805202960968018,
+        0.18392354249954224,
+        0.4965967535972595,
+        9.999000099990002e-05
+      ],
+      [
+        "HLA-B",
+        0.6831943988800049,
+        0.1889086365699768,
+        0.4942857623100281,
+        9.999000099990002e-05
+      ],
+      [
+        "HLA-C",
+        0.695654571056366,
+        0.18627402186393738,
+        0.509380578994751,
+        9.999000099990002e-05
+      ],
+      [
+        "HMGB2",
+        0.6722337007522583,
+        0.1852826178073883,
+        0.48695108294487,
+        9.999000099990002e-05
+      ],
+      [
+        "ICAM1",
+        0.6834519505500793,
+        0.18567603826522827,
+        0.4977759122848511,
+        9.999000099990002e-05
+      ],
+      [
+        "IFNB1",
+        0.69366854429245,
+        0.18551455438137054,
+        0.5081539750099182,
+        9.999000099990002e-05
+      ],
+      [
+        "IL1B",
+        0.6615104079246521,
+        0.1849331259727478,
+        0.4765772819519043,
+        9.999000099990002e-05
+      ],
+      [
+        "IL6",
+        0.686823844909668,
+        0.1885501742362976,
+        0.49827367067337036,
+        9.999000099990002e-05
+      ],
+      [
+        "IRF1",
+        0.6835868954658508,
+        0.18773235380649567,
+        0.49585455656051636,
+        9.999000099990002e-05
+      ],
+      [
+        "IRF3",
+        0.6873098015785217,
+        0.1845332682132721,
+        0.5027765035629272,
+        9.999000099990002e-05
+      ],
+      [
+        "JAK1",
+        0.6903102993965149,
+        0.18582120537757874,
+        0.5044890642166138,
+        9.999000099990002e-05
+      ],
+      [
+        "JAK2",
+        0.6748073101043701,
+        0.1860148161649704,
+        0.4887924790382385,
+        9.999000099990002e-05
+      ],
+      [
+        "KPNA2",
+        0.6774435639381409,
+        0.185942143201828,
+        0.49150142073631287,
+        9.999000099990002e-05
+      ],
+      [
+        "KRAS",
+        0.6714596152305603,
+        0.18514205515384674,
+        0.48631757497787476,
+        9.999000099990002e-05
+      ],
+      [
+        "KRT14",
+        0.6878337264060974,
+        0.18952827155590057,
+        0.49830543994903564,
+        9.999000099990002e-05
+      ],
+      [
+        "KRT17",
+        0.6802774667739868,
+        0.19448532164096832,
+        0.4857921600341797,
+        9.999000099990002e-05
+      ],
+      [
+        "KRT18",
+        0.6794685125350952,
+        0.18923769891262054,
+        0.4902307987213135,
+        9.999000099990002e-05
+      ],
+      [
+        "KRT19",
+        0.6786256432533264,
+        0.1874673217535019,
+        0.49115830659866333,
+        9.999000099990002e-05
+      ],
+      [
+        "KRT5",
+        0.6871442794799805,
+        0.18898209929466248,
+        0.498162180185318,
+        9.999000099990002e-05
+      ],
+      [
+        "KRT6A",
+        0.6834259033203125,
+        0.18919475376605988,
+        0.4942311644554138,
+        9.999000099990002e-05
+      ],
+      [
+        "KRT8",
+        0.6943767070770264,
+        0.18559452891349792,
+        0.508782148361206,
+        9.999000099990002e-05
+      ],
+      [
+        "LAG3",
+        0.673191249370575,
+        0.1897323578596115,
+        0.48345887660980225,
+        9.999000099990002e-05
+      ],
+      [
+        "LIG1",
+        0.6848123073577881,
+        0.18576084077358246,
+        0.49905145168304443,
+        9.999000099990002e-05
+      ],
+      [
+        "MAPK1",
+        0.6943672895431519,
+        0.18124979734420776,
+        0.5131174921989441,
+        9.999000099990002e-05
+      ],
+      [
+        "MAPK3",
+        0.6983724236488342,
+        0.18447431921958923,
+        0.5138981342315674,
+        9.999000099990002e-05
+      ],
+      [
+        "MCM2",
+        0.6691843867301941,
+        0.18352074921131134,
+        0.48566365242004395,
+        9.999000099990002e-05
+      ],
+      [
+        "MCM3",
+        0.6870130300521851,
+        0.18532711267471313,
+        0.5016859173774719,
+        9.999000099990002e-05
+      ],
+      [
+        "MCM4",
+        0.6887891888618469,
+        0.18691454827785492,
+        0.5018746256828308,
+        9.999000099990002e-05
+      ],
+      [
+        "MCM5",
+        0.6794916391372681,
+        0.18318428099155426,
+        0.496307373046875,
+        9.999000099990002e-05
+      ],
+      [
+        "MCM6",
+        0.6754804849624634,
+        0.18607184290885925,
+        0.4894086420536041,
+        9.999000099990002e-05
+      ],
+      [
+        "MCM7",
+        0.7049679756164551,
+        0.18438449501991272,
+        0.5205835103988647,
+        9.999000099990002e-05
+      ],
+      [
+        "MDM2",
+        0.6994666457176208,
+        0.18553420901298523,
+        0.513932466506958,
+        9.999000099990002e-05
+      ],
+      [
+        "MKI67",
+        0.6776198148727417,
+        0.18928876519203186,
+        0.48833104968070984,
+        9.999000099990002e-05
+      ],
+      [
+        "MTOR",
+        0.6810606122016907,
+        0.18556691706180573,
+        0.49549371004104614,
+        9.999000099990002e-05
+      ],
+      [
+        "MX1",
+        0.6892919540405273,
+        0.18468701839447021,
+        0.5046049356460571,
+        9.999000099990002e-05
+      ],
+      [
+        "MYC",
+        0.6997912526130676,
+        0.1873721480369568,
+        0.5124191045761108,
+        9.999000099990002e-05
+      ],
+      [
+        "NUMA1",
+        0.6862420439720154,
+        0.18751206994056702,
+        0.49872997403144836,
+        9.999000099990002e-05
+      ],
+      [
+        "OAS1",
+        0.6764821410179138,
+        0.18153329193592072,
+        0.4949488639831543,
+        9.999000099990002e-05
+      ],
+      [
+        "OAS2",
+        0.6971914172172546,
+        0.18642516434192657,
+        0.5107662677764893,
+        9.999000099990002e-05
+      ],
+      [
+        "OAS3",
+        0.7026916146278381,
+        0.18673576414585114,
+        0.5159558653831482,
+        9.999000099990002e-05
+      ],
+      [
+        "ORC1",
+        0.6829385161399841,
+        0.18797965347766876,
+        0.49495887756347656,
+        9.999000099990002e-05
+      ],
+      [
+        "PCNA",
+        0.6959555149078369,
+        0.1827383190393448,
+        0.5132172107696533,
+        9.999000099990002e-05
+      ],
+      [
+        "PDCD1",
+        0.6941057443618774,
+        0.19096876680850983,
+        0.5031369924545288,
+        9.999000099990002e-05
+      ],
+      [
+        "PDCD1LG2",
+        0.6930848360061646,
+        0.18608541786670685,
+        0.5069994330406189,
+        9.999000099990002e-05
+      ],
+      [
+        "PIK3CA",
+        0.6993684768676758,
+        0.18787802755832672,
+        0.5114904642105103,
+        9.999000099990002e-05
+      ],
+      [
+        "PLK1",
+        0.6866590976715088,
+        0.18378233909606934,
+        0.5028767585754395,
+        9.999000099990002e-05
+      ],
+      [
+        "POLA1",
+        0.6980854272842407,
+        0.18762236833572388,
+        0.5104630589485168,
+        9.999000099990002e-05
+      ],
+      [
+        "PRF1",
+        0.6546177268028259,
+        0.1923753023147583,
+        0.4622424244880676,
+        9.999000099990002e-05
+      ],
+      [
+        "PRIM1",
+        0.6814733743667603,
+        0.18765203654766083,
+        0.49382132291793823,
+        9.999000099990002e-05
+      ],
+      [
+        "PSMB8",
+        0.6686442494392395,
+        0.19100400805473328,
+        0.4776402413845062,
+        9.999000099990002e-05
+      ],
+      [
+        "PSMB9",
+        0.6975354552268982,
+        0.1849478781223297,
+        0.5125875473022461,
+        9.999000099990002e-05
+      ],
+      [
+        "PSME1",
+        0.6785848736763,
+        0.18800215423107147,
+        0.4905827045440674,
+        9.999000099990002e-05
+      ],
+      [
+        "PSME2",
+        0.6825085878372192,
+        0.18733981251716614,
+        0.4951687753200531,
+        9.999000099990002e-05
+      ],
+      [
+        "PTEN",
+        0.6913577318191528,
+        0.18314528465270996,
+        0.5082124471664429,
+        9.999000099990002e-05
+      ],
+      [
+        "RB1",
+        0.6663219928741455,
+        0.18084049224853516,
+        0.48548150062561035,
+        9.999000099990002e-05
+      ],
+      [
+        "RRM2",
+        0.6955601572990417,
+        0.1849929690361023,
+        0.5105671882629395,
+        9.999000099990002e-05
+      ],
+      [
+        "SMAD2",
+        0.6888154745101929,
+        0.1854381561279297,
+        0.5033773183822632,
+        9.999000099990002e-05
+      ],
+      [
+        "SMAD3",
+        0.6799442172050476,
+        0.18493977189064026,
+        0.49500444531440735,
+        9.999000099990002e-05
+      ],
+      [
+        "SMAD4",
+        0.6885603070259094,
+        0.18657617270946503,
+        0.5019841194152832,
+        9.999000099990002e-05
+      ],
+      [
+        "STAT1",
+        0.6927640438079834,
+        0.19149748980998993,
+        0.5012665390968323,
+        9.999000099990002e-05
+      ],
+      [
+        "TAP1",
+        0.6774618625640869,
+        0.18586724996566772,
+        0.4915946125984192,
+        9.999000099990002e-05
+      ],
+      [
+        "TAP2",
+        0.6823182106018066,
+        0.1862783133983612,
+        0.49603989720344543,
+        9.999000099990002e-05
+      ],
+      [
+        "TGFB1",
+        0.6887496113777161,
+        0.18231268227100372,
+        0.5064369440078735,
+        9.999000099990002e-05
+      ],
+      [
+        "TIGIT",
+        0.6745699048042297,
+        0.18605361878871918,
+        0.48851627111434937,
+        9.999000099990002e-05
+      ],
+      [
+        "TK1",
+        0.7073675394058228,
+        0.18588405847549438,
+        0.5214834809303284,
+        9.999000099990002e-05
+      ],
+      [
+        "TNF",
+        0.688622236251831,
+        0.1829906553030014,
+        0.5056315660476685,
+        9.999000099990002e-05
+      ],
+      [
+        "TOP2A",
+        0.6914117336273193,
+        0.18761131167411804,
+        0.5038003921508789,
+        9.999000099990002e-05
+      ],
+      [
+        "TP53",
+        0.6889021992683411,
+        0.18714597821235657,
+        0.5017561912536621,
+        9.999000099990002e-05
+      ],
+      [
+        "TP63",
+        0.6801424026489258,
+        0.19167211651802063,
+        0.48847028613090515,
+        9.999000099990002e-05
+      ],
+      [
+        "TYMS",
+        0.6898053288459778,
+        0.18496595323085785,
+        0.5048393607139587,
+        9.999000099990002e-05
+      ],
+      [
+        "VCAM1",
+        0.6763783693313599,
+        0.18499881029129028,
+        0.4913795590400696,
+        9.999000099990002e-05
+      ]
+    ],
+    "Immuno_inhibitory": [
+      [
+        "PDCD1",
+        0.6941057443618774,
+        0.19096876680850983,
+        0.5031369924545288,
+        9.999000099990002e-05
+      ],
+      [
+        "CTLA4",
+        0.6849390864372253,
+        0.18570035696029663,
+        0.4992387294769287,
+        9.999000099990002e-05
+      ],
+      [
+        "LAG3",
+        0.673191249370575,
+        0.1897323578596115,
+        0.48345887660980225,
+        9.999000099990002e-05
+      ],
+      [
+        "HAVCR2",
+        0.7037928104400635,
+        0.18995168805122375,
+        0.5138411521911621,
+        9.999000099990002e-05
+      ],
+      [
+        "TIGIT",
+        0.6745699048042297,
+        0.18605361878871918,
+        0.48851627111434937,
+        9.999000099990002e-05
+      ],
+      [
+        "PDCD1LG2",
+        0.6930848360061646,
+        0.18608541786670685,
+        0.5069994330406189,
+        9.999000099990002e-05
+      ]
+    ],
+    "Immune_activation": [
+      [
+        "CD8A",
+        0.6900981664657593,
+        0.18157708644866943,
+        0.5085210800170898,
+        9.999000099990002e-05
+      ],
+      [
+        "GZMB",
+        0.6713035702705383,
+        0.1891595870256424,
+        0.48214399814605713,
+        9.999000099990002e-05
+      ],
+      [
+        "PRF1",
+        0.6546177268028259,
+        0.1923753023147583,
+        0.4622424244880676,
+        9.999000099990002e-05
+      ],
+      [
+        "CXCL10",
+        0.6866675615310669,
+        0.19014737010002136,
+        0.49652019143104553,
+        9.999000099990002e-05
+      ]
+    ],
+    "Macrophage_M1": [
+      [
+        "TNF",
+        0.688622236251831,
+        0.1829906553030014,
+        0.5056315660476685,
+        9.999000099990002e-05
+      ]
+    ],
+    "Macrophage_M2": [
+      [
+        "TGFB1",
+        0.6887496113777161,
+        0.18231268227100372,
+        0.5064369440078735,
+        9.999000099990002e-05
+      ]
+    ],
+    "Proliferation": [
+      [
+        "MKI67",
+        0.6776198148727417,
+        0.18928876519203186,
+        0.48833104968070984,
+        9.999000099990002e-05
+      ],
+      [
+        "PCNA",
+        0.6959555149078369,
+        0.1827383190393448,
+        0.5132172107696533,
+        9.999000099990002e-05
+      ],
+      [
+        "TOP2A",
+        0.6914117336273193,
+        0.18761131167411804,
+        0.5038003921508789,
+        9.999000099990002e-05
+      ],
+      [
+        "CCNB1",
+        0.6708135604858398,
+        0.1925816386938095,
+        0.47823190689086914,
+        9.999000099990002e-05
+      ],
+      [
+        "CDK1",
+        0.6944423317909241,
+        0.18944847583770752,
+        0.5049938559532166,
+        9.999000099990002e-05
+      ]
+    ],
+    "Epithelial": [
+      [
+        "EPCAM",
+        0.6860486268997192,
+        0.18777203559875488,
+        0.49827659130096436,
+        9.999000099990002e-05
+      ],
+      [
+        "KRT8",
+        0.6943767070770264,
+        0.18559452891349792,
+        0.508782148361206,
+        9.999000099990002e-05
+      ],
+      [
+        "KRT18",
+        0.6794685125350952,
+        0.18923769891262054,
+        0.4902307987213135,
+        9.999000099990002e-05
+      ],
+      [
+        "KRT19",
+        0.6786256432533264,
+        0.1874673217535019,
+        0.49115830659866333,
+        9.999000099990002e-05
+      ]
+    ],
+    "Tumor_drivers": [
+      [
+        "TP53",
+        0.6889021992683411,
+        0.18714597821235657,
+        0.5017561912536621,
+        9.999000099990002e-05
+      ],
+      [
+        "MYC",
+        0.6997912526130676,
+        0.1873721480369568,
+        0.5124191045761108,
+        9.999000099990002e-05
+      ],
+      [
+        "EGFR",
+        0.6878098845481873,
+        0.1801205426454544,
+        0.507689356803894,
+        9.999000099990002e-05
+      ],
+      [
+        "ERBB2",
+        0.6793785095214844,
+        0.18962107598781586,
+        0.4897574186325073,
+        9.999000099990002e-05
+      ],
+      [
+        "PIK3CA",
+        0.6993684768676758,
+        0.18787802755832672,
+        0.5114904642105103,
+        9.999000099990002e-05
+      ],
+      [
+        "KRAS",
+        0.6714596152305603,
+        0.18514205515384674,
+        0.48631757497787476,
+        9.999000099990002e-05
+      ],
+      [
+        "MTOR",
+        0.6810606122016907,
+        0.18556691706180573,
+        0.49549371004104614,
+        9.999000099990002e-05
+      ]
+    ]
+  },
+  "holdout": null
+}

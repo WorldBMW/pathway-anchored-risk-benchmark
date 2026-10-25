@@ -1,0 +1,30 @@
+{
+  "title": "Auditable repair of identity leakage in group-structured data",
+  "upload_type": "software",
+  "description": "Code, simulation manifests and figure generators for the manuscript 'An auditable instrument for identity leakage in group-structured data: the sibling-unit trap, decision boundaries, and validation in spatial transcriptomics'. Contains the cohort simulator, the label-dependence audit (LDI, tau_LOO / tau_LGO / tau_LDO, block permutation with B = 2000 and seed 20261010), the cross-domain runner, the unit-resolution ladder and the within-group-label control, together with every script that regenerates the reported tables and figures from public data.",
+  "creators": [
+    {"name": "Bai, Mingwei", "affiliation": "JiMei Technology Group Co., Ltd., Shenyang, China"},
+    {"name": "Gu, Zhengmin", "affiliation": "Medical Record Management Center, The First Hospital of China Medical University, Shenyang, China"},
+    {"name": "Zhang, Ye", "affiliation": "Medical Record Management Center, The First Hospital of China Medical University, Shenyang, China"},
+    {"name": "Ni, Zhiping", "affiliation": "JiMei Technology Group Co., Ltd., Shenyang, China"},
+    {"name": "Guo, Lang", "affiliation": "School of Pharmacy, Shenyang Medical College, Shenyang, China"}
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": [
+    "identity leakage",
+    "group-structured data",
+    "model auditing",
+    "evaluation integrity",
+    "spatial transcriptomics",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/WorldBMW/cervix-st-multimodal",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Archived from the tagged GitHub release that corresponds to the submitted manuscript. Public data only: GSE268014, GSE278936, GSE316098, UCI HAR and the UCI Gas Sensor Array Drift are re-downloaded by the scripts and are not redistributed here."
+}

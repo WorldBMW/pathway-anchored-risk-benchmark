@@ -1,0 +1,20 @@
+﻿
+========================================================================
+MANUAL DOWNLOAD CHECKLIST (use if HTTP download fails on this machine)
+========================================================================
+1. Open in browser:  https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE208654&format=file
+   (size ~222 MB; saves as GSE208654_RAW.tar)
+2. Place downloaded file at:  G:\project4_cervix_multimodal\data\st_visium\_dl_tmp\GSE208654\GSE208654_RAW.tar
+   (or any path; then run:  python scripts/download_and_prepare_cervix.py --tar <path>)
+3. Re-run this script; it will extract and rebuild the geo_cesc sample dirs.
+
+4. (Optional) 10x Visium FFPE demo block cervical cancer sample
+   Already at data/st_visium/cervical_cancer_1/ (packed with Space Ranger).
+   If missing, download from 10x Genomics website -> Resources -> Datasets
+   -> 'Visium FFPE Human Cervical Cancer' (Block C00084155.1a).
+
+Other public cervical Visium datasets we are aware of (no GEO GSM):
+  - Pavilion et al. 2024 (bioRxiv 10.1101/2024.10.02.611623): 7x HPV+ HSIL/CIN3 Visium sections; raw H&E TIFs on UQ eSpace; request processed ST matrices from authors.
+  - Zhou et al. 2024 (J Transl Med 22:1163): CC squamous cell carcinoma ST; contact corresponding author for GEO accession / processed files.
+  - Wu et al. 2025 (Commun Biol Xenium): 22 FFPE sections but Xenium platform (subcellular, not Visium); not compatible with Visium pipeline.
+========================================================================

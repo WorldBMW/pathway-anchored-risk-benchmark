@@ -1,0 +1,26 @@
+{
+  "rows": [
+    {
+      "cohort": "breast_cancer_1",
+      "n_spots": 2518,
+      "moran_i": 0.1862,
+      "n_deg_perm_fdr05": 20,
+      "hpv_gene_overlap_in_deg": [
+        "GATA3",
+        "KPNA2",
+        "KRT18",
+        "KRT8",
+        "MX1",
+        "TOP2A"
+      ],
+      "n_hpv_overlap": 6
+    }
+  ],
+  "config": {
+    "fm": "uni",
+    "lambda_hpv": 1.0,
+    "lambda_neigh": 0.3,
+    "lambda_recon": 0.3,
+    "epochs": 20
+  }
+}

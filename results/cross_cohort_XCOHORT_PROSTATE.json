@@ -1,0 +1,23 @@
+{
+  "rows": [
+    {
+      "cohort": "prostate_cancer_1",
+      "n_spots": 4371,
+      "moran_i": 0.2697,
+      "n_deg_perm_fdr05": 8,
+      "hpv_gene_overlap_in_deg": [
+        "KRT18",
+        "KRT8",
+        "MYC"
+      ],
+      "n_hpv_overlap": 3
+    }
+  ],
+  "config": {
+    "fm": "uni",
+    "lambda_hpv": 1.0,
+    "lambda_neigh": 0.3,
+    "lambda_recon": 0.3,
+    "epochs": 20
+  }
+}

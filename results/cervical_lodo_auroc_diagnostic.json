@@ -1,0 +1,22 @@
+{
+ "purpose": "diagnostic only, NOT used in the manuscript",
+ "question": "can the companion study's in-sample AUROC 1.00 -> LODO AUROC 0.497 be re-derived from this project's own frozen cervical embeddings?",
+ "answer": "no",
+ "input": "results/dump_cervix.json (35 slice-level embeddings, 128 dim, ordinal severity 0/1/2; 31 normal, 4 neoplastic)",
+ "probe": "closed-form ridge alpha=1, standardised inside the training fold, leave-one-donor-out, same family as the tau_LDO probe",
+ "result": {
+  "in_sample_auroc": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "lodo_auroc": [
+   0.967741935483871,
+   0.7338709677419355,
+   0.7258064516129032
+  ],
+  "n_positive": 4,
+  "n_donors": 35
+ },
+ "conclusion": "there is no collapse on this cohort: slice-level LODO AUROC is 0.73-0.97 and tau_in 0.462 falls only to tau_LOO 0.42 (retention 0.92). The companion's 1.00 -> 0.497 must come from a different evaluation unit or a different model, so it cannot be cited as corroboration on the same structure."
+}

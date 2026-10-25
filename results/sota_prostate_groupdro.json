@@ -1,0 +1,176 @@
+{
+  "params": {
+    "data": "data/st_visium/geo_prostate_GSE278936",
+    "out": "results/sota_prostate_groupdro.json",
+    "log_every": 50,
+    "n_genes": 2000,
+    "k": 6,
+    "dim": 128,
+    "hid": 256,
+    "lr": 0.001,
+    "epochs": 300,
+    "adv_list": [
+      1.0,
+      10.0
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "grl_cap": 1.0,
+    "warmup": 50,
+    "clip": 1.0,
+    "adv_sn": true,
+    "seed": 2,
+    "backbone": "gat",
+    "method": "groupdro",
+    "recon_chunk": 0,
+    "dump_xs": false,
+    "dump_w": "",
+    "dump_lam": 2.0,
+    "device": "cuda:0"
+  },
+  "n_spots": 134509,
+  "n_genes_union": 6312,
+  "n_donors": 52,
+  "samples": [
+    "BPH_1",
+    "BPH_2",
+    "BPH_3",
+    "BPH_4",
+    "CRPC_1",
+    "CRPC_2",
+    "CRPC_3",
+    "CRPC_4",
+    "CRPC_5",
+    "MET_A",
+    "MET_B",
+    "MET_C",
+    "MET_D",
+    "NEADT_1",
+    "NEADT_10",
+    "NEADT_11",
+    "NEADT_12",
+    "NEADT_13",
+    "NEADT_14",
+    "NEADT_15",
+    "NEADT_16",
+    "NEADT_17",
+    "NEADT_18",
+    "NEADT_19",
+    "NEADT_2",
+    "NEADT_20",
+    "NEADT_21",
+    "NEADT_22",
+    "NEADT_3",
+    "NEADT_4",
+    "NEADT_5",
+    "NEADT_6",
+    "NEADT_7",
+    "NEADT_8",
+    "NEADT_9",
+    "TRNA_1",
+    "TRNA_10",
+    "TRNA_11",
+    "TRNA_12",
+    "TRNA_13",
+    "TRNA_14",
+    "TRNA_15",
+    "TRNA_16",
+    "TRNA_17",
+    "TRNA_2",
+    "TRNA_3",
+    "TRNA_4",
+    "TRNA_5",
+    "TRNA_6",
+    "TRNA_7",
+    "TRNA_8",
+    "TRNA_9"
+  ],
+  "scan": {
+    "s0_lam1.0": {
+      "tau_lodo": 0.2933184213952714,
+      "p_refit": 0.0124987501249875,
+      "tau_insample": 0.3805211953235953,
+      "sigma_null": 0.13919627444144297,
+      "ldi": 2.100044865196761,
+      "tau_ldo": 0.29331842139527137,
+      "n_samples": 52,
+      "train_seconds": 68.9
+    },
+    "s0_lam10.0": {
+      "tau_lodo": 0.31313723365170865,
+      "p_refit": 0.007799220077992201,
+      "tau_insample": 0.3805211953235953,
+      "sigma_null": 0.14273927290305224,
+      "ldi": 2.1867649127210464,
+      "tau_ldo": 0.3131372336517086,
+      "n_samples": 52,
+      "train_seconds": 68.4
+    },
+    "s1_lam1.0": {
+      "tau_lodo": 0.3448473332620082,
+      "p_refit": 0.0022997700229977,
+      "tau_insample": 0.3805211953235953,
+      "sigma_null": 0.1408330975914868,
+      "ldi": 2.4415236130032647,
+      "tau_ldo": 0.3448473332620082,
+      "n_samples": 52,
+      "train_seconds": 68.3
+    },
+    "s1_lam10.0": {
+      "tau_lodo": 0.33295604590814587,
+      "p_refit": 0.0040995900409959,
+      "tau_insample": 0.3805211953235953,
+      "sigma_null": 0.14214933321070017,
+      "ldi": 2.3352627719759025,
+      "tau_ldo": 0.33295604590814587,
+      "n_samples": 52,
+      "train_seconds": 67.7
+    },
+    "s2_lam1.0": {
+      "tau_lodo": 0.33295604590814587,
+      "p_refit": 0.0029997000299970002,
+      "tau_insample": 0.3805211953235953,
+      "sigma_null": 0.14093144975823724,
+      "ldi": 2.3554433483626567,
+      "tau_ldo": 0.33295604590814587,
+      "n_samples": 52,
+      "train_seconds": 68.4
+    },
+    "s2_lam10.0": {
+      "tau_lodo": 0.19422436011308508,
+      "p_refit": 0.10278972102789721,
+      "tau_insample": 0.3805211953235953,
+      "sigma_null": 0.14582278272397042,
+      "ldi": 1.325062905148653,
+      "tau_ldo": 0.19422436011308508,
+      "n_samples": 52,
+      "train_seconds": 67.7
+    }
+  },
+  "lam_means": {
+    "1.0": {
+      "mean_ldi": 2.2990039421875608,
+      "mean_tau_lodo": 0.32370726685514184,
+      "n_seeds": 3
+    },
+    "10.0": {
+      "mean_ldi": 1.9490301966152008,
+      "mean_tau_lodo": 0.28010587989097985,
+      "n_seeds": 3
+    }
+  },
+  "verdict": {
+    "E3": "no-go",
+    "base_mean_ldi": NaN,
+    "base_mean_tau_lodo": NaN,
+    "passing_lambdas": [],
+    "gate": {
+      "ldi": 1.645,
+      "fidelity_keep": 0.7,
+      "fidelity_metric": "tau_lodo"
+    }
+  }
+}

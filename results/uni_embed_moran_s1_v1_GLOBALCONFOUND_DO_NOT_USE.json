@@ -1,0 +1,281 @@
+{
+  "note": "Supplementary Note S1 — spatial autocorrelation of frozen UNI patch embeddings (morphology), independent of the risk head",
+  "config": {
+    "n_samples": 35,
+    "n_spots": 46820,
+    "feat_dim": 1024,
+    "fm": "uni",
+    "k_neighbors": 6,
+    "coord_offset_per_sample": 10000.0,
+    "standardization": "global per-dim z-score over all spots",
+    "pc1_var_ratio": 0.46623800783421115,
+    "moran_definition": "identical to src.models.moran_i / train_st.py",
+    "null": "coordinate-fixed permutation of PC1 across spots, B=10000, seed=20260915"
+  },
+  "pc1_moran_i": 0.9954838907725947,
+  "pc1_perm_p": 9.999000099990002e-05,
+  "pc1_perm_null": {
+    "mean": -1.923049850983745e-05,
+    "q025": -0.005106333089062767,
+    "q975": 0.005219445446853321,
+    "q990": 0.006051990882100163,
+    "max": 0.01039171966813216
+  },
+  "per_dim_moran": {
+    "mean": 0.7372529233485956,
+    "median": 0.7862298169633792,
+    "q25": 0.6276553294031335,
+    "q75": 0.889136420264278,
+    "min": 0.15805376865022105,
+    "max": 0.986027142460406,
+    "fraction_positive": 1.0
+  },
+  "per_sample": [
+    {
+      "name": "CA_HPV_1",
+      "n_spots": 1757,
+      "pc1_moran": 0.9479950125565196,
+      "mean_dim_moran": 0.5134295932648208,
+      "median_dim_moran": 0.5121228966447728
+    },
+    {
+      "name": "CA_HPV_2",
+      "n_spots": 1593,
+      "pc1_moran": 0.9189831557445168,
+      "mean_dim_moran": 0.48106563014281634,
+      "median_dim_moran": 0.47018330813402864
+    },
+    {
+      "name": "HSIL_HPV",
+      "n_spots": 579,
+      "pc1_moran": 0.7803058754792312,
+      "mean_dim_moran": 0.3260835619762065,
+      "median_dim_moran": 0.29090768275762446
+    },
+    {
+      "name": "N_HPV",
+      "n_spots": 1054,
+      "pc1_moran": 0.8192590439064378,
+      "mean_dim_moran": 0.38007180029922505,
+      "median_dim_moran": 0.36507272440757493
+    },
+    {
+      "name": "cervical_cancer_1",
+      "n_spots": 2781,
+      "pc1_moran": NaN,
+      "mean_dim_moran": 0.0,
+      "median_dim_moran": 0.0
+    },
+    {
+      "name": "ecto_P001",
+      "n_spots": 1379,
+      "pc1_moran": -0.0021802325581395353,
+      "mean_dim_moran": -0.0021078420239825585,
+      "median_dim_moran": -0.0021802325581395353
+    },
+    {
+      "name": "ecto_P004",
+      "n_spots": 1256,
+      "pc1_moran": -0.00707799145299145,
+      "mean_dim_moran": -0.006898276828942329,
+      "median_dim_moran": -0.007077991453802487
+    },
+    {
+      "name": "ecto_P007",
+      "n_spots": 978,
+      "pc1_moran": -0.00040509259259256976,
+      "mean_dim_moran": -0.0003967850298401424,
+      "median_dim_moran": -0.00040509259259965903
+    },
+    {
+      "name": "ecto_P008",
+      "n_spots": 825,
+      "pc1_moran": NaN,
+      "mean_dim_moran": 0.0,
+      "median_dim_moran": 0.0
+    },
+    {
+      "name": "ecto_P014",
+      "n_spots": 1988,
+      "pc1_moran": -0.0021841397849462364,
+      "mean_dim_moran": -0.00210948656657267,
+      "median_dim_moran": -0.002184139784669829
+    },
+    {
+      "name": "ecto_P016",
+      "n_spots": 840,
+      "pc1_moran": -0.009415064102564102,
+      "mean_dim_moran": -0.009176009740587236,
+      "median_dim_moran": -0.009415064102548984
+    },
+    {
+      "name": "ecto_P018",
+      "n_spots": 1808,
+      "pc1_moran": -0.008835565476190476,
+      "mean_dim_moran": -0.008516311645727697,
+      "median_dim_moran": -0.00883556547653694
+    },
+    {
+      "name": "ecto_P020",
+      "n_spots": 2966,
+      "pc1_moran": NaN,
+      "mean_dim_moran": 0.0,
+      "median_dim_moran": 0.0
+    },
+    {
+      "name": "ecto_P021",
+      "n_spots": 1831,
+      "pc1_moran": -0.0038377192982456143,
+      "mean_dim_moran": -0.0036840606154057006,
+      "median_dim_moran": -0.0038377192982456134
+    },
+    {
+      "name": "ecto_P023",
+      "n_spots": 1171,
+      "pc1_moran": NaN,
+      "mean_dim_moran": 0.0,
+      "median_dim_moran": 0.0
+    },
+    {
+      "name": "ecto_P024",
+      "n_spots": 1167,
+      "pc1_moran": 0.009490740740740746,
+      "mean_dim_moran": 0.009166350188078709,
+      "median_dim_moran": 0.00949074074074075
+    },
+    {
+      "name": "ecto_P026",
+      "n_spots": 1431,
+      "pc1_moran": -0.016098484848484845,
+      "mean_dim_moran": -0.01570545543388427,
+      "median_dim_moran": -0.016098484848485337
+    },
+    {
+      "name": "ecto_P028",
+      "n_spots": 679,
+      "pc1_moran": -0.010912698412698409,
+      "mean_dim_moran": -0.010475764199328347,
+      "median_dim_moran": -0.010912698412390428
+    },
+    {
+      "name": "ecto_P031",
+      "n_spots": 760,
+      "pc1_moran": -0.003925120772946862,
+      "mean_dim_moran": -0.0037717957427536243,
+      "median_dim_moran": -0.003925120772946861
+    },
+    {
+      "name": "ecto_P044",
+      "n_spots": 2004,
+      "pc1_moran": 0.006670026881720443,
+      "mean_dim_moran": 0.006429020051271159,
+      "median_dim_moran": 0.0066700268817383185
+    },
+    {
+      "name": "ecto_P045",
+      "n_spots": 697,
+      "pc1_moran": NaN,
+      "mean_dim_moran": 0.0,
+      "median_dim_moran": 0.0
+    },
+    {
+      "name": "ecto_P047",
+      "n_spots": 1180,
+      "pc1_moran": NaN,
+      "mean_dim_moran": 0.0,
+      "median_dim_moran": 0.0
+    },
+    {
+      "name": "ecto_P050",
+      "n_spots": 1692,
+      "pc1_moran": NaN,
+      "mean_dim_moran": 0.0,
+      "median_dim_moran": 0.0
+    },
+    {
+      "name": "ecto_P057",
+      "n_spots": 2387,
+      "pc1_moran": NaN,
+      "mean_dim_moran": 0.0,
+      "median_dim_moran": 0.0
+    },
+    {
+      "name": "ecto_P067",
+      "n_spots": 2749,
+      "pc1_moran": NaN,
+      "mean_dim_moran": 0.0,
+      "median_dim_moran": 0.0
+    },
+    {
+      "name": "ecto_P080",
+      "n_spots": 1124,
+      "pc1_moran": -0.0040178571428571425,
+      "mean_dim_moran": -0.0038805280436146057,
+      "median_dim_moran": -0.00401785714278109
+    },
+    {
+      "name": "ecto_P081",
+      "n_spots": 1005,
+      "pc1_moran": 0.012872208436724576,
+      "mean_dim_moran": 0.012407099342819479,
+      "median_dim_moran": 0.012872208436724562
+    },
+    {
+      "name": "ecto_P087",
+      "n_spots": 1040,
+      "pc1_moran": 0.0058593749999999965,
+      "mean_dim_moran": 0.005647659299945517,
+      "median_dim_moran": 0.005859374999952944
+    },
+    {
+      "name": "ecto_P097",
+      "n_spots": 1280,
+      "pc1_moran": NaN,
+      "mean_dim_moran": 0.0,
+      "median_dim_moran": 0.0
+    },
+    {
+      "name": "ecto_P105",
+      "n_spots": 712,
+      "pc1_moran": 0.031013257575757586,
+      "mean_dim_moran": 0.03022581158197297,
+      "median_dim_moran": 0.031013257575730018
+    },
+    {
+      "name": "ecto_P107",
+      "n_spots": 418,
+      "pc1_moran": -0.005208333333333331,
+      "mean_dim_moran": -0.005050659177667883,
+      "median_dim_moran": -0.005208333332992466
+    },
+    {
+      "name": "ecto_P108",
+      "n_spots": 307,
+      "pc1_moran": NaN,
+      "mean_dim_moran": 0.0,
+      "median_dim_moran": 0.0
+    },
+    {
+      "name": "ecto_P114",
+      "n_spots": 969,
+      "pc1_moran": -0.009027777777777777,
+      "mean_dim_moran": -0.008666314019951604,
+      "median_dim_moran": -0.009027777777790907
+    },
+    {
+      "name": "ecto_P117",
+      "n_spots": 1283,
+      "pc1_moran": -0.00234375,
+      "mean_dim_moran": -0.002265930175781252,
+      "median_dim_moran": -0.002343750000000004
+    },
+    {
+      "name": "ecto_P118",
+      "n_spots": 1130,
+      "pc1_moran": -0.00937500000000001,
+      "mean_dim_moran": -0.009036254881757032,
+      "median_dim_moran": -0.009374999998336925
+    }
+  ],
+  "sample_mean_pc1_moran": 0.14323349453199502
+}

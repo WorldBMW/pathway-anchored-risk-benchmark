@@ -1,0 +1,73 @@
+{
+  "dataset": "GSE316098 (GeoMx, independent platform)",
+  "certified_programs": {
+    "CELL_tumor_epithelial": {
+      "rho_NO_SUP": 0.5355533835565861,
+      "sign_used": 1.0,
+      "classification": "REAL (survives NO-SUP)"
+    },
+    "HPV_INTEGRATION_CANDIDATE": {
+      "rho_NO_SUP": 0.446463063910391,
+      "sign_used": 1.0,
+      "classification": "REAL (survives NO-SUP)"
+    },
+    "ANTIGEN_PRESENTATION": {
+      "rho_NO_SUP": 0.46050050033408413,
+      "sign_used": 1.0,
+      "classification": "REAL (survives NO-SUP)"
+    },
+    "INTERFERON_ANTIVIRAL": {
+      "rho_NO_SUP": -0.46954851163417405,
+      "sign_used": -1.0,
+      "classification": "REAL (survives NO-SUP)"
+    },
+    "PROLIFERATION": {
+      "rho_NO_SUP": -0.3689567775897243,
+      "sign_used": -1.0,
+      "classification": "REAL (survives NO-SUP)"
+    }
+  },
+  "n_rois": 186,
+  "n_benign": 50,
+  "n_tumor": 136,
+  "n_patients_paired": 7,
+  "scores": {
+    "S_full": {
+      "auc_tumor_vs_benign": 0.7922058823529412,
+      "mwu_p_roi": 1.0445751956591742e-09,
+      "within_patient_wilcoxon_p": 0.03125,
+      "within_patient_frac_tumor_higher": 1.0
+    },
+    "dec_signsum": {
+      "auc_tumor_vs_benign": 0.6552941176470588,
+      "mwu_p_roi": 0.0011850576788525753,
+      "within_patient_wilcoxon_p": 0.3125,
+      "within_patient_frac_tumor_higher": 0.6666666666666666
+    },
+    "dec_rho_weighted": {
+      "auc_tumor_vs_benign": 0.7177941176470588,
+      "mwu_p_roi": 5.414919379396115e-06,
+      "within_patient_wilcoxon_p": 0.15625,
+      "within_patient_frac_tumor_higher": 0.6666666666666666
+    },
+    "dec_top2": {
+      "auc_tumor_vs_benign": 0.47044117647058825,
+      "mwu_p_roi": 0.5379422345654103,
+      "within_patient_wilcoxon_p": 0.6875,
+      "within_patient_frac_tumor_higher": 0.6666666666666666
+    },
+    "dec_epithelial_only": {
+      "auc_tumor_vs_benign": 0.7486764705882353,
+      "mwu_p_roi": 2.0676982516360321e-07,
+      "within_patient_wilcoxon_p": 0.09375,
+      "within_patient_frac_tumor_higher": 0.8333333333333334
+    }
+  },
+  "baseline_auc_supervised": 0.7922058823529412,
+  "best_label_free_readout": {
+    "name": "dec_epithelial_only",
+    "auc": 0.7486764705882353
+  },
+  "delta_auc_best_dec_minus_full": -0.04352941176470593,
+  "interpretation": "Label-free readouts built ONLY from audit-certified programs are evaluated against the supervised head on an independent platform. A non-negative delta_AUC would support an audit-guided performance gain; a negative delta means the audit does not yield a better predictor here."
+}

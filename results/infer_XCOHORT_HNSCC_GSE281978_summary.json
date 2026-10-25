@@ -1,0 +1,58 @@
+{
+  "run_id": "XCOHORT_HNSCC_GSE281978",
+  "checkpoint": "results\\checkpoint_MAIN_KEGG_seed42.pt",
+  "mode": "expr_only",
+  "fm": "uni",
+  "n_genes": 4991,
+  "n_samples": 6,
+  "per_sample": [
+    {
+      "name": "LI_SING_21_00757",
+      "n_spots": 1187,
+      "mean_score": 2.4735958576202393,
+      "std_score": 0.7234674692153931,
+      "median_score": 2.6133475303649902,
+      "moran_i": 0.6457141517262552
+    },
+    {
+      "name": "LI_SING_21_00758",
+      "n_spots": 1579,
+      "mean_score": 2.64861798286438,
+      "std_score": 0.7194398641586304,
+      "median_score": 2.7917637825012207,
+      "moran_i": 0.659825240789542
+    },
+    {
+      "name": "LI_SING_21_01569",
+      "n_spots": 1359,
+      "mean_score": 1.14240300655365,
+      "std_score": 0.53492671251297,
+      "median_score": 1.116974115371704,
+      "moran_i": 0.5860453687928977
+    },
+    {
+      "name": "LI_SING_21_01570",
+      "n_spots": 1908,
+      "mean_score": 0.978183925151825,
+      "std_score": 0.6214048266410828,
+      "median_score": 0.8873953819274902,
+      "moran_i": 0.6265336402599764
+    },
+    {
+      "name": "LI_SING_21_01586",
+      "n_spots": 1195,
+      "mean_score": 2.1607155799865723,
+      "std_score": 1.2840070724487305,
+      "median_score": 1.8993477821350098,
+      "moran_i": 0.8702635472057693
+    },
+    {
+      "name": "LI_SING_21_01587",
+      "n_spots": 1439,
+      "mean_score": 1.8117094039916992,
+      "std_score": 0.7227877974510193,
+      "median_score": 1.798319697380066,
+      "moran_i": 0.5969796464928978
+    }
+  ]
+}

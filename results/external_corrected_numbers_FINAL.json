@@ -1,0 +1,220 @@
+{
+  "geomx_gse316098_corrected": {
+    "n_rois": 186,
+    "n_cores": 93,
+    "n_patients": 7,
+    "roi_level": {
+      "benign_n": 50,
+      "tumor_n": 136,
+      "benign_mean": 9.741055278778076,
+      "tumor_mean": 11.58281372575199,
+      "benign_vs_tumor_p": 7.265044654865731e-05,
+      "silva": {
+        "A": {
+          "n": 42,
+          "mean": 12.973233177548362
+        },
+        "B": {
+          "n": 44,
+          "mean": 10.884409416805614
+        },
+        "C": {
+          "n": 50,
+          "mean": 11.029457178115845
+        }
+      },
+      "silva_A_vs_B_p": 0.01612591936644387,
+      "silva_A_vs_C_p": 0.01929264954427438,
+      "silva_B_vs_C_p": 0.7762948857797177,
+      "risk_high_n": 84,
+      "risk_low_n": 52,
+      "risk_high_mean": 11.0787113904953,
+      "risk_low_mean": 12.397132882705101,
+      "risk_high_vs_low_p": 0.11240645355400089,
+      "epi_mean": 11.716848219594647,
+      "stroma_mean": 10.458586518482495,
+      "compartment_p": 0.0019726469734499866
+    },
+    "core_level": {
+      "benign_n": 25,
+      "tumor_n": 68,
+      "benign_mean": 9.741055278778076,
+      "tumor_mean": 11.58281372575199,
+      "benign_vs_tumor_p": 0.0003507776653249573,
+      "silva": {
+        "A": {
+          "n": 21,
+          "mean": 12.973233177548362
+        },
+        "B": {
+          "n": 22,
+          "mean": 10.884409416805614
+        },
+        "C": {
+          "n": 25,
+          "mean": 11.029457178115845
+        }
+      },
+      "silva_A_vs_B_p": 0.005821848030812579,
+      "silva_B_vs_C_p": 1.0,
+      "risk_high_mean": 11.0787113904953,
+      "risk_low_mean": 12.397132882705101,
+      "risk_high_vs_low_p": 0.0626834351245219
+    },
+    "within_patient": {
+      "n_patients_paired": 6,
+      "tumor_mean": 11.17352112555171,
+      "normal_mean": 9.458101236157948,
+      "mean_diff": 1.7154198893937653,
+      "all_tumor_gt_normal": true,
+      "paired_wilcoxon_p": 0.03125
+    }
+  },
+  "lodo_v2": {
+    "protocol": "final locked (full-spot cohort; lambda_recon=0.2, lambda_hpv=1.0, lambda_neigh=0.3, lambda_sup=5.0, lambda_prog=1.5; other 3 labeled diseases kept)",
+    "n_folds": 4,
+    "folds": [
+      {
+        "holdout": "CA_HPV_1",
+        "holdout_mean_risk": 1.0433862209320068,
+        "holdout_moran_i": 0.38046079779737074,
+        "n_normal_train": 31,
+        "normal_mean": 0.0072237773227595515,
+        "percentile_vs_normal": 1.0,
+        "above_median_normal": true,
+        "above_all_normal": true,
+        "lambda_recon": 0.2,
+        "lambda_sup": 5.0,
+        "lambda_prog": 1.5,
+        "n_train_samples": 34,
+        "train_spots": 45063
+      },
+      {
+        "holdout": "CA_HPV_2",
+        "holdout_mean_risk": 0.08677682280540466,
+        "holdout_moran_i": 0.8641072904305,
+        "n_normal_train": 31,
+        "normal_mean": 0.0734624118213692,
+        "percentile_vs_normal": 0.6129032258064516,
+        "above_median_normal": true,
+        "above_all_normal": false,
+        "lambda_recon": 0.2,
+        "lambda_sup": 5.0,
+        "lambda_prog": 1.5,
+        "n_train_samples": 34,
+        "train_spots": 45227
+      },
+      {
+        "holdout": "HSIL_HPV",
+        "holdout_mean_risk": 1.0736122131347656,
+        "holdout_moran_i": 0.42847350564050235,
+        "n_normal_train": 31,
+        "normal_mean": 0.09988733263866555,
+        "percentile_vs_normal": 1.0,
+        "above_median_normal": true,
+        "above_all_normal": true,
+        "lambda_recon": 0.2,
+        "lambda_sup": 5.0,
+        "lambda_prog": 1.5,
+        "n_train_samples": 34,
+        "train_spots": 46241
+      },
+      {
+        "holdout": "cervical_cancer_1",
+        "holdout_mean_risk": 1.6081808805465698,
+        "holdout_moran_i": 0.7239424103786576,
+        "n_normal_train": 31,
+        "normal_mean": 0.06328586720290684,
+        "percentile_vs_normal": 1.0,
+        "above_median_normal": true,
+        "above_all_normal": true,
+        "lambda_recon": 0.2,
+        "lambda_sup": 5.0,
+        "lambda_prog": 1.5,
+        "n_train_samples": 34,
+        "train_spots": 44039
+      }
+    ],
+    "mean_percentile_vs_normal": 0.9032258064516129,
+    "min_percentile_vs_normal": 0.6129032258064516,
+    "n_above_median": 4,
+    "n_above_all": 3,
+    "note": "Semi-supervised LODO. Fully unsupervised LODO (lambda_sup=lambda_prog=0) collapses (results_UNSUP_LODO_*), consistent with NO-PROG."
+  },
+  "unsup_lodo_v2": {
+    "protocol": "final locked, fully unsupervised (full-spot cohort, no spot cap; lambda_sup=0, lambda_prog=0; lambda_recon=0.2, lambda_hpv=1.0, lambda_neigh=0.3)",
+    "n_folds": 4,
+    "folds": [
+      {
+        "holdout": "CA_HPV_1",
+        "holdout_mean_risk": 0.5680740475654602,
+        "holdout_moran_i": 0.8225564853086154,
+        "n_normal_train": 31,
+        "normal_mean": 0.251429476324589,
+        "percentile_vs_normal": 0.967741935483871,
+        "above_median_normal": true,
+        "above_all_normal": false,
+        "hpv_proxy_auc": 0.313977003717615,
+        "lambda_recon": 0.2,
+        "lambda_sup": 0.0,
+        "lambda_prog": 0.0,
+        "n_train_samples": 34,
+        "train_spots": 45063
+      },
+      {
+        "holdout": "CA_HPV_2",
+        "holdout_mean_risk": -0.39943474531173706,
+        "holdout_moran_i": 0.8585821095517541,
+        "n_normal_train": 31,
+        "normal_mean": -0.22323756773144968,
+        "percentile_vs_normal": 0.0,
+        "above_median_normal": false,
+        "above_all_normal": false,
+        "hpv_proxy_auc": 0.9390143568737791,
+        "lambda_recon": 0.2,
+        "lambda_sup": 0.0,
+        "lambda_prog": 0.0,
+        "n_train_samples": 34,
+        "train_spots": 45227
+      },
+      {
+        "holdout": "HSIL_HPV",
+        "holdout_mean_risk": -0.2836065888404846,
+        "holdout_moran_i": 0.8577011413787279,
+        "n_normal_train": 31,
+        "normal_mean": -0.3687109641971127,
+        "percentile_vs_normal": 0.8064516129032258,
+        "above_median_normal": true,
+        "above_all_normal": false,
+        "hpv_proxy_auc": 0.9813875492762688,
+        "lambda_recon": 0.2,
+        "lambda_sup": 0.0,
+        "lambda_prog": 0.0,
+        "n_train_samples": 34,
+        "train_spots": 46241
+      },
+      {
+        "holdout": "cervical_cancer_1",
+        "holdout_mean_risk": 1.0843195915222168,
+        "holdout_moran_i": 0.880421536860101,
+        "n_normal_train": 31,
+        "normal_mean": 0.46423791204729387,
+        "percentile_vs_normal": 1.0,
+        "above_median_normal": true,
+        "above_all_normal": true,
+        "hpv_proxy_auc": 0.4196033345192879,
+        "lambda_recon": 0.2,
+        "lambda_sup": 0.0,
+        "lambda_prog": 0.0,
+        "n_train_samples": 34,
+        "train_spots": 44039
+      }
+    ],
+    "mean_percentile_vs_normal": 0.6935483870967742,
+    "min_percentile_vs_normal": 0.0,
+    "max_percentile_vs_normal": 1.0,
+    "n_above_median": 3,
+    "n_above_all": 1,
+    "note": "Final-protocol rerun replacing the exploratory 30,000-spot results_UNSUP_LODO_* folds."
+  }
+}

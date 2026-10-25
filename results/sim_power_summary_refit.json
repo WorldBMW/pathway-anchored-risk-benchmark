@@ -1,0 +1,1267 @@
+{
+  "design": {
+    "permutation": "refit (hat-matrix, seed 20261010, B=10000)",
+    "generator_seeds": [
+      "g20261006",
+      "g20261007",
+      "g20261008"
+    ],
+    "signal_levels": [
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "sizes": [
+      "main",
+      "small"
+    ],
+    "thresholds": {
+      "supported_tau": 0.35,
+      "unsupported_abs_tau": 0.15,
+      "alpha": 0.05
+    }
+  },
+  "detection_rate": {
+    "main": {
+      "L1": {
+        "mean_tau": 0.7035245188782951,
+        "sd_tau": 0.009422203377834318,
+        "n_significant": 9,
+        "n_runs": 9,
+        "frac_significant": 1.0,
+        "verdict": "supported"
+      },
+      "L2": {
+        "mean_tau": 0.2755209304401716,
+        "sd_tau": 0.15447524818778313,
+        "n_significant": 6,
+        "n_runs": 9,
+        "frac_significant": 0.6666666666666666,
+        "verdict": "suggestive"
+      },
+      "L3": {
+        "mean_tau": 0.12547234164816023,
+        "sd_tau": 0.12210549414037358,
+        "n_significant": 1,
+        "n_runs": 9,
+        "frac_significant": 0.1111111111111111,
+        "verdict": "suggestive"
+      },
+      "L4": {
+        "mean_tau": 0.1823196353610939,
+        "sd_tau": 0.1044090438585216,
+        "n_significant": 3,
+        "n_runs": 9,
+        "frac_significant": 0.3333333333333333,
+        "verdict": "suggestive"
+      }
+    },
+    "small": {
+      "L1": {
+        "mean_tau": 0.4565121699851361,
+        "sd_tau": 5.887846720064156e-17,
+        "n_significant": 9,
+        "n_runs": 9,
+        "frac_significant": 1.0,
+        "verdict": "supported"
+      },
+      "L2": {
+        "mean_tau": 0.39351676301586114,
+        "sd_tau": 0.09466030570784414,
+        "n_significant": 6,
+        "n_runs": 9,
+        "frac_significant": 0.6666666666666666,
+        "verdict": "supported"
+      },
+      "L3": {
+        "mean_tau": 0.28634275895125033,
+        "sd_tau": 0.09561009844661882,
+        "n_significant": 2,
+        "n_runs": 9,
+        "frac_significant": 0.2222222222222222,
+        "verdict": "suggestive"
+      },
+      "L4": {
+        "mean_tau": 0.176714388381343,
+        "sd_tau": 0.14836234427657508,
+        "n_significant": 2,
+        "n_runs": 9,
+        "frac_significant": 0.2222222222222222,
+        "verdict": "suggestive"
+      }
+    }
+  },
+  "type_i_error_control": {
+    "main": {
+      "CTRL": {
+        "mean_tau": -0.029758459001660038,
+        "sd_tau": 0.11138972558924362,
+        "n_significant": 0,
+        "n_runs": 9,
+        "frac_significant": 0.0,
+        "verdict": "unsupported",
+        "frac_false_positive": 0.0
+      }
+    },
+    "small": {
+      "CTRL": {
+        "mean_tau": 0.04172423059003932,
+        "sd_tau": 0.10189316661626661,
+        "n_significant": 0,
+        "n_runs": 9,
+        "frac_significant": 0.0,
+        "verdict": "unsupported",
+        "frac_false_positive": 0.0
+      }
+    }
+  },
+  "threshold_roc": {
+    "main": {
+      "threshold": [
+        0.05,
+        0.075,
+        0.1,
+        0.125,
+        0.15,
+        0.175,
+        0.2,
+        0.225,
+        0.25,
+        0.275,
+        0.3,
+        0.325,
+        0.35,
+        0.375,
+        0.4,
+        0.425,
+        0.45,
+        0.475,
+        0.5,
+        0.525,
+        0.55,
+        0.575,
+        0.6,
+        0.625,
+        0.65,
+        0.675,
+        0.7,
+        0.725,
+        0.75,
+        0.775,
+        0.8,
+        0.825,
+        0.85
+      ],
+      "sensitivity": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.8888888888888888,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "one_minus_specificity": [
+        0.2222222222222222,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "small": {
+      "threshold": [
+        0.05,
+        0.075,
+        0.1,
+        0.125,
+        0.15,
+        0.175,
+        0.2,
+        0.225,
+        0.25,
+        0.275,
+        0.3,
+        0.325,
+        0.35,
+        0.375,
+        0.4,
+        0.425,
+        0.45,
+        0.475,
+        0.5,
+        0.525,
+        0.55,
+        0.575,
+        0.6,
+        0.625,
+        0.65,
+        0.675,
+        0.7,
+        0.725,
+        0.75,
+        0.775,
+        0.8,
+        0.825,
+        0.85
+      ],
+      "sensitivity": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "one_minus_specificity": [
+        0.5555555555555556,
+        0.5555555555555556,
+        0.3333333333333333,
+        0.2222222222222222,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "per_cohort": {
+    "group_A_g20261006_L1": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261006",
+        "level": "L1",
+        "size": "main"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.7066652533375732,
+          "p_refit": 9.999000099990002e-05,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.7066652533375732,
+          "p_refit": 9.999000099990002e-05,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.6783986432040703,
+          "p_refit": 9.999000099990002e-05,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        }
+      ]
+    },
+    "group_A_g20261006_L1_small": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261006",
+        "level": "L1",
+        "size": "small"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.45651216998513616,
+          "p_refit": 0.0023997600239976003,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.45651216998513616,
+          "p_refit": 0.0017998200179982,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.45651216998513616,
+          "p_refit": 0.0008999100089991,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        }
+      ]
+    },
+    "group_A_g20261006_L2": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261006",
+        "level": "L2",
+        "size": "main"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.47770571125619954,
+          "p_refit": 0.00029997000299970003,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.3780659105356017,
+          "p_refit": 0.0044995500449955,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.322946020775271,
+          "p_refit": 0.012698730126987301,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        }
+      ]
+    },
+    "group_A_g20261006_L2_small": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261006",
+        "level": "L2",
+        "size": "small"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.45651216998513616,
+          "p_refit": 0.0022997700229977,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.45651216998513616,
+          "p_refit": 0.0015998400159984002,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.45651216998513616,
+          "p_refit": 0.0013998600139986002,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        }
+      ]
+    },
+    "group_A_g20261006_L3": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261006",
+        "level": "L3",
+        "size": "main"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": -0.03250660165352837,
+          "p_refit": 0.6247375262473752,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.17878630909440604,
+          "p_refit": 0.08899110088991101,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.020493292346789625,
+          "p_refit": 0.44935506449355067,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        }
+      ]
+    },
+    "group_A_g20261006_L3_small": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261006",
+        "level": "L3",
+        "size": "small"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.3166132791832396,
+          "p_refit": 0.062193780621937804,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.33870257773090745,
+          "p_refit": 0.051894810518948106,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.3166132791832396,
+          "p_refit": 0.05929407059294071,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        }
+      ]
+    },
+    "group_A_g20261006_L4": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261006",
+        "level": "L4",
+        "size": "main"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.35403929192212424,
+          "p_refit": 0.007499250074992501,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.2805461055750166,
+          "p_refit": 0.028397160283971604,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.11165311002733658,
+          "p_refit": 0.21687831216878312,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        }
+      ]
+    },
+    "group_A_g20261006_L4_small": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261006",
+        "level": "L4",
+        "size": "small"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.2945239806355717,
+          "p_refit": 0.0781921807819218,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.353428776762686,
+          "p_refit": 0.044495550444955505,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.34606567724679677,
+          "p_refit": 0.041995800419958006,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        }
+      ]
+    },
+    "group_A_g20261007_L1": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261007",
+        "level": "L1",
+        "size": "main"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.7066652533375732,
+          "p_refit": 9.999000099990002e-05,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.7066652533375732,
+          "p_refit": 9.999000099990002e-05,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.7066652533375732,
+          "p_refit": 9.999000099990002e-05,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        }
+      ]
+    },
+    "group_A_g20261007_L1_small": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261007",
+        "level": "L1",
+        "size": "small"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.45651216998513616,
+          "p_refit": 0.0017998200179982,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.45651216998513616,
+          "p_refit": 0.0027997200279972004,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.45651216998513616,
+          "p_refit": 0.0016998300169983002,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        }
+      ]
+    },
+    "group_A_g20261007_L2": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261007",
+        "level": "L2",
+        "size": "main"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.269946126774953,
+          "p_refit": 0.028597140285971403,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 1,
+          "tau_lodo": -0.002826661013350293,
+          "p_refit": 0.5328467153284672,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.1907996184011448,
+          "p_refit": 0.0806919308069193,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        }
+      ]
+    },
+    "group_A_g20261007_L2_small": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261007",
+        "level": "L2",
+        "size": "small"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.2650715825720146,
+          "p_refit": 0.10818918108189181,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.2797977816037931,
+          "p_refit": 0.0933906609339066,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.25770848305612526,
+          "p_refit": 0.11298870112988701,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        }
+      ]
+    },
+    "group_A_g20261007_L3": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261007",
+        "level": "L3",
+        "size": "main"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.19150628365448236,
+          "p_refit": 0.0861913808619138,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 1,
+          "tau_lodo": -0.01695996608010176,
+          "p_refit": 0.5771422857714229,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.09115981768054696,
+          "p_refit": 0.24597540245975402,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        }
+      ]
+    },
+    "group_A_g20261007_L3_small": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261007",
+        "level": "L3",
+        "size": "small"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.38288117482624323,
+          "p_refit": 0.028497150284971504,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.3239763786991289,
+          "p_refit": 0.06159384061593841,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.2945239806355717,
+          "p_refit": 0.08209179082091791,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        }
+      ]
+    },
+    "group_A_g20261007_L4": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261007",
+        "level": "L4",
+        "size": "main"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.08903982192053424,
+          "p_refit": 0.261973802619738,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.10105313122727297,
+          "p_refit": 0.23567643235676433,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.12649308034742562,
+          "p_refit": 0.18368163183681632,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        }
+      ]
+    },
+    "group_A_g20261007_L4_small": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261007",
+        "level": "L4",
+        "size": "small"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.13989889080189655,
+          "p_refit": 0.280971902809719,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 1,
+          "tau_lodo": -0.05154169661122505,
+          "p_refit": 0.6284371562843716,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 2,
+          "tau_lodo": -0.007363099515889292,
+          "p_refit": 0.5516448355164484,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        }
+      ]
+    },
+    "group_A_g20261008_L1": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261008",
+        "level": "L1",
+        "size": "main"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.7066652533375732,
+          "p_refit": 9.999000099990002e-05,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.7066652533375732,
+          "p_refit": 9.999000099990002e-05,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.7066652533375732,
+          "p_refit": 9.999000099990002e-05,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        }
+      ]
+    },
+    "group_A_g20261008_L1_small": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261008",
+        "level": "L1",
+        "size": "small"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.45651216998513616,
+          "p_refit": 0.0021997800219978004,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.45651216998513616,
+          "p_refit": 0.0022997700229977,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.45651216998513616,
+          "p_refit": 0.0015998400159984002,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        }
+      ]
+    },
+    "group_A_g20261008_L2": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261008",
+        "level": "L2",
+        "size": "main"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.14627970744087768,
+          "p_refit": 0.14288571142885712,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.23602619461474947,
+          "p_refit": 0.0425957404259574,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.46074574517609773,
+          "p_refit": 0.00029997000299970003,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        }
+      ]
+    },
+    "group_A_g20261008_L2_small": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261008",
+        "level": "L2",
+        "size": "small"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.45651216998513616,
+          "p_refit": 0.001999800019998,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.45651216998513616,
+          "p_refit": 0.0014998500149985001,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.45651216998513616,
+          "p_refit": 0.001999800019998,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        }
+      ]
+    },
+    "group_A_g20261008_L3": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261008",
+        "level": "L3",
+        "size": "main"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.15970634725429156,
+          "p_refit": 0.11768823117688232,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.18938628789446965,
+          "p_refit": 0.08809119088091191,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.3476793046420861,
+          "p_refit": 0.007099290070992901,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        }
+      ]
+    },
+    "group_A_g20261008_L3_small": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261008",
+        "level": "L3",
+        "size": "small"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.176714388381343,
+          "p_refit": 0.21107889211078892,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.08099409467478222,
+          "p_refit": 0.3608639136086391,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.34606567724679677,
+          "p_refit": 0.0420957904209579,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        }
+      ]
+    },
+    "group_A_g20261008_L4": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261008",
+        "level": "L4",
+        "size": "main"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.20775958448124654,
+          "p_refit": 0.070992900709929,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.07561318210712034,
+          "p_refit": 0.2860713928607139,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.29467941064176806,
+          "p_refit": 0.0197980201979802,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        }
+      ]
+    },
+    "group_A_g20261008_L4_small": {
+      "meta": {
+        "kind": "A",
+        "gen": "g20261008",
+        "level": "L4",
+        "size": "small"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.2061667864449002,
+          "p_refit": 0.16868313168683133,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.07363099515889293,
+          "p_refit": 0.38346165383461656,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.23561918450845734,
+          "p_refit": 0.1367863213678632,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        }
+      ]
+    },
+    "group_C_g20261006_CTRL": {
+      "meta": {
+        "kind": "C",
+        "gen": "g20261006",
+        "level": "CTRL",
+        "size": "main"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.019079961840114477,
+          "p_refit": 0.458054194580542,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.07278652109377005,
+          "p_refit": 0.2996700329967003,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.18655962688111932,
+          "p_refit": 0.09429057094290572,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        }
+      ]
+    },
+    "group_C_g20261006_CTRL_small": {
+      "meta": {
+        "kind": "C",
+        "gen": "g20261006",
+        "level": "CTRL",
+        "size": "small"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.12517269177011797,
+          "p_refit": 0.2933706629337066,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.176714388381343,
+          "p_refit": 0.2104789521047895,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 2,
+          "tau_lodo": 0.09572029370656081,
+          "p_refit": 0.33856614338566143,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        }
+      ]
+    },
+    "group_C_g20261007_CTRL": {
+      "meta": {
+        "kind": "C",
+        "gen": "g20261007",
+        "level": "CTRL",
+        "size": "main"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": -0.12790641085410076,
+          "p_refit": 0.8854114588541145,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 1,
+          "tau_lodo": -0.12013309306738745,
+          "p_refit": 0.8620137986201379,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 2,
+          "tau_lodo": -0.1561730209876037,
+          "p_refit": 0.9263073692630737,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        }
+      ]
+    },
+    "group_C_g20261007_CTRL_small": {
+      "meta": {
+        "kind": "C",
+        "gen": "g20261007",
+        "level": "CTRL",
+        "size": "small"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": -0.11780959225422867,
+          "p_refit": 0.7521247875212479,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.1030833932224501,
+          "p_refit": 0.3361663833616638,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 2,
+          "tau_lodo": -0.08099409467478222,
+          "p_refit": 0.6799320067993201,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        }
+      ]
+    },
+    "group_C_g20261008_CTRL": {
+      "meta": {
+        "kind": "C",
+        "gen": "g20261008",
+        "level": "CTRL",
+        "size": "main"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.009186648293388453,
+          "p_refit": 0.49835016498350165,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 1,
+          "tau_lodo": -0.06995986008041975,
+          "p_refit": 0.7464253574642535,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        },
+        {
+          "seed": 2,
+          "tau_lodo": -0.08126650413382093,
+          "p_refit": 0.7806219378062194,
+          "tau_insample_probe": 0.7066652533375732,
+          "n_donors": 90
+        }
+      ]
+    },
+    "group_C_g20261008_CTRL_small": {
+      "meta": {
+        "kind": "C",
+        "gen": "g20261008",
+        "level": "CTRL",
+        "size": "small"
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "tau_lodo": 0.09572029370656081,
+          "p_refit": 0.3448655134486551,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 1,
+          "tau_lodo": 0.022089298547667877,
+          "p_refit": 0.4841515848415158,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        },
+        {
+          "seed": 2,
+          "tau_lodo": -0.04417859709533575,
+          "p_refit": 0.613038696130387,
+          "tau_insample_probe": 0.4565121699851361,
+          "n_donors": 35
+        }
+      ]
+    }
+  }
+}

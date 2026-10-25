@@ -1,0 +1,33 @@
+{
+  "verdict": "suggestive",
+  "metric": "LODO Kendall tau-b on real cervical NOALL (label-free) frozen embeddings",
+  "n_donors": 35,
+  "n_perm": 10000,
+  "lodo_mean": 0.270410321798511,
+  "lodo_sd": 0.11557315382551486,
+  "lodo_seeds": [
+    {
+      "seed": 0,
+      "tau_lodo": 0.2073550001235219,
+      "p": 0.07029297070292971,
+      "tau_insample_probe": 0.4620014915032856,
+      "n_donors": 35
+    },
+    {
+      "seed": 1,
+      "tau_lodo": 0.40379657918791106,
+      "p": 0.0005999400059994001,
+      "tau_insample_probe": 0.4620014915032856,
+      "n_donors": 35
+    },
+    {
+      "seed": 2,
+      "tau_lodo": 0.20007938608410006,
+      "p": 0.08289171082891711,
+      "tau_insample_probe": 0.4620014915032856,
+      "n_donors": 35
+    }
+  ],
+  "insample_probe_mean": 0.4620014915032857,
+  "note": "n=35 donors (31 normals: 30 ecto_Pxxx + N_HPV; 4 diseased: HSIL_HPV + CA_HPV_1/2 + cervical_cancer_1). Label-free NOALL encoder saw every donor's expression (never labels); the ridge severity probe is trained on 34 donors and tested on the held-out donor (standard linear-probe LODO, transductive in X only). Positive but weak and seed-unstable transfer (1/3 seeds p<0.05) grades as suggestive under the pre-registered rules \u2014 partial cross-donor disease-axis information survives complete label removal, in contrast to the identity-confounding simulation arm."
+}

@@ -1,0 +1,176 @@
+{
+  "params": {
+    "data": "data/st_visium/geo_prostate_GSE278936",
+    "out": "results/sota_prostate_irm.json",
+    "log_every": 50,
+    "n_genes": 2000,
+    "k": 6,
+    "dim": 128,
+    "hid": 256,
+    "lr": 0.001,
+    "epochs": 300,
+    "adv_list": [
+      10.0,
+      100.0
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "grl_cap": 1.0,
+    "warmup": 50,
+    "clip": 1.0,
+    "adv_sn": true,
+    "seed": 2,
+    "backbone": "gat",
+    "method": "irm",
+    "recon_chunk": 0,
+    "dump_xs": false,
+    "dump_w": "",
+    "dump_lam": 2.0,
+    "device": "cuda:0"
+  },
+  "n_spots": 134509,
+  "n_genes_union": 6312,
+  "n_donors": 52,
+  "samples": [
+    "BPH_1",
+    "BPH_2",
+    "BPH_3",
+    "BPH_4",
+    "CRPC_1",
+    "CRPC_2",
+    "CRPC_3",
+    "CRPC_4",
+    "CRPC_5",
+    "MET_A",
+    "MET_B",
+    "MET_C",
+    "MET_D",
+    "NEADT_1",
+    "NEADT_10",
+    "NEADT_11",
+    "NEADT_12",
+    "NEADT_13",
+    "NEADT_14",
+    "NEADT_15",
+    "NEADT_16",
+    "NEADT_17",
+    "NEADT_18",
+    "NEADT_19",
+    "NEADT_2",
+    "NEADT_20",
+    "NEADT_21",
+    "NEADT_22",
+    "NEADT_3",
+    "NEADT_4",
+    "NEADT_5",
+    "NEADT_6",
+    "NEADT_7",
+    "NEADT_8",
+    "NEADT_9",
+    "TRNA_1",
+    "TRNA_10",
+    "TRNA_11",
+    "TRNA_12",
+    "TRNA_13",
+    "TRNA_14",
+    "TRNA_15",
+    "TRNA_16",
+    "TRNA_17",
+    "TRNA_2",
+    "TRNA_3",
+    "TRNA_4",
+    "TRNA_5",
+    "TRNA_6",
+    "TRNA_7",
+    "TRNA_8",
+    "TRNA_9"
+  ],
+  "scan": {
+    "s0_lam10.0": {
+      "tau_lodo": 0.35277485816458315,
+      "p_refit": 0.0011998800119988001,
+      "tau_insample": 0.3805211953235953,
+      "sigma_null": 0.1390245025606396,
+      "ldi": 2.5303083390724326,
+      "tau_ldo": 0.3527748581645831,
+      "n_samples": 52,
+      "train_seconds": 180.0
+    },
+    "s0_lam100.0": {
+      "tau_lodo": 0.3805211953235953,
+      "p_refit": 0.00019998000199980003,
+      "tau_insample": 0.3805211953235953,
+      "sigma_null": 0.13787150365459205,
+      "ldi": 2.7527167345211927,
+      "tau_ldo": 0.3805211953235953,
+      "n_samples": 52,
+      "train_seconds": 78.1
+    },
+    "s1_lam10.0": {
+      "tau_lodo": 0.3725936704210204,
+      "p_refit": 9.999000099990002e-05,
+      "tau_insample": 0.3805211953235953,
+      "sigma_null": 0.13912881297350707,
+      "ldi": 2.670860639713639,
+      "tau_ldo": 0.3725936704210204,
+      "n_samples": 52,
+      "train_seconds": 75.8
+    },
+    "s1_lam100.0": {
+      "tau_lodo": 0.3805211953235953,
+      "p_refit": 9.999000099990002e-05,
+      "tau_insample": 0.3805211953235953,
+      "sigma_null": 0.14551519395159834,
+      "ldi": 2.6081207399540194,
+      "tau_ldo": 0.3805211953235953,
+      "n_samples": 52,
+      "train_seconds": 75.6
+    },
+    "s2_lam10.0": {
+      "tau_lodo": 0.3805211953235953,
+      "p_refit": 9.999000099990002e-05,
+      "tau_insample": 0.3805211953235953,
+      "sigma_null": 0.1382757324049907,
+      "ldi": 2.7446695723297974,
+      "tau_ldo": 0.3805211953235953,
+      "n_samples": 52,
+      "train_seconds": 76.0
+    },
+    "s2_lam100.0": {
+      "tau_lodo": 0.3805211953235953,
+      "p_refit": 0.00019998000199980003,
+      "tau_insample": 0.3805211953235953,
+      "sigma_null": 0.13595057046022682,
+      "ldi": 2.7916116426641002,
+      "tau_ldo": 0.3805211953235953,
+      "n_samples": 52,
+      "train_seconds": 75.8
+    }
+  },
+  "lam_means": {
+    "10.0": {
+      "mean_ldi": 2.6486128503719564,
+      "mean_tau_lodo": 0.3686299079697329,
+      "n_seeds": 3
+    },
+    "100.0": {
+      "mean_ldi": 2.7174830390464373,
+      "mean_tau_lodo": 0.38052119532359524,
+      "n_seeds": 3
+    }
+  },
+  "verdict": {
+    "E3": "no-go",
+    "base_mean_ldi": NaN,
+    "base_mean_tau_lodo": NaN,
+    "passing_lambdas": [],
+    "gate": {
+      "ldi": 1.645,
+      "fidelity_keep": 0.7,
+      "fidelity_metric": "tau_lodo"
+    }
+  }
+}

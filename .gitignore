@@ -1,0 +1,65 @@
+# ---------------------------------------------------------------------------
+# Public release for the Patterns submission (v1.0.0).
+#
+# Policy: allow-list, not deny-list. Nothing is published unless it is
+# explicitly re-included below. Rationale: the working tree also contains
+# other journals' manuscript workspaces, internal strategy notes, data-request
+# correspondence, and helper scripts with cloud-server credentials in them.
+#
+# Everything needed to reproduce a reported number is published: the code, the
+# simulator, the manifests and seeds, the manuscript source, and the result
+# JSONs. Public cohorts are re-downloaded by the scripts, so no dataset ships
+# with the code.
+# ---------------------------------------------------------------------------
+
+# ---- default: ignore everything at the top level ----
+/*
+!/.gitignore
+!/.zenodo.json
+!/README.md
+!/REPRODUCE.md
+!/requirements-patterns.txt
+!/scripts/
+!/src/
+!/results/
+!/papers/
+!/docs/
+
+# ---- manuscript workspaces: only this submission travels with the code ----
+papers/*
+!papers/20_MRP-ST-Repair_Patterns/
+
+# ---- docs: keep only material a reader needs to re-fetch the public data ----
+docs/*
+!docs/GEO_DOWNLOAD_CHECKLIST.txt
+!docs/hpv_genes.json
+
+# ---- helper scripts carrying cloud-server credentials: never published ----
+scripts/ssh_*.py
+scripts/_put.py
+scripts/pull_reseed_results.py
+scripts/upload_e2_reseed.py
+scripts/verify_upload_sizes.py
+
+# ---- bulk / derived artefacts ----
+results/cache/
+*.pt
+*.pth
+*.npz
+*.npy
+*.h5
+*.h5ad
+*.parquet
+*.filepart
+*.tgz
+*.tar
+*.tar.gz
+*.zip
+*.log
+__pycache__/
+*.py[cod]
+
+# ---- manuscript build snapshots (current deliverables are kept) ----
+papers/**/*.bak
+papers/**/*pre_2026*.docx
+papers/**/*_v[0-9]*_2026*.docx

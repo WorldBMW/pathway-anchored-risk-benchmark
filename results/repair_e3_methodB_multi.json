@@ -1,0 +1,237 @@
+{
+  "params": {
+    "data": "data/st_visium/cervix_all_ext",
+    "out": "results/repair_e3_methodB_multi.json",
+    "log_every": 50,
+    "n_genes": 2000,
+    "k": 6,
+    "dim": 128,
+    "hid": 256,
+    "lr": 0.001,
+    "epochs": 300,
+    "adv_list": [
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      5.0
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "grl_cap": 1.0,
+    "seed": 2,
+    "device": "cuda:0"
+  },
+  "n_spots": 46820,
+  "n_genes_union": 4991,
+  "samples": [
+    "CA_HPV_1",
+    "CA_HPV_2",
+    "HSIL_HPV",
+    "N_HPV",
+    "cervical_cancer_1",
+    "ecto_P001",
+    "ecto_P004",
+    "ecto_P007",
+    "ecto_P008",
+    "ecto_P014",
+    "ecto_P016",
+    "ecto_P018",
+    "ecto_P020",
+    "ecto_P021",
+    "ecto_P023",
+    "ecto_P024",
+    "ecto_P026",
+    "ecto_P028",
+    "ecto_P031",
+    "ecto_P044",
+    "ecto_P045",
+    "ecto_P047",
+    "ecto_P050",
+    "ecto_P057",
+    "ecto_P067",
+    "ecto_P080",
+    "ecto_P081",
+    "ecto_P087",
+    "ecto_P097",
+    "ecto_P105",
+    "ecto_P107",
+    "ecto_P108",
+    "ecto_P114",
+    "ecto_P117",
+    "ecto_P118"
+  ],
+  "scan": {
+    "s0_lam0.0": {
+      "tau_lodo": 0.4110721932273329,
+      "p_refit": 0.0014998500149985001,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.17114680352700806,
+      "ldi": 2.3960260126191657,
+      "n_samples": 35,
+      "train_seconds": 17.8
+    },
+    "s0_lam0.5": {
+      "tau_lodo": -0.11277201761103824,
+      "p_refit": 0.6936306369363063,
+      "tau_insample": 0.447450263424442,
+      "sigma_null": 0.1811224370833843,
+      "ldi": -0.6281497722927636,
+      "n_samples": 35,
+      "train_seconds": 16.5
+    },
+    "s0_lam1.0": {
+      "tau_lodo": -0.17825254396583465,
+      "p_refit": 0.8292170782921707,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.17994839707514318,
+      "ldi": -0.9961330408015918,
+      "n_samples": 35,
+      "train_seconds": 16.2
+    },
+    "s0_lam2.0": {
+      "tau_lodo": 0.12004763165046006,
+      "p_refit": 0.2618738126187381,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.17709687808853108,
+      "ldi": 0.6722175621353862,
+      "n_samples": 35,
+      "train_seconds": 16.4
+    },
+    "s0_lam5.0": {
+      "tau_lodo": 0.32376482475427104,
+      "p_refit": 0.027697230276972302,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.17447912149074638,
+      "ldi": 1.849876489499571,
+      "n_samples": 35,
+      "train_seconds": 16.4
+    },
+    "s1_lam0.0": {
+      "tau_lodo": 0.42562342130617653,
+      "p_refit": 0.0007999200079992001,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.16795116109922925,
+      "ldi": 2.5282553483229546,
+      "n_samples": 35,
+      "train_seconds": 16.3
+    },
+    "s1_lam0.5": {
+      "tau_lodo": 0.18552815800525646,
+      "p_refit": 0.1611838816118388,
+      "tau_insample": 0.4547258774638638,
+      "sigma_null": 0.18572691286729714,
+      "ldi": 0.9935456049770385,
+      "n_samples": 35,
+      "train_seconds": 16.4
+    },
+    "s1_lam1.0": {
+      "tau_lodo": 0.4401746493850202,
+      "p_refit": 0.00039996000399960006,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.17688544148315125,
+      "ldi": 2.482819647013475,
+      "n_samples": 35,
+      "train_seconds": 16.5
+    },
+    "s1_lam2.0": {
+      "tau_lodo": 0.1054964035716164,
+      "p_refit": 0.27547245275472454,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.17795649491478846,
+      "ldi": 0.5872019654109999,
+      "n_samples": 35,
+      "train_seconds": 16.9
+    },
+    "s1_lam5.0": {
+      "tau_lodo": 0.010913421059132733,
+      "p_refit": 0.4453554644535546,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.18002020089200704,
+      "ldi": 0.05506838127060935,
+      "n_samples": 35,
+      "train_seconds": 16.6
+    },
+    "s2_lam0.0": {
+      "tau_lodo": 0.43289903534559837,
+      "p_refit": 0.00039996000399960006,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.17387445142093155,
+      "ldi": 2.4839706570807043,
+      "n_samples": 35,
+      "train_seconds": 16.5
+    },
+    "s2_lam0.5": {
+      "tau_lodo": 0.22190622820236555,
+      "p_refit": 0.11088891110888911,
+      "tau_insample": 0.4547258774638638,
+      "sigma_null": 0.1825895769288336,
+      "ldi": 1.2098512517418578,
+      "n_samples": 35,
+      "train_seconds": 16.5
+    },
+    "s2_lam1.0": {
+      "tau_lodo": 0.04001587721682002,
+      "p_refit": 0.4072592740725927,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.17866044972993197,
+      "ldi": 0.2183800459239719,
+      "n_samples": 35,
+      "train_seconds": 16.5
+    },
+    "s2_lam2.0": {
+      "tau_lodo": 0.3310404387936929,
+      "p_refit": 0.0235976402359764,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.1782450579133025,
+      "ldi": 1.851610600919005,
+      "n_samples": 35,
+      "train_seconds": 16.5
+    },
+    "s2_lam5.0": {
+      "tau_lodo": 0.4401746493850202,
+      "p_refit": 0.00019998000199980003,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.17939306980708591,
+      "ldi": 2.4481137975803406,
+      "n_samples": 35,
+      "train_seconds": 16.3
+    }
+  },
+  "lam_means": {
+    "0.5": {
+      "mean_ldi": 0.5250823614753776,
+      "mean_tau_lodo": 0.0982207895321946,
+      "n_seeds": 3
+    },
+    "1.0": {
+      "mean_ldi": 0.5683555507119517,
+      "mean_tau_lodo": 0.10064599421200188,
+      "n_seeds": 3
+    },
+    "2.0": {
+      "mean_ldi": 1.037010042821797,
+      "mean_tau_lodo": 0.18552815800525643,
+      "n_seeds": 3
+    },
+    "5.0": {
+      "mean_ldi": 1.4510195561168402,
+      "mean_tau_lodo": 0.25828429839947464,
+      "n_seeds": 3
+    }
+  },
+  "verdict": {
+    "E3": "no-go",
+    "base_mean_ldi": 2.4694173393409415,
+    "base_mean_tau_lodo": 0.42319821662636925,
+    "passing_lambdas": [],
+    "gate": {
+      "ldi": 1.645,
+      "fidelity_keep": 0.7,
+      "fidelity_metric": "tau_lodo"
+    }
+  }
+}

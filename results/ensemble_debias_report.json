@@ -1,0 +1,115 @@
+{
+  "common_seeds": [
+    0
+  ],
+  "alphas": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "per_seed": {
+    "seed0": [
+      {
+        "alpha": 0.0,
+        "tau": -0.1270944369215576,
+        "moran": NaN,
+        "perm_p": 0.203,
+        "tau_perm_mean": -0.0002438438451709739,
+        "tau_perm_sd": 0.10312487306619983
+      },
+      {
+        "alpha": 0.2,
+        "tau": 0.494873630962242,
+        "moran": NaN,
+        "perm_p": 0.0,
+        "tau_perm_mean": -0.003083168221986975,
+        "tau_perm_sd": 0.10391216689570833
+      },
+      {
+        "alpha": 0.4,
+        "tau": 0.4948647668755901,
+        "moran": NaN,
+        "perm_p": 0.0,
+        "tau_perm_mean": -0.0030919864383389733,
+        "tau_perm_sd": 0.10390370411562039
+      },
+      {
+        "alpha": 0.6,
+        "tau": 0.49485595373492386,
+        "moran": NaN,
+        "perm_p": 0.0,
+        "tau_perm_mean": -0.0031100010636609886,
+        "tau_perm_sd": 0.10390343884912505
+      },
+      {
+        "alpha": 0.8,
+        "tau": 0.49482684432927554,
+        "moran": NaN,
+        "perm_p": 0.0,
+        "tau_perm_mean": -0.003161850685140374,
+        "tau_perm_sd": 0.10391040574186367
+      },
+      {
+        "alpha": 1.0,
+        "tau": -0.16491886120727892,
+        "moran": NaN,
+        "perm_p": 0.01,
+        "tau_perm_mean": -0.001913742088724712,
+        "tau_perm_sd": 0.06577551960730428
+      }
+    ]
+  },
+  "aggregated": [
+    {
+      "alpha": 0.0,
+      "tau_mean": -0.1270944369215576,
+      "tau_sd": 0.0,
+      "moran_mean": NaN,
+      "p_min": 0.203,
+      "nom_sig": false
+    },
+    {
+      "alpha": 0.2,
+      "tau_mean": 0.494873630962242,
+      "tau_sd": 0.0,
+      "moran_mean": NaN,
+      "p_min": 0.0,
+      "nom_sig": true
+    },
+    {
+      "alpha": 0.4,
+      "tau_mean": 0.4948647668755901,
+      "tau_sd": 0.0,
+      "moran_mean": NaN,
+      "p_min": 0.0,
+      "nom_sig": true
+    },
+    {
+      "alpha": 0.6,
+      "tau_mean": 0.49485595373492386,
+      "tau_sd": 0.0,
+      "moran_mean": NaN,
+      "p_min": 0.0,
+      "nom_sig": true
+    },
+    {
+      "alpha": 0.8,
+      "tau_mean": 0.49482684432927554,
+      "tau_sd": 0.0,
+      "moran_mean": NaN,
+      "p_min": 0.0,
+      "nom_sig": true
+    },
+    {
+      "alpha": 1.0,
+      "tau_mean": -0.16491886120727892,
+      "tau_sd": 0.0,
+      "moran_mean": NaN,
+      "p_min": 0.01,
+      "nom_sig": true
+    }
+  ]
+}

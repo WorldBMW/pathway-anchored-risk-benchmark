@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "cohort": "ovarian_cancer_1",
+      "n_spots": 3455,
+      "moran_i": 0.5011,
+      "n_deg_perm_fdr05": 26,
+      "hpv_gene_overlap_in_deg": [
+        "CD4",
+        "IL2RG",
+        "IRF1",
+        "KRT18",
+        "KRT8",
+        "MX1",
+        "MYC",
+        "OAS1",
+        "STAT1"
+      ],
+      "n_hpv_overlap": 9
+    }
+  ],
+  "config": {
+    "fm": "uni",
+    "lambda_hpv": 1.0,
+    "lambda_neigh": 0.3,
+    "lambda_recon": 0.3,
+    "epochs": 20
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "ldi": {
+    "ldi_mean": 0.5650726903950949,
+    "ldi_sd": 0.08401155448360018,
+    "ldi_normalized": 1.229551451187335,
+    "seeds": 3
+  },
+  "marginal_contributions": {
+    "morphology": {
+      "mean": 0.0024252046798073357,
+      "sd": 0.009392777336037886,
+      "seeds": 3,
+      "zh": "形态学分支贡献",
+      "pair": "FULL→NOIMAGE"
+    },
+    "hpv": {
+      "mean": -0.00485040935961456,
+      "sd": 0.00840115544836004,
+      "seeds": 3,
+      "zh": "KEGG-HPV 通路先验贡献",
+      "pair": "NOIMAGE→NOHPV"
+    },
+    "neigh": {
+      "mean": 0.0024252046798072247,
+      "sd": 0.00420057772418002,
+      "seeds": 3,
+      "zh": "空间邻域正则贡献",
+      "pair": "NOHPV→NONEIGH"
+    },
+    "prog": {
+      "mean": 0.20856760246342565,
+      "sd": 0.01830989380418874,
+      "seeds": 3,
+      "zh": "HPV 代理项贡献 (lambda_prog)",
+      "pair": "NONEIGH→NOPROG"
+    },
+    "label": {
+      "mean": 0.041228479556723624,
+      "sd": 0.07287729974608054,
+      "seeds": 3,
+      "zh": "序数诊断标签贡献 (lambda_sup)",
+      "pair": "NOPROG→NOSUP"
+    },
+    "prior": {
+      "mean": 0.3152766083749456,
+      "sd": 0.10969863214238508,
+      "seeds": 3,
+      "zh": "通路先验支撑残余头部贡献",
+      "pair": "NOSUP→NOALL"
+    }
+  },
+  "variant_summary": {
+    "FULL": {
+      "tau_mean": 0.45957628682347845,
+      "tau_sd": 0.00420057772418002,
+      "seeds": 3,
+      "moran_mean": 0.9309961951413851,
+      "moran_sd": 0.001184537760687325
+    },
+    "NOIMAGE": {
+      "tau_mean": 0.4571510821436711,
+      "tau_sd": 0.00840115544836004,
+      "seeds": 3,
+      "moran_mean": 0.859442885743186,
+      "moran_sd": 0.03226799673051699
+    },
+    "NOHPV": {
+      "tau_mean": 0.4620014915032857,
+      "tau_sd": 0.0,
+      "seeds": 3,
+      "moran_mean": 0.9200383195797975,
+      "moran_sd": 0.005036623962603802
+    },
+    "NONEIGH": {
+      "tau_mean": 0.45957628682347845,
+      "tau_sd": 0.00420057772418002,
+      "seeds": 3,
+      "moran_mean": 0.920076609984613,
+      "moran_sd": 0.006144128352862642
+    },
+    "NOPROG": {
+      "tau_mean": 0.2510086843600528,
+      "tau_sd": 0.017821541962013045,
+      "seeds": 4,
+      "moran_mean": 0.9217175332197882,
+      "moran_sd": 0.011530496807917309
+    },
+    "NOSUP": {
+      "tau_mean": 0.20978020480332918,
+      "tau_sd": 0.07066465495830485,
+      "seeds": 3,
+      "moran_mean": 0.6798047648874758,
+      "moran_sd": 0.022640947829123615
+    },
+    "NOALL": {
+      "tau_mean": -0.10549640357161642,
+      "tau_sd": 0.08390647432429779,
+      "seeds": 3,
+      "moran_mean": 0.6869797565408651,
+      "moran_sd": 0.03013616338649753
+    }
+  },
+  "decision": {
+    "theta": 0.21099280714323285,
+    "theta_source": "fallback θ=2·|τ_NOALL|=2·0.105≈0.211",
+    "state": "label-dependent (gate triggered)",
+    "reasons": [
+      "LDI=0.565 > θ=0.211"
+    ],
+    "noall_perm_p": []
+  },
+  "method_note": {
+    "definition": "LDI = τ_FULL − τ_NOALL (backward marginal decomposition, error-propagated SD via √(σ_a²+σ_b²))",
+    "gate_rule": "LDI > θ → label-dependent; θ calibrated from random-control runs",
+    "tau_source": "results/paper_v10_numbers.json::ablation (gen_figures_v10.py aggregated)"
+  },
+  "variant_order_zh": {
+    "FULL": "全标签+代理+通路先验",
+    "NOIMAGE": "剥形态学分支",
+    "NOHPV": "剥 KEGG-HPV 通路先验",
+    "NONEIGH": "剥空间邻域正则",
+    "NOPROG": "剥代理项 (lambda_prog)",
+    "NOSUP": "剥标签 (lambda_sup, 标签+代理全开剥)",
+    "NOALL": "标签+代理+通路先验全开剥"
+  }
+}

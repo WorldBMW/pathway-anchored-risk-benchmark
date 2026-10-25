@@ -1,0 +1,193 @@
+{
+  "pre_registered": {
+    "supported_tau": 0.35,
+    "unsupported_abs_tau": 0.15,
+    "alpha": 0.05
+  },
+  "arms_per_seed": {
+    "group_A": {
+      "tau_lodo": [
+        0.7066652533375732,
+        0.7066652533375732,
+        0.7066652533375732
+      ],
+      "p": [
+        9.999000099990002e-05,
+        9.999000099990002e-05,
+        9.999000099990002e-05
+      ]
+    },
+    "group_B": {
+      "tau_lodo": [
+        0.38795922408232775,
+        0.2225995548013356,
+        0.04593324146694226
+      ],
+      "p": [
+        9.999000099990002e-05,
+        0.0047995200479952005,
+        0.30526947305269475
+      ]
+    },
+    "group_C": {
+      "tau_lodo": [
+        0.11023977952066143,
+        -0.04310658045359197,
+        0.007066652533375733
+      ],
+      "p": [
+        0.10528947105289471,
+        0.687031296870313,
+        0.46485351464853514
+      ]
+    }
+  },
+  "grid": [
+    {
+      "tau_up": 0.2,
+      "tau_low": 0.1,
+      "group_A": "supported",
+      "group_B": "supported",
+      "group_C": "unsupported",
+      "intended": false
+    },
+    {
+      "tau_up": 0.2,
+      "tau_low": 0.15,
+      "group_A": "supported",
+      "group_B": "supported",
+      "group_C": "unsupported",
+      "intended": false
+    },
+    {
+      "tau_up": 0.2,
+      "tau_low": 0.2,
+      "group_A": "supported",
+      "group_B": "supported",
+      "group_C": "unsupported",
+      "intended": false
+    },
+    {
+      "tau_up": 0.25,
+      "tau_low": 0.1,
+      "group_A": "supported",
+      "group_B": "suggestive",
+      "group_C": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.25,
+      "tau_low": 0.15,
+      "group_A": "supported",
+      "group_B": "suggestive",
+      "group_C": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.25,
+      "tau_low": 0.2,
+      "group_A": "supported",
+      "group_B": "suggestive",
+      "group_C": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.3,
+      "tau_low": 0.1,
+      "group_A": "supported",
+      "group_B": "suggestive",
+      "group_C": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.3,
+      "tau_low": 0.15,
+      "group_A": "supported",
+      "group_B": "suggestive",
+      "group_C": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.3,
+      "tau_low": 0.2,
+      "group_A": "supported",
+      "group_B": "suggestive",
+      "group_C": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.35,
+      "tau_low": 0.1,
+      "group_A": "supported",
+      "group_B": "suggestive",
+      "group_C": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.35,
+      "tau_low": 0.15,
+      "group_A": "supported",
+      "group_B": "suggestive",
+      "group_C": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.35,
+      "tau_low": 0.2,
+      "group_A": "supported",
+      "group_B": "suggestive",
+      "group_C": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.4,
+      "tau_low": 0.1,
+      "group_A": "supported",
+      "group_B": "suggestive",
+      "group_C": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.4,
+      "tau_low": 0.15,
+      "group_A": "supported",
+      "group_B": "suggestive",
+      "group_C": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.4,
+      "tau_low": 0.2,
+      "group_A": "supported",
+      "group_B": "suggestive",
+      "group_C": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.45,
+      "tau_low": 0.1,
+      "group_A": "supported",
+      "group_B": "suggestive",
+      "group_C": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.45,
+      "tau_low": 0.15,
+      "group_A": "supported",
+      "group_B": "suggestive",
+      "group_C": "unsupported",
+      "intended": true
+    },
+    {
+      "tau_up": 0.45,
+      "tau_low": 0.2,
+      "group_A": "supported",
+      "group_B": "suggestive",
+      "group_C": "unsupported",
+      "intended": true
+    }
+  ],
+  "n_intended_combos": 15,
+  "n_combos": 18
+}

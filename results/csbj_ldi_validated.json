@@ -1,0 +1,203 @@
+{
+  "definition": {
+    "tau": "Kendall tau-b between per-sample mean score and ordinal severity",
+    "LDI": "(tau_FULL - tau_perp) / sigma_null, standardized excess over the label-permutation null",
+    "tau_perp": "E[tau | complete sample-label permutation] of the supervised score",
+    "theta": "Phi^-1(0.95) = 1.6449, one-sided Gaussian gate on the LDI scale",
+    "gate_rule": "LDI > theta -> label-dependent",
+    "not_used": "tau_FULL - tau_NOALL is not used: the NOALL head collapses to a near-constant offset so its tau is dtype-dependent (indeterminate) noise",
+    "severity_map": "normal=0, HSIL/CIN=1, cancer/carcinoma=2 (gen_figures_v10 convention)"
+  },
+  "variant_stats": {
+    "FULL": {
+      "tau_mean": 0.45957628682347845,
+      "tau_sd": 0.00420057772418002,
+      "tau_per_seed": [
+        0.4620014915032857,
+        0.45472587746386384,
+        0.4620014915032857
+      ],
+      "seeds": [
+        0,
+        3,
+        4
+      ],
+      "n_samples": 35
+    },
+    "NOIMAGE": {
+      "tau_mean": 0.4571510821436711,
+      "tau_sd": 0.00840115544836004,
+      "tau_per_seed": [
+        0.447450263424442,
+        0.4620014915032857,
+        0.4620014915032857
+      ],
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_samples": 35
+    },
+    "NOHPV": {
+      "tau_mean": 0.4620014915032857,
+      "tau_sd": 0.0,
+      "tau_per_seed": [
+        0.4620014915032857,
+        0.4620014915032857,
+        0.4620014915032857
+      ],
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_samples": 35
+    },
+    "NONEIGH": {
+      "tau_mean": 0.45957628682347845,
+      "tau_sd": 0.00420057772418002,
+      "tau_per_seed": [
+        0.45472587746386384,
+        0.4620014915032857,
+        0.4620014915032857
+      ],
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_samples": 35
+    },
+    "NOPROG": {
+      "tau_mean": 0.2510086843600528,
+      "tau_sd": 0.017821541962013045,
+      "tau_per_seed": [
+        0.2655599124388965,
+        0.22918184224178736,
+        0.243733070320631,
+        0.2655599124388965
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "n_samples": 35
+    },
+    "NOSUP": {
+      "tau_mean": 0.20978020480332918,
+      "tau_sd": 0.07066465495830485,
+      "tau_per_seed": [
+        0.14915008780814734,
+        0.19280377204467825,
+        0.28738675455716195
+      ],
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_samples": 35
+    },
+    "NOALL": {
+      "tau_mean": -0.10549640357161642,
+      "tau_sd": 0.08390647432429779,
+      "tau_per_seed": [
+        -0.07639394741392913,
+        -0.20007938608410009,
+        -0.04001587721682002
+      ],
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_samples": 35
+    }
+  },
+  "ldi": {
+    "value": 3.258266481130093,
+    "theta": 1.6448536269514722,
+    "tau_full": 0.45957628682347845,
+    "tau_perp": 0.0007297440881540085,
+    "sigma_null": 0.1408253577148112,
+    "tau_noall": -0.10549640357161642,
+    "tau_noall_sd": 0.08390647432429779,
+    "raw_noall_contrast_not_used": 0.5650726903950949
+  },
+  "theta_calibration": {
+    "B": 10000,
+    "perm_seed": 20261005,
+    "null_mean": 0.0007297440881540085,
+    "null_sd": 0.1408253577148112,
+    "theta_q95": 0.2364574562812092,
+    "theta_q99": 0.31648921071484926,
+    "true_tau_full": 0.45957628682347845,
+    "p_upper": 0.0
+  },
+  "gate": {
+    "threshold": 1.6448536269514722,
+    "state": "label-dependent",
+    "reasons": [
+      "LDI=3.258 > theta=1.645"
+    ]
+  },
+  "injected_calibration": {
+    "alphas": [
+      0.0,
+      0.05,
+      0.1,
+      0.15000000000000002,
+      0.2,
+      0.25,
+      0.30000000000000004,
+      0.35000000000000003,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6000000000000001,
+      0.65,
+      0.7000000000000001,
+      0.75,
+      0.8,
+      0.8500000000000001,
+      0.9,
+      0.9500000000000001,
+      1.0
+    ],
+    "tau_curve": [
+      -0.010913421059132731,
+      -0.010913421059132731,
+      0.025507555064170205,
+      0.0691183333745073,
+      0.1019443000559627,
+      0.13858648595048456,
+      0.17097692992641278,
+      0.20735500012352193,
+      0.25871948707944065,
+      0.3019379826360056,
+      0.3607497073361215,
+      0.4110721932273329,
+      0.44017464938502016,
+      0.4620014915032857,
+      0.4620014915032857,
+      0.4620014915032857,
+      0.4620014915032857,
+      0.4620014915032857,
+      0.4620014915032857,
+      0.4620014915032857,
+      1.0
+    ],
+    "monotone": true,
+    "equiv_alpha": 0.6444444444444447
+  },
+  "random_panel_control": {
+    "n": 30,
+    "mean": 0.46200149150328557,
+    "sd": 1.1102230246251565e-16,
+    "note": "RANDOM108 keeps lambda_sup/lambda_prog, so its score ordering tracks severity irrespective of panel content."
+  }
+}

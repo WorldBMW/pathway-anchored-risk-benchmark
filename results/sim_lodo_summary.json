@@ -1,0 +1,143 @@
+{
+  "metric": "LODO Kendall tau-b on NOALL (label-free) frozen embeddings",
+  "thresholds": {
+    "supported_tau": 0.35,
+    "unsupported_abs_tau": 0.15,
+    "alpha": 0.05
+  },
+  "n_perm": 10000,
+  "arms": {
+    "group_A": {
+      "verdict": "supported",
+      "stats": {
+        "transfer_mean": 0.7066652533375732,
+        "transfer_sd": 0.0,
+        "seeds_significant": 3,
+        "seeds_total": 3,
+        "fraction_significant": 1.0,
+        "full_head_insample_mean": 0.7066652533375732,
+        "gap_insample_minus_transfer": 0.0
+      },
+      "seeds": [
+        {
+          "seed": 0,
+          "transfer": {
+            "tau_lodo": 0.7066652533375732,
+            "p": 9.999000099990002e-05,
+            "tau_insample_probe": 0.7066652533375732,
+            "n_donors": 90
+          },
+          "full_head_insample_tau": 0.7066652533375732
+        },
+        {
+          "seed": 1,
+          "transfer": {
+            "tau_lodo": 0.7066652533375732,
+            "p": 9.999000099990002e-05,
+            "tau_insample_probe": 0.7066652533375732,
+            "n_donors": 90
+          },
+          "full_head_insample_tau": 0.7066652533375732
+        },
+        {
+          "seed": 2,
+          "transfer": {
+            "tau_lodo": 0.7066652533375732,
+            "p": 9.999000099990002e-05,
+            "tau_insample_probe": 0.7066652533375732,
+            "n_donors": 90
+          },
+          "full_head_insample_tau": 0.7066652533375732
+        }
+      ]
+    },
+    "group_B": {
+      "verdict": "suggestive",
+      "stats": {
+        "transfer_mean": 0.21883067345020182,
+        "transfer_sd": 0.17104413625139034,
+        "seeds_significant": 2,
+        "seeds_total": 3,
+        "fraction_significant": 0.6666666666666666,
+        "full_head_insample_mean": 0.7066652533375732,
+        "gap_insample_minus_transfer": 0.48783457988737144
+      },
+      "seeds": [
+        {
+          "seed": 0,
+          "transfer": {
+            "tau_lodo": 0.38795922408232775,
+            "p": 9.999000099990002e-05,
+            "tau_insample_probe": 0.7066652533375732,
+            "n_donors": 90
+          },
+          "full_head_insample_tau": 0.7066652533375732
+        },
+        {
+          "seed": 1,
+          "transfer": {
+            "tau_lodo": 0.2225995548013356,
+            "p": 0.0047995200479952005,
+            "tau_insample_probe": 0.7066652533375732,
+            "n_donors": 90
+          },
+          "full_head_insample_tau": 0.7066652533375732
+        },
+        {
+          "seed": 2,
+          "transfer": {
+            "tau_lodo": 0.04593324146694226,
+            "p": 0.30526947305269475,
+            "tau_insample_probe": 0.7066652533375732,
+            "n_donors": 90
+          },
+          "full_head_insample_tau": 0.7066652533375732
+        }
+      ]
+    },
+    "group_C": {
+      "verdict": "unsupported",
+      "stats": {
+        "transfer_mean": 0.02473328386681507,
+        "transfer_sd": 0.07818477426163019,
+        "seeds_significant": 0,
+        "seeds_total": 3,
+        "fraction_significant": 0.0,
+        "full_head_insample_mean": 0.3867814486600984,
+        "gap_insample_minus_transfer": 0.36204816479328333
+      },
+      "seeds": [
+        {
+          "seed": 0,
+          "transfer": {
+            "tau_lodo": 0.11023977952066143,
+            "p": 0.10528947105289471,
+            "tau_insample_probe": 0.7066652533375732,
+            "n_donors": 90
+          },
+          "full_head_insample_tau": 0.3222393555219334
+        },
+        {
+          "seed": 1,
+          "transfer": {
+            "tau_lodo": -0.04310658045359197,
+            "p": 0.687031296870313,
+            "tau_insample_probe": 0.7066652533375732,
+            "n_donors": 90
+          },
+          "full_head_insample_tau": 0.4826523680295625
+        },
+        {
+          "seed": 2,
+          "transfer": {
+            "tau_lodo": 0.007066652533375733,
+            "p": 0.46485351464853514,
+            "tau_insample_probe": 0.7066652533375732,
+            "n_donors": 90
+          },
+          "full_head_insample_tau": 0.3554526224287993
+        }
+      ]
+    }
+  }
+}

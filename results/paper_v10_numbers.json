@@ -1,0 +1,583 @@
+{
+  "ablation": {
+    "FULL": {
+      "n_seeds": 3,
+      "moran_mean": 0.9309961951413851,
+      "moran_sd": 0.001184537760687325,
+      "tau_mean": 0.45957628682347845,
+      "tau_sd": 0.00420057772418002,
+      "taus": [
+        0.4620014915032857,
+        0.45472587746386384,
+        0.4620014915032857
+      ],
+      "mwu_ps": [
+        1.9098548510313215e-05,
+        1.9098548510313215e-05,
+        1.9098548510313215e-05
+      ],
+      "mwu_nsig": 3,
+      "tau_p_min": 0.0010133130709898328,
+      "tau_p_max": 0.0012162424917036526,
+      "mwu_p_min": 1.9098548510313215e-05,
+      "mwu_p_max": 1.9098548510313215e-05,
+      "tau_perm_p_min": 9.999000099990002e-05,
+      "tau_perm_p_max": 0.00019998000199980003,
+      "tau_perm_ps": [
+        0.00019998000199980003,
+        9.999000099990002e-05,
+        9.999000099990002e-05,
+        9.999000099990002e-05,
+        9.999000099990002e-05
+      ],
+      "tau_perm_nsig": 5,
+      "tau_perm_B": 10000
+    },
+    "NOIMAGE": {
+      "n_seeds": 3,
+      "moran_mean": 0.859442885743186,
+      "moran_sd": 0.03226799673051699,
+      "tau_mean": 0.4571510821436711,
+      "tau_sd": 0.00840115544836004,
+      "taus": [
+        0.447450263424442,
+        0.4620014915032857,
+        0.4620014915032857
+      ],
+      "mwu_ps": [
+        7.639419404125286e-05,
+        1.9098548510313215e-05,
+        1.9098548510313215e-05
+      ],
+      "mwu_nsig": 3,
+      "tau_p_min": 0.0010133130709898328,
+      "tau_p_max": 0.0014561537179100805,
+      "mwu_p_min": 1.9098548510313215e-05,
+      "mwu_p_max": 7.639419404125286e-05,
+      "tau_perm_p_min": 9.999000099990002e-05,
+      "tau_perm_p_max": 0.00019998000199980003,
+      "tau_perm_ps": [
+        0.00019998000199980003,
+        9.999000099990002e-05,
+        9.999000099990002e-05
+      ],
+      "tau_perm_nsig": 3,
+      "tau_perm_B": 10000
+    },
+    "NOHPV": {
+      "n_seeds": 3,
+      "moran_mean": 0.9200383195797975,
+      "moran_sd": 0.005036623962603802,
+      "tau_mean": 0.4620014915032857,
+      "tau_sd": 0.0,
+      "taus": [
+        0.4620014915032857,
+        0.4620014915032857,
+        0.4620014915032857
+      ],
+      "mwu_ps": [
+        1.9098548510313215e-05,
+        1.9098548510313215e-05,
+        1.9098548510313215e-05
+      ],
+      "mwu_nsig": 3,
+      "tau_p_min": 0.0010133130709898328,
+      "tau_p_max": 0.0010133130709898328,
+      "mwu_p_min": 1.9098548510313215e-05,
+      "mwu_p_max": 1.9098548510313215e-05,
+      "tau_perm_p_min": 9.999000099990002e-05,
+      "tau_perm_p_max": 0.00019998000199980003,
+      "tau_perm_ps": [
+        0.00019998000199980003,
+        9.999000099990002e-05,
+        9.999000099990002e-05
+      ],
+      "tau_perm_nsig": 3,
+      "tau_perm_B": 10000
+    },
+    "NONEIGH": {
+      "n_seeds": 3,
+      "moran_mean": 0.920076609984613,
+      "moran_sd": 0.006144128352862642,
+      "tau_mean": 0.45957628682347845,
+      "tau_sd": 0.00420057772418002,
+      "taus": [
+        0.45472587746386384,
+        0.4620014915032857,
+        0.4620014915032857
+      ],
+      "mwu_ps": [
+        1.9098548510313215e-05,
+        1.9098548510313215e-05,
+        1.9098548510313215e-05
+      ],
+      "mwu_nsig": 3,
+      "tau_p_min": 0.0010133130709898328,
+      "tau_p_max": 0.0012162424917036526,
+      "mwu_p_min": 1.9098548510313215e-05,
+      "mwu_p_max": 1.9098548510313215e-05,
+      "tau_perm_p_min": 9.999000099990002e-05,
+      "tau_perm_p_max": 0.00019998000199980003,
+      "tau_perm_ps": [
+        0.00019998000199980003,
+        9.999000099990002e-05,
+        9.999000099990002e-05
+      ],
+      "tau_perm_nsig": 3,
+      "tau_perm_B": 10000
+    },
+    "NOPROG": {
+      "n_seeds": 4,
+      "moran_mean": 0.9217175332197882,
+      "moran_sd": 0.011530496807917309,
+      "tau_mean": 0.2510086843600528,
+      "tau_sd": 0.017821541962013045,
+      "taus": [
+        0.2655599124388965,
+        0.22918184224178736,
+        0.243733070320631,
+        0.2655599124388965
+      ],
+      "mwu_ps": [
+        0.03214285714285715,
+        0.05815508021390375,
+        0.04635217723453018,
+        0.03214285714285715
+      ],
+      "mwu_nsig": 3,
+      "tau_p_min": 0.058856283887599004,
+      "tau_p_max": 0.10300391864541403,
+      "mwu_p_min": 0.03214285714285715,
+      "mwu_p_max": 0.05815508021390375,
+      "tau_perm_p_min": 0.039996000399960006,
+      "tau_perm_p_max": 0.0724927507249275,
+      "tau_perm_ps": [
+        0.0724927507249275,
+        0.058394160583941604,
+        0.05219478052194781,
+        0.039996000399960006
+      ],
+      "tau_perm_nsig": 1,
+      "tau_perm_B": 10000
+    },
+    "NOSUP": {
+      "n_seeds": 3,
+      "moran_mean": 0.6798047648874758,
+      "moran_sd": 0.022640947829123615,
+      "tau_mean": 0.20978020480332918,
+      "tau_sd": 0.07066465495830485,
+      "taus": [
+        0.14915008780814734,
+        0.19280377204467825,
+        0.28738675455716195
+      ],
+      "mwu_ps": [
+        0.16275783040488923,
+        0.09700152788388083,
+        0.021447669977081744
+      ],
+      "mwu_nsig": 1,
+      "tau_p_min": 0.04089949795833555,
+      "tau_p_max": 0.28864707991731553,
+      "mwu_p_min": 0.021447669977081744,
+      "mwu_p_max": 0.16275783040488923,
+      "tau_perm_p_min": 0.0188981101889811,
+      "tau_perm_p_max": 0.1578842115788421,
+      "tau_perm_ps": [
+        0.1578842115788421,
+        0.09609039096090391,
+        0.0188981101889811
+      ],
+      "tau_perm_nsig": 1,
+      "tau_perm_B": 10000
+    },
+    "NOALL": {
+      "n_seeds": 3,
+      "moran_mean": 0.6869797565408651,
+      "moran_sd": 0.03013616338649753,
+      "tau_mean": -0.10549640357161642,
+      "tau_sd": 0.08390647432429779,
+      "taus": [
+        -0.07639394741392913,
+        -0.20007938608410009,
+        -0.04001587721682002
+      ],
+      "mwu_ps": [
+        0.7003246753246753,
+        0.9202062643239114,
+        0.6273873185637892
+      ],
+      "mwu_nsig": 0,
+      "tau_p_min": 0.15461470209167955,
+      "tau_p_max": 0.7758863894360796,
+      "mwu_p_min": 0.6273873185637892,
+      "mwu_p_max": 0.9202062643239114,
+      "tau_perm_p_min": 0.6125387461253875,
+      "tau_perm_p_max": 0.9173082691730827,
+      "tau_perm_ps": [
+        0.7032296770322968,
+        0.9173082691730827,
+        0.6125387461253875
+      ],
+      "tau_perm_nsig": 0,
+      "tau_perm_B": 10000
+    }
+  },
+  "biology": {
+    "CELL_tumor_epithelial": {
+      "rho": 0.45663525576662445,
+      "rho_sd": 0.006460385808319671,
+      "q_max": 0.0
+    },
+    "INTERFERON_ANTIVIRAL": {
+      "rho": -0.4483829900904633,
+      "rho_sd": 0.001788482184021318,
+      "q_max": 0.0
+    },
+    "HPV_INTEGRATION_CANDIDATE": {
+      "rho": 0.40884594837682947,
+      "rho_sd": 0.0009791329397417822,
+      "q_max": 0.0
+    },
+    "ANTIGEN_PRESENTATION": {
+      "rho": 0.4021443108625527,
+      "rho_sd": 0.0034354561027813346,
+      "q_max": 0.0
+    },
+    "PROLIFERATION": {
+      "rho": -0.3407226043888843,
+      "rho_sd": 0.0014262280830620395,
+      "q_max": 0.0
+    },
+    "EMT": {
+      "rho": -0.1905878982456419,
+      "rho_sd": 0.0018985683442163785,
+      "q_max": 0.0
+    },
+    "CELL_myeloid": {
+      "rho": 0.113870237935897,
+      "rho_sd": 0.0018659346136451918,
+      "q_max": 1.0040204320722466e-129
+    },
+    "CELL_plasma": {
+      "rho": 0.10202579227045024,
+      "rho_sd": 0.002152508222684081,
+      "q_max": 2.1506619958887394e-104
+    },
+    "CELL_endothelial": {
+      "rho": -0.09071977542422653,
+      "rho_sd": 0.007317329558542148,
+      "q_max": 3.37726560207276e-78
+    },
+    "CELL_fibroblast": {
+      "rho": -0.08109783782291603,
+      "rho_sd": 0.003344313769498956,
+      "q_max": 3.4274790035178864e-63
+    },
+    "P53_PATHWAY": {
+      "rho": -0.042185847656380414,
+      "rho_sd": 0.003194746558231092,
+      "q_max": 1.3589975754790082e-17
+    }
+  },
+  "risk_by_severity_spot": {
+    "normal_mean": -0.0897364043878873,
+    "hsil_mean": 1.0854891761494012,
+    "cancer_mean": 1.794620597302729,
+    "normal_n_spots": 40110,
+    "hsil_n_spots": 579,
+    "cancer_n_spots": 6131
+  },
+  "external": {
+    "geomx_n_patients": 7,
+    "geomx_n_cores": 93,
+    "geomx_n_rois": 186,
+    "geomx_benign_mean": -10.522355709075928,
+    "geomx_tumor_mean": -12.984637519892525,
+    "geomx_tn_roi_p": 1.8412430971750576e-08,
+    "geomx_core_benign_mean": -10.522355709075928,
+    "geomx_core_tumor_mean": -12.984637519892525,
+    "geomx_tn_core_p": 2.003004215213635e-06,
+    "geomx_wp_n": 6,
+    "geomx_wp_p": 0.03125,
+    "geomx_wp_all": false,
+    "geomx_silva_A": -14.250665233248757,
+    "geomx_silva_B": -12.069400050423361,
+    "geomx_silva_C": -12.726583213806153,
+    "geomx_AB_p": 0.012998620379125901,
+    "geomx_core_silva_A": -14.250665233248757,
+    "geomx_core_silva_B": -12.069400050423361,
+    "geomx_core_silva_C": -12.726583213806153,
+    "geomx_core_silva_AB_p": 0.007803302674505027,
+    "geomx_compartment_epi": -12.66512002227127,
+    "geomx_compartment_stroma": -11.980347592343566,
+    "geomx_risk_hi": -12.552856240953718,
+    "geomx_risk_lo": -13.682130355101366,
+    "geomx_risk_p": 0.19330166126293924,
+    "geomx_risk_core_hi": -12.552856240953718,
+    "geomx_risk_core_lo": -13.682130355101366,
+    "geomx_risk_core_p": 0.09958012942347291,
+    "geomx_risk_core_hi_n": 42,
+    "geomx_risk_core_lo_n": 26,
+    "geomx_compartment_p": 0.1828687496976159,
+    "geomx_silva_epi_A": -16.18036024911063,
+    "geomx_silva_epi_B": -12.521762717853893,
+    "geomx_silva_epi_C": -12.133717575073241,
+    "geomx_silva_epi_AB_p": 0.0007652646086569484,
+    "geomx_silva_str_A": -12.320970217386881,
+    "geomx_silva_str_B": -11.617037382992832,
+    "geomx_silva_str_C": -13.319448852539063,
+    "geomx_wp_exact_two_sided_floor_n6": 0.03125,
+    "geomx_wp_ci_lo": 0.541,
+    "lodo_4of4_ci_lo": 0.398,
+    "unsup_3of4_ci_lo": 0.194,
+    "rank_perm_distinct_labelings_35": 209440,
+    "hnscc_moran_mean": 0.7570004403487663,
+    "hnscc_moran_min": 0.657440167626923,
+    "hnscc_moran_max": 0.8674592937541195,
+    "hnscc_n_samples": 8,
+    "hnscc_gse281978_moran_mean": 0.667217405291145,
+    "hnscc_gse281978_moran_min": 0.5876133047976372,
+    "hnscc_gse281978_moran_max": 0.8744714553175146,
+    "hnscc_gse281978_n": 6,
+    "hnscc_perm_null_mean_268": -0.00030249457504806054,
+    "hnscc_perm_p_max_268": 0.000999000999000999,
+    "hnscc_perm_z_min_268": 65.53866950048116,
+    "hnscc_perm_null_mean_281": -0.0007551508950050741,
+    "hnscc_perm_p_max_281": 0.000999000999000999,
+    "hnscc_perm_z_min_281": 38.581634853198715,
+    "rg268_kegg": 0.7097539811534636,
+    "rg268_exprm": 0.5846613549764139,
+    "rg268_exprm_delta": 0.12509262617704964,
+    "rg268_exprm_signp": 0.0078125,
+    "rg268_exprm_npos": 8,
+    "rg268_exprm_n": 8,
+    "rg268_hvgu": 0.39686852467875156,
+    "rg268_hvgu_signp": 0.0078125,
+    "rg268_hvgu_npos": 8,
+    "rg281_kegg": 0.6233411848537127,
+    "rg281_exprm": 0.4755271007281207,
+    "rg281_exprm_delta": 0.147814084125592,
+    "rg281_exprm_signp": 0.03125,
+    "rg281_exprm_npos": 6,
+    "rg281_exprm_n": 6,
+    "rg281_hvgu": 0.29850085397083276,
+    "rg281_hvgu_signp": 0.03125,
+    "rg281_hvgu_npos": 6,
+    "mal_non_delta": -0.8076777305644831,
+    "mal_non_p": 0.1953125,
+    "mal_non_pos": 3,
+    "mal_non_n": 8,
+    "edge_core_delta": -0.5492881757557984,
+    "edge_core_p": 0.0546875,
+    "edge_core_pos": 1,
+    "edge_core_n": 8,
+    "hpv268_pos": -2.8965423934672874,
+    "hpv268_neg": -4.0227676658036335,
+    "hpv268_p": 0.2,
+    "hpv268_npos": 4,
+    "hpv268_nneg": 4,
+    "hpv281_pos": -1.8754427015990172,
+    "hpv281_neg": -4.205532276921742,
+    "hpv281_p": 0.13333333333333333,
+    "hpv281_npos": 2,
+    "hpv281_nneg": 4,
+    "pt_mean": -3.478452630564951,
+    "lnmt_mean": -3.379218873063383,
+    "pt_lnmt_p": 1.0,
+    "pt_n": 3,
+    "lnmt_n": 3,
+    "lodo_mean_pct": 0.9274193548387097,
+    "lodo_min_pct": 0.7096774193548387,
+    "lodo_n_above_median": 4,
+    "lodo_n_above_all": 3,
+    "lodo_folds": [
+      {
+        "holdout": "CA_HPV_1",
+        "holdout_mean_risk": 1.06563138961792,
+        "holdout_moran_i": 0.3015463236206232,
+        "n_normal_train": 31,
+        "normal_mean": 0.027822819005157196,
+        "percentile_vs_normal": 1.0,
+        "above_median_normal": true,
+        "above_all_normal": true,
+        "lambda_recon": 0.2,
+        "lambda_sup": 5.0,
+        "lambda_prog": 1.5,
+        "n_train_samples": 34,
+        "train_spots": 45063
+      },
+      {
+        "holdout": "CA_HPV_2",
+        "holdout_mean_risk": 0.02738344669342041,
+        "holdout_moran_i": 0.7878606614710586,
+        "n_normal_train": 31,
+        "normal_mean": -0.012946474576188673,
+        "percentile_vs_normal": 0.7096774193548387,
+        "above_median_normal": true,
+        "above_all_normal": false,
+        "lambda_recon": 0.2,
+        "lambda_sup": 5.0,
+        "lambda_prog": 1.5,
+        "n_train_samples": 34,
+        "train_spots": 45227
+      },
+      {
+        "holdout": "HSIL_HPV",
+        "holdout_mean_risk": 1.1248337030410767,
+        "holdout_moran_i": 0.6205418492501538,
+        "n_normal_train": 31,
+        "normal_mean": 0.002454219660120866,
+        "percentile_vs_normal": 1.0,
+        "above_median_normal": true,
+        "above_all_normal": true,
+        "lambda_recon": 0.2,
+        "lambda_sup": 5.0,
+        "lambda_prog": 1.5,
+        "n_train_samples": 34,
+        "train_spots": 46241
+      },
+      {
+        "holdout": "cervical_cancer_1",
+        "holdout_mean_risk": 1.751482367515564,
+        "holdout_moran_i": 0.6801875469716672,
+        "n_normal_train": 31,
+        "normal_mean": -0.011178264574658486,
+        "percentile_vs_normal": 1.0,
+        "above_median_normal": true,
+        "above_all_normal": true,
+        "lambda_recon": 0.2,
+        "lambda_sup": 5.0,
+        "lambda_prog": 1.5,
+        "n_train_samples": 34,
+        "train_spots": 44039
+      }
+    ],
+    "unsup_lodo_mean_pct": 0.7903225806451613,
+    "unsup_lodo_min_pct": 0.25806451612903225,
+    "unsup_lodo_max_pct": 1.0,
+    "unsup_lodo_n_above_median": 3,
+    "unsup_lodo_n_above_all": 1,
+    "unsup_lodo_n_folds": 4,
+    "unsup_lodo_folds": [
+      {
+        "holdout": "CA_HPV_1",
+        "holdout_mean_risk": -0.1644102931022644,
+        "holdout_moran_i": 0.8271850080202368,
+        "n_normal_train": 31,
+        "normal_mean": -0.47723046546020814,
+        "percentile_vs_normal": 0.967741935483871,
+        "above_median_normal": true,
+        "above_all_normal": false,
+        "hpv_proxy_auc": 0.9737272671678108,
+        "lambda_recon": 0.2,
+        "lambda_sup": 0.0,
+        "lambda_prog": 0.0,
+        "n_train_samples": 34,
+        "train_spots": 45063
+      },
+      {
+        "holdout": "CA_HPV_2",
+        "holdout_mean_risk": -0.4575325846672058,
+        "holdout_moran_i": 0.8898335713182384,
+        "n_normal_train": 31,
+        "normal_mean": -0.3911633686192574,
+        "percentile_vs_normal": 0.25806451612903225,
+        "above_median_normal": false,
+        "above_all_normal": false,
+        "hpv_proxy_auc": 0.785790486144309,
+        "lambda_recon": 0.2,
+        "lambda_sup": 0.0,
+        "lambda_prog": 0.0,
+        "n_train_samples": 34,
+        "train_spots": 45227
+      },
+      {
+        "holdout": "HSIL_HPV",
+        "holdout_mean_risk": 0.02119813673198223,
+        "holdout_moran_i": 0.8736757151110757,
+        "n_normal_train": 31,
+        "normal_mean": -0.1282966076895161,
+        "percentile_vs_normal": 0.9354838709677419,
+        "above_median_normal": true,
+        "above_all_normal": false,
+        "hpv_proxy_auc": 0.012300212332622313,
+        "lambda_recon": 0.2,
+        "lambda_sup": 0.0,
+        "lambda_prog": 0.0,
+        "n_train_samples": 34,
+        "train_spots": 46241
+      },
+      {
+        "holdout": "cervical_cancer_1",
+        "holdout_mean_risk": 0.796978771686554,
+        "holdout_moran_i": 0.8965621942966147,
+        "n_normal_train": 31,
+        "normal_mean": 0.2736304849386215,
+        "percentile_vs_normal": 1.0,
+        "above_median_normal": true,
+        "above_all_normal": true,
+        "hpv_proxy_auc": 0.9807823820322427,
+        "lambda_recon": 0.2,
+        "lambda_sup": 0.0,
+        "lambda_prog": 0.0,
+        "n_train_samples": 34,
+        "train_spots": 44039
+      }
+    ]
+  },
+  "baseline": {
+    "loso_hpv_ridge_auc": 0.4967,
+    "loso_hpv_ridge_auc_sd": 0.0205,
+    "loso_hpv_ridge_valid": 16,
+    "loso_hpv_ridge_total": 35,
+    "loso_hpv_mlp_auc": 0.4973,
+    "loso_hpv_mlp_auc_sd": 0.0198,
+    "loso_hpv_mlp_valid": 33,
+    "loso35_mode": "loso_cross_sample",
+    "loso35_n_samples": 35,
+    "loso35_fm": "uni",
+    "loso35_n_target_genes": 1533,
+    "loso35_recon_mse": 0.59659,
+    "loso35_per_gene_pearson": -0.0145,
+    "loso35_valid_folds": 35,
+    "he2st_mode": "single_sample_80_20",
+    "he2st_sample": "cervical_cancer_1",
+    "he2st_mse": 0.57861
+  },
+  "random_control": {
+    "kegg_moran": 0.9621278804757833,
+    "random_moran_mean": 0.9486162545832182,
+    "random_moran_min": 0.9216046880572821,
+    "random_moran_max": 0.9642518719826209,
+    "n_random": 30,
+    "moran_perm_p": 0.0967741935483871,
+    "auc_perm_p": 0.5483870967741935,
+    "kegg_kendall": 0.4620014915032857,
+    "random_kendall_mean": 0.4620014915032857
+  },
+  "scrna": {
+    "n_cells": 31002,
+    "n_markers": 52,
+    "within_corr": 0.2419694694390157,
+    "between_corr": -0.03734813909121518,
+    "gap": 0.2793176085302309
+  },
+  "tcga": {
+    "n_patients": 302,
+    "events": 72,
+    "n_genes": 11,
+    "n_sig_BH": 0,
+    "min_gene": "PSME2",
+    "min_p": 0.11354106961583364,
+    "min_HR": 0.8361955517356593
+  },
+  "cohort": {
+    "n_samples": 35,
+    "n_normal": 31,
+    "n_disease": 4,
+    "n_spots": 46820,
+    "n_genes_panel": 108,
+    "n_seed_full": 3
+  }
+}

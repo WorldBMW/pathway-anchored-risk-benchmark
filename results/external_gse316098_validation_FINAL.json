@@ -1,0 +1,1129 @@
+{
+  "dataset": "GSE316098",
+  "type": "cervical adenocarcinoma GeoMx",
+  "checkpoint": "results/checkpoint_FULL_DEPLOY_FAST_seed42.pt",
+  "mode": "expr_only",
+  "normalization": "log1p(raw counts aligned to checkpoint panel, zero-fill missing)",
+  "n_rois": 186,
+  "panel_n_genes": 4991,
+  "gene_match": 4788,
+  "silva_A_mean_oldlabel": -13.220770348893835,
+  "per_roi": [
+    {
+      "roi": "1A.001.epi",
+      "score": -13.183178901672363,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.001.stroma",
+      "score": -11.461002349853516,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.002.epi",
+      "score": -10.841309547424316,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.002.stroma",
+      "score": -11.744765281677246,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.003.epi",
+      "score": -11.503900527954102,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.003.stroma",
+      "score": -10.957778930664062,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.004.epi",
+      "score": -11.445426940917969,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.004.stroma",
+      "score": -10.273735046386719,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.005.epi",
+      "score": -12.320775985717773,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.005.stroma",
+      "score": -11.42956829071045,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.006.epi",
+      "score": -11.94320011138916,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.006.stroma",
+      "score": -9.962334632873535,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.007.epi",
+      "score": -9.706804275512695,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.007.stroma",
+      "score": -10.226909637451172,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.008.epi",
+      "score": -14.152139663696289,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.008.stroma",
+      "score": -10.129559516906738,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.009.epi",
+      "score": -11.298933029174805,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.009.stroma",
+      "score": -11.499306678771973,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.010.epi",
+      "score": -12.569238662719727,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.010.stroma",
+      "score": -10.276535034179688,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.011.epi",
+      "score": -11.565194129943848,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.011.stroma",
+      "score": -8.196537971496582,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.012.epi",
+      "score": -14.311442375183105,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.012.stroma",
+      "score": -11.293622016906738,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.013.epi",
+      "score": -14.753929138183594,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.013.stroma",
+      "score": -11.986455917358398,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.014.epi",
+      "score": -10.623751640319824,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.014.stroma",
+      "score": -11.798803329467773,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.015.epi",
+      "score": -10.684233665466309,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.015.stroma",
+      "score": -10.423798561096191,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.016.epi",
+      "score": -9.200444221496582,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.016.stroma",
+      "score": -9.222041130065918,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.017.epi",
+      "score": -11.626707077026367,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.017.stroma",
+      "score": -11.21868896484375,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.018.epi",
+      "score": -15.763257026672363,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.018.stroma",
+      "score": -15.99023151397705,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.019.epi",
+      "score": -16.63949203491211,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.019.stroma",
+      "score": -15.43240737915039,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.020.epi",
+      "score": -16.03451156616211,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.020.stroma",
+      "score": -16.260677337646484,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.021.epi",
+      "score": -12.468344688415527,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.021.stroma",
+      "score": -15.916004180908203,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.022.epi",
+      "score": -12.118006706237793,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.022.stroma",
+      "score": -13.509027481079102,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.023.epi",
+      "score": -15.892831802368164,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.023.stroma",
+      "score": -14.525717735290527,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.024.epi",
+      "score": -15.303499221801758,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.024.stroma",
+      "score": -16.30259895324707,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.025.epi",
+      "score": -15.727444648742676,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.025.stroma",
+      "score": -15.307792663574219,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.026.epi",
+      "score": -13.569293022155762,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.026.stroma",
+      "score": -15.63572883605957,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.027.epi",
+      "score": -11.995993614196777,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.027.stroma",
+      "score": -15.170594215393066,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.029.epi",
+      "score": -20.468629837036133,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.029.stroma",
+      "score": -14.078487396240234,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.030.epi",
+      "score": -18.55199432373047,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.030.stroma",
+      "score": -14.575139045715332,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.032.epi",
+      "score": -19.70000648498535,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.032.stroma",
+      "score": -15.504714965820312,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.033.epi",
+      "score": -20.229141235351562,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.033.stroma",
+      "score": -15.914838790893555,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.034.epi",
+      "score": -18.974668502807617,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.034.stroma",
+      "score": -14.726651191711426,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.035.epi",
+      "score": -19.10419273376465,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.035.stroma",
+      "score": -16.939191818237305,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.036.epi",
+      "score": -19.590545654296875,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.036.stroma",
+      "score": -14.795429229736328,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.037.epi",
+      "score": -19.15969467163086,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.037.stroma",
+      "score": -11.911806106567383,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.038.epi",
+      "score": -12.03187370300293,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.038.stroma",
+      "score": -11.293660163879395,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.039.epi",
+      "score": -12.909760475158691,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.039.stroma",
+      "score": -12.06466007232666,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.040.epi",
+      "score": -10.57651424407959,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.040.stroma",
+      "score": -10.835287094116211,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.041.epi",
+      "score": -10.69810962677002,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.041.stroma",
+      "score": -10.749519348144531,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.042.epi",
+      "score": -13.561986923217773,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.042.stroma",
+      "score": -13.433412551879883,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.043.epi",
+      "score": -14.975330352783203,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.043.stroma",
+      "score": -12.06237506866455,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.044.epi",
+      "score": -7.842275619506836,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.044.stroma",
+      "score": -13.54736328125,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.045.epi",
+      "score": -12.227128028869629,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.045.stroma",
+      "score": -11.757292747497559,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.046.epi",
+      "score": -11.443268775939941,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.046.stroma",
+      "score": -12.330680847167969,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.047.epi",
+      "score": -14.212946891784668,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.047.stroma",
+      "score": -11.722563743591309,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.048.epi",
+      "score": -11.171195983886719,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.048.stroma",
+      "score": -10.813102722167969,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1A.049.epi",
+      "score": -11.198972702026367,
+      "pattern": "1A",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1A.049.stroma",
+      "score": -11.672492027282715,
+      "pattern": "1A",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.001.epi",
+      "score": -17.190673828125,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.001.stroma",
+      "score": -10.866920471191406,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.002.epi",
+      "score": -14.555788040161133,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.002.stroma",
+      "score": -11.1714506149292,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.003.epi",
+      "score": -13.85627555847168,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.003.stroma",
+      "score": -12.603660583496094,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.004.epi",
+      "score": -15.900605201721191,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.004.stroma",
+      "score": -12.363945007324219,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.005.epi",
+      "score": -17.586833953857422,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.005.stroma",
+      "score": -11.111303329467773,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.006.epi",
+      "score": -17.246904373168945,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.006.stroma",
+      "score": -10.82213306427002,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.007.epi",
+      "score": -16.293867111206055,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.007.stroma",
+      "score": -9.6398286819458,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.008.epi",
+      "score": -13.2394380569458,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.008.stroma",
+      "score": -10.377882957458496,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.009.epi",
+      "score": -11.868147850036621,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.009.stroma",
+      "score": -9.653726577758789,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.010.epi",
+      "score": -11.691563606262207,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.010.stroma",
+      "score": -10.709710121154785,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.011.epi",
+      "score": -11.334832191467285,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.011.stroma",
+      "score": -11.770244598388672,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.012.epi",
+      "score": -9.097023963928223,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.012.stroma",
+      "score": -14.736892700195312,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.013.epi",
+      "score": -9.234030723571777,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.013.stroma",
+      "score": -13.38591194152832,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.014.epi",
+      "score": -10.067572593688965,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.014.stroma",
+      "score": -11.742265701293945,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.015.epi",
+      "score": -8.900766372680664,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.015.stroma",
+      "score": -10.958744049072266,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.016.epi",
+      "score": -10.1038236618042,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.016.stroma",
+      "score": -12.327388763427734,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.017.epi",
+      "score": -8.603185653686523,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.017.stroma",
+      "score": -11.866791725158691,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.018.epi",
+      "score": -10.63040828704834,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.018.stroma",
+      "score": -14.231914520263672,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.019.epi",
+      "score": -8.853585243225098,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.019.stroma",
+      "score": -10.980578422546387,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.020.epi",
+      "score": -13.204753875732422,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.020.stroma",
+      "score": -11.885199546813965,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.021.epi",
+      "score": -12.099080085754395,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.021.stroma",
+      "score": -12.498361587524414,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.022.epi",
+      "score": -14.634269714355469,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.022.stroma",
+      "score": -12.267979621887207,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.023.epi",
+      "score": -12.575971603393555,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.023.stroma",
+      "score": -10.20254135131836,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.024.epi",
+      "score": -14.689168930053711,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.024.stroma",
+      "score": -12.96108627319336,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.025.epi",
+      "score": -14.774714469909668,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.025.stroma",
+      "score": -11.728382110595703,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.026.epi",
+      "score": -12.517104148864746,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.026.stroma",
+      "score": -10.113446235656738,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.027.epi",
+      "score": -8.237344741821289,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.027.stroma",
+      "score": -9.836163520812988,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.028.epi",
+      "score": -6.5165910720825195,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.028.stroma",
+      "score": -9.731989860534668,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.029.epi",
+      "score": -11.914778709411621,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.029.stroma",
+      "score": -11.067764282226562,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.030.epi",
+      "score": -10.318168640136719,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.030.stroma",
+      "score": -10.526755332946777,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.031.epi",
+      "score": -11.476201057434082,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.031.stroma",
+      "score": -10.060622215270996,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.032.epi",
+      "score": -12.208008766174316,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.032.stroma",
+      "score": -9.80648422241211,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.033.epi",
+      "score": -14.38593578338623,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.033.stroma",
+      "score": -12.619607925415039,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.034.epi",
+      "score": -13.013331413269043,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.034.stroma",
+      "score": -13.134316444396973,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.035.epi",
+      "score": -9.023444175720215,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.035.stroma",
+      "score": -11.489402770996094,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.036.epi",
+      "score": -10.850432395935059,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.036.stroma",
+      "score": -8.031750679016113,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.037.epi",
+      "score": -11.912342071533203,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.037.stroma",
+      "score": -8.723187446594238,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.038.epi",
+      "score": -10.209284782409668,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.038.stroma",
+      "score": -9.381705284118652,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.039.epi",
+      "score": -9.108497619628906,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.039.stroma",
+      "score": -9.142790794372559,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.040.epi",
+      "score": -11.234384536743164,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.040.stroma",
+      "score": -10.709317207336426,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.041.epi",
+      "score": -9.659270286560059,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.041.stroma",
+      "score": -11.113524436950684,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.042.epi",
+      "score": -8.95107364654541,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.042.stroma",
+      "score": -11.621851921081543,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.043.epi",
+      "score": -5.782720565795898,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.043.stroma",
+      "score": -10.219518661499023,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.044.epi",
+      "score": -6.185553550720215,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.044.stroma",
+      "score": -14.183812141418457,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.045.epi",
+      "score": -10.024544715881348,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.045.stroma",
+      "score": -11.724116325378418,
+      "pattern": "1b",
+      "compartment": "stroma"
+    },
+    {
+      "roi": "1b.1.046.epi",
+      "score": -10.222343444824219,
+      "pattern": "1b",
+      "compartment": "epi"
+    },
+    {
+      "roi": "1b.1.046.stroma",
+      "score": -11.188462257385254,
+      "pattern": "1b",
+      "compartment": "stroma"
+    }
+  ]
+}

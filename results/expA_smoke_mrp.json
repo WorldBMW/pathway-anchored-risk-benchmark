@@ -1,0 +1,82 @@
+{
+  "params": {
+    "data": "data/e2_phase/ax1_n4_s0",
+    "out": "results/expA_smoke_mrp.json",
+    "log_every": 50,
+    "n_genes": 2000,
+    "k": 6,
+    "dim": 128,
+    "hid": 256,
+    "lr": 0.001,
+    "epochs": 50,
+    "adv_list": [
+      0.0,
+      1.0
+    ],
+    "seeds": [
+      0
+    ],
+    "grl_cap": 1.0,
+    "warmup": 0,
+    "clip": 0.0,
+    "adv_sn": false,
+    "seed": 0,
+    "backbone": "gat",
+    "method": "mrp",
+    "dump_xs": false,
+    "dump_w": "",
+    "dump_lam": 2.0,
+    "device": "cpu"
+  },
+  "n_spots": 6000,
+  "n_genes_union": 2964,
+  "n_donors": 4,
+  "samples": [
+    "CA_002",
+    "CA_003",
+    "N_000",
+    "N_001"
+  ],
+  "scan": {
+    "s0_lam0.0": {
+      "tau_lodo": 0.8164965809277261,
+      "p_refit": 0.3300669933006699,
+      "tau_insample": 0.8164965809277261,
+      "sigma_null": 0.7677504284337328,
+      "ldi": 1.0621896787363558,
+      "tau_ldo": 0.8164965809277261,
+      "n_samples": 4,
+      "train_seconds": 32.9
+    },
+    "s0_lam1.0": {
+      "tau_lodo": 0.8164965809277261,
+      "p_refit": 0.3300669933006699,
+      "tau_insample": 0.8164965809277261,
+      "sigma_null": 0.6563302405743211,
+      "ldi": 1.242509533332072,
+      "tau_ldo": 0.8164965809277261,
+      "n_samples": 4,
+      "train_seconds": 21.4
+    }
+  },
+  "lam_means": {
+    "1.0": {
+      "mean_ldi": 1.242509533332072,
+      "mean_tau_lodo": 0.8164965809277261,
+      "n_seeds": 1
+    }
+  },
+  "verdict": {
+    "E3": "go",
+    "base_mean_ldi": 1.0621896787363558,
+    "base_mean_tau_lodo": 0.8164965809277261,
+    "passing_lambdas": [
+      "1.0"
+    ],
+    "gate": {
+      "ldi": 1.645,
+      "fidelity_keep": 0.7,
+      "fidelity_metric": "tau_lodo"
+    }
+  }
+}

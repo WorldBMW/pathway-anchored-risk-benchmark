@@ -1,0 +1,240 @@
+{
+  "params": {
+    "data": "data/st_visium/cervix_all_ext",
+    "out": "results/repair_e3_cervix_stable.json",
+    "log_every": 50,
+    "n_genes": 2000,
+    "k": 6,
+    "dim": 128,
+    "hid": 256,
+    "lr": 0.001,
+    "epochs": 300,
+    "adv_list": [
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      5.0
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "grl_cap": 1.0,
+    "warmup": 50,
+    "clip": 1.0,
+    "adv_sn": true,
+    "seed": 2,
+    "device": "cuda:0"
+  },
+  "n_spots": 46820,
+  "n_genes_union": 4991,
+  "samples": [
+    "CA_HPV_1",
+    "CA_HPV_2",
+    "HSIL_HPV",
+    "N_HPV",
+    "cervical_cancer_1",
+    "ecto_P001",
+    "ecto_P004",
+    "ecto_P007",
+    "ecto_P008",
+    "ecto_P014",
+    "ecto_P016",
+    "ecto_P018",
+    "ecto_P020",
+    "ecto_P021",
+    "ecto_P023",
+    "ecto_P024",
+    "ecto_P026",
+    "ecto_P028",
+    "ecto_P031",
+    "ecto_P044",
+    "ecto_P045",
+    "ecto_P047",
+    "ecto_P050",
+    "ecto_P057",
+    "ecto_P067",
+    "ecto_P080",
+    "ecto_P081",
+    "ecto_P087",
+    "ecto_P097",
+    "ecto_P105",
+    "ecto_P107",
+    "ecto_P108",
+    "ecto_P114",
+    "ecto_P117",
+    "ecto_P118"
+  ],
+  "scan": {
+    "s0_lam0.0": {
+      "tau_lodo": 0.42562342130617653,
+      "p_refit": 0.0007999200079992001,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.17246035181251212,
+      "ldi": 2.4621509630677316,
+      "n_samples": 35,
+      "train_seconds": 18.6
+    },
+    "s0_lam0.5": {
+      "tau_lodo": 0.4401746493850202,
+      "p_refit": 9.999000099990002e-05,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.17433425187687582,
+      "ldi": 2.5191529757169513,
+      "n_samples": 35,
+      "train_seconds": 16.5
+    },
+    "s0_lam1.0": {
+      "tau_lodo": 0.43289903534559837,
+      "p_refit": 0.00019998000199980003,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.17952220355137147,
+      "ldi": 2.405825167035718,
+      "n_samples": 35,
+      "train_seconds": 16.6
+    },
+    "s0_lam2.0": {
+      "tau_lodo": 0.4401746493850202,
+      "p_refit": 9.999000099990002e-05,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.18202478973582914,
+      "ldi": 2.4127188940714626,
+      "n_samples": 35,
+      "train_seconds": 16.4
+    },
+    "s0_lam5.0": {
+      "tau_lodo": 0.1418744737687255,
+      "p_refit": 0.21477852214778523,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.17724454316384525,
+      "ldi": 0.7948028822444526,
+      "n_samples": 35,
+      "train_seconds": 16.5
+    },
+    "s1_lam0.0": {
+      "tau_lodo": 0.42562342130617653,
+      "p_refit": 0.000999900009999,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.1712591105849035,
+      "ldi": 2.4794209187234157,
+      "n_samples": 35,
+      "train_seconds": 16.3
+    },
+    "s1_lam0.5": {
+      "tau_lodo": 0.42562342130617653,
+      "p_refit": 0.00029997000299970003,
+      "tau_insample": 0.4547258774638638,
+      "sigma_null": 0.18337074200299633,
+      "ldi": 2.3156552494030813,
+      "n_samples": 35,
+      "train_seconds": 16.5
+    },
+    "s1_lam1.0": {
+      "tau_lodo": 0.4110721932273329,
+      "p_refit": 0.0008999100089991,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.172969522960575,
+      "ldi": 2.3707771531566335,
+      "n_samples": 35,
+      "train_seconds": 16.4
+    },
+    "s1_lam2.0": {
+      "tau_lodo": 0.11277201761103824,
+      "p_refit": 0.25247475252474755,
+      "tau_insample": 0.4547258774638638,
+      "sigma_null": 0.18144907403646507,
+      "ldi": 0.6159966271780251,
+      "n_samples": 35,
+      "train_seconds": 16.5
+    },
+    "s1_lam5.0": {
+      "tau_lodo": 0.16370131588699097,
+      "p_refit": 0.16898310168983102,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.1797593780994418,
+      "ldi": 0.9051061346962692,
+      "n_samples": 35,
+      "train_seconds": 16.5
+    },
+    "s2_lam0.0": {
+      "tau_lodo": 0.41834780726675475,
+      "p_refit": 0.0011998800119988001,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.17399332655154284,
+      "ldi": 2.3986426119804194,
+      "n_samples": 35,
+      "train_seconds": 16.4
+    },
+    "s2_lam0.5": {
+      "tau_lodo": 0.43289903534559837,
+      "p_refit": 0.0006999300069993001,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.17270643808752018,
+      "ldi": 2.500769746213691,
+      "n_samples": 35,
+      "train_seconds": 16.3
+    },
+    "s2_lam1.0": {
+      "tau_lodo": 0.35286728091195835,
+      "p_refit": 0.014698530146985302,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.1755531359530534,
+      "ldi": 2.0043349211719867,
+      "n_samples": 35,
+      "train_seconds": 16.4
+    },
+    "s2_lam2.0": {
+      "tau_lodo": 0.20735500012352193,
+      "p_refit": 0.1121887811218878,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.17880789091596175,
+      "ldi": 1.154059807240314,
+      "n_samples": 35,
+      "train_seconds": 16.5
+    },
+    "s2_lam5.0": {
+      "tau_lodo": 0.43289903534559837,
+      "p_refit": 0.00029997000299970003,
+      "tau_insample": 0.4620014915032856,
+      "sigma_null": 0.178191041303239,
+      "ldi": 2.4237976959268583,
+      "n_samples": 35,
+      "train_seconds": 16.6
+    }
+  },
+  "lam_means": {
+    "0.5": {
+      "mean_ldi": 2.445192657111241,
+      "mean_tau_lodo": 0.43289903534559837,
+      "n_seeds": 3
+    },
+    "1.0": {
+      "mean_ldi": 2.2603124137881125,
+      "mean_tau_lodo": 0.39894616982829656,
+      "n_seeds": 3
+    },
+    "2.0": {
+      "mean_ldi": 1.394258442829934,
+      "mean_tau_lodo": 0.25343388903986014,
+      "n_seeds": 3
+    },
+    "5.0": {
+      "mean_ldi": 1.3745689042891935,
+      "mean_tau_lodo": 0.2461582750004383,
+      "n_seeds": 3
+    }
+  },
+  "verdict": {
+    "E3": "no-go",
+    "base_mean_ldi": 2.4467381645905224,
+    "base_mean_tau_lodo": 0.42319821662636925,
+    "passing_lambdas": [],
+    "gate": {
+      "ldi": 1.645,
+      "fidelity_keep": 0.7,
+      "fidelity_metric": "tau_lodo"
+    }
+  }
+}
