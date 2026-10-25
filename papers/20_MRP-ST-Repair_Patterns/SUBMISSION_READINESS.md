@@ -1,6 +1,24 @@
-# 投稿前状态（Patterns · v22）
+# 投稿前状态（Patterns · v23）
 
 生成于 2026-10-25。这份清单只列"上传输之前必须为真"的事，不重复正文里的论证。
+
+---
+
+## A0. 本轮处置（v22 → v23）
+
+| 评审意见 | 判断 | 处置 |
+|---|---|---|
+| 两处 Zenodo 占位符未清零 | **正确，且实际是 3 处**（漏了 Key Resources Table 那一行） | 已清：改写为 Cell Press 的真实时点口径——归档与 DOI 要求发生在**接收前**，tagged release 是冻结态与 interim 可访问位置。全库 `TO BE INSERTED BEFORE SUBMISSION` 计数为 0 |
+| ref [1] 预印本 DOI 占位 | **正确** | 已清：ref [1] 改写为"相关稿件"本体 + 可验证 interim 地址，分工边界在投稿信里单列成段。参考文献编号不动：重编 42 条会让累积式 SI 的引用号错位 |
+| 稿件声称代码已发布 | **比占位符更致命，评审未发现** | 实测 `github.com/WorldBMW/cervix-st-multimodal` 返回 **404**（该用户存在）。本轮已 `git init` + 白名单 `.gitignore` + 提交 `39a3cc3` + 打 `v1.0.0` 标签；**只剩 push**（见 B2） |
+| DSML 仍是强制项 | **不正确** | 已取证：官方 IFA 现版（2026-10-25 实抓）在 Policies / Components to include / Final file requirements 三处均无 DSML；期刊 2024 年起逐步淘汰。**未添加**，理由见 C3 |
+| cover letter 正面论证 broad interest | **正确** | 已新增 `Why this is a Patterns paper...` 段并前置到第一段之后；另修投稿信里 3 个评审没看到的瑕疵（整句重复、`sigma_hat` 未统一、`[status to be inserted: under review elsewhere]`） |
+
+补充发现（本轮顺手堵掉的泄密风险）：`scripts/ssh_*.py`、`_put.py`、`pull_reseed_results.py`、
+`upload_e2_reseed.py`、`verify_upload_sizes.py` 里**硬编码了云服务器 root 密码**。按早期清单里的
+`printf ... > .gitignore` + `git add -A` 整目录推上去会直接公开泄露。现 `.gitignore` 改为
+**白名单制**（先 `/*` 全忽略，再逐条放行），凭据脚本、其他期刊稿件工作区、内部策略文档
+一律不入库；已验证 `git grep 'PW ='` 为空。入库 785 文件 / 46.3 MB。
 
 v16 新增：STAR-Methods 框架补全（Lead contact / Materials availability / Data and code
 availability 三段；**Key Resources Table 作为 Table 6**；"Quantification and statistical
@@ -33,23 +51,28 @@ analysis"写明 n 的两重含义、两个种子族、B = 2,000 与 B = 10,000�
 
 ### 2. GitHub 仓库 + tag + Zenodo 归档（阻塞 Data availability）
 
-**当前这个目录根本不是 git 仓库**（无 `.git`，无 remote），而正文已经写了
-`https://github.com/WorldBMW/cervix-st-multimodal` 与"tagged release + Zenodo DOI"。
-这是真正的 desk-reject 风险点：审稿人点进去必须是能跑的东西。
+**仓库本地已建好**（commit `39a3cc3`，tag `v1.0.0`，785 文件 / 46.3 MB，工作区干净）。
+线上 `github.com/WorldBMW/cervix-st-multimodal` 目前仍是 **404**，所以这一步还没走完；
+只要不 push，正文里六处链接就都是死链，等同"代码不可访问"——这是本稿唯一真正的
+desk-reject 风险点。你要做的只有三行：
 
 ```bash
 cd /g/project4_cervix_multimodal
-git init
-# .gitignore 必须先排除数据与缓存，否则 8000+ 文件、数十 GB 会直接推不上去
-printf 'data/\nfm_cache/\n.venv/\n__pycache__/\n*.npz\n*.h5\n*.tgz\n.idea/\n.workbuddy/\n' > .gitignore
-git add -A && git commit -m "Manuscript release: auditable identity-leakage audit (Patterns submission)"
 git remote add origin https://github.com/WorldBMW/cervix-st-multimodal.git
-git tag -a v1.0.0 -m "Release matching the submitted manuscript"
-git push -u origin main --tags
+git push -u origin main --tags        # v1.0.0 一并推上去
 ```
 
-然后在 GitHub 上建 Release（用 v1.0.0 这个 tag），再在 Zenodo 里对本仓库开 archiving，
-拿到的 DOI 形如 `10.5281/zenodo.xxxxxxx`。
+（GitHub 上先建好同名空仓库，不要勾 README / .gitignore。）
+
+然后在 GitHub 上给 `v1.0.0` 建 Release（正文三处写死的正是 `.../releases/tag/v1.0.0`，
+**若实际 tag 改名，正文三处必须同步改**），再到 <https://zenodo.org/account/settings/github/>
+对本仓库开启 archiving——Zenodo 会自动为这个 tag 建记录并**当场分配 DOI**，
+形如 `10.5281/zenodo.xxxxxxx`。仓库根的 `.zenodo.json` 已写好（MIT、五位作者、
+关键词、related identifier），Zenodo 会直接读取。
+
+> 若你想让 DOI 在投稿时就已解析：Zenodo 建好记录后直接 **Publish**（开放获取，无 embargo），
+> 不要留成 draft。reserved DOI 在未发布状态下点开是"not publicly available"，
+> 反而会给编辑一个比"DOI 待填"更差的印象。
 
 正文里已经把 tag 链接写死成 `.../releases/tag/v1.0.0`（Key Resources Table、Resource
 availability、Data availability 三处）。**如果你的实际 tag 不叫 v1.0.0，必须改这三处**，否则编辑
@@ -59,19 +82,22 @@ availability、Data availability 三处）。**如果你的实际 tag 不叫 v1.
 ### 3. 一次性填两个 DOI 并重建
 
 ```bash
-python scripts/_fill_dois.py --check                       # 先看还剩几处
+python scripts/_fill_dois.py --check                       # 列出 4 个填充点
 python scripts/_fill_dois.py --companion 10.xxxx/xxxxx --zenodo 10.5281/zenodo.xxxxxxx --build
-python scripts/_qa_v22.py                                  # 重建后必须再跑一遍 QA
+python scripts/_qa_v23.py                                  # 重建后必须再跑一遍 QA
 ```
 
-脚本会同时改 ref [1]、Key Resources Table 的 Zenodo 行、`**Code.**` 段、Data availability 段，并把投稿信里
-"DOI will be inserted in place of the current placeholder" 换成真实 DOI。
+脚本会同时改 ref [1]、Key Resources Table 的 Zenodo 行、`**Code.**` 段、Data availability 段，
+并把投稿信里对 ref [1] 的状态描述换成真实 DOI。
+
+v23 起稿件里已无 `TO BE INSERTED BEFORE SUBMISSION` 字样，`--check` 报的是**填充点**
+（3 个 Zenodo 锚点 + 1 个 companion 锚点 + 投稿信 1 处），不是占位符。
 
 ---
 
 ## C. 一个待你决定的问题
 
-**正文 17,461 词**（Introduction 至 Experimental Procedures，不含图注与表）。
+**正文 17,619 词**（Introduction 至 Experimental Procedures，不含图注与表）。
 TitlePage 已写明"要么在投稿信里申请豁免，要么压缩 Results"。
 
 现状分布：Introduction 3,532 / Results 8,534 / Discussion 4,813 / Procedures 3,129。
@@ -82,6 +108,28 @@ TitlePage 已写明"要么在投稿信里申请豁免，要么压缩 Results"。
 
 ---
 
+## C3. DSML（Data Science Maturity Scale）：已核实**不需要**，故未添加
+
+评审要求"以官方 IFA 为准"确认并补齐 DSML。按官方 IFA 核对的结果是**不用补**：
+
+- 官方《Information for Authors》（<https://www.cell.com/patterns/information-for-authors>，
+  2026-10-25 实抓）全文**没有** DSML / "maturity scale" 任何一处：Policies 目录下无，
+  "Components to include"（Title / Summary / … / Resource availability / …）无，
+  "Final file requirements" 无。
+- 该刊 2024 年起在主编 Andrew Hufton 任内**逐步淘汰** DSML（与"明确聚焦机器学习与 AI 的
+  创造性应用"同步调整）。
+- 因此若在正文里加一段 `Data Science Maturity Scale: Proof-of-Concept`，等于告诉编辑
+  这份稿子是按 2022 年的模板准备的——**扣分而非加分**。
+
+若 handling editor 真的开口要，一行即可补（挂到 Experimental Procedures 末尾）：
+
+> **Data science maturity level.** This work corresponds to *Proof-of-Concept*:
+> the instrument is validated on simulated cohorts with known ground truth and on
+> public real cohorts, and is not yet deployed in an operational pipeline.
+
+除此之外，本稿也**不适用** IFA 里的 "Standardized data reporting checklists"：
+Cell Press 现只有 battery、photovoltaic cell、catalysis 三张表，与本稿无关。
+
 ## C2. 若担心匹配度：Cell Press Multi-Journal Submission（MJS）
 
 一个不需要多花一轮投稿周期的备选通道。官方口径（Cell Press 编辑部公告）：MJS 允许一篇稿件
@@ -89,7 +137,7 @@ TitlePage 已写明"要么在投稿信里申请豁免，要么压缩 Results"。
 Device），由一名专职编辑协调，各刊**独立**决定是否送审；**超过 80% 的 MJS 投稿至少获得一本
 期刊的评审机会**；2025 年通过 MJS 最终接收的论文里 70% 落在作者最初选中的目标刊之一。
 
-对本稿最实际的两点：**MJS 初始投稿阶段大幅放宽格式要求**（17,461 词与 6 张主表不会被卡），
+对本稿最实际的两点：**MJS 初始投稿阶段大幅放宽格式要求**（17,619 词与 6 张主表不会被卡），
 且多刊若都要审会共用同一组审稿人，不会重复消耗审稿资源。
 
 投稿前需自行确认：Patterns 是否在当期 MJS 参与刊名单内（名单会变动）。若不在，MJS 就只能当
@@ -114,8 +162,8 @@ Device），由一名专职编辑协调，各刊**独立**决定是否送审；*
 ## E. 上传前 30 秒自查
 
 ```bash
-python scripts/_qa_v22.py                      # 格式硬指标（含 Highlights ≤85、In brief ≤50、Summary ≤150）
-python scripts/_fill_dois.py --check           # 必须输出 "no placeholders left"
+python scripts/_qa_v23.py                      # 格式硬指标（含 Highlights ≤85、In brief ≤50、Summary ≤150）
+python scripts/_fill_dois.py --check           # 4 个填充点；若已拿到 DOI 应先 --build 再自查
 python -c "from docx import Document; d=Document('papers/20_MRP-ST-Repair_Patterns/Manuscript_Patterns.docx'); print(len(d.tables), 'main tables')"
 ```
 

@@ -1,34 +1,34 @@
-"""Fill the two submission blockers that need an externally minted DOI.
+"""Fill the two externally minted DOIs, then rebuild the docx files.
 
-The manuscript carries two placeholder strings while the DOIs do not yet exist:
+v23 removed the literal string "TO BE INSERTED BEFORE SUBMISSION" from the
+manuscript: an editor reading a template leftover has every reason to conclude
+the submission is not ready, and the honest Cell Press timing is that a
+DOI-minting archive is required *before publication*, with the tagged release
+as the frozen, citable state in the meantime. So the manuscript now carries
+status text rather than a placeholder, and this script rewrites that status
+text into a real DOI.
 
-  * the companion study (reference 1, plus the note in the Data availability
-    statement) -- a preprint DOI minted by bioRxiv/medRxiv at posting time;
-  * this paper's own code archive -- a Zenodo DOI minted from the tagged
-    GitHub release.
-
-Both are written as the literal string "TO BE INSERTED BEFORE SUBMISSION" so
-they cannot be missed during proofing. This script replaces them and rebuilds
-the docx, so that the swap is one command per DOI instead of a manual hunt
-through five files.
+  * companion study -- reference 1, currently "Companion manuscript (related
+    submission)", plus the matching sentence in the cover letter;
+  * this paper's own code archive -- one sentence in Resource availability, one
+    in Data and code availability, and one cell of the Key Resources Table.
 
 Usage
 -----
-    # see what is still a placeholder and where
+    # see what still needs a DOI
     python scripts/_fill_dois.py --check
 
     # fill the companion preprint DOI only
     python scripts/_fill_dois.py --companion 10.1101/2026.10.24.123456
 
-    # fill both, and rebuild the docx files afterwards
+    # fill both and rebuild the docx files
     python scripts/_fill_dois.py \
         --companion 10.1101/2026.10.24.123456 \
         --zenodo 10.5281/zenodo.1234567 \
         --build
 
 Nothing is written unless --build (or --write) is passed, so an accidental run
-with a typo in the DOI cannot silently corrupt the manuscript. The script
-prints every replacement it would make, then applies them.
+with a typo in the DOI cannot silently corrupt the manuscript.
 """
 from __future__ import annotations
 
@@ -60,31 +60,36 @@ def latest_manuscript() -> Path:
 
 MANUSCRIPT = latest_manuscript()
 COVER = PAPERS / "CoverLetter_Patterns.md"
-
-PLACEHOLDER = "TO BE INSERTED BEFORE SUBMISSION"
 PYTHON = r"C:/Users/jm/anaconda3/python.exe"
 
-# Anchors are matched as regexes so a rewrap of the markdown cannot break them.
+# (label, regex with one capture group, replacement built from the group + DOI)
 ZENODO_PATTERNS = [
-    re.compile(r"(archived at Zenodo \(DOI:\s*)" + PLACEHOLDER),
-    # Key Resources Table row, added in v20
-    re.compile(r"(Zenodo DOI:\s*)" + PLACEHOLDER),
+    ("Resource availability / Data availability",
+     re.compile(r"(deposited in Zenodo) before publication, whose DOI is "
+                r"reported in the version of record"),
+     lambda g, doi: g + " under DOI " + doi),
+    ("Key resources table",
+     re.compile(r"(Zenodo archive of the same state), DOI reported in the "
+                r"version of record"),
+     lambda g, doi: g + ": https://doi.org/" + doi),
 ]
-COVER_PATTERN = re.compile(
-    r"its DOI will be inserted in place of the current placeholder, with the "
-    r"GitHub repository serving as interim access"
+COMPANION_PATTERN = (
+    "reference 1",
+    re.compile(r"Companion manuscript \(related submission\);"),
+    lambda g, doi: "Companion manuscript. Preprint DOI: " + doi + ";",
 )
-
-
-def report(text: str, label: str) -> int:
-    n = text.count(PLACEHOLDER)
-    print(f"  {label:<34} {n} placeholder(s)")
-    return n
+COVER_PATTERN = (
+    "cover letter",
+    re.compile(r"reference \[1\] records the tagged code release as interim "
+               r"access"),
+    lambda g, doi: ("reference [1] records the preprint DOI " + doi
+                    + ", with the tagged code release as interim access"),
+)
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--check", action="store_true", help="only report placeholders")
+    ap.add_argument("--check", action="store_true", help="only report what is pending")
     ap.add_argument("--companion", help="preprint DOI of the companion study")
     ap.add_argument("--zenodo", help="Zenodo DOI of the tagged code release")
     ap.add_argument("--write", action="store_true", help="apply the edits")
@@ -95,57 +100,51 @@ def main() -> int:
     cov = COVER.read_text(encoding="utf-8")
 
     print(f"manuscript: {MANUSCRIPT.name}")
-    total = report(ms, "total")
-    report(cov, "cover letter")
+    pending = 0
+    for label, pat, _ in ZENODO_PATTERNS:
+        n = len(pat.findall(ms))
+        pending += n
+        print(f"  {label:<42} {n} Zenodo anchor(s)")
+    n = len(COMPANION_PATTERN[1].findall(ms))
+    pending += n
+    print(f"  {COMPANION_PATTERN[0]:<42} {n} companion anchor(s)")
+    print(f"  {'cover letter':<42} "
+          f"{len(COVER_PATTERN[1].findall(cov))} companion anchor(s)")
 
     if args.check or not (args.companion or args.zenodo):
-        if total:
-            for m in re.finditer(r"^.*" + PLACEHOLDER + r".*$", ms, flags=re.M):
-                line = m.group(0)
-                print("\n  ... " + (line[:150] + "..." if len(line) > 150 else line))
-        else:
-            print("  no placeholders left")
+        print("\n  (no placeholder string remains; these are the fill points)")
         return 0
 
     new = ms
-    if args.companion:
-        doi = args.companion.strip()
-        assert doi.startswith("10."), "a DOI starts with 10."
-        # reference 1
-        new, n1 = re.subn(r"(Companion study\.\s*Preprint DOI:\s*)" + PLACEHOLDER,
-                          lambda m: m.group(1) + doi, new)
-        print(f"\ncompanion DOI {doi}")
-        print(f"  reference 1: {n1} replacement(s)")
     if args.zenodo:
         doi = args.zenodo.strip()
         assert doi.startswith("10."), "a DOI starts with 10."
-        n2 = 0
-        for pat in ZENODO_PATTERNS:
-            new, k = pat.subn(lambda m: m.group(1) + doi, new)
-            n2 += k
         print(f"\nZenodo DOI {doi}")
-        print(f"  Zenodo placeholder: {n2} replacement(s)")
-
-    left = new.count(PLACEHOLDER)
-    print(f"\nplaceholders remaining: {left}")
-    if left:
-        print("  (the other DOI is still pending; that string stays visible on purpose)")
+        for label, pat, repl in ZENODO_PATTERNS:
+            new, k = pat.subn(lambda m: repl(m.group(1), doi), new)
+            print(f"  {label}: {k} replacement(s)")
+    if args.companion:
+        doi = args.companion.strip()
+        assert doi.startswith("10."), "a DOI starts with 10."
+        print(f"\ncompanion DOI {doi}")
+        _, pat, repl = COMPANION_PATTERN
+        new, k = pat.subn(lambda m: repl(m.group(1), doi), new)
+        print(f"  reference 1: {k} replacement(s)")
 
     new_cov = cov
     if args.companion:
-        new_cov = COVER_PATTERN.sub(
-            f"its DOI is {args.companion.strip()} and the GitHub repository is "
-            f"the archived source of the reported numbers", new_cov)
+        _, pat, repl = COVER_PATTERN
+        new_cov = pat.sub(lambda m: repl(m.group(0), args.companion.strip()), cov)
 
     if not (args.write or args.build):
         print("\ndry run: pass --write or --build to apply")
         return 0
 
     MANUSCRIPT.write_text(new, encoding="utf-8")
+    print(f"updated {MANUSCRIPT.name}")
     if new_cov != cov:
         COVER.write_text(new_cov, encoding="utf-8")
         print(f"updated {COVER.name}")
-    print(f"updated {MANUSCRIPT.name}")
 
     if args.build:
         md2docx = ROOT / "scripts" / "_md2docx.py"
@@ -153,7 +152,7 @@ def main() -> int:
                          (COVER, PAPERS / "CoverLetter_Patterns.docx")]:
             subprocess.run([PYTHON, str(md2docx), str(src), str(dst)], check=True)
         print("rebuilt Manuscript_Patterns.docx and CoverLetter_Patterns.docx")
-        print("now re-run: python scripts/_qa_v15.py")
+        print("now re-run: python scripts/_qa_v23.py")
     return 0
 
 
