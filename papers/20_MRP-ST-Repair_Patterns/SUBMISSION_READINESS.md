@@ -1,6 +1,27 @@
-# 投稿前状态（Patterns · v27b）
+# 投稿前状态（Patterns · v28 + DOI）
 
 生成于 2026-10-25。这份清单只列"上传之前必须为真"的事，不重复正文里的论证。
+
+## A0''''. Zenodo DOI 已分配并写入（本轮）
+
+- DOI：`10.5281/zenodo.23640979`，规范引用链接 `https://doi.org/10.5281/zenodo.23640979`
+  （concept DOI `10.5281/zenodo.23640978`）。Zenodo 记录标题
+  `WorldBMW/pathway-anchored-risk-benchmark: v1.0 - MRP-ST Audit Evidence Package`。
+- 已写入三处：Resource availability 的 **Code.** 段、Key Resources Table 的 Software 行、
+  DATA AND CODE AVAILABILITY 段；投稿信一份。旧措辞 "deposited in Zenodo, a DOI-minting
+  archive, before acceptance; the DOI is reported in the version of record" 与 KRT 里的
+  "public access and Zenodo archiving pending verification" 已全部删除（这类"待核实"字样
+  与 `TO BE INSERTED` 同类，编辑读到即判定稿件未就绪）。
+- **顺带更正死链**：正文原写的 `github.com/WorldBMW/cervix-st-multimodal` 实测仍 **404**；
+  实际已公开且被 Zenodo 归档的仓库是
+  `github.com/WorldBMW/pathway-anchored-risk-benchmark`（200，含 tag `v1.0.0` 与同名
+  release、README/scripts/src/results 齐全）。稿件四处链接已改为后者。若你更想用
+  `cervix-st-multimodal` 这个名字，只需在 GitHub 建仓并保持同名 tag，链接再改回即可。
+- **仍待你处理**：Zenodo 记录描述里留有占位文本
+  "Commit: [你把当前commit hash粘贴在这里]"，公开可见；建议在 Zenodo 上补上
+  v1.0.0 的 commit `73ad0f17`，或发布一个新 version 覆盖。
+- 填充脚本 `scripts/_fill_doi_v28.py`（就地 patch docx，不重建，保住 5 幅内嵌图）；
+  旧的 `scripts/_fill_dois.py` 依赖已不存在的占位符，`--check` 会报 0 填充点，别再用。
 
 **本文件曾在第 9 轮后被覆盖成 996 字节的指针文件，现从 `SUBMISSION_READINESS_v26pre_20261025.md`
 恢复，并在顶部补 v27/v27b 的新增结论。** 方法与证据层面的未决项以
@@ -191,6 +212,9 @@ analysis"写明 n 的两重含义、两个种子族、B = 2,000 与 B = 10,000�
 
 **仓库本地已建好**（commit b138e2a，tag `v1.0.0`，785 文件 / 46.3 MB，工作区干净）。
 线上 `github.com/WorldBMW/cervix-st-multimodal` 目前仍是 **404**，所以这一步还没走完；
+（**2026-10-25 更新**：实际已公开的是 `github.com/WorldBMW/pathway-anchored-risk-benchmark`，
+200 且带 tag `v1.0.0`；稿件链接已改到该仓库。下面这套 push 命令只在你要把本地仓库
+推成 `cervix-st-multimodal` 时才需要。）
 只要不 push，正文里六处链接就都是死链，等同"代码不可访问"——这是本稿唯一真正的
 desk-reject 风险点。你要做的只有三行：
 
