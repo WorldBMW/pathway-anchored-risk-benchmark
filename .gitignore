@@ -63,3 +63,8 @@ __pycache__/
 papers/**/*.bak
 papers/**/*pre_2026*.docx
 papers/**/*_v[0-9]*_2026*.docx
+
+# ---- files belonging to an earlier, different manuscript: never published ----
+results/MODEL_USAGE_v1.2/
+scripts/build_cmpb_paper_*.py
+scripts/generate_cmpb_figures.py
