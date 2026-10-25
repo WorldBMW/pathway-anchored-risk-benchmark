@@ -167,7 +167,7 @@ analysis"写明 n 的两重含义、两个种子族、B = 2,000 与 B = 10,000�
 
 ### 2. GitHub 仓库 + tag + Zenodo 归档（阻塞 Data availability）
 
-**仓库本地已建好**（commit df1c404，tag `v1.0.0`，785 文件 / 46.3 MB，工作区干净）。
+**仓库本地已建好**（commit b138e2a，tag `v1.0.0`，785 文件 / 46.3 MB，工作区干净）。
 线上 `github.com/WorldBMW/cervix-st-multimodal` 目前仍是 **404**，所以这一步还没走完；
 只要不 push，正文里六处链接就都是死链，等同"代码不可访问"——这是本稿唯一真正的
 desk-reject 风险点。你要做的只有三行：
