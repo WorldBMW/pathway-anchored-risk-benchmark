@@ -73,13 +73,8 @@ ZENODO_PATTERNS = [
                 r"version of record"),
      lambda g, doi: g + ": https://doi.org/" + doi),
 ]
-COMPANION_PATTERN = (
-    "reference 1",
-    re.compile(r"Manuscript in preparation, declared as a related manuscript in "
-               r"the cover letter and supplied with this submission as a related "
-               r"file;"),
-    lambda g, doi: "Preprint, https://doi.org/" + doi + ";",
-)
+# v25 起正文不再引用 companion 稿件（ref [1] 已删除，宫颈队列自包含），
+# 因此 companion DOI 只剩投稿信一处填充点。
 COVER_PATTERN = (
     "cover letter",
     re.compile(r"No DOI is recorded for it yet"),
@@ -105,9 +100,6 @@ def main() -> int:
         n = len(pat.findall(ms))
         pending += n
         print(f"  {label:<42} {n} Zenodo anchor(s)")
-    n = len(COMPANION_PATTERN[1].findall(ms))
-    pending += n
-    print(f"  {COMPANION_PATTERN[0]:<42} {n} companion anchor(s)")
     print(f"  {'cover letter':<42} "
           f"{len(COVER_PATTERN[1].findall(cov))} companion anchor(s)")
 
@@ -126,10 +118,7 @@ def main() -> int:
     if args.companion:
         doi = args.companion.strip()
         assert doi.startswith("10."), "a DOI starts with 10."
-        print(f"\ncompanion DOI {doi}")
-        _, pat, repl = COMPANION_PATTERN
-        new, k = pat.subn(lambda m: repl(m.group(1), doi), new)
-        print(f"  reference 1: {k} replacement(s)")
+        print(f"\ncompanion DOI {doi} (cover letter only)")
 
     new_cov = cov
     if args.companion:

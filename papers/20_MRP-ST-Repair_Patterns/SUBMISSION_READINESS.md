@@ -1,10 +1,44 @@
-# 投稿前状态（Patterns · v24）
+# 投稿前状态（Patterns · v25）
 
 生成于 2026-10-25。这份清单只列"上传输之前必须为真"的事，不重复正文里的论证。
 
 ---
 
-## A0. 本轮处置（v23 → v24）
+## A0'. 本轮处置（v24 → v25）
+
+| 评审意见 | 判断 | 处置 |
+|---|---|---|
+| 彻底删除参考文献 1，不留 companion / in preparation 字样 | **采纳（正文层面）** | ref [1] 已删除，7 处引用全部改写，42 条参考文献重编为 1–42，GSE208654 补为新的 43。**正文现在零 companion 字样**（仅剩 KRT 里 "make_figures_patterns.py and companions" 这个无关词组） |
+| 让"宫颈队列定义已在 Experimental Procedures 重述"成为事实 | **正确，而且戳中一个真问题** | 原文里 `inclusion` 出现 **0 次**——那句话当时是**假的**。现按 `results/dump_cervix.json` 与 `download_and_prepare_cervix.py` 的实测写成完整定义：来源与 GSM 号、4+1+30 构成、供体级 severity 判读规则、31/1/3 类别数、46,820 spots、CPM→log1p→top 2,000、整片 mean-pool、分析单位为 section |
+| 第 4 条 Highlights 大概率超 85 字符 | **不正确** | 实测 4 条为 72 / 71 / 66 / 74 字符（docx 含 `N. ` 前缀为 75 / 74 / 69 / 77），**全部 ≤85** |
+| DSML 官方 IFA 仍保留 | **不成立，已再核实** | 见 C3 |
+
+### 顺带删掉的三处不可复现依赖
+
+删 ref [1] 时一并去掉了三处以 companion 为**证据**的表述，理由与合规无关，是它们本身站不住：
+
+- 引言里"in-sample AUROC 1.00 → 0.497 坍缩"；
+- sibling-unit trap 的第三条支撑"a clinical cohort in the companion study"（现改为两条支撑：45/45 仿真 + 30/30 真实跨域细胞）；
+- 宫颈结果段那整段"不可通约"的比较。
+
+原因：这个数字本文复现不出来。本队列上 LODO AUROC 实测 0.73–0.97、τ 保留 0.92，**没有坍缩**。
+留着它等于把一个自己无法复核的数字当论据。删掉后 sibling-unit trap 仍由两个独立支撑托住。
+
+### 投稿信里保留什么（政策不允许删）
+
+正文 companion 字样清零了，但**投稿信里的披露一个字都不能删**。Cell Press《Journal policies》
+要求相关稿件在**投稿信**披露、并随初稿以 **related file** 上传，"Failure to provide copies of
+related manuscripts ... may be grounds for rejection"。披露的位置本来就是投稿信，不是正文。
+现投稿信明确写了三点：该稿件**不在正文任何位置被引用**、宫颈队列已由公开 accession 自包含重建、
+两稿不共享任何结果/表/图。
+
+> 注：v23 时我判断"重编 42 条引用会让累积式 SI 引用号错位"——**这个担心是多余的**。
+> 实测 SI（`Supplemental_Information_Patterns.docx`）**不含任何编号引用**（`[n]` 计数为 0），
+> 所以重编只影响正文，脚本一次跑完，已验证 43 条、最大引用号 43、无悬空号。
+
+---
+
+## A0. 上轮处置（v23 → v24）
 
 | 评审意见 | 判断 | 处置 |
 |---|---|---|
@@ -52,7 +86,7 @@ Cell Press《Journal policies》原文（2026-10-25 实抓）：
 | 评审意见 | 判断 | 处置 |
 |---|---|---|
 | 两处 Zenodo 占位符未清零 | **正确，且实际是 3 处**（漏了 Key Resources Table 那一行） | 已清：改写为 Cell Press 的真实时点口径——归档与 DOI 要求发生在**接收前**，tagged release 是冻结态与 interim 可访问位置。全库 `TO BE INSERTED BEFORE SUBMISSION` 计数为 0 |
-| ref [1] 预印本 DOI 占位 | **正确** | 已清：ref [1] 改写为"相关稿件"本体 + 可验证 interim 地址，分工边界在投稿信里单列成段。参考文献编号不动：重编 42 条会让累积式 SI 的引用号错位 |
+| ref [1] 预印本 DOI 占位 | **正确** | 已清：ref [1] 改写为"相关稿件"本体 + 可验证 interim 地址，分工边界在投稿信里单列成段。（v24 未重编引用号；v25 已把 ref [1] 整个删除并完成重编——SI 不含编号引用，重编是安全的，见 A0'） |
 | 稿件声称代码已发布 | **比占位符更致命，评审未发现** | 实测 `github.com/WorldBMW/cervix-st-multimodal` 返回 **404**（该用户存在）。本轮已 `git init` + 白名单 `.gitignore` + 提交 `256dd43` + 打 `v1.0.0` 标签；**只剩 push**（见 B2） |
 | DSML 仍是强制项 | **不正确** | 已取证：官方 IFA 现版（2026-10-25 实抓）在 Policies / Components to include / Final file requirements 三处均无 DSML；期刊 2024 年起逐步淘汰。**未添加**，理由见 C3 |
 | cover letter 正面论证 broad interest | **正确** | 已新增 `Why this is a Patterns paper...` 段并前置到第一段之后；另修投稿信里 3 个评审没看到的瑕疵（整句重复、`sigma_hat` 未统一、`[status to be inserted: under review elsewhere]`） |
@@ -87,18 +121,23 @@ analysis"写明 n 的两重含义、两个种子族、B = 2,000 与 B = 10,000�
 
 ## B. 只能由你本人完成的三步（我无法代做）
 
-### 1. Companion preprint 上线（阻塞 ref [1]）
+### 1. Companion preprint（**v25 起不再阻塞投稿**）
 
-`papers/19_ISCLS_20261016/Manuscript_ISCLS.md` 已完稿。挂到 bioRxiv/medRxiv 后拿到 DOI。
-注意 Patterns 的口径：**投稿时该 preprint 必须已 online 且可访问**，只有"已提交待审"不算。
+`papers/19_ISCLS_20261016/Manuscript_ISCLS.md` 已完稿。挂到 bioRxiv/medRxiv 后拿到 DOI 仍是
+最干净的做法，但**v25 已经不再有任何参考文献等着它**：正文不再引用该稿件，投稿信里也只有一句
+"No DOI is recorded for it yet"，没有占位符。也就是说 preprint 没上线**可以直接投**。
 
-**但 preprint 没上线也照样能投**，只需要在投稿系统里多做一件事：把 companion 稿件 PDF 作为
-**related file** 上传（政策强制，见 D 节）。ref [1] 现在写的是 `Manuscript in preparation`，
-与"随稿上传、尚无 DOI"完全自洽，不需要任何占位符。
+投稿系统里必须做的两件事（与 preprint 状态无关）：
+① 把 companion 稿件 PDF 作为 **related file** 上传（政策强制，见 D 节）；
+② 若它**已经在别刊送审**，投稿信里的 `manuscript in preparation` 必须改成
+`under consideration elsewhere` 并点名期刊。
+
+拿到 DOI 后：`python scripts/_fill_dois.py --companion 10.xxxx/xxxxx --build`
+（v25 起 companion 只有一个填充点：投稿信）。
 
 ### 2. GitHub 仓库 + tag + Zenodo 归档（阻塞 Data availability）
 
-**仓库本地已建好**（commit `39a3cc3`，tag `v1.0.0`，785 文件 / 46.3 MB，工作区干净）。
+**仓库本地已建好**（commit `cdf26ea`，tag `v1.0.0`，785 文件 / 46.3 MB，工作区干净）。
 线上 `github.com/WorldBMW/cervix-st-multimodal` 目前仍是 **404**，所以这一步还没走完；
 只要不 push，正文里六处链接就都是死链，等同"代码不可访问"——这是本稿唯一真正的
 desk-reject 风险点。你要做的只有三行：
@@ -131,7 +170,7 @@ availability、Data availability 三处）。**如果你的实际 tag 不叫 v1.
 ```bash
 python scripts/_fill_dois.py --check                       # 列出 4 个填充点
 python scripts/_fill_dois.py --companion 10.xxxx/xxxxx --zenodo 10.5281/zenodo.xxxxxxx --build
-python scripts/_qa_v24.py                                  # 重建后必须再跑一遍 QA
+python scripts/_qa_v25.py                                  # 重建后必须再跑一遍 QA
 ```
 
 脚本会同时改 ref [1]、Key Resources Table 的 Zenodo 行、`**Code.**` 段、Data availability 段，
@@ -144,7 +183,7 @@ v23 起稿件里已无 `TO BE INSERTED BEFORE SUBMISSION` 字样，`--check` 报
 
 ## C. 一个待你决定的问题
 
-**正文 17,619 词**（Introduction 至 Experimental Procedures，不含图注与表）。
+**正文 17,521 词**（Introduction 至 Experimental Procedures，不含图注与表）。
 TitlePage 已写明"要么在投稿信里申请豁免，要么压缩 Results"。
 
 现状分布：Introduction 3,532 / Results 8,534 / Discussion 4,813 / Procedures 3,129。
@@ -210,7 +249,7 @@ operator；② 它读的是 representation 而非 training objective，因此可
 Device），由一名专职编辑协调，各刊**独立**决定是否送审；**超过 80% 的 MJS 投稿至少获得一本
 期刊的评审机会**；2025 年通过 MJS 最终接收的论文里 70% 落在作者最初选中的目标刊之一。
 
-对本稿最实际的两点：**MJS 初始投稿阶段大幅放宽格式要求**（17,619 词与 6 张主表不会被卡），
+对本稿最实际的两点：**MJS 初始投稿阶段大幅放宽格式要求**（17,521 词与 6 张主表不会被卡），
 且多刊若都要审会共用同一组审稿人，不会重复消耗审稿资源。
 
 投稿前需自行确认：Patterns 是否在当期 MJS 参与刊名单内（名单会变动）。若不在，MJS 就只能当
@@ -236,7 +275,7 @@ Device），由一名专职编辑协调，各刊**独立**决定是否送审；*
 ## E. 上传前 30 秒自查
 
 ```bash
-python scripts/_qa_v24.py                      # 格式硬指标（含 Highlights ≤4 条且 ≤85 字符、In brief ≤50、Summary ≤150）
+python scripts/_qa_v25.py                      # 格式硬指标（含 Highlights ≤4 条且 ≤85 字符、In brief ≤50、Summary ≤150）
 python scripts/_fill_dois.py --check           # 4 个填充点；若已拿到 DOI 应先 --build 再自查
 python -c "from docx import Document; d=Document('papers/20_MRP-ST-Repair_Patterns/Manuscript_Patterns.docx'); print(len(d.tables), 'main tables')"
 ```
